@@ -10,7 +10,8 @@
     "start": "node --experimental-strip-types server/index.ts",
     "lint": "tsc --noEmit",
     "smoke:offline": "node --experimental-strip-types scripts/offline-engine-smoke.ts",
-    "import:bfpd": "node --experimental-strip-types scripts/importBfpdSeed.ts"
+    "import:bfpd": "node --experimental-strip-types scripts/importBfpdSeed.ts",
+    "test": "node --experimental-strip-types --test server/__tests__/nutrientUtils.test.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
