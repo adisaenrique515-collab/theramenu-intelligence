@@ -1,0 +1,61 @@
+{
+  "version": "2026.04.08-local",
+  "sodiumAlertMg": 2300,
+  "fiberDensityPer1000Kcal": 14,
+  "highFiberPerServingG": 3,
+  "plateMethod": [
+    "50% nonstarchy vegetables",
+    "25% protein",
+    "25% high-fiber carbohydrates"
+  ],
+  "nutritionalBehaviors": {
+    "encourage": [
+      "Dark green vegetables",
+      "Red and orange vegetables",
+      "Beans, peas, and lentils",
+      "Soybeans",
+      "Nuts and seeds"
+    ],
+    "sodiumReplacementBase": [
+      "Onions",
+      "Garlic",
+      "Celery",
+      "Carrots"
+    ]
+  },
+  "riskScore": {
+    "pregnancyWithAnyDiabetes": 6.5,
+    "type1Diabetes": 1,
+    "durationOver20Years": 1,
+    "duration10To20Years": 0.5,
+    "multipleDailyInsulin": 2,
+    "basalInsulin": 1,
+    "modernSulfonylurea": 0.5,
+    "impairedHypoglycemiaAwareness": 6.5,
+    "severeHypoglycemiaLast4Weeks": 5,
+    "a1cAbove9": 1,
+    "a1cBetween7_5And9": 0.5,
+    "noMonitoring": 2,
+    "cgmCredit": -0.5,
+    "recentDkaOrHhs": 3.5,
+    "unstableMacrovascularDisease": 6.5,
+    "stableMacrovascularDisease": 2,
+    "egfrBelow30": 6.5,
+    "egfr30To45": 4,
+    "neuropathy": 1,
+    "footComplications": 1,
+    "retinopathy": 1,
+    "cognitiveImpairment": 6.5,
+    "ageOver70WithoutSupport": 1,
+    "highPhysicalLabor": 4,
+    "moderatePhysicalLabor": 2,
+    "noFastingEducation": 1,
+    "fastingAtLeast16Hours": 1
+  },
+  "medicationAdjustmentRules": {
+    "olderSulfonylurea": "Replace with newer-generation sulfonylurea when possible; otherwise reduce dose by 50%.",
+    "basalInsulin": "Reduce basal insulin by 25-35% during fasting.",
+    "prandialInsulin": "Reduce prandial insulin by 35-50% for the meal followed by fasting.",
+    "sglt2OrMetformin": "No dose change by default; take at the main mealtime."
+  }
+}

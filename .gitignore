@@ -1,0 +1,44 @@
+# ── Secrets & local environment ──────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*/.env
+*/.env.local
+*/.env.*.local
+
+# ── Build outputs ─────────────────────────────────────────────────────────────
+node_modules/
+dist/
+build/
+.tmp/
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# ── Logs & temp files ─────────────────────────────────────────────────────────
+*.log
+api-server.log
+.tmp/
+migrated_prompt_history/
+
+# ── Package manager caches ────────────────────────────────────────────────────
+.pnpm-store/
+.npm/
+
+# ── OS & editor ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ── Machine-local tool config ─────────────────────────────────────────────────
+.mcp.json
+.claude/
+
+# ── Windows reserved filename (corrupted artifact) ───────────────────────────
+CON

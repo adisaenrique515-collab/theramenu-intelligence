@@ -1,0 +1,152 @@
+================================================================================
+              CLAUDE + NOTEBOOKLM INTEGRATION - START HERE
+================================================================================
+
+Welcome! You have a complete Claude + NotebookLM integration ready to use.
+
+================================================================================
+QUICK START (3 STEPS)
+================================================================================
+
+1. AUTHENTICATE (One-time setup)
+   Open Command Prompt and run:
+   cd C:\Users\erick\Downloads\Thera-menu-main-patched\notebooklm-mcp
+   venv\Scripts\python.exe -m notebooklm login
+
+   Then complete Google sign-in in the browser that opens.
+
+2. TRY THE DEMO
+   Run in Command Prompt:
+   venv\Scripts\python.exe integration_demo.py
+
+   This shows Claude planning + NotebookLM executing 3 complete workflows.
+
+3. START USING
+   Run in Command Prompt:
+   python quick_start.py
+
+   Interactive tool to create and manage notebooks.
+
+================================================================================
+IMPORTANT FILES TO READ
+================================================================================
+
+📖 INTEGRATION_GUIDE.md
+   Start with this! Shows:
+   - How the integration works
+   - 3 real-world workflow examples
+   - Step-by-step getting started
+   - How to customize
+
+📖 CAPABILITIES.md
+   Shows what's possible:
+   - Claude capabilities
+   - NotebookLM capabilities
+   - Industry use cases
+   - Real scenarios
+
+📖 notebooklm-mcp\EXAMPLES.md
+   Technical reference:
+   - Complete API docs
+   - 10 code examples
+   - Error handling
+   - Best practices
+
+================================================================================
+EXECUTABLE FILES (Try These)
+================================================================================
+
+integration_demo.py
+   Shows the complete integration in action
+   Run: python integration_demo.py
+
+quick_start.py
+   Interactive tool for daily use
+   Run: python quick_start.py
+
+examples_usage.py
+   10 different usage patterns with code
+   Run: python examples_usage.py
+
+authenticate.py
+   Check if NotebookLM authentication is working
+   Run: python authenticate.py
+
+================================================================================
+CONFIGURATION FILES
+================================================================================
+
+.mcp.json
+   MCP server configuration (if using MCP integration)
+
+.claude/settings.json
+   Claude Code configuration for this project
+
+.claude/settings.local.json
+   Local overrides for Claude Code settings
+
+================================================================================
+DIRECTORY STRUCTURE
+================================================================================
+
+C:\Users\erick\Downloads\Thera-menu-main-patched\
+├── INTEGRATION_GUIDE.md (READ FIRST!)
+├── CAPABILITIES.md
+├── .mcp.json
+├── .claude\
+│   ├── settings.json
+│   └── settings.local.json
+└── notebooklm-mcp\
+    ├── integration_demo.py (RUN THIS!)
+    ├── quick_start.py
+    ├── examples_usage.py
+    ├── authenticate.py
+    ├── EXAMPLES.md
+    ├── server.py
+    └── venv\ (Python environment with all dependencies)
+
+================================================================================
+WHAT THIS INTEGRATION DOES
+================================================================================
+
+✓ Claude plans strategies
+✓ NotebookLM ingests content (URLs, PDFs, YouTube, text)
+✓ Generates content: Audio, Slides, Quizzes, Flashcards
+✓ Answers questions with citations
+✓ Claude analyzes results
+✓ Automates workflows at scale
+
+Real-world scenarios:
+✓ Research paper analysis and learning
+✓ Training program creation
+✓ Literature review automation
+✓ Conference analysis
+✓ Competitive intelligence
+
+================================================================================
+HOW TO OPEN IN FILE EXPLORER
+================================================================================
+
+Press: Windows Key + R
+Type: explorer C:\Users\erick\Downloads\Thera-menu-main-patched
+Press: Enter
+
+Or from Command Prompt:
+explorer C:\Users\erick\Downloads\Thera-menu-main-patched
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. Read INTEGRATION_GUIDE.md
+2. Run: python integration_demo.py (see it work)
+3. Run: notebooklm login (authenticate)
+4. Run: python quick_start.py (start using)
+5. Reference EXAMPLES.md for custom code
+
+================================================================================
+
+Everything you need is ready!
+Questions? Check INTEGRATION_GUIDE.md first.
+
+================================================================================

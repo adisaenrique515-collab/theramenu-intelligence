@@ -1,0 +1,8 @@
+{
+  "version": "0.1.0",
+  "note": "Illustrative per-meal budgets. Set patient-specific values with clinical oversight.",
+  "budgets": {
+    "sodium_mg_per_meal": 600,
+    "carbs_g_per_meal": 60
+  }
+}

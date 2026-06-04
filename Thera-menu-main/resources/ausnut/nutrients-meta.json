@@ -1,0 +1,569 @@
+[
+  {
+    "Energy": "Energy without dietary fibre",
+    "Unnamed: 1": "kilojoules (kJ)",
+    "Unnamed: 2": "ENERC",
+    "Unnamed: 3": "ENERC",
+    "Unnamed: 4": "Protein *17 + Fat *37 + Total sugars *16 + Starch *17 + Other available carbohydrates (Dextrin + Maltodextrin + Raffinose + stachyose + Other undifferentiated oligosaccharides + Glycogen) *17 +  Alcohol *29 + sorbitol/mannitol/glycerol *16 + maltitol* 13 + citric/malic/quinic acids *10 + lactic/acetic acids *15",
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Energy with dietary fibre",
+    "Unnamed: 1": "kilojoules (kJ)",
+    "Unnamed: 2": null,
+    "Unnamed: 3": "ENERC1",
+    "Unnamed: 4": "Protein *17 + Fat *37 + Total sugars *16 + Starch *17 + Other available carbohydrates (Dextrin + Maltodextrin + Raffinose + stachyose + Other undifferentiated oligosaccharides + Glycogen) *17 +  Alcohol *29 + sorbitol/mannitol/glycerol *16 + maltitol* 13 + citric/malic/quinic acids *10 + lactic/acetic acids *15 + Dietary fibre *8 + Resistent starch *8 + Polydextrose *5",
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Proximate components",
+    "Unnamed: 1": null,
+    "Unnamed: 2": null,
+    "Unnamed: 3": null,
+    "Unnamed: 4": null,
+    "Unnamed: 5": "Other constituents may be present in some foods and have been taken into account in the estimation of energy content, but are not reported individually in AUSNUT 2023. These components include organic acids (such as acetic, lactic and citric acids), sugar alcohols (including glycerol and sorbitol) and unavailable carbohydrates (including resistant starch for legumes). ",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Moisture",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "WATER",
+    "Unnamed: 3": "WATER",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Protein",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "PROT",
+    "Unnamed: 3": "PROCNT",
+    "Unnamed: 4": "Nitrogen * nitrogen factor",
+    "Unnamed: 5": "Choice of conversion factor for foods with mixed protein sources will influence reported protein content. Factors used in these calculations are provided in the AUSNUT 2023 Food Details File.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Total fat",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "FAT",
+    "Unnamed: 3": "FAT",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Available carbohydrate, without sugar alcohols",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "CHOAVL",
+    "Unnamed: 3": "CHOAVL",
+    "Unnamed: 4": "Fructose + Glucose + Sucrose + Lactose + Maltose + Galactose + Maltotriose + Starch + Other available carbohydrates (glycogen + raffinose + stachyose + Dextrins + Maltodextrins + other undifferentiated oligosaccharides) ",
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Available carbohydrate, with sugar alcohols",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": null,
+    "Unnamed: 3": null,
+    "Unnamed: 4": "Fructose + Glucose + Sucrose + Lactose + Maltose + Galactose + Maltotriose + Starch + Other available carbohydrates (glycogen + raffinose + stachyose + Dextrins + Maltodextrins + other undifferentiated oligosaccharides) + Sugar Alcohols (sorbitol + maltitol + mannitol + glycerol)",
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Starch",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "STARCH",
+    "Unnamed: 3": "STARCH",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Total sugars",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "SUGAR",
+    "Unnamed: 3": "SUGAR",
+    "Unnamed: 4": "Fructose + Glucose + Sucrose + Maltose + Lactose + Galactose",
+    "Unnamed: 5": "The total sugar values are generally calculated using values for individual sugars, however where these were not available a total sugar value has been imputed.\n\nThe total sugars value does not distinguish between naturally occurring and added sugars.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Added sugars",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "SUGAD",
+    "Unnamed: 3": null,
+    "Unnamed: 4": null,
+    "Unnamed: 5": "Added sugars is defined for use in the National Nutrition and Physical Activity Study based on clause 1 of Standard 1.1.2 of the Food Standards Code:\n\n“Sugars means -\n    a)  hexose monosaccharides and disaccharides, including dextrose, fructose, sucrose and lactose; or\n    b)  starch hydrolysate; or\n    c)  glucose syrups, maltodextrin and similar products; or\n    d)  products derived at a sugar refinery, including brown sugar and molasses; or\n    e)  icing sugar; or\n    f)   invert sugar; or\n    g)  fruit sugar syrup; derived from any source,\nbut does not include -\n    h)  malt or malt extracts; or\n    i)   sorbitol, mannitol, glycerol, xylitol, polydextrose, isomalt, maltitol, maltitol syrup or lactitol.”\n\nAlthough the definition in Standard 1.1.2 indicates that 'sugars' includes maltodextrin and similar products, these ingredients have not been captured in the components included in the added sugars amount in the dataset. This decision was made to maintain consistency with the definition of sugars used in nutrition labelling and health claims standards in the Code and with international food composition database practice where total sugars has been defined as being only mono- and di-saccharides. It is also consistent with the definition of sugars used in the reporting of total sugars intake in the NNPAS. Honey, fruit juices and fruit juice concentrates were not included in this Standard and as such were not considered 'added sugars' under this definition.",
+    "Unnamed: 6": " "
+  },
+  {
+    "Energy": "Free sugars",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": null,
+    "Unnamed: 3": null,
+    "Unnamed: 4": null,
+    "Unnamed: 5": "Free sugars is defined for use in the National Nutrition and Physical Activity Study based on the WHO definition provided as part of their work on diet, nutrition and the prevention of chronic diseases:\n\n“Free sugars include monosaccharides and disaccharides added to foods and beverages by the manufacturer, cook or consumer, and sugars naturally present in honey, syrups, fruit juices and fruit juice concentrates”.\n\nThis definition includes honey, fruit juices and fruit juice concentrates. The only forms of sugar not included in the WHO definition of free sugars are intrinsic sugars and milk sugars. Intrinsic sugars is defined by the WHO as the sugars incorporated in the structure of intact fruit and vegetables. Milk sugars are the natural sugars present in milk. ",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Dietary fibre",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "FIBTG",
+    "Unnamed: 3": "FIBTG",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "In some cases the reported values may underestimate true levels in some foods that contain resistant starch. However the data available on resistant starch levels in Australian foods was not sufficient to allow all dietary fibre values to be updated.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Alcohol",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "ALC",
+    "Unnamed: 3": "ALC",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Ash",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "ASH",
+    "Unnamed: 3": "ASH",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "This component is not reported by the ABS, but is used by FSANZ to undertake data validation and sum of proximate checks. ",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Fatty acid components",
+    "Unnamed: 1": null,
+    "Unnamed: 2": null,
+    "Unnamed: 3": null,
+    "Unnamed: 4": "Levels of individual fatty acids are calculated from analysis of the percentage of that fatty acid as a total of all fatty acids: \nFatty acid (g) = Fatty acid (% of total fatty acids/100)*fat content (g)*fat factor.",
+    "Unnamed: 5": "Choice of fat factor will influence reported fatty acid content. Factors used are provided in the AUSNUT 2023 Food Details File.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Total saturated fat",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "FASAT",
+    "Unnamed: 3": "FASAT",
+    "Unnamed: 4": "C4:0 + C6:0+ C8:0 + C10:0 + C11:0 + C12:0 + C13:0 + C14:0 + C15:0 + C16:0 + C17:0+ C18:0 + C19:0 + C20:0 + C21:0 + C22:0 + C23:0 + C24:0",
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Total monounsaturated fat",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "FAMS",
+    "Unnamed: 3": "FAMS",
+    "Unnamed: 4": "Cis isomers of C10:1 + C14:1 + C15:1 +C16:1 + C17:1 + C18:1 + C20:1 + 22:1 + C24:1 + any additional undifferentiated monounsaturated fatty acids",
+    "Unnamed: 5": "Where fatty acids have been able to be separated into cis and trans isomers, only cis isomers are included in the total monounsaturated fatty acid value. In older analyses where cis and trans isomers were not separated, the sum of monounsaturates may have been slightly reduced to account for the estimated amount of trans-isomers present.\n\nZero values may have been imputed where a food contains a total fat content of less than 0.5 g/100 g. ",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Total polyunsaturated fat",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "FAPU",
+    "Unnamed: 3": "FAPU",
+    "Unnamed: 4": "Cis isomers of C12:2 + C16:2ω4 + C16:3 + C18:2ω6 + C18:3ω3, C18:3ω4 + C18:3ω6 + C18:4ω1 + C18:4ω3 + C20:2ω6 + C20:3ω3 + C20:3ω6 + C20:4ω3 + C20:4ω6 + C20:5ω3 + C22:2ω6 + C22:4ω6 + C22:5ω3 or ω6 + C22:6ω3 + any additional undifferentiated polyunsaturated fatty acids",
+    "Unnamed: 5": "Where fatty acids have been able to be separated into cis and trans isomers, only cis isomers are included in the total polyunsaturated fatty acid value. In older analyses where cis and trans isomers were not separated, the sum of polyunsaturates may have been slightly reduced to account for the estimated amount of trans-isomers present.\n\nZero values may have been imputed where a food contains a fat content of less than 0.5 g/100 g. ",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Linoleic acid (C18:2w6)",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "F18D2N6",
+    "Unnamed: 3": "F18D2N6",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "In newer analyses, trans and conjugated isomers will not be included in the value reported. In older analyses, different isomers may not have been separated and therefore may slightly overestimate linoleic acid.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Alpha linolenic acid (C18:3w3)",
+    "Unnamed: 1": "grams (g)",
+    "Unnamed: 2": "F18D3N3",
+    "Unnamed: 3": "F18D3N3",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "In newer analyses, trans and conjugated isomers will not be included in the value reported. In older analyses, different isomers may not have been separated and therefore may slightly overestimate levels of linoleic acid.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Eicosapentaenoic acid (EPA) (C20:5w3)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "F20D5N3",
+    "Unnamed: 3": "F20D5N3",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "This nutrient is not reported by the ABS, but is used in the calculation of total long chain omega 3 fatty acids by FSANZ",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Docosapentaenoic acid (DPA) (C22:5w3)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "F22D5N3",
+    "Unnamed: 3": "F22D5N3",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "This nutrient is not reported by the ABS, but is used in the calculation of total long chain omega 3 fatty acids by FSANZ",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Docosahexaenoic acid (DHA) (C22:6w3)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "F22D6N3",
+    "Unnamed: 3": "F22D6N3",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "This nutrient is not reported by the ABS, but is used in the calculation of total long chain omega 3 fatty acids by FSANZ",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Total long chain omega 3 fatty acids",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "FAPUN3LC",
+    "Unnamed: 3": "FALCPUN3",
+    "Unnamed: 4": "Eicosapentaenoic acid + Docosapentaenoic acid + Docosahexaenoic acid",
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Total trans fatty acids",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "FATRN",
+    "Unnamed: 3": "FATRN",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Vitamin components",
+    "Unnamed: 1": null,
+    "Unnamed: 2": null,
+    "Unnamed: 3": null,
+    "Unnamed: 4": null,
+    "Unnamed: 5": "Label data were used to assign a vitamin concentration for many fortified foods. Values for added vitamins declared on labels may underestimate actual values as extra nutrient may be added to ensure the declared levels, at a minimum, are achieved throughout the life of the product",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Preformed vitamin A (retinol)",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "RETOL",
+    "Unnamed: 3": "RETOL",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Beta-carotene",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "CARTB",
+    "Unnamed: 3": "CARTB",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "This nutrient is not reported by the ABS, but is used in the calculation of beta-carotene equivalents and vitamin A retinol equivalents by FSANZ.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Pro vitamin A (beta-carotene equivalents)",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "CARTBEQ",
+    "Unnamed: 3": "CARTBEQ",
+    "Unnamed: 4": "Beta-carotene + (Alpha-carotene* 0.5) + (Cryptoxanthin * 0.5)",
+    "Unnamed: 5": "For many foods only beta-carotene values were available.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Vitamin A retinol equivalents",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "VITA",
+    "Unnamed: 3": "VITA",
+    "Unnamed: 4": "Retinol + (Beta-carotene/6) + (alpha-carotene/12) + (cryptoxanthin/12) ",
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Thiamin (B1)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "THIA",
+    "Unnamed: 3": "THIA",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Riboflavin (B2)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "RIBF",
+    "Unnamed: 3": "RIBF",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Niacin (B3)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "NIA",
+    "Unnamed: 3": "NIA",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "This nutrient is not reported by the ABS, but is used in the calculation of niacin derived equivalents by FSANZ.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Niacin derived equivalents",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "NIAEQ",
+    "Unnamed: 3": "NIAEQ",
+    "Unnamed: 4": "Niacin + Niacin derived from tryptophan",
+    "Unnamed: 5": "The amount of niacin able to be formed in the body from the amino acid tryptophan is estimated as:\n\nNiacin derived from tryptophan (mg) =  tryptophan (mg)*0.017 ",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Folate, natural ",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "FOLFD",
+    "Unnamed: 3": "FOLFD",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Folic acid",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "FOLAC",
+    "Unnamed: 3": "FOLAC",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Total folates",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "FOL",
+    "Unnamed: 3": "FOL",
+    "Unnamed: 4": "Natural Folate + Folic acid",
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Dietary folate equivalents",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "FOLDFE",
+    "Unnamed: 3": "FOLDFE",
+    "Unnamed: 4": "Natural folate + (Folic acid*1.67)",
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Pyridoxine (B6)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "VITB6A",
+    "Unnamed: 3": "VITB6A",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Cobalamin (B12)",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "VITB12",
+    "Unnamed: 3": "VITB12",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Vitamin C",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "VITC",
+    "Unnamed: 3": "VITC",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Cholecalciferol (D3)",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "CHOCAL",
+    "Unnamed: 3": "CHOCAL",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "This nutrient is not reported by the ABS, but is used in the calculation of vitamin D3 equivalents by FSANZ.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Ergocalciferol (D2)",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "ERGCAL",
+    "Unnamed: 3": "ERGCAL",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "This nutrient is not reported by the ABS, but is used in the calculation of vitamin D3 equivalents by FSANZ.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "25-hydroxy cholecalciferol (25-OH D3)",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "CHOCALOH",
+    "Unnamed: 3": "CHOCALOH",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "This nutrient is not reported by the ABS, but is used in the calculation of vitamin D3 equivalents by FSANZ.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "25-hydroxy ergocalciferol (25-OH D2)",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "ERGCALOH",
+    "Unnamed: 3": "ERGCALOH",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "This nutrient is not reported by the ABS, but is used in the calculation of vitamin D3 equivalents by FSANZ.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Vitamin D3 equivalents",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "VITDEQ",
+    "Unnamed: 3": "VITDEQ",
+    "Unnamed: 4": "Cholecalciferol + Ergocalciferol + (25-hydroxy vitamin D* 5)",
+    "Unnamed: 5": "Total vitamin D activity of a food.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Alpha tocopherol",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "TOCPHA",
+    "Unnamed: 3": "TOCPHA",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "This nutrient is not reported by the ABS, but is used in the calculation of vitamin E by FSANZ.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Vitamin E",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "VITE",
+    "Unnamed: 3": "VITE",
+    "Unnamed: 4": "Alpha tocopherol + (Beta-tocopherol/2) + (Gamma-tocopherol/10)",
+    "Unnamed: 5": "For many foods, only values for alpha tocopherol were available.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Mineral components",
+    "Unnamed: 1": null,
+    "Unnamed: 2": null,
+    "Unnamed: 3": null,
+    "Unnamed: 4": null,
+    "Unnamed: 5": "Label data were used to assign a mineral concentration for many fortified foods. Values for added minerals declared on labels may underestimate actual values as extra nutrient may be added to ensure the declared levels, at a minimum, are achieved throughout the life of the product.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Calcium (Ca)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "CA",
+    "Unnamed: 3": "CA",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Iodine (I)",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "ID",
+    "Unnamed: 3": "ID",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "Iodine was assumed to be present in almost all foods reported in AUSNUT 2023. However, for many foods including widely consumed foods such as fruit and vegetables, laboratories have reported iodine concentrations as being below the LOR. As an element present in the environment, it can reasonably be expected that iodine will be present in almost all foods even though it may not be possible to quantify levels. Therefore in almost all cases where laboratories were not able to quantify iodine levels, a value equivalent to half the LOR (0.5 ug/100 g) was assigned. This approach was also used in AUSNUT 2011-13.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Iron (Fe)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "FE",
+    "Unnamed: 3": "FE",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Magnesium (Mg)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "MG",
+    "Unnamed: 3": "MG",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Phosphorus (P)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "P",
+    "Unnamed: 3": "P",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Potassium (K)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "K",
+    "Unnamed: 3": "K",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Selenium (Se)",
+    "Unnamed: 1": "micrograms (µg)",
+    "Unnamed: 2": "SE",
+    "Unnamed: 3": "SE",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "Selenium was assumed to be present in almost all foods reported in AUSNUT 2023. However, for many foods including widely consumed foods such as fruit and vegetables, laboratories have reported selenium concentrations as being below the LOR. As an element present in the environment, it can reasonably be expected that selenium will be present in almost all foods even though it may not be possible to quantify levels. Therefore in almost all cases where laboratories were not able to quantify selenium levels, a value equivalent to half the LOR (0.5 ug/100 g) was assigned. This approach was also used in AUSNUT 2011-13.",
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Sodium (Na)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": null,
+    "Unnamed: 3": null,
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Zinc (Zn)",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "ZN",
+    "Unnamed: 3": "ZN",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Other components",
+    "Unnamed: 1": null,
+    "Unnamed: 2": null,
+    "Unnamed: 3": null,
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Caffeine",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "CAFFN",
+    "Unnamed: 3": "CAFFN",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Cholesterol",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "CHOLE",
+    "Unnamed: 3": "CHOLE",
+    "Unnamed: 4": null,
+    "Unnamed: 5": null,
+    "Unnamed: 6": null
+  },
+  {
+    "Energy": "Tryptophan",
+    "Unnamed: 1": "milligrams (mg)",
+    "Unnamed: 2": "TRP",
+    "Unnamed: 3": "TRP",
+    "Unnamed: 4": null,
+    "Unnamed: 5": "This nutrient is not reported by the ABS, but is used in the calculation of niacin derived from tryptophan by FSANZ which feeds into the calculation of niacin derived equivalents.",
+    "Unnamed: 6": null
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "name": "RaAS cogno costing",
+  "description": "Transform standard recipes into professional Synthesis Reports or SOP Spreadsheets using advanced AI vision analysis.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 23,
+    "name": "beef",
+    "category": "protein",
+    "allergen_flag": 0
+  },
+  {
+    "id": 1,
+    "name": "chicken",
+    "category": "protein",
+    "allergen_flag": 0
+  },
+  {
+    "id": 181,
+    "name": "egg",
+    "category": "protein",
+    "allergen_flag": 1
+  },
+  {
+    "id": 839,
+    "name": "goat",
+    "category": "protein",
+    "allergen_flag": 0
+  },
+  {
+    "id": 25,
+    "name": "lamb",
+    "category": "protein",
+    "allergen_flag": 0
+  },
+  {
+    "id": 26,
+    "name": "pork",
+    "category": "protein",
+    "allergen_flag": 0
+  },
+  {
+    "id": 183,
+    "name": "seafood",
+    "category": "protein",
+    "allergen_flag": 0
+  },
+  {
+    "id": 184,
+    "name": "vegetarian",
+    "category": "protein",
+    "allergen_flag": 0
+  },
+  {
+    "id": 591,
+    "name": "chutney",
+    "category": "sauce_or_marinade",
+    "allergen_flag": 0
+  },
+  {
+    "id": 193,
+    "name": "curry",
+    "category": "sauce_or_marinade",
+    "allergen_flag": 0
+  }
+]

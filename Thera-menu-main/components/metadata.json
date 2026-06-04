@@ -1,0 +1,7 @@
+{
+  "name": "TheraMenu: Hospital Dietary Intelligence",
+  "description": "A world-class clinical nutrition platform that transforms standard menus into customized therapeutic meal plans based on patient diagnoses, adhering to hospital menus medical catering standards.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

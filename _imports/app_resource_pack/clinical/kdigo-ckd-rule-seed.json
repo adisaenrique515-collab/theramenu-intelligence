@@ -1,0 +1,54 @@
+{
+  "sourceDocument": "kidney clinical practice guideline.pdf",
+  "sourceFramework": "KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease",
+  "resourceType": "clinicalRuleSeed",
+  "diagnosisCode": "CKD_G3_G5_ADULT",
+  "rules": {
+    "dietPattern": {
+      "recommendationType": "practice_point",
+      "summary": "Advise healthy and diverse diets with higher consumption of plant-based foods compared to animal-based foods and lower consumption of ultra-processed foods."
+    },
+    "monitoredNutrients": {
+      "recommendationType": "practice_point",
+      "summary": "Dietary adaptations should cover sodium, phosphorus, potassium, and protein and be tailored to individual needs, CKD severity, and comorbid conditions.",
+      "trackedNutrients": [
+        "sodiumMg",
+        "phosphorusMg",
+        "potassiumMg",
+        "proteinG"
+      ]
+    },
+    "proteinIntake": {
+      "recommendationType": "recommendation_2C",
+      "targetGPerKgPerDay": 0.8,
+      "population": "Adults with CKD G3-G5"
+    },
+    "avoidHighProtein": {
+      "recommendationType": "practice_point",
+      "avoidAboveGPerKgPerDay": 1.3
+    },
+    "sodiumIntake": {
+      "recommendationType": "recommendation_2C",
+      "maxSodiumGPerDay": 2.0,
+      "maxSodiumMmolPerDay": 90,
+      "equivalentSaltGPerDay": 5.0
+    },
+    "notes": [
+      "Do not prescribe low or very low protein diets in metabolically unstable people with CKD.",
+      "In older adults with frailty or sarcopenia, consider higher protein and calorie targets after individual assessment.",
+      "For children with CKD, do not restrict protein because of growth risk."
+    ]
+  },
+  "appUse": {
+    "useFor": [
+      "daily nutrient targets",
+      "food ranking by monitored nutrients",
+      "clinician-facing explanation panel"
+    ],
+    "notDirectlyEncoded": [
+      "food-level hard contraindications",
+      "dialysis-specific rules",
+      "patient-specific exceptions"
+    ]
+  }
+}

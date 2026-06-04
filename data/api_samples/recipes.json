@@ -1,0 +1,37 @@
+[
+  {
+    "id": "rcp_a2fbbdc77d29",
+    "title": "Pork, Beef & Lamb, The Woks of Life",
+    "cuisine_family": "Chinese / Wok; American BBQ",
+    "dish_category": "Hot Main",
+    "commercial_deployability_score": 25
+  },
+  {
+    "id": "rcp_e84214caa660",
+    "title": "Pork, Beef & Lamb",
+    "cuisine_family": "Chinese / Wok; American BBQ",
+    "dish_category": "Hot Main",
+    "commercial_deployability_score": 25
+  },
+  {
+    "id": "rcp_97640e2861b0",
+    "title": "Char Siu Roast Pork",
+    "cuisine_family": "Chinese / Wok; American BBQ",
+    "dish_category": "Hot Main",
+    "commercial_deployability_score": 25
+  },
+  {
+    "id": "rcp_d4e8e9d5109b",
+    "title": "Hong Kong Beef Brisket in Clear Broth",
+    "cuisine_family": "Chinese / Wok; American BBQ",
+    "dish_category": "Wet Main / Bowl",
+    "commercial_deployability_score": 25
+  },
+  {
+    "id": "rcp_2c0eab0acaf7",
+    "title": "Cantonese Roast Pork Belly (Siu Yuk)",
+    "cuisine_family": "Chinese / Wok; American BBQ",
+    "dish_category": "Hot Main",
+    "commercial_deployability_score": 25
+  }
+]

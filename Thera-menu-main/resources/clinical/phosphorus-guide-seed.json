@@ -1,0 +1,75 @@
+{
+  "sourceDocument": "Phosphorus Food Guide 090419 + NephCure Low Phosphorus Diet Guide 2024",
+  "sourceFramework": "Renal patient education / low phosphorus diet guidance",
+  "resourceType": "phosphorus_management_seed",
+  "diagnosisCode": "RENAL_PHOSPHORUS",
+  "rules": {
+    "dailyAllowanceMg": {
+      "min": 800,
+      "max": 1000
+    },
+    "lowPhosphorusPerServingMgMax": 100,
+    "mediumPhosphorusPerServingMgMax": 199,
+    "highPhosphorusPerServingMgMin": 200,
+    "highPhosphorusFoodGroups": [
+      "milk",
+      "cheese",
+      "yogurt",
+      "ice cream",
+      "pudding",
+      "beans",
+      "lentils",
+      "soybeans",
+      "nuts",
+      "seeds",
+      "bran cereals",
+      "oatmeal",
+      "whole grain products",
+      "dark soda",
+      "cocoa",
+      "chocolate drinks",
+      "bottled iced tea"
+    ],
+    "lowerPhosphorusFoodGroups": [
+      "fresh fruits",
+      "fresh vegetables",
+      "white bread",
+      "non-wheat crackers",
+      "white pasta",
+      "popcorn",
+      "corn cereal",
+      "rice cereal",
+      "white rice",
+      "fruit juices",
+      "light colored soda",
+      "tea",
+      "coffee without dairy",
+      "egg"
+    ],
+    "ingredientLabelWarnings": [
+      "phosphorus",
+      "phosphate",
+      "phosphoric",
+      "pyrophosphate",
+      "polyphosphate"
+    ],
+    "careNotes": [
+      "Prefer fresh foods over prepackaged foods with added phosphorus.",
+      "Check ingredient labels for PHOS terms.",
+      "Smaller portions of high-protein foods reduce phosphorus burden.",
+      "Discuss phosphate binders with the treating clinician when ordered."
+    ]
+  },
+  "appUse": {
+    "useFor": [
+      "renal phosphorus filtering",
+      "patient-facing low phosphorus guidance",
+      "ingredient label warnings",
+      "daily phosphorus target messaging"
+    ],
+    "notDirectlyEncoded": [
+      "phosphate binder prescribing",
+      "serum phosphorus treatment escalation"
+    ]
+  }
+}

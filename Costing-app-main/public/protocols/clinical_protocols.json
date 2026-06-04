@@ -1,0 +1,452 @@
+{
+  "version": "0.1.0",
+  "updated": "2026-04-07",
+  "about": "Core logic rule definitions used by TheraMenu Intelligence to audit and suggest transformations for meals. Values are defaults and must be adapted by a clinician for patient-specific care.",
+  "schema": {
+    "protocol": {
+      "id": "string",
+      "name": "string",
+      "category": "Allergy|Disease|Texture|Metabolic|Electrolyte|Other",
+      "triggers": [
+        "patient_flag"
+      ],
+      "rules": [
+        {
+          "id": "string",
+          "type": "numeric_threshold|contains_any|excludes_all|keyword_flag|texture_allow_list",
+          "subject": "meal_totals|ingredients|meal_meta",
+          "path": "dot.path or semantic",
+          "operator": "<=|>=|=|!=|includes|excludes",
+          "value": "number|string|[string]",
+          "severity": "info|warning|critical",
+          "message": "string",
+          "suggestion": "string"
+        }
+      ]
+    }
+  },
+  "protocols": [
+    {
+      "id": "allergy_peanut",
+      "name": "Allergy � Peanut",
+      "category": "Allergy",
+      "triggers": [
+        "allergy_peanut"
+      ],
+      "rules": [
+        {
+          "id": "peanut_present",
+          "type": "contains_any",
+          "subject": "ingredients",
+          "path": "ingredients[].name",
+          "operator": "includes",
+          "value": [
+            "peanut",
+            "peanut butter",
+            "groundnut"
+          ],
+          "severity": "critical",
+          "message": "Peanut or derivative present.",
+          "suggestion": "Remove peanut ingredients; substitute with roasted chickpea puree or seed butter if appropriate."
+        }
+      ]
+    },
+    {
+      "id": "allergy_treenut",
+      "name": "Allergy � Tree Nuts",
+      "category": "Allergy",
+      "triggers": [
+        "allergy_treenut"
+      ],
+      "rules": [
+        {
+          "id": "treenut_present",
+          "type": "contains_any",
+          "subject": "ingredients",
+          "path": "ingredients[].name",
+          "operator": "includes",
+          "value": [
+            "almond",
+            "walnut",
+            "pecan",
+            "cashew",
+            "pistachio",
+            "hazelnut",
+            "macadamia",
+            "brazil nut"
+          ],
+          "severity": "critical",
+          "message": "Tree nut present.",
+          "suggestion": "Remove nuts; use toasted seeds (if permitted) or crunchy legumes."
+        }
+      ]
+    },
+    {
+      "id": "allergy_milk",
+      "name": "Allergy � Milk",
+      "category": "Allergy",
+      "triggers": [
+        "allergy_milk"
+      ],
+      "rules": [
+        {
+          "id": "milk_present",
+          "type": "contains_any",
+          "subject": "ingredients",
+          "path": "ingredients[].name",
+          "operator": "includes",
+          "value": [
+            "milk",
+            "cheese",
+            "yoghurt",
+            "butter",
+            "cream",
+            "whey",
+            "casein"
+          ],
+          "severity": "critical",
+          "message": "Dairy ingredient present.",
+          "suggestion": "Replace with fortified plant-based alternatives (soy/oat) if clinically acceptable."
+        }
+      ]
+    },
+    {
+      "id": "celiac_gluten_free",
+      "name": "Celiac � Gluten Free",
+      "category": "Disease",
+      "triggers": [
+        "celiac"
+      ],
+      "rules": [
+        {
+          "id": "gluten_sources",
+          "type": "contains_any",
+          "subject": "ingredients",
+          "path": "ingredients[].name",
+          "operator": "includes",
+          "value": [
+            "wheat",
+            "barley",
+            "rye",
+            "malt",
+            "farro",
+            "spelt",
+            "bulgur",
+            "semolina",
+            "seitan"
+          ],
+          "severity": "critical",
+          "message": "Gluten source present.",
+          "suggestion": "Use gluten-free grains (rice, quinoa, corn, GF oats) and GF thickeners."
+        }
+      ]
+    },
+    {
+      "id": "cardiac_low_sodium",
+      "name": "Cardiac � Low Sodium (per meal budget)",
+      "category": "Disease",
+      "triggers": [
+        "htn",
+        "chf",
+        "low_sodium"
+      ],
+      "rules": [
+        {
+          "id": "sodium_threshold",
+          "type": "numeric_threshold",
+          "subject": "meal_totals",
+          "path": "totals.sodium_mg_per_portion",
+          "operator": "<=",
+          "value": 600,
+          "severity": "warning",
+          "message": "Sodium above target per portion.",
+          "suggestion": "Swap high-sodium items (stock, soy sauce, processed meats) and use herbs/acid for flavor."
+        }
+      ]
+    },
+    {
+      "id": "diabetes_carb_budget",
+      "name": "Diabetes � Carbohydrate Per Meal",
+      "category": "Metabolic",
+      "triggers": [
+        "t2d",
+        "t1d"
+      ],
+      "rules": [
+        {
+          "id": "carb_threshold",
+          "type": "numeric_threshold",
+          "subject": "meal_totals",
+          "path": "totals.carbs_g_per_portion",
+          "operator": "<=",
+          "value": 60,
+          "severity": "warning",
+          "message": "Carbohydrates exceed default meal budget.",
+          "suggestion": "Increase non-starchy vegetables; choose whole grains and adjust portion sizes."
+        }
+      ]
+    },
+    {
+      "id": "renal_k_p_phos_watch",
+      "name": "Renal � Monitor K/Phosphorus/Sodium",
+      "category": "Electrolyte",
+      "triggers": [
+        "ckd",
+        "renal"
+      ],
+      "rules": [
+        {
+          "id": "potassium_flag",
+          "type": "contains_any",
+          "subject": "ingredients",
+          "path": "ingredients[].name",
+          "operator": "includes",
+          "value": [
+            "banana",
+            "avocado",
+            "potato",
+            "tomato",
+            "spinach",
+            "beans",
+            "lentils"
+          ],
+          "severity": "warning",
+          "message": "High-potassium ingredient � confirm portion and suitability.",
+          "suggestion": "Use lower-K alternatives (e.g., berries, apples, zucchini) or leach potatoes."
+        },
+        {
+          "id": "phos_flag",
+          "type": "contains_any",
+          "subject": "ingredients",
+          "path": "ingredients[].name",
+          "operator": "includes",
+          "value": [
+            "cola",
+            "processed cheese",
+            "organ meat",
+            "seeds",
+            "nuts"
+          ],
+          "severity": "info",
+          "message": "Potential phosphorus load.",
+          "suggestion": "Prefer unprocessed meats, limit cola/processed cheeses."
+        },
+        {
+          "id": "sodium_warn",
+          "type": "numeric_threshold",
+          "subject": "meal_totals",
+          "path": "totals.sodium_mg_per_portion",
+          "operator": "<=",
+          "value": 600,
+          "severity": "warning",
+          "message": "Sodium above renal-friendly target.",
+          "suggestion": "Reduce processed/cured products and salty condiments."
+        }
+      ]
+    },
+    {
+      "id": "dysphagia_texture_pureed",
+      "name": "Dysphagia � Pureed Only",
+      "category": "Texture",
+      "triggers": [
+        "iddsi_lvl4"
+      ],
+      "rules": [
+        {
+          "id": "texture_allow",
+          "type": "texture_allow_list",
+          "subject": "meal_meta",
+          "path": "texture.level",
+          "operator": "=",
+          "value": "pureed",
+          "severity": "critical",
+          "message": "Item must be pureed texture.",
+          "suggestion": "Blend to uniform smooth consistency; avoid mixed textures."
+        }
+      ]
+    },
+    {
+      "id": "fodmap_low",
+      "name": "Low FODMAP � High-FODMAP Flags",
+      "category": "Disease",
+      "triggers": [
+        "ibs_fodmap"
+      ],
+      "rules": [
+        {
+          "id": "fodmap_flag",
+          "type": "contains_any",
+          "subject": "ingredients",
+          "path": "ingredients[].name",
+          "operator": "includes",
+          "value": [
+            "onion",
+            "garlic",
+            "wheat flour",
+            "honey",
+            "apple",
+            "pear",
+            "cauliflower"
+          ],
+          "severity": "info",
+          "message": "High-FODMAP ingredient flagged.",
+          "suggestion": "Use green parts of spring onion, garlic-infused oil, or approved alternatives."
+        }
+      ]
+    },
+    {
+      "id": "manual_2018clinicaldietmanual_pdf_sodium",
+      "name": "Manual-derived Sodium Budget (2018CLINICALDIETMANUAL.pdf)",
+      "category": "Disease",
+      "triggers": [
+        "low_sodium",
+        "htn",
+        "chf"
+      ],
+      "rules": [
+        {
+          "id": "sodium_threshold_manual",
+          "type": "numeric_threshold",
+          "subject": "meal_totals",
+          "path": "totals.sodium_mg_per_portion",
+          "operator": "<=",
+          "value": 167,
+          "severity": "warning",
+          "message": "Sodium exceeds ~167 mg/portion (derived from manual).",
+          "suggestion": "Reduce high-sodium ingredients and use herbs/acid for flavor."
+        }
+      ]
+    },
+    {
+      "id": "manual_2018clinicaldietmanual_pdf_renal_p",
+      "name": "Manual-derived Phosphorus Guidance (2018CLINICALDIETMANUAL.pdf)",
+      "category": "Electrolyte",
+      "triggers": [
+        "ckd",
+        "renal"
+      ],
+      "rules": [
+        {
+          "id": "p_flag_manual",
+          "type": "numeric_threshold",
+          "subject": "meal_totals",
+          "path": "totals.phosphorus_mg_per_portion",
+          "operator": "<=",
+          "value": 20000,
+          "severity": "info",
+          "message": "Phosphorus per portion exceeds ~20000 mg target.",
+          "suggestion": "Reduce processed cheeses/colas; prefer whole foods."
+        }
+      ]
+    },
+    {
+      "id": "manual_2018clinicaldietmanual_pdf_texture",
+      "name": "Manual-derived Texture (Pureed)",
+      "category": "Texture",
+      "triggers": [
+        "iddsi_lvl4"
+      ],
+      "rules": [
+        {
+          "id": "texture_pureed_manual",
+          "type": "texture_allow_list",
+          "subject": "meal_meta",
+          "path": "texture.level",
+          "operator": "=",
+          "value": "pureed",
+          "severity": "critical",
+          "message": "Item must be pureed texture.",
+          "suggestion": "Blend to smooth; avoid mixed textures."
+        }
+      ]
+    },
+    {
+      "id": "manual_tdm_pdf_sodium",
+      "name": "Manual-derived Sodium Budget (tdm.pdf)",
+      "category": "Disease",
+      "triggers": [
+        "low_sodium",
+        "htn",
+        "chf"
+      ],
+      "rules": [
+        {
+          "id": "sodium_threshold_manual",
+          "type": "numeric_threshold",
+          "subject": "meal_totals",
+          "path": "totals.sodium_mg_per_portion",
+          "operator": "<=",
+          "value": 100,
+          "severity": "warning",
+          "message": "Sodium exceeds ~100 mg/portion (derived from manual).",
+          "suggestion": "Reduce high-sodium ingredients and use herbs/acid for flavor."
+        }
+      ]
+    },
+    {
+      "id": "manual_tdm_pdf_renal_k",
+      "name": "Manual-derived Potassium Guidance (tdm.pdf)",
+      "category": "Electrolyte",
+      "triggers": [
+        "ckd",
+        "renal"
+      ],
+      "rules": [
+        {
+          "id": "k_flag_manual",
+          "type": "numeric_threshold",
+          "subject": "meal_totals",
+          "path": "totals.potassium_mg_per_portion",
+          "operator": "<=",
+          "value": 20333,
+          "severity": "warning",
+          "message": "Potassium per portion exceeds ~20333 mg target.",
+          "suggestion": "Prefer lower-K produce or adjust portions."
+        }
+      ]
+    },
+    {
+      "id": "manual_tdm_pdf_renal_p",
+      "name": "Manual-derived Phosphorus Guidance (tdm.pdf)",
+      "category": "Electrolyte",
+      "triggers": [
+        "ckd",
+        "renal"
+      ],
+      "rules": [
+        {
+          "id": "p_flag_manual",
+          "type": "numeric_threshold",
+          "subject": "meal_totals",
+          "path": "totals.phosphorus_mg_per_portion",
+          "operator": "<=",
+          "value": 100,
+          "severity": "info",
+          "message": "Phosphorus per portion exceeds ~100 mg target.",
+          "suggestion": "Reduce processed cheeses/colas; prefer whole foods."
+        }
+      ]
+    },
+    {
+      "id": "manual_tdm_pdf_texture",
+      "name": "Manual-derived Texture (Pureed)",
+      "category": "Texture",
+      "triggers": [
+        "iddsi_lvl4"
+      ],
+      "rules": [
+        {
+          "id": "texture_pureed_manual",
+          "type": "texture_allow_list",
+          "subject": "meal_meta",
+          "path": "texture.level",
+          "operator": "=",
+          "value": "pureed",
+          "severity": "critical",
+          "message": "Item must be pureed texture.",
+          "suggestion": "Blend to smooth; avoid mixed textures."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,567 @@
+{
+  "sourceDocument": "BFPD_csv_07132018.zip",
+  "sourceFramework": "USDA Branded Food Products Database (July 13, 2018 CSV release)",
+  "resourceType": "branded_foods_seed",
+  "generatedAt": "2026-04-08T06:32:01.059Z",
+  "dataset": {
+    "products": 239089,
+    "nutrientRows": 3231488,
+    "servingRows": 237910,
+    "productsWithServingAndTrackedNutrients": 206877,
+    "productsWithPhosphateAdditives": 41495
+  },
+  "ingredientLabelWarnings": [
+    "phosphate",
+    "phosphoric",
+    "pyrophosphate",
+    "polyphosphate",
+    "phosphorus"
+  ],
+  "topManufacturers": [
+    {
+      "name": "Wal-Mart Stores, Inc.",
+      "count": 3975
+    },
+    {
+      "name": "Target Stores",
+      "count": 3414
+    },
+    {
+      "name": "Meijer, Inc.",
+      "count": 3366
+    },
+    {
+      "name": "The Kroger Co.",
+      "count": 3026
+    },
+    {
+      "name": "Safeway, Inc.",
+      "count": 2631
+    },
+    {
+      "name": "Topco Associates, Inc.",
+      "count": 2527
+    },
+    {
+      "name": "Hy-Vee, Inc.",
+      "count": 2365
+    },
+    {
+      "name": "Supervalu, Inc.",
+      "count": 2340
+    },
+    {
+      "name": "GENERAL MILLS SALES INC.",
+      "count": 1954
+    },
+    {
+      "name": "Weis Markets, Inc.",
+      "count": 1946
+    }
+  ],
+  "renalSaferBrandedFoods": [
+    {
+      "ndbNo": "45360502",
+      "name": "ORGANIC SLICED STRAWBERRIES",
+      "manufacturer": "MEMBER'S MARK",
+      "serving": "140g (1.0 cup)",
+      "caloriesKcal": 50.4,
+      "proteinG": 1,
+      "fiberG": 2.9,
+      "sodiumMg": 0,
+      "potassiumMg": 0,
+      "phosphorusMg": 19.6,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45083647",
+      "name": "MATZO GRANOLA BREAKFAST & NOSH MAPLE NUT",
+      "manufacturer": "Foodman, LLC",
+      "serving": "52g (0.5 cup)",
+      "caloriesKcal": 250.1,
+      "proteinG": 4,
+      "fiberG": 3,
+      "sodiumMg": 0,
+      "potassiumMg": 110.2,
+      "phosphorusMg": 19.8,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45326179",
+      "name": "DATE BALLS",
+      "manufacturer": "SONIA'S ORGANICS",
+      "serving": "34g (2.0 BALLS)",
+      "caloriesKcal": 199.9,
+      "proteinG": 3,
+      "fiberG": 3,
+      "sodiumMg": 0,
+      "potassiumMg": 114.9,
+      "phosphorusMg": 20.1,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45360644",
+      "name": "TRIPLE BERRY BLEND",
+      "manufacturer": "MEMBER'S MARK",
+      "serving": "140g (1.0 cup)",
+      "caloriesKcal": 79.8,
+      "proteinG": 1,
+      "fiberG": 7,
+      "sodiumMg": 0,
+      "potassiumMg": 159.6,
+      "phosphorusMg": 29.4,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45362775",
+      "name": "PASTA FRESCA",
+      "manufacturer": "LE 5 STAGIONI",
+      "serving": "28g (1.0 ONZ)",
+      "caloriesKcal": 101.9,
+      "proteinG": 2.7,
+      "fiberG": 0.7,
+      "sodiumMg": 0.6,
+      "potassiumMg": 35,
+      "phosphorusMg": 30,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45021593",
+      "name": "MARIANI, PREMIUM BANANA CHIPS",
+      "manufacturer": "Mariani Packing Company",
+      "serving": "30g (0.33 cup)",
+      "caloriesKcal": 159.9,
+      "proteinG": 0,
+      "fiberG": 4,
+      "sodiumMg": 0,
+      "potassiumMg": 140.1,
+      "phosphorusMg": 20.1,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45329252",
+      "name": "100% NATURAL CALIFORNIA RAISINS",
+      "manufacturer": "Growers Marketing, LLC",
+      "serving": "14g (1.0 BOX)",
+      "caloriesKcal": 40,
+      "proteinG": 0,
+      "fiberG": 1,
+      "sodiumMg": 0,
+      "potassiumMg": 105,
+      "phosphorusMg": 20,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45097030",
+      "name": "LE PAIN DES FLEURS, 100% ORGANIC CHESTNUT CRISP BREAD, CHESTNUT",
+      "manufacturer": "LE PAIN DES FLEURS",
+      "serving": "16g (4.0 CRISPBREADS)",
+      "caloriesKcal": 60,
+      "proteinG": 1,
+      "fiberG": 1,
+      "sodiumMg": 40,
+      "potassiumMg": 0,
+      "phosphorusMg": 20,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45357113",
+      "name": "PURE & UNSWEETENED ORGANIC FRUIT PUREE",
+      "manufacturer": "Amafruits LLC",
+      "serving": "100g (1.0 PACK)",
+      "caloriesKcal": 90,
+      "proteinG": 2,
+      "fiberG": 4,
+      "sodiumMg": 10,
+      "potassiumMg": 160,
+      "phosphorusMg": 20,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45335481",
+      "name": "SUN DRIED & SLICED DAIKON RADISH",
+      "manufacturer": "Eden Foods, Inc.",
+      "serving": "14g (2.0 Tbsp)",
+      "caloriesKcal": 44.9,
+      "proteinG": 1,
+      "fiberG": 3,
+      "sodiumMg": 20,
+      "potassiumMg": 20,
+      "phosphorusMg": 40,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45089273",
+      "name": "ORGANIC CORN TORTILLAS",
+      "manufacturer": "Robert Berber & Sons, Inc.",
+      "serving": "33g (1.0 TORTILLA)",
+      "caloriesKcal": 70,
+      "proteinG": 2,
+      "fiberG": 1,
+      "sodiumMg": 0,
+      "potassiumMg": 50.2,
+      "phosphorusMg": 39.9,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45051311",
+      "name": "PREMIUM PITTED PRUNES",
+      "manufacturer": "Mariani Packing Company",
+      "serving": "40g (3.0 -4 PRUNES)",
+      "caloriesKcal": 100,
+      "proteinG": 1,
+      "fiberG": 3,
+      "sodiumMg": 0,
+      "potassiumMg": 180,
+      "phosphorusMg": 20,
+      "phosphateAdditives": []
+    }
+  ],
+  "diabetesSaferBrandedFoods": [
+    {
+      "ndbNo": "45372990",
+      "name": "ORGANIC BLACK BEAN SPAGHETTI",
+      "manufacturer": "BELLABONDONZA",
+      "serving": "56g (2.0 ONZ)",
+      "caloriesKcal": 179.8,
+      "proteinG": 25,
+      "fiberG": 12,
+      "sodiumMg": 2.2,
+      "potassiumMg": 0,
+      "phosphorusMg": 0,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45342402",
+      "name": "ORGANIC EDAMAME SPAGHETTI",
+      "manufacturer": "SEAPOINT FARMS",
+      "serving": "56g (0.25 BOX | ABOUT)",
+      "caloriesKcal": 199.9,
+      "proteinG": 24,
+      "fiberG": 12,
+      "sodiumMg": 0,
+      "potassiumMg": 1120,
+      "phosphorusMg": 0,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45342406",
+      "name": "ORGANIC EDAMAME FETTUCCINE",
+      "manufacturer": "SEAPOINT FARMS",
+      "serving": "56g (0.25 BOX | ABOUT)",
+      "caloriesKcal": 199.9,
+      "proteinG": 24,
+      "fiberG": 12,
+      "sodiumMg": 0,
+      "potassiumMg": 1120,
+      "phosphorusMg": 0,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45253738",
+      "name": "ORGANIC BLACK BEAN SPAGHETTI",
+      "manufacturer": "Ethical Foods SA",
+      "serving": "56g (2.0 ONZ)",
+      "caloriesKcal": 215,
+      "proteinG": 25,
+      "fiberG": 12,
+      "sodiumMg": 3.9,
+      "potassiumMg": 1266.7,
+      "phosphorusMg": 0,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45350210",
+      "name": "ORGANIC SOYBEAN SPAGHETTI",
+      "manufacturer": "Ethical Foods SA",
+      "serving": "56g (2.0 ONZ)",
+      "caloriesKcal": 210,
+      "proteinG": 25,
+      "fiberG": 11,
+      "sodiumMg": 2.2,
+      "potassiumMg": 1333.9,
+      "phosphorusMg": 0,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45284103",
+      "name": "ORGANIC EDAMAME SPAGHETTI",
+      "manufacturer": "Ethical Foods SA",
+      "serving": "56g (2.0 ONZ)",
+      "caloriesKcal": 210,
+      "proteinG": 25,
+      "fiberG": 11,
+      "sodiumMg": 2.8,
+      "potassiumMg": 1303.1,
+      "phosphorusMg": 0,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45332498",
+      "name": "ORGANIC HEMP PROTEIN HI-FIBER SUPERFOOD",
+      "manufacturer": "Nutiva, Inc.",
+      "serving": "30g (3.0 Tbsp)",
+      "caloriesKcal": 80.1,
+      "proteinG": 11,
+      "fiberG": 12,
+      "sodiumMg": 0,
+      "potassiumMg": 240,
+      "phosphorusMg": 0,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45332835",
+      "name": "HEMP PROTEIN ORGANIC SUPERFOOD",
+      "manufacturer": "Nutiva, Inc.",
+      "serving": "30g (3.0 Tbsp)",
+      "caloriesKcal": 80.1,
+      "proteinG": 11,
+      "fiberG": 12,
+      "sodiumMg": 0,
+      "potassiumMg": 240,
+      "phosphorusMg": 0,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45344750",
+      "name": "ORGANIC GREEN BEAN SPAGHETTI",
+      "manufacturer": "BELLABONDONZA",
+      "serving": "56g (2.0 ONZ)",
+      "caloriesKcal": 199.9,
+      "proteinG": 24,
+      "fiberG": 11,
+      "sodiumMg": 5,
+      "potassiumMg": 0,
+      "phosphorusMg": 0,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45253730",
+      "name": "ORGANIC EDAMAME & MUNG BEAN FETTUCCINE",
+      "manufacturer": "Ethical Foods SA",
+      "serving": "56g (2.0 ONZ)",
+      "caloriesKcal": 205,
+      "proteinG": 22,
+      "fiberG": 11,
+      "sodiumMg": 2.8,
+      "potassiumMg": 1266.7,
+      "phosphorusMg": 0,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45172473",
+      "name": "BLACK BEANS",
+      "manufacturer": "Safeway, Inc.",
+      "serving": "35g (0.25 cup)",
+      "caloriesKcal": 80.1,
+      "proteinG": 8,
+      "fiberG": 12,
+      "sodiumMg": 4.9,
+      "potassiumMg": 210,
+      "phosphorusMg": 0,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45176549",
+      "name": "ORGANIC BLACK BEANS",
+      "manufacturer": "Glencourt Inc.",
+      "serving": "35g (0.25 cup)",
+      "caloriesKcal": 80.1,
+      "proteinG": 8,
+      "fiberG": 12,
+      "sodiumMg": 4.9,
+      "potassiumMg": 209,
+      "phosphorusMg": 0,
+      "phosphateAdditives": []
+    }
+  ],
+  "phosphateAdditiveExamples": [
+    {
+      "ndbNo": "45353198",
+      "name": "CORN TORTILLAS",
+      "manufacturer": "LOS ALTOS",
+      "serving": "50g (2.0 TORTILLAS)",
+      "caloriesKcal": 130,
+      "proteinG": 3,
+      "fiberG": 2,
+      "sodiumMg": 50000,
+      "potassiumMg": 0,
+      "phosphorusMg": 0,
+      "phosphateAdditives": [
+        "phosphate"
+      ]
+    },
+    {
+      "ndbNo": "45053963",
+      "name": "SUGAR COOKIE",
+      "manufacturer": "Charlie's Specialties, Inc.",
+      "serving": "34g (1.0 COOKIE)",
+      "caloriesKcal": 160.1,
+      "proteinG": 1.5,
+      "fiberG": 1,
+      "sodiumMg": 15000.1,
+      "potassiumMg": 0,
+      "phosphorusMg": 0,
+      "phosphateAdditives": [
+        "phosphate"
+      ]
+    },
+    {
+      "ndbNo": "45345370",
+      "name": "HORCHATA NON DAIRY RICE DRINK",
+      "manufacturer": "LA SIESTA",
+      "serving": "226g (8.0 ONZ)",
+      "caloriesKcal": 165,
+      "proteinG": 0,
+      "fiberG": 0,
+      "sodiumMg": 14000.7,
+      "potassiumMg": 0,
+      "phosphorusMg": 0,
+      "phosphateAdditives": [
+        "phosphate"
+      ]
+    },
+    {
+      "ndbNo": "45154426",
+      "name": "GORILLY GOODS, RAW SEEDS & GREENS",
+      "manufacturer": "ReallyGoods, llc",
+      "serving": "26g (0.9 ONZ)",
+      "caloriesKcal": 145.1,
+      "proteinG": 8,
+      "fiberG": 2,
+      "sodiumMg": 190.1,
+      "potassiumMg": 0,
+      "phosphorusMg": 1400.1,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45084936",
+      "name": "FITNESS WHOLE FOOD BAR",
+      "manufacturer": "Caldo International Inc.",
+      "serving": "50g (1.0 BAR)",
+      "caloriesKcal": 195,
+      "proteinG": 10,
+      "fiberG": 5,
+      "sodiumMg": 65,
+      "potassiumMg": 0,
+      "phosphorusMg": 1000,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45084937",
+      "name": "WHOLE FOOD BAR",
+      "manufacturer": "Caldo International Inc.",
+      "serving": "50g (1.0 BAR)",
+      "caloriesKcal": 195,
+      "proteinG": 10,
+      "fiberG": 5,
+      "sodiumMg": 65,
+      "potassiumMg": 0,
+      "phosphorusMg": 1000,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45252965",
+      "name": "MARIE CALLENDER'S, HOME-STYLE BONELESS PORK",
+      "manufacturer": "Marie Callender's Retail Foods",
+      "serving": "408g (1.0 MEAL)",
+      "caloriesKcal": 579.4,
+      "proteinG": 28,
+      "fiberG": 8.2,
+      "sodiumMg": 1011.8,
+      "potassiumMg": 1268.9,
+      "phosphorusMg": 448.8,
+      "phosphateAdditives": [
+        "phosphate",
+        "pyrophosphate",
+        "polyphosphate"
+      ]
+    },
+    {
+      "ndbNo": "45204092",
+      "name": "ITALIAN SAUSAGE PIZZA SLIDER",
+      "manufacturer": "GLOBAL PERFORMANCE GROUP",
+      "serving": "122g (1.0 PACK)",
+      "caloriesKcal": 300.1,
+      "proteinG": 12,
+      "fiberG": 4,
+      "sodiumMg": 6640.5,
+      "potassiumMg": 0,
+      "phosphorusMg": 0,
+      "phosphateAdditives": [
+        "phosphoric"
+      ]
+    },
+    {
+      "ndbNo": "45258059",
+      "name": "SWEET CORN TAMALES",
+      "manufacturer": "Jump Start Software",
+      "serving": "142g (1.0 TAMALE)",
+      "caloriesKcal": 289.7,
+      "proteinG": 4,
+      "fiberG": 2,
+      "sodiumMg": 1170.1,
+      "potassiumMg": 0,
+      "phosphorusMg": 600.7,
+      "phosphateAdditives": []
+    },
+    {
+      "ndbNo": "45328572",
+      "name": "HIGH PROTEIN PANCAKE MIX",
+      "manufacturer": "Rexall Sundown, Inc.",
+      "serving": "57g (2.0 SCOOPS, MAKES ABOUT 3 PANCAKES)",
+      "caloriesKcal": 209.8,
+      "proteinG": 12,
+      "fiberG": 3,
+      "sodiumMg": 570,
+      "potassiumMg": 34.8,
+      "phosphorusMg": 600.2,
+      "phosphateAdditives": [
+        "phosphate"
+      ]
+    },
+    {
+      "ndbNo": "45335862",
+      "name": "ENGINEERED NUTRITION MEAL REPLACEMENT PROTEIN POWDER",
+      "manufacturer": "Rexall Sundown, Inc.",
+      "serving": "72g (1.0 PACKET)",
+      "caloriesKcal": 239.8,
+      "proteinG": 39,
+      "fiberG": 3,
+      "sodiumMg": 400.3,
+      "potassiumMg": 1159.9,
+      "phosphorusMg": 599.8,
+      "phosphateAdditives": [
+        "phosphate"
+      ]
+    },
+    {
+      "ndbNo": "45251778",
+      "name": "COUNTRY FRIED BEEF STEAK & GRAVY",
+      "manufacturer": "Marie Callender's Retail Foods",
+      "serving": "425g (1.0 MEAL)",
+      "caloriesKcal": 658.8,
+      "proteinG": 20,
+      "fiberG": 6.8,
+      "sodiumMg": 1219.8,
+      "potassiumMg": 1330.3,
+      "phosphorusMg": 450.5,
+      "phosphateAdditives": [
+        "phosphate",
+        "pyrophosphate"
+      ]
+    }
+  ],
+  "appUse": {
+    "useFor": [
+      "branded ingredient label screening",
+      "phosphate additive flagging",
+      "renal low-phosphorus branded shortlist examples",
+      "diabetes low-sodium higher-fiber branded shortlist examples"
+    ],
+    "notDirectlyEncoded": [
+      "meal-planner primary nutrient source replacement",
+      "cloud product lookup"
+    ]
+  }
+}

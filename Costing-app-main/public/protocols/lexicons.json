@@ -1,0 +1,17 @@
+{
+  "version": "0.1.0",
+  "allergens": {
+    "peanut": ["peanut","groundnut","satay"],
+    "tree_nut": ["almond","walnut","pecan","cashew","pistachio","hazelnut","macadamia","brazil"],
+    "milk": ["milk","cheese","butter","cream","yoghurt","whey","casein"],
+    "egg": ["egg","albumen","mayonnaise"],
+    "soy": ["soy","tofu","soy sauce","tempeh","edamame"],
+    "fish": ["salmon","tuna","cod","haddock","snapper","mackerel","anchovy"],
+    "shellfish": ["prawn","shrimp","crab","lobster","scallop","oyster","mussel"],
+    "sesame": ["sesame","tahini"]
+  },
+  "high_sodium_markers": ["soy sauce","stock cube","bouillon","ham","bacon","salami","pickled","brined","olives"],
+  "high_potassium_markers": ["banana","avocado","potato","tomato","spinach","beans","lentils","dried fruit"],
+  "high_phosphorus_markers": ["cola","processed cheese","organ meat","seeds","nuts"],
+  "fodmap_high": ["onion","garlic","wheat flour","honey","apple","pear","cauliflower","mushroom"]
+}

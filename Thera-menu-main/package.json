@@ -1,0 +1,33 @@
+{
+  "name": "theramenu:-hospital-dietary-intelligence",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node --experimental-strip-types server/index.ts",
+    "lint": "tsc --noEmit",
+    "smoke:offline": "node --experimental-strip-types scripts/offline-engine-smoke.ts",
+    "import:bfpd": "node --experimental-strip-types scripts/importBfpdSeed.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@tailwindcss/vite": "^4.0.0-alpha.33",
+    "html2pdf.js": "^0.14.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.0.0-alpha.33"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "pdf-parse": "^2.4.5",
+    "typescript": "~5.8.2",
+    "vite": "^5.4.21",
+    "xlsx": "^0.18.5"
+  }
+}

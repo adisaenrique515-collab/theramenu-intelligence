@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./Thera-menu-main
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - VITE_USDA_FDC_API_KEY=${VITE_USDA_FDC_API_KEY:-}
+      - VITE_USE_MOCK_DATA=${VITE_USE_MOCK_DATA:-false}
+    restart: unless-stopped
+    depends_on:
+      - api
+
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - api_data:/app/database
+    restart: unless-stopped
+
+volumes:
+  api_data:

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rcp_a2fbbdc77d29",
+    "title": "Pork, Beef & Lamb, The Woks of Life",
+    "dish_category": "Hot Main",
+    "commercial_deployability_score": 25
+  },
+  {
+    "id": "rcp_e84214caa660",
+    "title": "Pork, Beef & Lamb",
+    "dish_category": "Hot Main",
+    "commercial_deployability_score": 25
+  },
+  {
+    "id": "rcp_97640e2861b0",
+    "title": "Char Siu Roast Pork",
+    "dish_category": "Hot Main",
+    "commercial_deployability_score": 25
+  },
+  {
+    "id": "rcp_d4e8e9d5109b",
+    "title": "Hong Kong Beef Brisket in Clear Broth",
+    "dish_category": "Wet Main / Bowl",
+    "commercial_deployability_score": 25
+  },
+  {
+    "id": "rcp_2c0eab0acaf7",
+    "title": "Cantonese Roast Pork Belly (Siu Yuk)",
+    "dish_category": "Hot Main",
+    "commercial_deployability_score": 25
+  },
+  {
+    "id": "rcp_9bf48ca7c83a",
+    "title": "Black Pepper Beef (Steak Kow)",
+    "dish_category": "Hot Main",
+    "commercial_deployability_score": 25
+  },
+  {
+    "id": "rcp_a0c4b2c611f7",
+    "title": "Korean Cuisine Sauces & Spices",
+    "dish_category": "Sauce / Condiment",
+    "commercial_deployability_score": 23
+  },
+  {
+    "id": "rcp_d9fdf1646696",
+    "title": "Beef Meals",
+    "dish_category": "Hot Main",
+    "commercial_deployability_score": 23
+  },
+  {
+    "id": "rcp_907d18fce19f",
+    "title": "Jangjorim (Korean Beef Simmered in Soy Sauce)",
+    "dish_category": "Sauce / Condiment",
+    "commercial_deployability_score": 23
+  },
+  {
+    "id": "rcp_9e53f95bcb5d",
+    "title": "Korean Soy Beef Strips With Hard-Boiled Eggs (Jang Jorim)",
+    "dish_category": "Hot Main",
+    "commercial_deployability_score": 23
+  }
+]
