@@ -5,6 +5,7 @@ import { getOfflineClinicalOverview } from './offlineClinicalApi.ts';
 import { getResourcePackSummary } from './resourcePackApi.ts';
 import { refineWeeklyPlanWithClaude, chatWithClaudeDietitian, isClaudeConfigured } from './claudeRefinementApi.ts';
 import { enrichPlanWithUsdaFdcData, isUsdaConfigured } from './usdaEnrichmentApi.ts';
+import { savePlanAudit, updatePlanReview, getPlanHistory, getPlanById } from './planAuditDb.ts';
 import type { WeeklyTherapeuticPlan } from '../types.ts';
 
 async function readRequestBody(req: IncomingMessage): Promise<string> {
@@ -139,6 +140,58 @@ export async function handleInternalApiRequest(req: IncomingMessage, res: Server
         claude: { configured: isClaudeConfigured(), model: 'claude-sonnet-4-6' },
         usda:   { configured: isUsdaConfigured(), source: 'USDA FoodData Central (FDC)' },
       });
+      return true;
+    }
+
+    // ── Audit: save plan ────────────────────────────────────────────────────
+    if (req.url === '/api/internal/plans/save' && req.method === 'POST') {
+      const body = await readRequestBody(req);
+      let parsed: unknown;
+      try { parsed = body ? JSON.parse(body) : {}; }
+      catch { respondJson(res, 400, { message: 'Invalid JSON' }); return true; }
+      const { plan, patientData, stageReached, nrsRiskLevel, nrsScore } = parsed as Record<string, unknown>;
+      const id = savePlanAudit(
+        plan as WeeklyTherapeuticPlan,
+        (patientData ?? {}) as Record<string, unknown>,
+        (stageReached as 1 | 2 | 3) ?? 1,
+        nrsRiskLevel as 'LOW' | 'MODERATE' | 'HIGH' | undefined,
+        typeof nrsScore === 'number' ? nrsScore : undefined,
+      );
+      respondJson(res, 200, { id });
+      return true;
+    }
+
+    // ── Audit: plan history ─────────────────────────────────────────────────
+    if (req.url === '/api/internal/plans/history' && req.method === 'GET') {
+      respondJson(res, 200, getPlanHistory(100));
+      return true;
+    }
+
+    // ── Audit: get single plan ──────────────────────────────────────────────
+    const planByIdMatch = req.url.match(/^\/api\/internal\/plans\/([^/]+)$/) ;
+    if (planByIdMatch && req.method === 'GET') {
+      const record = getPlanById(planByIdMatch[1]);
+      if (!record) { respondJson(res, 404, { message: 'Plan not found' }); return true; }
+      respondJson(res, 200, record);
+      return true;
+    }
+
+    // ── Audit: submit dietitian review ──────────────────────────────────────
+    const reviewMatch = req.url.match(/^\/api\/internal\/plans\/([^/]+)\/review$/);
+    if (reviewMatch && req.method === 'PATCH') {
+      const body = await readRequestBody(req);
+      let parsed: unknown;
+      try { parsed = body ? JSON.parse(body) : {}; }
+      catch { respondJson(res, 400, { message: 'Invalid JSON' }); return true; }
+      const { status, reviewedBy, reviewerCredentials, reviewNotes } = parsed as Record<string, unknown>;
+      updatePlanReview(
+        reviewMatch[1],
+        status as 'APPROVED' | 'REJECTED' | 'PENDING_REVIEW' | 'SENT_TO_KITCHEN',
+        String(reviewedBy ?? ''),
+        String(reviewerCredentials ?? ''),
+        String(reviewNotes ?? ''),
+      );
+      respondJson(res, 200, { ok: true });
       return true;
     }
 

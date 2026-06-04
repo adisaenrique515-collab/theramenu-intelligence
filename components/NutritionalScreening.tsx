@@ -7,7 +7,11 @@ interface ScreeningResult {
   action: string;
 }
 
-const NutritionalScreening: React.FC = () => {
+interface NutritionalScreeningProps {
+  onScreeningComplete?: (score: number, risk: 'LOW' | 'MODERATE' | 'HIGH') => void;
+}
+
+const NutritionalScreening: React.FC<NutritionalScreeningProps> = ({ onScreeningComplete }) => {
   const [scores, setScores] = useState({
     nutritionalStatus: 0,
     severityOfIllness: 0,
@@ -91,9 +95,12 @@ const NutritionalScreening: React.FC = () => {
             </div>
           </div>
 
-          <button className="mt-8 w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-xl font-bold text-sm transition-all flex items-center justify-center space-x-2">
-            <i className="fas fa-file-medical"></i>
-            <span>Log to Patient Record</span>
+          <button
+            onClick={() => onScreeningComplete?.(result.score, result.risk)}
+            className="mt-8 w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-xl font-bold text-sm transition-all flex items-center justify-center space-x-2"
+          >
+            <i className="fas fa-check-circle"></i>
+            <span>Confirm & Apply to Next Plan</span>
           </button>
         </div>
       </div>
