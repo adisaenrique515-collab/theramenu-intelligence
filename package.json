@@ -11,7 +11,7 @@
     "lint": "tsc --noEmit",
     "smoke:offline": "node --experimental-strip-types scripts/offline-engine-smoke.ts",
     "import:bfpd": "node --experimental-strip-types scripts/importBfpdSeed.ts",
-    "test": "node --experimental-strip-types --test server/__tests__/nutrientUtils.test.ts"
+    "test": "node --experimental-strip-types --test server/__tests__/nutrientUtils.test.ts server/__tests__/clinicalProtocols.test.ts server/__tests__/eligibilityEngine.test.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
