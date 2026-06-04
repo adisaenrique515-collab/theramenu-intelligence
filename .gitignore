@@ -40,5 +40,16 @@ Thumbs.db
 .mcp.json
 .claude/
 
+# ── Project-level artifacts not part of the codebase ─────────────────────────
+_imports/
+niche_pack/
+prompts/
+data/
+scripts/
+Culinary_Monetization_Workspace/
+claude.ipynb
+OPEN_FOLDER.bat
+restaurant-booking-api/
+
 # ── Windows reserved filename (corrupted artifact) ───────────────────────────
 CON
