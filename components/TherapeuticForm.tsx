@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { DiagnosisType } from '../types';
 import CollapsibleSection from './CollapsibleSection';
+import { Badge, Button, Card, Input, Select } from './thera/ui';
 
 export interface PatientData {
   age: number;
@@ -187,7 +188,7 @@ const sdohFlags = [
 
 const sectionTitleClass = 'text-[10px] font-black text-slate-900 uppercase tracking-[0.2em] italic';
 const fieldLabelClass = 'block text-[8px] font-black text-slate-400 uppercase tracking-widest';
-const inputClass = 'w-full px-4 py-3 text-xs font-black border border-slate-200 rounded-lg bg-slate-50 focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/5 transition-all outline-none';
+const inputClass = 'bg-slate-50 text-xs font-black';
 
 const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }) => {
   const [selectedDiagnosis, setSelectedDiagnosis] = useState<DiagnosisType | ''>('');
@@ -232,7 +233,7 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
   };
 
   return (
-    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl transition-all hover:shadow-blue-900/5">
+    <Card className="overflow-hidden transition-all hover:shadow-blue-900/5">
       <div className="relative flex items-center justify-between overflow-hidden bg-slate-900 px-6 py-5">
         <div className="absolute left-0 top-0 h-1 w-full bg-blue-600"></div>
         <h2 className="flex items-center text-[10px] font-black uppercase tracking-[0.3em] text-white">
@@ -242,9 +243,7 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
         <div className="flex items-center space-x-3">
           <div className="flex flex-col items-end">
             <span className="font-mono text-[7px] uppercase tracking-widest text-slate-500">PHI Boundary</span>
-            <span className="flex items-center font-mono text-[8px] font-bold uppercase tracking-widest text-emerald-400">
-              <i className="fas fa-lock mr-1 text-[7px]"></i> LOCAL ONLY
-            </span>
+            <Badge tone="emerald">Local Only</Badge>
           </div>
         </div>
       </div>
@@ -261,7 +260,7 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
               <div key={field.key} className="space-y-1.5">
                 <label className={fieldLabelClass}>{field.label}</label>
                 <div className="relative">
-                  <input
+                  <Input
                     type="number"
                     value={patientData[field.key as 'age' | 'weightKg' | 'heightCm']}
                     onChange={(e) => updateNumericField(field.key as 'age' | 'weightKg' | 'heightCm', e.target.value)}
@@ -275,10 +274,10 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
             ))}
             <div className="space-y-1.5">
               <label className={fieldLabelClass}>Sex</label>
-              <select value={patientData.sex} onChange={(e) => setField('sex', e.target.value as PatientData['sex'])} className={inputClass}>
+              <Select value={patientData.sex} onChange={(e) => setField('sex', e.target.value as PatientData['sex'])} className={inputClass}>
                 <option value="male">MALE</option>
                 <option value="female">FEMALE</option>
-              </select>
+              </Select>
             </div>
           </div>
         </CollapsibleSection>
@@ -288,13 +287,13 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="space-y-1.5">
               <label className={fieldLabelClass}>IDDSI Texture Level</label>
-              <select value={patientData.textureLevel} onChange={(e) => setField('textureLevel', e.target.value as PatientData['textureLevel'])} className={inputClass}>
+              <Select value={patientData.textureLevel} onChange={(e) => setField('textureLevel', e.target.value as PatientData['textureLevel'])} className={inputClass}>
                 <option value="regular">REGULAR (LEVEL 7)</option>
                 <option value="soft">SOFT (LEVEL 6)</option>
                 <option value="minced">MINCED (LEVEL 5)</option>
                 <option value="pureed">PUREED (LEVEL 4)</option>
                 <option value="liquid">LIQUID (LEVEL 0-3)</option>
-              </select>
+              </Select>
             </div>
             <div className="space-y-1.5">
               <label className={fieldLabelClass}>Nutritional Risk Assessment</label>
@@ -325,21 +324,21 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
             <div className="space-y-1.5">
               <label className={fieldLabelClass}>eGFR</label>
               <div className="relative">
-                <input type="number" value={patientData.eGfr} onChange={(e) => updateNumericField('eGfr', e.target.value)} className={`${inputClass} pr-14`} />
+                <Input type="number" value={patientData.eGfr} onChange={(e) => updateNumericField('eGfr', e.target.value)} className={`${inputClass} pr-14`} />
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 font-mono text-[8px] font-bold uppercase text-slate-300">ml/min</span>
               </div>
             </div>
             <div className="space-y-1.5">
               <label className={fieldLabelClass}>ACR</label>
               <div className="relative">
-                <input type="number" value={patientData.acrMgG} onChange={(e) => updateNumericField('acrMgG', e.target.value)} className={`${inputClass} pr-14`} />
+                <Input type="number" value={patientData.acrMgG} onChange={(e) => updateNumericField('acrMgG', e.target.value)} className={`${inputClass} pr-14`} />
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 font-mono text-[8px] font-bold uppercase text-slate-300">mg/g</span>
               </div>
             </div>
             <div className="space-y-1.5">
               <label className={fieldLabelClass}>Serum Potassium</label>
               <div className="relative">
-                <input type="number" step="0.1" value={patientData.potassiumMmolL} onChange={(e) => updateNumericField('potassiumMmolL', e.target.value)} className={`${inputClass} pr-14`} />
+                <Input type="number" step="0.1" value={patientData.potassiumMmolL} onChange={(e) => updateNumericField('potassiumMmolL', e.target.value)} className={`${inputClass} pr-14`} />
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 font-mono text-[8px] font-bold uppercase text-slate-300">mmol/L</span>
               </div>
             </div>
@@ -393,58 +392,58 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
             <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
               <div className="space-y-1.5">
                 <label className={fieldLabelClass}>Diabetes Type</label>
-                <select value={patientData.diabetesType} onChange={(e) => setField('diabetesType', e.target.value as PatientData['diabetesType'])} className={inputClass}>
+                <Select value={patientData.diabetesType} onChange={(e) => setField('diabetesType', e.target.value as PatientData['diabetesType'])} className={inputClass}>
                   <option value="type1">TYPE 1</option>
                   <option value="type2">TYPE 2</option>
-                </select>
+                </Select>
               </div>
               <div className="space-y-1.5">
                 <label className={fieldLabelClass}>Years Since Diagnosis</label>
-                <input type="number" value={patientData.yearsSinceDiagnosis} onChange={(e) => updateNumericField('yearsSinceDiagnosis', e.target.value)} className={inputClass} />
+                <Input type="number" value={patientData.yearsSinceDiagnosis} onChange={(e) => updateNumericField('yearsSinceDiagnosis', e.target.value)} className={inputClass} />
               </div>
               <div className="space-y-1.5">
                 <label className={fieldLabelClass}>A1C %</label>
-                <input type="number" step="0.1" value={patientData.a1cPercent} onChange={(e) => updateNumericField('a1cPercent', e.target.value)} className={inputClass} />
+                <Input type="number" step="0.1" value={patientData.a1cPercent} onChange={(e) => updateNumericField('a1cPercent', e.target.value)} className={inputClass} />
               </div>
               <div className="space-y-1.5">
                 <label className={fieldLabelClass}>Fasting Hours</label>
-                <input type="number" value={patientData.fastingHours} onChange={(e) => updateNumericField('fastingHours', e.target.value)} className={inputClass} />
+                <Input type="number" value={patientData.fastingHours} onChange={(e) => updateNumericField('fastingHours', e.target.value)} className={inputClass} />
               </div>
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
               <div className="space-y-1.5">
                 <label className={fieldLabelClass}>eGFR Band</label>
-                <select value={patientData.egfrBand} onChange={(e) => setField('egfrBand', e.target.value as PatientData['egfrBand'])} className={inputClass}>
+                <Select value={patientData.egfrBand} onChange={(e) => setField('egfrBand', e.target.value as PatientData['egfrBand'])} className={inputClass}>
                   <option value="gte45">eGFR &gt;= 45</option>
                   <option value="30to45">eGFR 30-45</option>
                   <option value="lt30">eGFR &lt; 30</option>
-                </select>
+                </Select>
               </div>
               <div className="space-y-1.5">
                 <label className={fieldLabelClass}>Macrovascular Status</label>
-                <select value={patientData.macrovascularStatus} onChange={(e) => setField('macrovascularStatus', e.target.value as PatientData['macrovascularStatus'])} className={inputClass}>
+                <Select value={patientData.macrovascularStatus} onChange={(e) => setField('macrovascularStatus', e.target.value as PatientData['macrovascularStatus'])} className={inputClass}>
                   <option value="none">NONE</option>
                   <option value="stable">STABLE</option>
                   <option value="unstable">UNSTABLE</option>
-                </select>
+                </Select>
               </div>
               <div className="space-y-1.5">
                 <label className={fieldLabelClass}>Physical Labor</label>
-                <select value={patientData.physicalLabor} onChange={(e) => setField('physicalLabor', e.target.value as PatientData['physicalLabor'])} className={inputClass}>
+                <Select value={patientData.physicalLabor} onChange={(e) => setField('physicalLabor', e.target.value as PatientData['physicalLabor'])} className={inputClass}>
                   <option value="low">LOW</option>
                   <option value="moderate">MODERATE</option>
                   <option value="high">HIGH</option>
-                </select>
+                </Select>
               </div>
               <div className="space-y-1.5">
                 <label className={fieldLabelClass}>Eating Pattern</label>
-                <select value={patientData.eatingPattern} onChange={(e) => setField('eatingPattern', e.target.value as PatientData['eatingPattern'])} className={inputClass}>
+                <Select value={patientData.eatingPattern} onChange={(e) => setField('eatingPattern', e.target.value as PatientData['eatingPattern'])} className={inputClass}>
                   <option value="balanced">BALANCED</option>
                   <option value="mediterranean">MEDITERRANEAN</option>
                   <option value="low_carb">LOW CARB</option>
                   <option value="ketogenic">KETOGENIC</option>
-                </select>
+                </Select>
               </div>
             </div>
 
@@ -537,9 +536,10 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
           </div>
         </section>
 
-        <button
+        <Button
           type="submit"
           disabled={isLoading || !selectedDiagnosis}
+          variant="primary"
           className={`group flex w-full items-center justify-center space-x-4 rounded-xl py-5 text-xs font-black uppercase tracking-[0.3em] text-white transition-all ${
             isLoading ? 'cursor-not-allowed bg-slate-300' : 'bg-blue-600 shadow-2xl shadow-blue-900/40 active:scale-[0.98] hover:bg-blue-700'
           }`}
@@ -555,7 +555,7 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
               <span>Generate Offline Therapeutic Plan</span>
             </>
           )}
-        </button>
+        </Button>
       </form>
 
       <div className="flex items-center justify-between border-t border-slate-100 bg-slate-50 px-8 py-4">
@@ -574,7 +574,7 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
           <span className="font-mono text-[8px] font-black uppercase tracking-widest text-blue-600">Clinical Local v5.0</span>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
 
