@@ -9,7 +9,7 @@ import {
   History,
 } from "lucide-react";
 import type { TabKey } from "./Header";
-import type { GeneratedPlan } from "@/lib/types";
+import type { GeneratedPlan } from "./types";
 
 type Step = {
   key: string;

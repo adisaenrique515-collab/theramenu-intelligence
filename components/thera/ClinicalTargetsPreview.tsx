@@ -1,5 +1,5 @@
 import { Card, StateView } from "./ui";
-import type { CalcTargetsResponse } from "@/lib/api";
+import type { CalcTargetsResponse } from "./types";
 
 type Status = NonNullable<CalcTargetsResponse["approvalStatus"]>;
 

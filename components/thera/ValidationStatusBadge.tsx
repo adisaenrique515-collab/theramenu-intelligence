@@ -4,7 +4,7 @@ import {
   CheckCircle2,
   Loader2,
 } from "lucide-react";
-import type { PlanValidationStatus } from "@/lib/api";
+import type { PlanValidationStatus } from "./types";
 
 const STATUS: Record<
   PlanValidationStatus,

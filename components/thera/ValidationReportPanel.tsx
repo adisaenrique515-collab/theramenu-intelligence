@@ -11,7 +11,7 @@ import type {
   ValidatePlanResponse,
   ValidationIssue,
   ValidationSeverity,
-} from "@/lib/api";
+} from "./types";
 
 /**
  * Renders a backend ValidatePlanResponse. The component never derives,

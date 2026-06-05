@@ -1,5 +1,5 @@
 import { History } from "lucide-react";
-import type { AuditSummary } from "@/lib/api";
+import type { AuditSummary } from "./types";
 import { Card, StateView } from "./ui";
 
 /**

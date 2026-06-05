@@ -1,5 +1,4 @@
-import type { PlanMetadata } from "@/lib/api";
-import type { PlanReviewStatus } from "@/lib/types";
+import type { PlanMetadata, PlanReviewStatus } from "./types";
 import { Card } from "./ui";
 import { ProtocolVersionBadge } from "./ProtocolVersionBadge";
 import { FoodDatabaseVersionBadge } from "./FoodDatabaseVersionBadge";

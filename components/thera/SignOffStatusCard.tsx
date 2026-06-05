@@ -1,5 +1,5 @@
 import { CheckCircle2, Clock, FileEdit, XCircle } from "lucide-react";
-import type { PlanReviewStatus } from "@/lib/types";
+import type { PlanReviewStatus } from "./types";
 import { Card } from "./ui";
 
 const STATUS: Record<
