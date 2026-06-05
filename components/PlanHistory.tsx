@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { getPlanHistory, getPlanById, type PlanRecord, type PlanRecordFull } from '../services/planAuditService';
+import { StateView } from './thera/ui';
 
 const STATUS_STYLES: Record<string, string> = {
   DRAFT:           'bg-slate-100 text-slate-600',
@@ -38,7 +39,7 @@ const PlanHistory: React.FC<Props> = ({ onLoadPlan }) => {
       const data = await getPlanHistory();
       setRecords(data);
     } catch {
-      // silent fail — history is non-critical
+      // silent fail - history is non-critical
     } finally {
       setLoading(false);
     }
@@ -60,7 +61,7 @@ const PlanHistory: React.FC<Props> = ({ onLoadPlan }) => {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-xl font-black uppercase italic tracking-tighter text-slate-900">Audit Log</h2>
-          <p className="text-[10px] font-mono uppercase tracking-widest text-slate-400 mt-1">JCI-compliant plan history — {records.length} records</p>
+          <p className="text-[10px] font-mono uppercase tracking-widest text-slate-400 mt-1">JCI-compliant plan history - {records.length} records</p>
         </div>
         <button onClick={fetchHistory} className="px-4 py-2 rounded-lg border border-slate-200 text-xs font-bold uppercase tracking-widest text-slate-500 hover:bg-slate-50 transition-all">
           <i className="fas fa-rotate mr-2"></i>Refresh
@@ -68,16 +69,13 @@ const PlanHistory: React.FC<Props> = ({ onLoadPlan }) => {
       </div>
 
       {loading ? (
-        <div className="flex items-center justify-center py-20 text-slate-400">
-          <i className="fas fa-spinner animate-spin mr-3"></i>
-          <span className="text-sm font-mono">Loading audit records…</span>
-        </div>
+        <StateView kind="loading" title="Loading audit records" />
       ) : records.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-20 text-slate-400 border-2 border-dashed border-slate-200 rounded-xl">
-          <i className="fas fa-clock-rotate-left text-3xl mb-3"></i>
-          <p className="text-sm font-semibold">No plans generated yet</p>
-          <p className="text-xs mt-1">Generate a protocol to create the first audit record.</p>
-        </div>
+        <StateView
+          kind="empty"
+          title="No plans generated yet"
+          description="Generate a protocol to create the first audit record."
+        />
       ) : (
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
           <table className="w-full text-sm">
@@ -106,7 +104,7 @@ const PlanHistory: React.FC<Props> = ({ onLoadPlan }) => {
                         <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full ${NRS_STYLES[r.nrsRiskLevel]}`}>
                           {r.nrsRiskLevel} {r.nrsScore !== undefined ? `(${r.nrsScore})` : ''}
                         </span>
-                      ) : <span className="text-slate-300 text-[9px]">—</span>}
+                      ) : <span className="text-slate-300 text-[9px]">-</span>}
                     </td>
                     <td className="px-4 py-3">
                       <span className={`text-[11px] font-black ${r.clinicalAlignmentScore >= 90 ? 'text-emerald-600' : r.clinicalAlignmentScore >= 75 ? 'text-amber-600' : 'text-red-600'}`}>
@@ -122,7 +120,7 @@ const PlanHistory: React.FC<Props> = ({ onLoadPlan }) => {
                     <td className="px-4 py-3 text-[10px] text-slate-500">
                       {r.reviewedBy ? (
                         <span>{r.reviewedBy}<br/><span className="text-slate-400 text-[9px]">{r.reviewerCredentials}</span></span>
-                      ) : <span className="text-slate-300">—</span>}
+                      ) : <span className="text-slate-300">-</span>}
                     </td>
                     <td className="px-4 py-3 text-right">
                       <i className={`fas fa-chevron-${selectedId === r.id ? 'up' : 'down'} text-slate-300 text-[10px]`}></i>
@@ -133,16 +131,14 @@ const PlanHistory: React.FC<Props> = ({ onLoadPlan }) => {
                     <tr>
                       <td colSpan={9} className="px-6 py-6 bg-slate-50">
                         {loadingDetail ? (
-                          <div className="flex items-center text-slate-400 text-sm">
-                            <i className="fas fa-spinner animate-spin mr-2"></i>Loading plan details…
-                          </div>
+                          <StateView compact kind="loading" title="Loading plan details" />
                         ) : selectedRecord ? (
                           <div className="space-y-4">
                             <div className="grid grid-cols-4 gap-4">
                               {[
                                 { label: 'Generated', value: new Date(selectedRecord.createdAt).toLocaleString() },
                                 { label: 'Patient Hash', value: selectedRecord.patientHash },
-                                { label: 'Approved', value: selectedRecord.approvedAt ? new Date(selectedRecord.approvedAt).toLocaleString() : '—' },
+                                { label: 'Approved', value: selectedRecord.approvedAt ? new Date(selectedRecord.approvedAt).toLocaleString() : '-' },
                                 { label: 'Alignment', value: `${selectedRecord.clinicalAlignmentScore}%` },
                               ].map((item) => (
                                 <div key={item.label} className="bg-white rounded-lg p-3 border border-slate-200">
@@ -167,7 +163,7 @@ const PlanHistory: React.FC<Props> = ({ onLoadPlan }) => {
                             )}
                           </div>
                         ) : (
-                          <p className="text-sm text-slate-400">Could not load plan details.</p>
+                          <StateView compact kind="error" title="Could not load plan details" />
                         )}
                       </td>
                     </tr>
