@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { CheckCircle2, Loader2, PenLine, X, XCircle } from 'lucide-react';
 import { submitReview, type PlanStatus } from '../services/planAuditService';
 import type { WeeklyTherapeuticPlan } from '../types';
+import { Badge, Button, Card, Input, StateView } from './thera/ui';
 
 interface Props {
   planId: string;
@@ -19,6 +21,13 @@ const DietitianReview: React.FC<Props> = ({ planId, plan, currentStatus, onStatu
 
   const activeDay = plan.days[0];
 
+  const statusTone = (status: PlanStatus): 'emerald' | 'amber' | 'red' | 'slate' => {
+    if (status === 'APPROVED' || status === 'SENT_TO_KITCHEN') return 'emerald';
+    if (status === 'REJECTED') return 'red';
+    if (status === 'DRAFT') return 'slate';
+    return 'amber';
+  };
+
   const submit = async (status: 'APPROVED' | 'REJECTED' | 'PENDING_REVIEW' | 'SENT_TO_KITCHEN') => {
     if (!reviewedBy.trim()) { setError('Reviewer name is required.'); return; }
     if (!credentials.trim()) { setError('Credentials are required (e.g. RD, MSc).'); return; }
@@ -36,52 +45,48 @@ const DietitianReview: React.FC<Props> = ({ planId, plan, currentStatus, onStatu
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[92vh] overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 p-4 backdrop-blur-sm">
+      <Card className="max-h-[92vh] w-full max-w-3xl overflow-y-auto">
 
         {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-slate-100 px-8 py-5 flex items-center justify-between rounded-t-2xl z-10">
+        <div className="sticky top-0 z-10 flex items-center justify-between rounded-t-xl border-b border-slate-100 bg-white px-8 py-5">
           <div>
             <h2 className="text-lg font-black uppercase italic tracking-tighter text-slate-900">Dietitian Review</h2>
-            <p className="text-[10px] font-mono uppercase tracking-widest text-slate-400 mt-0.5">Plan ID: {planId}</p>
+            <p className="mt-0.5 font-mono text-[10px] uppercase tracking-widest text-slate-400">Plan ID: {planId}</p>
           </div>
           <div className="flex items-center space-x-3">
-            <span className={`text-[9px] font-bold px-2 py-1 rounded-full ${
-              currentStatus === 'APPROVED' ? 'bg-emerald-100 text-emerald-700' :
-              currentStatus === 'REJECTED' ? 'bg-red-100 text-red-700' :
-              'bg-amber-100 text-amber-700'
-            }`}>{currentStatus.replace('_', ' ')}</span>
-            <button onClick={onClose} className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-all">
-              <i className="fas fa-times text-slate-500 text-xs"></i>
-            </button>
+            <Badge tone={statusTone(currentStatus)}>{currentStatus.replace('_', ' ')}</Badge>
+            <Button onClick={onClose} variant="ghost" className="h-8 min-h-0 w-8 rounded-full bg-slate-100 p-0" aria-label="Close dietitian review">
+              <X className="h-4 w-4" aria-hidden />
+            </Button>
           </div>
         </div>
 
-        <div className="px-8 py-6 space-y-6">
+        <div className="space-y-6 px-8 py-6">
 
           {/* Plan summary */}
-          <div className="bg-slate-900 rounded-xl p-5 text-white">
-            <p className="text-[9px] font-mono uppercase tracking-widest text-slate-400 mb-3">Protocol Summary</p>
-            <h3 className="text-2xl font-black uppercase italic tracking-tighter mb-4">{plan.diagnosis}</h3>
+          <Card className="bg-slate-900 p-5 text-white">
+            <p className="mb-3 font-mono text-[9px] uppercase tracking-widest text-slate-400">Protocol Summary</p>
+            <h3 className="mb-4 text-2xl font-black uppercase italic tracking-tighter">{plan.diagnosis}</h3>
             <div className="grid grid-cols-4 gap-4">
               {[
                 { label: 'Alignment', value: `${plan.clinicalAlignmentScore}%` },
-                { label: 'Texture', value: plan.constraints?.textureLevel ?? '—' },
-                { label: 'Care Path', value: plan.carePathLabel ?? '—' },
+                { label: 'Texture', value: plan.constraints?.textureLevel ?? '-' },
+                { label: 'Care Path', value: plan.carePathLabel ?? '-' },
                 { label: 'Engine', value: plan.engineMode ?? 'LOCAL' },
               ].map((s) => (
                 <div key={s.label}>
-                  <p className="text-[8px] font-mono text-slate-400 uppercase tracking-widest">{s.label}</p>
+                  <p className="font-mono text-[8px] uppercase tracking-widest text-slate-400">{s.label}</p>
                   <p className="text-sm font-black uppercase">{s.value}</p>
                 </div>
               ))}
             </div>
-          </div>
+          </Card>
 
           {/* Day 1 nutrient snapshot */}
           {activeDay && (
             <div>
-              <p className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest mb-3">Day 1 Nutrient Audit ({activeDay.dayName})</p>
+              <p className="mb-3 font-mono text-[9px] font-bold uppercase tracking-widest text-slate-400">Day 1 Nutrient Audit ({activeDay.dayName})</p>
               <div className="grid grid-cols-5 gap-3">
                 {[
                   { label: 'Calories', actual: activeDay.totals?.caloriesKcal, target: activeDay.dailyTargets?.caloriesKcal, unit: 'kcal' },
@@ -93,12 +98,12 @@ const DietitianReview: React.FC<Props> = ({ planId, plan, currentStatus, onStatu
                   const pct = stat.target ? Math.round(((stat.actual ?? 0) / stat.target) * 100) : null;
                   const ok = pct !== null && pct >= 80 && pct <= 130;
                   return (
-                    <div key={stat.label} className={`rounded-lg p-3 border ${ok ? 'border-emerald-200 bg-emerald-50' : 'border-red-200 bg-red-50'}`}>
-                      <p className="text-[9px] font-mono font-bold text-slate-500 uppercase tracking-wider">{stat.label}</p>
+                    <Card key={stat.label} className={`p-3 ${ok ? 'border-emerald-200 bg-emerald-50' : 'border-red-200 bg-red-50'}`}>
+                      <p className="font-mono text-[9px] font-bold uppercase tracking-wider text-slate-500">{stat.label}</p>
                       <p className="text-lg font-black text-slate-900">{Math.round(stat.actual ?? 0)}</p>
                       <p className="text-[9px] text-slate-400">/ {Math.round(stat.target ?? 0)}{stat.unit}</p>
-                      {pct !== null && <p className={`text-[9px] font-bold mt-0.5 ${ok ? 'text-emerald-600' : 'text-red-600'}`}>{pct}%</p>}
-                    </div>
+                      {pct !== null && <p className={`mt-0.5 text-[9px] font-bold ${ok ? 'text-emerald-600' : 'text-red-600'}`}>{pct}%</p>}
+                    </Card>
                   );
                 })}
               </div>
@@ -107,100 +112,102 @@ const DietitianReview: React.FC<Props> = ({ planId, plan, currentStatus, onStatu
 
           {/* Validation issues */}
           {plan.validationReport && !plan.validationReport.passed && (
-            <div className="bg-red-50 border border-red-200 rounded-xl p-4 space-y-2">
-              <p className="text-[9px] font-mono font-bold text-red-600 uppercase tracking-widest">Validation Issues</p>
-              {plan.validationReport.issues.map((issue, i) => (
-                <p key={i} className="text-xs text-red-700 leading-relaxed">• {issue}</p>
-              ))}
-            </div>
+            <StateView
+              compact
+              kind="error"
+              title="Validation Issues"
+              items={plan.validationReport.issues}
+            />
           )}
 
           {/* Rationale */}
-          <div className="bg-blue-50 border border-blue-100 rounded-xl p-4">
-            <p className="text-[9px] font-mono font-bold text-blue-600 uppercase tracking-widest mb-2">Clinical Rationale</p>
-            <p className="text-xs text-slate-700 leading-relaxed italic">{plan.rationale}</p>
-          </div>
+          <Card className="bg-blue-50 p-4">
+            <p className="mb-2 font-mono text-[9px] font-bold uppercase tracking-widest text-blue-600">Clinical Rationale</p>
+            <p className="text-xs italic leading-relaxed text-slate-700">{plan.rationale}</p>
+          </Card>
 
           {/* Reviewer sign-off */}
-          <div className="border-t border-slate-100 pt-6 space-y-4">
+          <div className="space-y-4 border-t border-slate-100 pt-6">
             <p className="text-sm font-bold text-slate-900">Dietitian Sign-Off</p>
 
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-[10px] font-mono font-bold text-slate-500 uppercase tracking-widest mb-1.5">
+                <label className="mb-1.5 block font-mono text-[10px] font-bold uppercase tracking-widest text-slate-500">
                   Full Name <span className="text-red-500">*</span>
                 </label>
-                <input
+                <Input
                   type="text"
                   value={reviewedBy}
                   onChange={(e) => setReviewedBy(e.target.value)}
                   placeholder="e.g. Dr. Jane Odhiambo"
-                  className="w-full px-3 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400"
+                  className="bg-slate-50"
                 />
               </div>
               <div>
-                <label className="block text-[10px] font-mono font-bold text-slate-500 uppercase tracking-widest mb-1.5">
+                <label className="mb-1.5 block font-mono text-[10px] font-bold uppercase tracking-widest text-slate-500">
                   Credentials <span className="text-red-500">*</span>
                 </label>
-                <input
+                <Input
                   type="text"
                   value={credentials}
                   onChange={(e) => setCredentials(e.target.value)}
                   placeholder="e.g. RD, MSc Clinical Nutrition"
-                  className="w-full px-3 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400"
+                  className="bg-slate-50"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-[10px] font-mono font-bold text-slate-500 uppercase tracking-widest mb-1.5">
+              <label className="mb-1.5 block font-mono text-[10px] font-bold uppercase tracking-widest text-slate-500">
                 Clinical Notes / Modifications
               </label>
               <textarea
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
                 rows={4}
-                placeholder="Document any modifications made, clinical observations, or recommendations for the kitchen team…"
-                className="w-full px-3 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 resize-none"
+                placeholder="Document any modifications made, clinical observations, or recommendations for the kitchen team..."
+                className="w-full resize-none rounded-md border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20"
               />
             </div>
 
             {error && (
-              <p className="text-xs text-red-600 font-medium">{error}</p>
+              <StateView compact kind="error" title={error} />
             )}
 
             <div className="flex items-center justify-between pt-2">
-              <button onClick={onClose} className="px-5 py-2.5 rounded-lg text-sm font-bold text-slate-500 hover:text-slate-700 transition-all">
+              <Button onClick={onClose} variant="ghost">
                 Cancel
-              </button>
+              </Button>
               <div className="flex items-center space-x-3">
-                <button
+                <Button
                   onClick={() => submit('REJECTED')}
                   disabled={submitting}
-                  className="px-5 py-2.5 rounded-lg border border-red-200 bg-red-50 text-red-700 text-xs font-bold uppercase tracking-widest hover:bg-red-100 transition-all disabled:opacity-50"
+                  variant="danger"
+                  className="text-xs font-bold uppercase tracking-widest"
                 >
-                  <i className="fas fa-times-circle mr-2"></i>Reject
-                </button>
-                <button
+                  <XCircle className="h-4 w-4" aria-hidden />Reject
+                </Button>
+                <Button
                   onClick={() => submit('PENDING_REVIEW')}
                   disabled={submitting}
-                  className="px-5 py-2.5 rounded-lg border border-amber-200 bg-amber-50 text-amber-700 text-xs font-bold uppercase tracking-widest hover:bg-amber-100 transition-all disabled:opacity-50"
+                  variant="secondary"
+                  className="border-amber-200 bg-amber-50 text-xs font-bold uppercase tracking-widest text-amber-700 hover:bg-amber-100"
                 >
-                  <i className="fas fa-pen mr-2"></i>Request Changes
-                </button>
-                <button
+                  <PenLine className="h-4 w-4" aria-hidden />Request Changes
+                </Button>
+                <Button
                   onClick={() => submit('APPROVED')}
                   disabled={submitting}
-                  className="px-6 py-2.5 rounded-lg bg-emerald-600 text-white text-xs font-bold uppercase tracking-widest hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-900/20 disabled:opacity-50"
+                  className="bg-emerald-600 text-xs font-bold uppercase tracking-widest shadow-lg shadow-emerald-900/20 hover:bg-emerald-700"
                 >
-                  {submitting ? <i className="fas fa-spinner animate-spin mr-2"></i> : <i className="fas fa-check-circle mr-2"></i>}
+                  {submitting ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : <CheckCircle2 className="h-4 w-4" aria-hidden />}
                   Approve Protocol
-                </button>
+                </Button>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </Card>
     </div>
   );
 };
