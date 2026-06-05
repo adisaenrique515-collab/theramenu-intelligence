@@ -128,12 +128,38 @@ export interface EvidenceReference {
 
 /**
  * A single validation finding with structured location metadata.
+ *
+ * Phase 6 additions: path, clinicalReason, observedValue, expectedValue, unit.
+ * All are new — no existing code creates ValidationIssue instances, so this
+ * is a backward-compatible additive extension.
  */
 export interface ValidationIssue {
   readonly severity: ValidationSeverity;
-  readonly code: string;              // machine-readable, e.g. "POTASSIUM_EXCEEDED"
-  readonly message: string;           // human-readable
-  readonly field?: string;            // nutrient name or field path
+  /** Machine-readable issue code, e.g. "POTASSIUM_EXCEEDS_RENAL_TARGET". */
+  readonly code: string;
+  /** Human-readable description of the finding. */
+  readonly message: string;
+  /**
+   * Hierarchical location path. Format:
+   *   "plan"
+   *   "day:Monday"
+   *   "day:Monday/meal:Breakfast"
+   *   "day:Monday/meal:Breakfast/slot:protein_primary"
+   */
+  readonly path: string;
+  /** Brief explanation of the clinical significance for patient safety reports. */
+  readonly clinicalReason: string;
+  /** The actual measured or observed value that triggered this issue. */
+  readonly observedValue?: number;
+  /**
+   * The expected value or acceptable limit.
+   * May be a number (e.g. 1800) or a descriptive string (e.g. "≤ 1800 mg/day").
+   */
+  readonly expectedValue?: number | string;
+  /** Unit for observedValue and expectedValue, e.g. "g/day", "mg", "kcal". */
+  readonly unit?: string;
+  // Legacy location fields — kept for backward compatibility with Phase 2 consumers.
+  readonly field?: string;
   readonly dayName?: string;
   readonly mealType?: MealTypeKey;
   readonly slotName?: string;

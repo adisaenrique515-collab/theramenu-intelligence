@@ -5,6 +5,15 @@ import type { LocalNutritionDbStatus } from '../localNutritionDb.types';
 import { loadResourcePackSummary } from '../services/resourcePack';
 import { loadOfflineClinicalOverview } from '../services/offlineClinicalApi';
 import { loadLocalNutritionDbStatus } from '../services/localClinicalApi';
+import {
+  loadClinicalCoverageReadiness,
+} from '../services/clinicalCoverageApi';
+import type {
+  ClinicalCoverageReadinessResponse,
+  DiagnosisReadinessSummary,
+  CoverageSeverityOrOk,
+  ValidationReadiness,
+} from '../services/clinicalCoverageApi';
 import type { ResourceFoodInsight, ResourcePackSummary } from '../resourcePack.types';
 
 type BlueprintNodeId =
@@ -203,6 +212,88 @@ const renderFoodInsight = (food: ResourceFoodInsight) => (
   </div>
 );
 
+// ── Readiness rendering helpers ───────────────────────────────────────────
+
+const READINESS_STYLES: Record<ValidationReadiness, string> = {
+  ready:               'border-emerald-200 bg-emerald-50 text-emerald-700',
+  ready_with_warnings: 'border-amber-200 bg-amber-50 text-amber-700',
+  blocked:             'border-red-200 bg-red-50 text-red-700',
+};
+
+const READINESS_LABELS: Record<ValidationReadiness, string> = {
+  ready:               'Ready',
+  ready_with_warnings: 'Warnings',
+  blocked:             'Blocked',
+};
+
+const COVERAGE_STYLES: Record<CoverageSeverityOrOk, string> = {
+  ok:       'bg-emerald-100 text-emerald-700',
+  info:     'bg-blue-100 text-blue-700',
+  warning:  'bg-amber-100 text-amber-700',
+  critical: 'bg-orange-100 text-orange-700',
+  blocker:  'bg-red-100 text-red-700',
+};
+
+function ProtocolCard({ s }: { s: DiagnosisReadinessSummary }) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <p className="truncate text-sm font-bold text-slate-900">{s.diagnosisName}</p>
+          <p className="mt-0.5 font-mono text-[10px] uppercase tracking-widest text-slate-400">{s.diagnosisCode}</p>
+        </div>
+        <span className={`shrink-0 rounded-full border px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.2em] ${READINESS_STYLES[s.validationReadiness]}`}>
+          {READINESS_LABELS[s.validationReadiness]}
+        </span>
+      </div>
+
+      <div className="mt-4 grid grid-cols-3 gap-2 text-center">
+        <div className="rounded-xl bg-slate-50 p-2">
+          <p className="text-lg font-black text-slate-900">{s.allowedApprovedFoodCount}</p>
+          <p className="text-[9px] uppercase tracking-[0.15em] text-slate-400">Approved</p>
+        </div>
+        <div className="rounded-xl bg-slate-50 p-2">
+          <p className="text-lg font-black text-slate-900">{s.pendingReviewFoodCount}</p>
+          <p className="text-[9px] uppercase tracking-[0.15em] text-slate-400">Pending</p>
+        </div>
+        <div className="rounded-xl bg-slate-50 p-2">
+          <p className="text-lg font-black text-slate-900">{s.restrictedFoodCount}</p>
+          <p className="text-[9px] uppercase tracking-[0.15em] text-slate-400">Restricted</p>
+        </div>
+      </div>
+
+      <div className="mt-3 flex flex-wrap items-center gap-2">
+        <span className={`rounded-full px-2 py-0.5 text-[10px] font-black uppercase tracking-[0.15em] ${COVERAGE_STYLES[s.coverageSeverity]}`}>
+          {s.coverageSeverity}
+        </span>
+        <span className="text-xs text-slate-500">v{s.protocolVersion}</span>
+        <span className="text-xs text-slate-500">{s.evidenceCount} evidence ref{s.evidenceCount !== 1 ? 's' : ''}</span>
+        <span className="text-xs text-slate-500">{s.slotTemplateCount} slot{s.slotTemplateCount !== 1 ? 's' : ''}</span>
+      </div>
+
+      {s.slotsWithNoEligibleFoods.length > 0 && (
+        <div className="mt-3 rounded-xl border border-red-100 bg-red-50 px-3 py-2">
+          <p className="text-[10px] font-black uppercase tracking-[0.15em] text-red-600">Slots with no eligible foods</p>
+          <p className="mt-1 text-xs text-red-700">{s.slotsWithNoEligibleFoods.join(', ')}</p>
+        </div>
+      )}
+
+      {s.weakRotationCategories.length > 0 && (
+        <div className="mt-2 rounded-xl border border-amber-100 bg-amber-50 px-3 py-2">
+          <p className="text-[10px] font-black uppercase tracking-[0.15em] text-amber-700">Weak rotation</p>
+          <p className="mt-1 text-xs text-amber-800">{s.weakRotationCategories.join(', ')}</p>
+        </div>
+      )}
+
+      {s.targetSummary && (
+        <p className="mt-3 text-[11px] leading-relaxed text-slate-500">{s.targetSummary}</p>
+      )}
+    </div>
+  );
+}
+
+// ── Component ─────────────────────────────────────────────────────────────
+
 const DiagnosisDB: React.FC = () => {
   const [selectedNodeId, setSelectedNodeId] = React.useState<BlueprintNodeId>('nutritional-therapy');
   const [resourceSummary, setResourceSummary] = React.useState<ResourcePackSummary | null>(null);
@@ -210,6 +301,10 @@ const DiagnosisDB: React.FC = () => {
   const [dbStatus, setDbStatus] = React.useState<LocalNutritionDbStatus | null>(null);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
+
+  const [readiness, setReadiness] = React.useState<ClinicalCoverageReadinessResponse | null>(null);
+  const [readinessLoading, setReadinessLoading] = React.useState(true);
+  const [readinessError, setReadinessError] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     let cancelled = false;
@@ -227,6 +322,28 @@ const DiagnosisDB: React.FC = () => {
         if (!cancelled) {
           setError(resourceError instanceof Error ? resourceError.message : 'Failed to load clinical resources.');
           setLoading(false);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  React.useEffect(() => {
+    let cancelled = false;
+
+    loadClinicalCoverageReadiness()
+      .then((data) => {
+        if (!cancelled) {
+          setReadiness(data);
+          setReadinessLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setReadinessError(err instanceof Error ? err.message : 'Failed to load protocol readiness.');
+          setReadinessLoading(false);
         }
       });
 
@@ -364,6 +481,71 @@ const DiagnosisDB: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* ── Protocol Readiness Section ─────────────────────────────────────── */}
+      <div className="mt-8 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p className="text-[11px] font-black uppercase tracking-[0.35em] text-slate-400">Protocol Readiness</p>
+            <h3 className="mt-2 text-2xl font-black tracking-tight text-slate-950">Diagnosis Protocol Registry</h3>
+            <p className="mt-2 text-sm leading-relaxed text-slate-600">
+              Live readiness for each versioned clinical protocol. Foods must be approved by a registered dietitian before a protocol is ready for production meal generation.
+            </p>
+          </div>
+          {readiness && (
+            <div className="grid grid-cols-4 gap-3 lg:min-w-[380px]">
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-center">
+                <p className="text-2xl font-black text-slate-900">{readiness.storeTotals.total}</p>
+                <p className="text-[9px] uppercase tracking-[0.2em] text-slate-400">Total</p>
+              </div>
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-center">
+                <p className="text-2xl font-black text-emerald-700">{readiness.storeTotals.approved}</p>
+                <p className="text-[9px] uppercase tracking-[0.2em] text-slate-400">Approved</p>
+              </div>
+              <div className="rounded-2xl border border-amber-100 bg-amber-50 px-4 py-3 text-center">
+                <p className="text-2xl font-black text-amber-700">{readiness.storeTotals.pendingReview}</p>
+                <p className="text-[9px] uppercase tracking-[0.2em] text-slate-400">Pending</p>
+              </div>
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-center">
+                <p className="text-2xl font-black text-slate-500">{readiness.storeTotals.draft}</p>
+                <p className="text-[9px] uppercase tracking-[0.2em] text-slate-400">Draft</p>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {readinessLoading && (
+          <div className="mt-6 flex items-center gap-3 text-sm text-slate-500">
+            <div className="h-5 w-5 animate-spin rounded-full border-2 border-slate-300 border-t-blue-600"></div>
+            Loading protocol readiness...
+          </div>
+        )}
+
+        {readinessError && (
+          <div className="mt-6 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+            Readiness load failed: {readinessError}
+          </div>
+        )}
+
+        {readiness && readiness.storeTotals.approved === 0 && (
+          <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <p className="text-[10px] font-black uppercase tracking-[0.25em] text-amber-700">Action Required</p>
+            <p className="mt-2 text-sm leading-relaxed text-amber-900">
+              {readiness.storeTotals.total.toLocaleString()} foods are loaded from the USDA Foundation and curated datasets, all with{' '}
+              <strong>draft</strong> approval status. A registered dietitian must review and approve foods before any protocol can generate
+              production-ready meal plans. Use the food management API or the approval workflow to begin.
+            </p>
+          </div>
+        )}
+
+        {readiness && readiness.summaries.length > 0 && (
+          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {readiness.summaries.map((s) => (
+              <ProtocolCard key={s.diagnosisCode} s={s} />
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="mt-8 grid grid-cols-1 gap-8 xl:grid-cols-[360px_minmax(0,1fr)]">

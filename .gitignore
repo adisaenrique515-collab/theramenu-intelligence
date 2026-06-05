@@ -51,3 +51,7 @@ restaurant-booking-api/
 
 # ── Windows reserved filename (corrupted artifact) ───────────────────────────
 CON
+
+# ── Large data files (exceed GitHub 100 MB limit) ─────────────────────────────
+Thera-menu-main/data/bfpd-import/
+Thera-menu-main/data/local-db/*.sqlite

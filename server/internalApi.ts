@@ -6,6 +6,13 @@ import { getResourcePackSummary } from './resourcePackApi.ts';
 import { refineWeeklyPlanWithClaude, chatWithClaudeDietitian, isClaudeConfigured } from './claudeRefinementApi.ts';
 import { enrichPlanWithUsdaFdcData, isUsdaConfigured } from './usdaEnrichmentApi.ts';
 import { savePlanAudit, updatePlanReview, getPlanHistory, getPlanById } from './planAuditDb.ts';
+import { CLINICAL_PROTOCOL_REGISTRY } from './clinicalProtocols.ts';
+import {
+  generateCoverageReport,
+  generateDiagnosisReadinessSummaries,
+  DEFAULT_THRESHOLDS,
+} from './coverageReports.ts';
+import { getFoodStore } from './foodItemStore.ts';
 import type { WeeklyTherapeuticPlan } from '../types.ts';
 
 async function readRequestBody(req: IncomingMessage): Promise<string> {
@@ -192,6 +199,76 @@ export async function handleInternalApiRequest(req: IncomingMessage, res: Server
         String(reviewNotes ?? ''),
       );
       respondJson(res, 200, { ok: true });
+      return true;
+    }
+
+    // ── Food store: list all foods ──────────────────────────────────────────
+    if (req.url === '/api/internal/foods' && req.method === 'GET') {
+      respondJson(res, 200, { foods: getFoodStore().getAllFoods() });
+      return true;
+    }
+
+    // ── Food store: list approved foods ────────────────────────────────────
+    if (req.url === '/api/internal/foods/approved' && req.method === 'GET') {
+      respondJson(res, 200, { foods: getFoodStore().getApprovedFoods() });
+      return true;
+    }
+
+    // ── Food store: totals summary ─────────────────────────────────────────
+    if (req.url === '/api/internal/foods/totals' && req.method === 'GET') {
+      respondJson(res, 200, getFoodStore().getTotals());
+      return true;
+    }
+
+    // ── Food store: approve a food ─────────────────────────────────────────
+    const approveFoodMatch = req.url.match(/^\/api\/internal\/foods\/([^/]+)\/approve$/);
+    if (approveFoodMatch && req.method === 'POST') {
+      const body = await readRequestBody(req);
+      let parsed: unknown;
+      try { parsed = body ? JSON.parse(body) : {}; }
+      catch { respondJson(res, 400, { message: 'Invalid JSON' }); return true; }
+      const { approvedBy, credentials } = parsed as Record<string, unknown>;
+      const food = getFoodStore().approveFood(
+        decodeURIComponent(approveFoodMatch[1]),
+        String(approvedBy ?? ''),
+        String(credentials ?? ''),
+      );
+      respondJson(res, 200, food);
+      return true;
+    }
+
+    // ── Food store: retire a food ──────────────────────────────────────────
+    const retireFoodMatch = req.url.match(/^\/api\/internal\/foods\/([^/]+)\/retire$/);
+    if (retireFoodMatch && req.method === 'POST') {
+      const body = await readRequestBody(req);
+      let parsed: unknown;
+      try { parsed = body ? JSON.parse(body) : {}; }
+      catch { respondJson(res, 400, { message: 'Invalid JSON' }); return true; }
+      const { retiredBy } = parsed as Record<string, unknown>;
+      const food = getFoodStore().retireFood(
+        decodeURIComponent(retireFoodMatch[1]),
+        String(retiredBy ?? ''),
+      );
+      respondJson(res, 200, food);
+      return true;
+    }
+
+    // ── Clinical coverage: diagnosis readiness summaries ────────────────────
+    if (req.url === '/api/internal/clinical-coverage/readiness' && req.method === 'GET') {
+      const protocols = Object.values(CLINICAL_PROTOCOL_REGISTRY);
+      const foods = getFoodStore().getAllFoods();
+      const summaries = generateDiagnosisReadinessSummaries(foods, protocols);
+      const storeTotals = getFoodStore().getTotals();
+      respondJson(res, 200, { summaries, thresholds: DEFAULT_THRESHOLDS, storeTotals });
+      return true;
+    }
+
+    // ── Clinical coverage: full database coverage report ────────────────────
+    if (req.url === '/api/internal/clinical-coverage/report' && req.method === 'GET') {
+      const protocols = Object.values(CLINICAL_PROTOCOL_REGISTRY);
+      const foods = getFoodStore().getAllFoods();
+      const report = generateCoverageReport(foods, protocols);
+      respondJson(res, 200, report);
       return true;
     }
 
