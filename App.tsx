@@ -9,6 +9,7 @@ import ComplianceDashboard from './components/ComplianceDashboard';
 import PlanHistory from './components/PlanHistory';
 import DietitianReview from './components/DietitianReview';
 import KitchenSheet from './components/KitchenSheet';
+import { StateView } from './components/thera/ui';
 import { generatePlanViaInternalApi } from './services/localClinicalApi';
 import { refineMenuWithClaude } from './services/claudeService';
 import { enrichPlanWithUsdaData } from './services/usdaFoodDataService';
@@ -186,13 +187,7 @@ const App: React.FC = () => {
               </div>
               <TherapeuticForm onSubmit={handleGenerate} isLoading={loading} />
               {error && (
-                <div className="animate-in slide-in-from-bottom-4 duration-300 flex flex-col space-y-3 rounded-xl border border-red-500/20 bg-red-950/10 p-6 text-sm text-red-900 shadow-xl">
-                  <div className="flex items-center font-black uppercase italic tracking-tighter text-red-600">
-                    <i className="fas fa-triangle-exclamation mr-3"></i>
-                    <span>Clinical Exception</span>
-                  </div>
-                  <p className="text-xs font-medium leading-relaxed text-red-800/80">{error}</p>
-                </div>
+                <StateView compact kind="error" title="Clinical Exception" description={error} />
               )}
             </div>
 
@@ -207,45 +202,32 @@ const App: React.FC = () => {
               </div>
 
               {!result && !loading && (
-                <div className="no-print flex min-h-[600px] h-full flex-col items-center justify-center rounded-lg border border-dashed border-gray-300 bg-white p-12 text-center text-gray-500">
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-gray-200 bg-gray-50">
-                    <i className="fas fa-clipboard-list text-2xl text-gray-400"></i>
-                  </div>
-                  <h3 className="mb-1 text-base font-semibold text-gray-900">Protocol Pending</h3>
-                  <p className="max-w-sm text-sm leading-relaxed text-gray-500">Submit a diagnosis to generate a comprehensive weekly nutritional strategy.</p>
-                  {!nrsResult && (
+                <StateView
+                  kind="empty"
+                  title="Protocol Pending"
+                  description="Submit a diagnosis to generate a comprehensive weekly nutritional strategy."
+                  actions={!nrsResult && (
                     <button
                       onClick={() => setActiveTab('screening')}
-                      className="mt-6 px-5 py-2.5 rounded-lg border border-blue-200 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-widest hover:bg-blue-100 transition-all"
+                      className="px-5 py-2.5 rounded-lg border border-blue-200 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-widest hover:bg-blue-100 transition-all"
                     >
                       <i className="fas fa-clipboard-check mr-2"></i>Complete NRS-2002 Screening First
                     </button>
                   )}
-                </div>
+                />
               )}
 
               {loading && (
-                <div className="relative no-print flex min-h-[600px] h-full flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-white p-12 text-center shadow-sm">
-                  <div className="absolute left-0 right-0 top-0 h-1 bg-gray-100">
-                    <div className="h-full bg-blue-600 transition-all duration-500" style={{ width: `${currentStage ? (currentStage / 3) * 100 : 10}%` }}></div>
-                  </div>
-                  <div className="relative mb-6 h-20 w-20">
-                    <div className="absolute inset-0 rounded-full border-4 border-gray-100"></div>
-                    <div className="absolute inset-0 animate-spin rounded-full border-4 border-blue-600 border-t-transparent"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <i className="fas fa-spinner animate-pulse text-xl text-blue-600"></i>
-                    </div>
-                  </div>
-                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
-                    {currentStage ? `Stage ${currentStage}/3: ` : ''}Synthesis Underway…
-                  </h3>
-                  <p className="max-w-sm text-sm leading-relaxed text-gray-500">
-                    {currentStage === 1 && 'Synthesizing 21 therapeutic meals · Applying clinical protocol filters'}
-                    {currentStage === 2 && 'Claude AI reviewing clinical narratives · Enriching therapeutic rationale'}
-                    {currentStage === 3 && 'Fetching live USDA nutrient data · Enriching detailed nutrient profiles'}
-                    {!currentStage && 'Initializing clinical synthesis…'}
-                  </p>
-                </div>
+                <StateView
+                  kind="loading"
+                  title={`${currentStage ? `Stage ${currentStage}/3: ` : ''}Synthesis Underway`}
+                  description={
+                    currentStage === 1 ? 'Synthesizing 21 therapeutic meals. Applying clinical protocol filters.' :
+                    currentStage === 2 ? 'Claude AI reviewing clinical narratives. Enriching therapeutic rationale.' :
+                    currentStage === 3 ? 'Fetching live USDA nutrient data. Enriching detailed nutrient profiles.' :
+                    'Initializing clinical synthesis.'
+                  }
+                />
               )}
 
               {result && !loading && (
