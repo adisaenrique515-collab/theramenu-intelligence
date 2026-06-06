@@ -10,7 +10,7 @@ import DietitianReview from './components/DietitianReview';
 import KitchenSheet from './components/KitchenSheet';
 import { Header as TheraHeader, type TabKey } from './components/thera/Header';
 import { Badge, Button, Card, StateView } from './components/thera/ui';
-import { CheckCircle2, ClipboardCheck, X } from 'lucide-react';
+import { CheckCircle2, ClipboardCheck, Loader2, X } from 'lucide-react';
 import { generatePlanViaInternalApi } from './services/localClinicalApi';
 import { refineMenuWithClaude } from './services/claudeService';
 import { enrichPlanWithUsdaData } from './services/usdaFoodDataService';
@@ -51,6 +51,63 @@ const planStatusTone = (status: PlanStatus): 'slate' | 'blue' | 'emerald' | 'amb
   if (status === 'PENDING_REVIEW') return 'amber';
   return 'slate';
 };
+
+const workflowStages = [
+  { id: 1, label: 'Clinical engine', description: 'Deterministic protocol synthesis' },
+  { id: 2, label: 'AI refinement', description: 'Clinical narrative review' },
+  { id: 3, label: 'Nutrient enrichment', description: 'USDA data pass' },
+] as const;
+
+function WorkflowStatusPanel({
+  currentStage,
+  lastSuccessfulStage,
+}: {
+  currentStage: 1 | 2 | 3 | null;
+  lastSuccessfulStage: 1 | 2 | 3 | null;
+}) {
+  return (
+    <Card className="space-y-4 p-5">
+      <div className="flex items-center justify-between gap-3">
+        <div>
+          <p className="font-mono text-[10px] uppercase tracking-widest text-blue-700">Workflow running</p>
+          <h2 className="text-base font-semibold text-slate-900">Generating therapeutic plan</h2>
+        </div>
+        <Badge tone="blue">Stage {currentStage ?? 1}/3</Badge>
+      </div>
+      <div className="grid gap-3 md:grid-cols-3">
+        {workflowStages.map((stage) => {
+          const complete = lastSuccessfulStage !== null && stage.id <= lastSuccessfulStage;
+          const active = currentStage === stage.id;
+          return (
+            <div
+              key={stage.id}
+              className={
+                'rounded-lg border px-4 py-3 ' +
+                (complete
+                  ? 'border-emerald-200 bg-emerald-50'
+                  : active
+                    ? 'border-blue-200 bg-blue-50'
+                    : 'border-slate-200 bg-slate-50')
+              }
+            >
+              <div className="flex items-center gap-2">
+                {complete ? (
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600" aria-hidden />
+                ) : active ? (
+                  <Loader2 className="h-4 w-4 animate-spin text-blue-600" aria-hidden />
+                ) : (
+                  <span className="h-4 w-4 rounded-full border border-slate-300 bg-white" aria-hidden />
+                )}
+                <p className="text-sm font-semibold text-slate-900">{stage.label}</p>
+              </div>
+              <p className="mt-1 text-xs leading-5 text-slate-600">{stage.description}</p>
+            </div>
+          );
+        })}
+      </div>
+    </Card>
+  );
+}
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab]             = useState<TabId>('generator');
@@ -272,16 +329,19 @@ const App: React.FC = () => {
             resultSlot={
               <>
                 {loading && (
-                  <StateView
-                    kind="loading"
-                    title={`${currentStage ? `Stage ${currentStage}/3: ` : ''}Synthesis Underway`}
-                    description={
-                      currentStage === 1 ? 'Synthesizing 21 therapeutic meals. Applying clinical protocol filters.' :
-                      currentStage === 2 ? 'Claude AI reviewing clinical narratives. Enriching therapeutic rationale.' :
-                      currentStage === 3 ? 'Fetching live USDA nutrient data. Enriching detailed nutrient profiles.' :
-                      'Initializing clinical synthesis.'
-                    }
-                  />
+                  <div className="space-y-4">
+                    <WorkflowStatusPanel currentStage={currentStage} lastSuccessfulStage={lastSuccessfulStage} />
+                    <StateView
+                      kind="loading"
+                      title={`${currentStage ? `Stage ${currentStage}/3: ` : ''}Synthesis Underway`}
+                      description={
+                        currentStage === 1 ? 'Synthesizing 21 therapeutic meals. Applying clinical protocol filters.' :
+                        currentStage === 2 ? 'Claude AI reviewing clinical narratives. Enriching therapeutic rationale.' :
+                        currentStage === 3 ? 'Fetching live USDA nutrient data. Enriching detailed nutrient profiles.' :
+                        'Initializing clinical synthesis.'
+                      }
+                    />
+                  </div>
                 )}
 
                 {result && !loading && (
