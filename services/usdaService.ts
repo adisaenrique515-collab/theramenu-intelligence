@@ -157,7 +157,7 @@ export async function enrichPlanWithUsdaData(
   for (let i = 0; i < names.length; i += BATCH_SIZE) {
     const batch = names.slice(i, i + BATCH_SIZE);
     const batchResults = await Promise.all(
-      batch.map(async (name) => [name, await searchUsdaFood(name)] as const),
+      batch.map(async (name): Promise<[string, UsdaFoodNutrients | null]> => [name, await searchUsdaFood(name)]),
     );
     entries.push(...batchResults);
   }

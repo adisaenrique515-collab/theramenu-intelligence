@@ -524,7 +524,9 @@ PREPARED BY: ${plan.preparedBy}
                         type="file" 
                         className="hidden" 
                         accept="image/*"
-                        ref={el => fileInputRefs.current[`${activeDayIndex}-${mIdx}`] = el}
+                        ref={(el) => {
+                          fileInputRefs.current[`${activeDayIndex}-${mIdx}`] = el;
+                        }}
                         onChange={(e) => handleImageUpload(activeDayIndex, mIdx, e)}
                       />
                       {uploadedImages[`${activeDayIndex}-${mIdx}`] ? (

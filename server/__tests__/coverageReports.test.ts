@@ -46,6 +46,7 @@ import type {
   FoodCategory,
   TextureLevel,
   MealTypeKey,
+  AllergenCode,
   VersionedClinicalProtocol,
   EvidenceReference,
   MealSlotTemplate,
@@ -739,14 +740,14 @@ describe('Suite 16 — hasCriticalGaps flag', () => {
     const allTextureFood = () => makeFood({
       textureLevels: ['regular', 'soft', 'minced', 'pureed', 'liquid'] as TextureLevel[],
       mealTypes: ['Breakfast', 'Snack AM', 'Lunch', 'Snack PM', 'Dinner', 'Snack Eve'] as MealTypeKey[],
-      allergens: ['GLUTEN'],
+      allergens: ['GLUTEN'] as AllergenCode[],
       missingNutrients: ['fluidMl'],
     });
     const db = makeSufficientFoodDb().map((f) => ({
       ...f,
       textureLevels: ['regular', 'soft', 'minced', 'pureed', 'liquid'] as TextureLevel[],
       mealTypes: ['Breakfast', 'Snack AM', 'Lunch', 'Snack PM', 'Dinner', 'Snack Eve'] as MealTypeKey[],
-      allergens: ['GLUTEN'],
+      allergens: ['GLUTEN'] as AllergenCode[],
       missingNutrients: ['fluidMl'] as (keyof typeof EMPTY_NUTRIENTS)[],
     }));
 
