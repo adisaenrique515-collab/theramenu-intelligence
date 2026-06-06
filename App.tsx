@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Header from './components/Header';
 import TherapeuticForm from './components/TherapeuticForm';
 import MenuResult from './components/MenuResult';
 import DiagnosisDB from './components/DiagnosisDB';
@@ -9,6 +8,7 @@ import ComplianceDashboard from './components/ComplianceDashboard';
 import PlanHistory from './components/PlanHistory';
 import DietitianReview from './components/DietitianReview';
 import KitchenSheet from './components/KitchenSheet';
+import { Header as TheraHeader, type TabKey } from './components/thera/Header';
 import { StateView } from './components/thera/ui';
 import { generatePlanViaInternalApi } from './services/localClinicalApi';
 import { refineMenuWithClaude } from './services/claudeService';
@@ -19,6 +19,14 @@ import { WeeklyTherapeuticPlan } from './types';
 import { executionMode } from './utils/appMode';
 
 type TabId = 'generator' | 'db' | 'logs' | 'screening' | 'compliance';
+
+const appToShellTab: Record<TabId, TabKey> = {
+  generator: 'generator',
+  db: 'diagnosis',
+  logs: 'audit',
+  screening: 'screening',
+  compliance: 'compliance',
+};
 
 interface NrsResult {
   score: number;
@@ -135,9 +143,49 @@ const App: React.FC = () => {
     setMobileView('result');
   };
 
+  const handleShellTabChange = (tab: TabKey) => {
+    if (tab === 'diagnosis') {
+      setActiveTab('db');
+      return;
+    }
+    if (tab === 'audit') {
+      setActiveTab('logs');
+      return;
+    }
+    if (tab === 'screening' || tab === 'compliance' || tab === 'generator') {
+      setActiveTab(tab);
+      return;
+    }
+    if (tab === 'plan') {
+      setActiveTab('generator');
+      setMobileView('result');
+      return;
+    }
+    if (tab === 'kitchen') {
+      if (result && planStatus === 'APPROVED') {
+        setShowKitchen(true);
+      }
+      setActiveTab('generator');
+      setMobileView('result');
+      return;
+    }
+    setActiveTab('generator');
+  };
+
   return (
-    <div className="min-h-screen bg-[#f8fafc] pb-20 font-sans selection:bg-blue-100">
-      <Header activeTab={activeTab} onTabChange={setActiveTab} executionMode={executionMode} />
+    <div className="min-h-screen bg-slate-50 pb-20 font-sans selection:bg-blue-100">
+      <TheraHeader
+        active={appToShellTab[activeTab]}
+        onChange={handleShellTabChange}
+        rightSlot={(
+          <div className="flex flex-col items-end text-right">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-slate-400">System Status</span>
+            <span className="rounded border border-emerald-500/30 bg-emerald-500/20 px-2 py-0.5 font-mono text-[10px] font-bold tracking-widest text-emerald-300">
+              {executionMode === 'MOCK' ? 'LOCAL PHI' : 'LIVE'}
+            </span>
+          </div>
+        )}
+      />
 
       {/* ── Generator tab ─────────────────────────────────────────────────── */}
       {activeTab === 'generator' && (
