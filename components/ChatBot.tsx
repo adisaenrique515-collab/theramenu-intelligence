@@ -1,6 +1,8 @@
 
 import React, { useState, useRef, useEffect } from 'react';
+import { Bot, MessageCircle, Minus, Send, X } from 'lucide-react';
 import { chatWithDietitian } from '../services/claudeService';
+import { Card, Input } from './thera/ui';
 
 const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,34 +45,35 @@ const ChatBot: React.FC = () => {
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all flex items-center justify-center group"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg transition-all hover:bg-blue-700"
+        aria-label={isOpen ? 'Close clinical assistant' : 'Open clinical assistant'}
       >
         {isOpen ? (
-          <i className="fas fa-times text-xl"></i>
+          <X className="h-6 w-6" aria-hidden />
         ) : (
           <div className="relative">
-            <i className="fas fa-comment-medical text-xl"></i>
-            <span className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full animate-pulse"></span>
+            <MessageCircle className="h-6 w-6" aria-hidden />
+            <span className="absolute -right-1 -top-1 h-3 w-3 animate-pulse rounded-full border-2 border-white bg-emerald-500"></span>
           </div>
         )}
       </button>
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="absolute bottom-20 right-0 w-[350px] sm:w-[400px] h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 duration-300">
+        <Card className="absolute bottom-20 right-0 flex h-[500px] w-[350px] flex-col overflow-hidden animate-in slide-in-from-bottom-5 duration-300 sm:w-[400px]">
           {/* Header */}
-          <div className="bg-slate-900 p-4 text-white flex items-center justify-between">
+          <div className="flex items-center justify-between bg-slate-900 p-4 text-white">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <i className="fas fa-robot text-sm"></i>
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600">
+                <Bot className="h-4 w-4" aria-hidden />
               </div>
               <div>
                 <h3 className="text-sm font-semibold">Local Clinical Dietitian</h3>
                 <p className="text-[10px] text-slate-400 font-mono uppercase tracking-widest">Internal Offline Engine</p>
               </div>
             </div>
-            <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-white">
-              <i className="fas fa-minus"></i>
+            <button onClick={() => setIsOpen(false)} className="flex h-8 w-8 items-center justify-center rounded-md text-slate-400 transition-colors hover:bg-slate-800 hover:text-white" aria-label="Minimize clinical assistant">
+              <Minus className="h-4 w-4" aria-hidden />
             </button>
           </div>
 
@@ -89,7 +92,7 @@ const ChatBot: React.FC = () => {
             ))}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-white border border-gray-200 p-3 rounded-2xl rounded-tl-none shadow-sm flex space-x-1">
+                <div className="flex space-x-1 rounded-2xl rounded-tl-none border border-gray-200 bg-white p-3 shadow-sm" role="status" aria-label="Assistant response loading">
                   <div className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce"></div>
                   <div className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce [animation-delay:0.2s]"></div>
                   <div className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce [animation-delay:0.4s]"></div>
@@ -102,27 +105,28 @@ const ChatBot: React.FC = () => {
           {/* Input */}
           <div className="p-4 bg-white border-t border-gray-200">
             <div className="relative flex items-center">
-              <input
+              <Input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="Ask about IDDSI, protocols..."
-                className="w-full pl-4 pr-12 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
+                className="pr-12"
               />
               <button
                 onClick={handleSend}
                 disabled={!input.trim() || isLoading}
-                className="absolute right-2 p-1.5 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors disabled:opacity-50"
+                className="absolute right-2 rounded-lg p-1.5 text-blue-600 transition-colors hover:bg-blue-50 disabled:opacity-50"
+                aria-label="Send clinical assistant message"
               >
-                <i className="fas fa-paper-plane"></i>
+                <Send className="h-4 w-4" aria-hidden />
               </button>
             </div>
             <p className="text-[9px] text-center text-gray-400 mt-2 uppercase tracking-widest font-mono">
               Processed Locally - No External API
             </p>
           </div>
-        </div>
+        </Card>
       )}
     </div>
   );

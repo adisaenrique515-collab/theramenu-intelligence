@@ -4,6 +4,7 @@ import { createPortal } from 'react-dom';
 import html2pdf from 'html2pdf.js';
 import { MealSlot, WeeklyTherapeuticPlan } from '../types';
 import { DEFAULT_STANDARDS, HOSPITAL_BRAND } from '../constants';
+import { Badge, Button, Card, StateView } from './thera/ui';
 
 interface MenuResultProps {
   plan: WeeklyTherapeuticPlan;
@@ -32,11 +33,11 @@ const MenuResult: React.FC<MenuResultProps> = ({ plan }) => {
 
   if (!activeDay) {
     return (
-      <div className="p-12 text-center bg-white rounded-xl border border-slate-200">
-        <i className="fas fa-exclamation-circle text-amber-500 text-4xl mb-4"></i>
-        <h3 className="text-lg font-bold">Incomplete Protocol Data</h3>
-        <p className="text-slate-500">The clinical engine failed to generate data for this day. Please try regenerating the protocol.</p>
-      </div>
+      <StateView
+        kind="warning"
+        title="Incomplete Protocol Data"
+        description="The clinical engine failed to generate data for this day. Please try regenerating the protocol."
+      />
     );
   }
   const pdfRef = useRef<HTMLDivElement>(null);
@@ -342,16 +343,14 @@ PREPARED BY: ${plan.preparedBy}
       {/* SCREEN VERSION */}
       <div className="no-print max-w-5xl mx-auto space-y-8">
         {/* Interactive Dashboard Header */}
-        <div className="bg-slate-900 rounded-xl p-8 text-white shadow-2xl relative overflow-hidden">
+        <Card className="relative overflow-hidden bg-slate-900 p-8 text-white">
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
           <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div className="space-y-2">
               <div className="flex items-center space-x-3">
-                <span className="px-2 py-1 bg-blue-500 text-[10px] font-black uppercase tracking-widest rounded italic">Protocol Active</span>
+                <Badge tone="blue">Protocol Active</Badge>
                 {plan.carePathLabel && (
-                  <span className="px-2 py-1 bg-emerald-500/20 text-[10px] font-black uppercase tracking-widest rounded border border-emerald-400/30 text-emerald-300">
-                    {plan.carePathLabel}
-                  </span>
+                  <Badge tone="emerald">{plan.carePathLabel}</Badge>
                 )}
                 <span className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.3em]">ID: {planRefId}</span>
               </div>
@@ -374,18 +373,18 @@ PREPARED BY: ${plan.preparedBy}
               </div>
             </div>
             <div className="flex gap-3">
-              <button onClick={printPlan} className="px-6 py-3 bg-slate-800 hover:bg-slate-700 rounded-lg text-xs font-bold uppercase tracking-widest transition-all border border-slate-700">
+              <Button onClick={printPlan} variant="ghost" className="border border-slate-700 bg-slate-800 text-xs font-bold uppercase tracking-widest text-white hover:bg-slate-700">
                 <i className="fas fa-print mr-2"></i> Print
-              </button>
-              <button onClick={() => handleGeneratePDF('save')} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-xs font-bold uppercase tracking-widest transition-all shadow-lg shadow-blue-900/40">
+              </Button>
+              <Button onClick={() => handleGeneratePDF('save')} className="text-xs font-bold uppercase tracking-widest shadow-lg shadow-blue-900/40">
                 <i className="fas fa-file-pdf mr-2"></i> Export PDF
-              </button>
+              </Button>
             </div>
           </div>
-        </div>
+        </Card>
 
         {/* Day Selector */}
-        <div className="flex overflow-x-auto scrollbar-hide rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+        <Card className="flex overflow-x-auto scrollbar-hide p-2">
           {plan.days.map((day, idx) => (
             <button
               key={day.dayName}
@@ -399,14 +398,14 @@ PREPARED BY: ${plan.preparedBy}
               {day.dayName}
             </button>
           ))}
-        </div>
+        </Card>
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Meal Cards */}
           <div className="lg:col-span-8 space-y-6">
             {activeDay.meals.map((meal, mIdx) => (
-              <div key={meal.mealType} className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden group hover:border-blue-300 transition-all">
+              <Card key={meal.mealType} className="overflow-hidden group hover:border-blue-300 transition-all">
                 <div className="px-6 py-4 bg-slate-50 border-b border-slate-100 flex justify-between items-center">
                   <div>
                     <h3 className="text-sm font-black uppercase italic tracking-tight text-slate-900">{meal.mealType}</h3>
@@ -414,7 +413,7 @@ PREPARED BY: ${plan.preparedBy}
                       <p className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-400 mt-1">{meal.scheduledTime}</p>
                     )}
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-widest">{meal.dietaryLabel}</span>
+                  <Badge tone="slate">{meal.dietaryLabel}</Badge>
                 </div>
                 <div className="p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
                   <div className="md:col-span-8">
@@ -442,7 +441,7 @@ PREPARED BY: ${plan.preparedBy}
                                   
                                   {/* USDA FDC Live Nutrient Panel */}
                                   {slot.item?.usdaNutrients && (
-                                    <div className="mt-2 p-2.5 rounded-lg bg-emerald-50/60 border border-emerald-100 opacity-0 group-hover/row:opacity-100 transition-opacity duration-300">
+                                    <Card className="mt-2 bg-emerald-50/60 p-2.5 opacity-0 transition-opacity duration-300 group-hover/row:opacity-100">
                                       <div className="flex items-center space-x-1.5 mb-2">
                                         <span className="text-[7px] font-mono font-black text-emerald-600 uppercase tracking-widest">USDA FDC</span>
                                         <span className="text-[7px] text-emerald-400">per 100 g</span>
@@ -466,12 +465,12 @@ PREPARED BY: ${plan.preparedBy}
                                           ) : null
                                         )}
                                       </div>
-                                    </div>
+                                    </Card>
                                   )}
 
                                   {/* Clinical Intelligence Sub-Panel */}
                                   {slot.item?.intelligence && (
-                                    <div className="mt-3 grid grid-cols-3 gap-3 bg-slate-50/50 p-3 rounded-lg border border-slate-100 opacity-0 group-hover/row:opacity-100 transition-opacity duration-300">
+                                    <Card className="mt-3 grid grid-cols-3 gap-3 bg-slate-50/50 p-3 opacity-0 transition-opacity duration-300 group-hover/row:opacity-100">
                                       <div className="space-y-1">
                                         <p className="text-[7px] font-mono text-slate-400 uppercase tracking-widest">Stability</p>
                                         <div className="flex items-center space-x-2">
@@ -487,20 +486,20 @@ PREPARED BY: ${plan.preparedBy}
                                       </div>
                                       <div className="space-y-1">
                                         <p className="text-[7px] font-mono text-slate-400 uppercase tracking-widest">Class</p>
-                                        <span className={`text-[7px] font-black px-1.5 py-0.5 rounded uppercase tracking-tighter ${
-                                          slot.item.intelligence.menuClassification === 'STAR' ? 'bg-emerald-100 text-emerald-700' :
-                                          slot.item.intelligence.menuClassification === 'PUZZLE' ? 'bg-blue-100 text-blue-700' :
-                                          slot.item.intelligence.menuClassification === 'PLOWHORSE' ? 'bg-amber-100 text-amber-700' :
-                                          'bg-red-100 text-red-700'
-                                        }`}>
+                                        <Badge tone={
+                                          slot.item.intelligence.menuClassification === 'STAR' ? 'emerald' :
+                                          slot.item.intelligence.menuClassification === 'PUZZLE' ? 'blue' :
+                                          slot.item.intelligence.menuClassification === 'PLOWHORSE' ? 'amber' :
+                                          'red'
+                                        }>
                                           {slot.item.intelligence.menuClassification}
-                                        </span>
+                                        </Badge>
                                       </div>
                                       <div className="col-span-3">
                                         <p className="text-[7px] font-mono text-slate-400 uppercase tracking-widest mb-1">Procurement Forecast</p>
                                         <p className="text-[8px] text-slate-600 leading-tight italic">"{slot.item.intelligence.procurementForecast}"</p>
                                       </div>
-                                    </div>
+                                    </Card>
                                   )}
                                 </div>
                                 <div className="text-right ml-4">
@@ -525,7 +524,9 @@ PREPARED BY: ${plan.preparedBy}
                         type="file" 
                         className="hidden" 
                         accept="image/*"
-                        ref={el => fileInputRefs.current[`${activeDayIndex}-${mIdx}`] = el}
+                        ref={(el) => {
+                          fileInputRefs.current[`${activeDayIndex}-${mIdx}`] = el;
+                        }}
                         onChange={(e) => handleImageUpload(activeDayIndex, mIdx, e)}
                       />
                       {uploadedImages[`${activeDayIndex}-${mIdx}`] ? (
@@ -537,22 +538,22 @@ PREPARED BY: ${plan.preparedBy}
                         </>
                       )}
                     </div>
-                    <div className="bg-blue-50/50 p-3 rounded-lg border border-blue-100">
+                    <Card className="bg-blue-50/50 p-3">
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-[8px] font-mono font-bold text-blue-600 uppercase">Service Standard</span>
                         <i className="fas fa-check-circle text-blue-500 text-[10px]"></i>
                       </div>
                       <p className="text-[10px] font-bold text-slate-700">Temp: {meal.slots?.[0]?.item?.operational?.serviceTemp || ">= 60°C"}</p>
-                    </div>
+                    </Card>
                   </div>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
 
           {/* Sidebar Audit */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 sticky top-24">
+            <Card className="p-6 sticky top-24">
               <h3 className="text-[10px] font-mono font-bold text-slate-900 uppercase tracking-[0.2em] mb-6 border-b border-slate-100 pb-2">Clinical Audit</h3>
               
               <div className="space-y-6">
@@ -578,12 +579,10 @@ PREPARED BY: ${plan.preparedBy}
 
               <div className="mt-8 pt-6 border-t border-slate-100 space-y-4">
                 {plan.validationReport && (
-                  <div className="bg-slate-50 border border-slate-200 rounded-lg p-3 space-y-2">
+                  <Card className="bg-slate-50 p-3 space-y-2">
                     <div className="flex items-center justify-between">
                       <p className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest">Validation</p>
-                      <span className={`text-[9px] font-black uppercase ${plan.validationReport.passed ? 'text-emerald-600' : 'text-red-600'}`}>
-                        {plan.validationReport.passed ? 'Pass' : 'Review'}
-                      </span>
+                      <Badge tone={plan.validationReport.passed ? 'emerald' : 'red'}>{plan.validationReport.passed ? 'Pass' : 'Review'}</Badge>
                     </div>
                     {plan.validationReport.summary && (
                       <p className="text-[10px] text-slate-600">
@@ -595,17 +594,17 @@ PREPARED BY: ${plan.preparedBy}
                         {plan.validationReport.issues.slice(0, 2).join(' ')}
                       </p>
                     )}
-                  </div>
+                  </Card>
                 )}
                 {plan.carePathLabel && (
-                  <div className="bg-emerald-50 border border-emerald-100 rounded-lg p-3">
+                  <Card className="bg-emerald-50 p-3">
                     <p className="text-[9px] font-mono font-bold text-emerald-600 uppercase tracking-widest mb-2">Care Path</p>
                     <p className="text-sm font-bold text-slate-900">{plan.carePathLabel}</p>
                     <p className="mt-1 text-[10px] text-slate-600 leading-relaxed">{plan.constraints?.nutrientTargets}</p>
-                  </div>
+                  </Card>
                 )}
                 {plan.diabetesMnt && (
-                  <div className="bg-orange-50 border border-orange-100 rounded-lg p-3 space-y-2">
+                  <Card className="bg-amber-50 p-3 space-y-2">
                     <p className="text-[9px] font-mono font-bold text-orange-600 uppercase tracking-widest">Diabetes Risk Engine</p>
                     <p className="text-sm font-bold text-slate-900">
                       Fasting Risk {plan.diabetesMnt.fastingRiskScore} ({plan.diabetesMnt.fastingRiskLevel})
@@ -616,18 +615,18 @@ PREPARED BY: ${plan.preparedBy}
                     {plan.diabetesMnt.safetyAlerts.slice(0, 2).map((alert) => (
                       <p key={alert} className="text-[10px] text-red-600 leading-relaxed">{alert}</p>
                     ))}
-                  </div>
+                  </Card>
                 )}
                 {plan.localEngine && (
-                  <div className="bg-blue-50 border border-blue-100 rounded-lg p-3 space-y-2">
+                  <Card className="bg-blue-50 p-3 space-y-2">
                     <p className="text-[9px] font-mono font-bold text-blue-600 uppercase tracking-widest">Local Execution</p>
                     <p className="text-[10px] text-slate-700">
                       {plan.localEngine.phiProcessing} • {plan.localEngine.networkDependency} • {plan.localEngine.databaseStatus.databaseReady ? 'SQLite loaded' : 'SQLite schema ready'}
                     </p>
-                  </div>
+                  </Card>
                 )}
                 {plan.therapeuticEngine && (
-                  <div className="bg-violet-50 border border-violet-100 rounded-lg p-3 space-y-2">
+                  <Card className="bg-blue-50 p-3 space-y-2">
                     <p className="text-[9px] font-mono font-bold text-violet-600 uppercase tracking-widest">Therapeutic Engine</p>
                     {plan.therapeuticEngine.ckdAssessment && (
                       <p className="text-[10px] text-slate-700">
@@ -664,46 +663,47 @@ PREPARED BY: ${plan.preparedBy}
                         {plan.therapeuticEngine.potassiumAlert.message}
                       </p>
                     )}
-                  </div>
+                  </Card>
                 )}
-                <div>
+                <Card className="p-3">
                   <p className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest mb-2">Scientific Rationale</p>
                   <p className="text-[11px] text-slate-600 leading-relaxed italic line-clamp-6">
                     {plan.rationale}
                   </p>
-                </div>
+                </Card>
                 {plan.diabetesMnt && (
-                  <div className="space-y-2">
+                  <Card className="p-3 space-y-2">
                     <p className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest">Plate Method</p>
                     {plan.diabetesMnt.plateMethod.map((step) => (
                       <p key={step} className="text-[10px] text-slate-600">{step}</p>
                     ))}
-                  </div>
+                  </Card>
                 )}
                 {plan.therapeuticEngine && (
-                  <div className="space-y-2">
+                  <Card className="p-3 space-y-2">
                     <p className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest">Fractionation Schedule</p>
                     {plan.therapeuticEngine.snackSchedule.map((time) => (
                       <p key={time} className="text-[10px] text-slate-600">{time}</p>
                     ))}
-                  </div>
+                  </Card>
                 )}
                 {plan.therapeuticEngine?.phosphorusGuide && (
-                  <div className="space-y-2">
+                  <Card className="p-3 space-y-2">
                     <p className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest">Low-Phosphorus Guide</p>
                     {plan.therapeuticEngine.phosphorusGuide.lowerPhosphorusFoodGroups.slice(0, 4).map((item) => (
                       <p key={item} className="text-[10px] text-slate-600">{item}</p>
                     ))}
-                  </div>
+                  </Card>
                 )}
-                <button 
+                <Button
                   onClick={handleShare}
-                  className="w-full py-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg text-[10px] font-bold uppercase tracking-widest text-slate-600 transition-all"
+                  variant="secondary"
+                  className="w-full text-[10px] font-bold uppercase tracking-widest text-slate-600"
                 >
                   <i className="fas fa-share-nodes mr-2"></i> Share Summary
-                </button>
+                </Button>
               </div>
-            </div>
+            </Card>
           </div>
         </div>
       </div>

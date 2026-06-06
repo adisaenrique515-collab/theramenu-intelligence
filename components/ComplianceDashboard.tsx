@@ -1,5 +1,7 @@
 
 import React from 'react';
+import { ChevronRight, ClipboardCheck, Database, FileCheck2, GraduationCap, ShieldCheck, Stethoscope } from 'lucide-react';
+import { Badge, Button, Card, ProgressBar } from './thera/ui';
 
 const ComplianceDashboard: React.FC = () => {
   const standards = [
@@ -10,6 +12,20 @@ const ComplianceDashboard: React.FC = () => {
     { id: 'FNC.5', title: 'Clinical Oversight', status: 'ACTION REQUIRED', description: 'Requires Registered Dietitian (RD) digital signature workflow.' },
   ];
 
+  const standardIcons: Record<string, typeof ClipboardCheck> = {
+    'FNC.1': ClipboardCheck,
+    'FNC.2': Stethoscope,
+    'FNC.3': ShieldCheck,
+    'FNC.4': GraduationCap,
+    'FNC.5': FileCheck2,
+  };
+
+  const statusTone = (status: string): 'emerald' | 'amber' | 'red' => {
+    if (status === 'READY') return 'emerald';
+    if (status === 'PARTIAL') return 'amber';
+    return 'red';
+  };
+
   return (
     <div className="max-w-5xl mx-auto py-10 px-6">
       <div className="mb-10">
@@ -18,67 +34,68 @@ const ComplianceDashboard: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <Card accent className="p-6">
           <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-2">Overall Readiness</div>
           <div className="text-4xl font-bold text-blue-600">82%</div>
-          <div className="mt-4 h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-            <div className="h-full bg-blue-600 w-[82%]"></div>
+          <div className="mt-4">
+            <ProgressBar value={82} max={100} tone="blue" />
           </div>
-        </div>
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        </Card>
+        <Card className="p-6">
           <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-2">Clinical Accuracy</div>
           <div className="text-4xl font-bold text-emerald-600">98.4%</div>
           <p className="text-xs text-slate-500 mt-2">Based on Clinical Alignment Scores</p>
-        </div>
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        </Card>
+        <Card className="p-6">
           <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-2">Audit Risk</div>
           <div className="text-4xl font-bold text-amber-600">LOW</div>
           <p className="text-xs text-slate-500 mt-2">3 minor gaps identified</p>
-        </div>
+        </Card>
       </div>
 
       <div className="space-y-4">
-        {standards.map((std) => (
-          <div key={std.id} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start space-x-6">
-            <div className="w-16 h-16 bg-slate-50 rounded-xl flex items-center justify-center flex-shrink-0 border border-slate-100">
-              <span className="text-xs font-bold text-slate-400">{std.id}</span>
-            </div>
-            <div className="flex-1">
-              <div className="flex items-center justify-between mb-1">
-                <h3 className="font-bold text-slate-900">{std.title}</h3>
-                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                  std.status === 'READY' ? 'bg-emerald-100 text-emerald-700' :
-                  std.status === 'PARTIAL' ? 'bg-amber-100 text-amber-700' : 'bg-red-100 text-red-700'
-                }`}>
-                  {std.status}
-                </span>
+        {standards.map((std) => {
+          const Icon = standardIcons[std.id];
+          return (
+            <Card key={std.id} className="p-6">
+              <div className="flex items-start gap-5">
+                <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-slate-50">
+                  <Icon className="h-6 w-6 text-slate-500" aria-hidden />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center justify-between mb-1">
+                    <h3 className="font-bold text-slate-900">{std.title}</h3>
+                    <Badge tone={statusTone(std.status)}>{std.status}</Badge>
+                  </div>
+                  <div className="mb-2 font-mono text-[10px] uppercase tracking-widest text-slate-400">{std.id}</div>
+                  <p className="text-sm text-slate-500 leading-relaxed">{std.description}</p>
+                </div>
+                <button className="mt-1 inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md text-slate-400 transition-colors hover:bg-slate-100 hover:text-blue-600" aria-label={`View ${std.id} compliance details`}>
+                  <ChevronRight className="h-4 w-4" aria-hidden />
+                </button>
               </div>
-              <p className="text-sm text-slate-500 leading-relaxed">{std.description}</p>
-            </div>
-            <button className="text-slate-400 hover:text-blue-600 transition-colors">
-              <i className="fas fa-chevron-right"></i>
-            </button>
-          </div>
-        ))}
+            </Card>
+          );
+        })}
       </div>
 
-      <div className="mt-12 p-8 bg-slate-900 rounded-3xl text-white relative overflow-hidden">
+      <Card className="mt-12 overflow-hidden bg-slate-900 p-8 text-white">
         <div className="relative z-10">
           <h2 className="text-2xl font-bold mb-4">Ready for Production?</h2>
           <p className="text-slate-400 max-w-2xl mb-8 leading-relaxed">
             TheraMenu is currently in **Clinical Validation Phase**. To move to full production, you must connect a persistent database (Firebase) to store RD signatures and patient logs, fulfilling the JCI requirement for "Documented Evidence of Care."
           </p>
           <div className="flex space-x-4">
-            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl font-bold text-sm transition-all">
+            <Button>
+              <Database className="h-4 w-4" aria-hidden />
               Request JCI Audit Export
-            </button>
-            <button className="px-6 py-3 bg-slate-800 hover:bg-slate-700 rounded-xl font-bold text-sm transition-all">
+            </Button>
+            <Button variant="ghost" className="bg-slate-800 text-white hover:bg-slate-700">
               Connect Hospital EMR
-            </button>
+            </Button>
           </div>
         </div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-      </div>
+      </Card>
     </div>
   );
 };

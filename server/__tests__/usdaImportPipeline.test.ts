@@ -102,7 +102,7 @@ function badJsonFetch(status = 200): FetchFn {
     ok: status >= 200 && status < 300,
     status,
     json: async () => { throw new SyntaxError('Unexpected token'); },
-  } as Response);
+  } as unknown as Response);
 }
 
 // ── Minimal FoodItem fixture ──────────────────────────────────────────────

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Badge, Card, StateView } from './thera/ui';
 import type { OfflineClinicalOverview } from '../offlineClinical.types';
 import type { LocalNutritionDbStatus } from '../localNutritionDb.types';
 import { loadResourcePackSummary } from '../services/resourcePack';
@@ -172,24 +173,24 @@ const BLUEPRINT_NODES: BlueprintNode[] = [
   },
 ];
 
-const STATUS_STYLES: Record<BlueprintNode['status'], string> = {
-  live: 'border-emerald-200 bg-emerald-50 text-emerald-700',
-  partial: 'border-amber-200 bg-amber-50 text-amber-700',
-  planned: 'border-slate-200 bg-slate-100 text-slate-600',
+type BadgeTone = 'slate' | 'blue' | 'emerald' | 'amber' | 'red';
+
+const statusTone = (status: BlueprintNode['status']): BadgeTone => {
+  if (status === 'live') return 'emerald';
+  if (status === 'partial') return 'amber';
+  return 'slate';
 };
 
 const currencyValue = (value: number) => Math.round(value * 10) / 10;
 
 const renderFoodInsight = (food: ResourceFoodInsight) => (
-  <div key={food.key} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+  <Card key={food.key} className="p-4">
     <div className="flex items-start justify-between gap-3">
       <div>
         <h4 className="text-sm font-bold text-slate-900">{food.name}</h4>
         <p className="mt-1 text-[11px] font-mono uppercase tracking-widest text-slate-400">{food.group}</p>
       </div>
-      <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-slate-600">
-        AUSNUT
-      </span>
+      <Badge tone="slate">AUSNUT</Badge>
     </div>
     <div className="mt-4 grid grid-cols-2 gap-3 text-xs text-slate-600">
       <div className="rounded-xl bg-slate-50 p-3">
@@ -209,16 +210,10 @@ const renderFoodInsight = (food: ResourceFoodInsight) => (
         <p className="mt-1 text-lg font-black text-slate-900">{currencyValue(food.potassiumMg)}mg</p>
       </div>
     </div>
-  </div>
+  </Card>
 );
 
 // ── Readiness rendering helpers ───────────────────────────────────────────
-
-const READINESS_STYLES: Record<ValidationReadiness, string> = {
-  ready:               'border-emerald-200 bg-emerald-50 text-emerald-700',
-  ready_with_warnings: 'border-amber-200 bg-amber-50 text-amber-700',
-  blocked:             'border-red-200 bg-red-50 text-red-700',
-};
 
 const READINESS_LABELS: Record<ValidationReadiness, string> = {
   ready:               'Ready',
@@ -226,25 +221,29 @@ const READINESS_LABELS: Record<ValidationReadiness, string> = {
   blocked:             'Blocked',
 };
 
-const COVERAGE_STYLES: Record<CoverageSeverityOrOk, string> = {
-  ok:       'bg-emerald-100 text-emerald-700',
-  info:     'bg-blue-100 text-blue-700',
-  warning:  'bg-amber-100 text-amber-700',
-  critical: 'bg-orange-100 text-orange-700',
-  blocker:  'bg-red-100 text-red-700',
+const readinessTone: Record<ValidationReadiness, BadgeTone> = {
+  ready: 'emerald',
+  ready_with_warnings: 'amber',
+  blocked: 'red',
+};
+
+const coverageTone: Record<CoverageSeverityOrOk, BadgeTone> = {
+  ok:       'emerald',
+  info:     'blue',
+  warning:  'amber',
+  critical: 'amber',
+  blocker:  'red',
 };
 
 function ProtocolCard({ s }: { s: DiagnosisReadinessSummary }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <Card className="p-5">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="truncate text-sm font-bold text-slate-900">{s.diagnosisName}</p>
           <p className="mt-0.5 font-mono text-[10px] uppercase tracking-widest text-slate-400">{s.diagnosisCode}</p>
         </div>
-        <span className={`shrink-0 rounded-full border px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.2em] ${READINESS_STYLES[s.validationReadiness]}`}>
-          {READINESS_LABELS[s.validationReadiness]}
-        </span>
+        <Badge tone={readinessTone[s.validationReadiness]}>{READINESS_LABELS[s.validationReadiness]}</Badge>
       </div>
 
       <div className="mt-4 grid grid-cols-3 gap-2 text-center">
@@ -263,9 +262,7 @@ function ProtocolCard({ s }: { s: DiagnosisReadinessSummary }) {
       </div>
 
       <div className="mt-3 flex flex-wrap items-center gap-2">
-        <span className={`rounded-full px-2 py-0.5 text-[10px] font-black uppercase tracking-[0.15em] ${COVERAGE_STYLES[s.coverageSeverity]}`}>
-          {s.coverageSeverity}
-        </span>
+        <Badge tone={coverageTone[s.coverageSeverity]}>{s.coverageSeverity}</Badge>
         <span className="text-xs text-slate-500">v{s.protocolVersion}</span>
         <span className="text-xs text-slate-500">{s.evidenceCount} evidence ref{s.evidenceCount !== 1 ? 's' : ''}</span>
         <span className="text-xs text-slate-500">{s.slotTemplateCount} slot{s.slotTemplateCount !== 1 ? 's' : ''}</span>
@@ -288,7 +285,7 @@ function ProtocolCard({ s }: { s: DiagnosisReadinessSummary }) {
       {s.targetSummary && (
         <p className="mt-3 text-[11px] leading-relaxed text-slate-500">{s.targetSummary}</p>
       )}
-    </div>
+    </Card>
   );
 }
 
@@ -387,14 +384,14 @@ const DiagnosisDB: React.FC = () => {
       ]
         .filter(Boolean)
         .map((item, index) => (
-          <div key={`${selectedNode.id}-${index}`} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+          <Card key={`${selectedNode.id}-${index}`} className="p-4">
             <p className="text-sm leading-relaxed text-slate-700">{item}</p>
-          </div>
+          </Card>
         ));
     }
 
     return [
-      <div key="inventory" className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+      <Card key="inventory" className="p-5">
         <p className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-400">Resource Inventory</p>
         <div className="mt-4 grid grid-cols-2 gap-4">
           <div>
@@ -414,8 +411,8 @@ const DiagnosisDB: React.FC = () => {
             <p className="text-xs text-slate-500">foods with recipe breakdowns</p>
           </div>
         </div>
-      </div>,
-      <div key="groups" className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+      </Card>,
+      <Card key="groups" className="p-5">
         <p className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-400">Top Food Groups</p>
         <div className="mt-4 space-y-3">
           {resourceSummary.topFoodGroups.map((group) => (
@@ -425,8 +422,8 @@ const DiagnosisDB: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>,
-      <div key="branded" className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+      </Card>,
+      <Card key="branded" className="p-5">
         <p className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-400">Branded Label Intelligence</p>
         <div className="mt-4 grid grid-cols-2 gap-4">
           <div>
@@ -453,13 +450,13 @@ const DiagnosisDB: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>,
+      </Card>,
     ];
   })();
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="rounded-[2rem] bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.18),_transparent_35%),linear-gradient(135deg,#0f172a,#172554_52%,#020617)] p-8 text-white shadow-2xl">
+      <Card className="bg-slate-900 p-8 text-white">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <p className="text-[11px] font-black uppercase tracking-[0.4em] text-blue-200">Clinical Blueprint Explorer</p>
@@ -481,10 +478,10 @@ const DiagnosisDB: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Card>
 
       {/* ── Protocol Readiness Section ─────────────────────────────────────── */}
-      <div className="mt-8 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl">
+      <Card accent className="mt-8 p-8">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-[11px] font-black uppercase tracking-[0.35em] text-slate-400">Protocol Readiness</p>
@@ -516,15 +513,14 @@ const DiagnosisDB: React.FC = () => {
         </div>
 
         {readinessLoading && (
-          <div className="mt-6 flex items-center gap-3 text-sm text-slate-500">
-            <div className="h-5 w-5 animate-spin rounded-full border-2 border-slate-300 border-t-blue-600"></div>
-            Loading protocol readiness...
+          <div className="mt-6">
+            <StateView compact kind="loading" title="Loading protocol readiness" />
           </div>
         )}
 
         {readinessError && (
-          <div className="mt-6 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-            Readiness load failed: {readinessError}
+          <div className="mt-6">
+            <StateView compact kind="error" title="Readiness load failed" description={readinessError} />
           </div>
         )}
 
@@ -546,10 +542,10 @@ const DiagnosisDB: React.FC = () => {
             ))}
           </div>
         )}
-      </div>
+      </Card>
 
       <div className="mt-8 grid grid-cols-1 gap-8 xl:grid-cols-[360px_minmax(0,1fr)]">
-        <aside className="space-y-3 rounded-[2rem] border border-slate-200 bg-white p-4 shadow-xl">
+        <Card className="space-y-3 p-4">
           {BLUEPRINT_NODES.map((node) => {
             const isActive = node.id === selectedNodeId;
             return (
@@ -566,17 +562,15 @@ const DiagnosisDB: React.FC = () => {
                     <p className="text-sm font-bold text-slate-900">{node.title}</p>
                     <p className="mt-1 text-xs leading-relaxed text-slate-500">{node.summary}</p>
                   </div>
-                  <span className={`rounded-full border px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.2em] ${STATUS_STYLES[node.status]}`}>
-                    {node.badge}
-                  </span>
+                  <Badge tone={statusTone(node.status)}>{node.badge}</Badge>
                 </div>
               </button>
             );
           })}
-        </aside>
+        </Card>
 
         <section className="space-y-6">
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl">
+          <Card className="p-8">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
               <div className="max-w-3xl">
                 <p className="text-[11px] font-black uppercase tracking-[0.35em] text-slate-400">
@@ -585,9 +579,7 @@ const DiagnosisDB: React.FC = () => {
                 <h3 className="mt-3 text-3xl font-black tracking-tight text-slate-950">{selectedNode.title}</h3>
                 <p className="mt-4 text-sm leading-relaxed text-slate-600">{selectedNode.summary}</p>
               </div>
-              <span className={`h-fit rounded-full border px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.25em] ${STATUS_STYLES[selectedNode.status]}`}>
-                {selectedNode.status}
-              </span>
+              <Badge tone={statusTone(selectedNode.status)}>{selectedNode.status}</Badge>
             </div>
 
             <div className="mt-8 grid gap-4 lg:grid-cols-3">
@@ -609,19 +601,14 @@ const DiagnosisDB: React.FC = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </Card>
 
           {loading && (
-            <div className="rounded-[2rem] border border-slate-200 bg-white p-10 text-center shadow-xl">
-              <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-slate-200 border-t-blue-600"></div>
-              <p className="mt-4 text-sm font-semibold text-slate-700">Loading AUSNUT and guideline resources...</p>
-            </div>
+            <StateView kind="loading" title="Loading AUSNUT and guideline resources" />
           )}
 
           {error && (
-            <div className="rounded-[2rem] border border-red-200 bg-red-50 p-6 text-sm text-red-700 shadow-xl">
-              Resource load failed: {error}
-            </div>
+            <StateView kind="error" title="Resource load failed" description={error} />
           )}
 
           {!loading && !error && (
@@ -631,7 +618,7 @@ const DiagnosisDB: React.FC = () => {
               </div>
 
               {offlineOverview && (
-                <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl">
+                <Card className="p-8">
                   <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                     <div className="max-w-3xl">
                       <p className="text-[11px] font-black uppercase tracking-[0.35em] text-slate-400">Offline Clinical Engine</p>
@@ -666,13 +653,7 @@ const DiagnosisDB: React.FC = () => {
                           <div key={module.name} className="rounded-2xl border border-slate-200 bg-white p-4">
                             <div className="flex items-center justify-between gap-3">
                               <p className="text-sm font-bold text-slate-900">{module.name}</p>
-                              <span className={`rounded-full px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.2em] ${
-                                module.status === 'active'
-                                  ? 'bg-emerald-100 text-emerald-700'
-                                  : 'bg-amber-100 text-amber-700'
-                              }`}>
-                                {module.status}
-                              </span>
+                              <Badge tone={module.status === 'active' ? 'emerald' : 'amber'}>{module.status}</Badge>
                             </div>
                             <p className="mt-2 text-xs leading-relaxed text-slate-600">{module.description}</p>
                           </div>
@@ -687,9 +668,7 @@ const DiagnosisDB: React.FC = () => {
                           <div key={source.id} className="rounded-2xl border border-slate-200 bg-white p-4">
                             <div className="flex items-center justify-between gap-3">
                               <p className="text-sm font-bold text-slate-900">{source.id}</p>
-                              <span className="rounded-full bg-blue-50 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-blue-700">
-                                {source.role}
-                              </span>
+                              <Badge tone="blue">{source.role}</Badge>
                             </div>
                             <p className="mt-2 text-xs leading-relaxed text-slate-600">{source.description}</p>
                             <div className="mt-3 flex flex-wrap gap-2">
@@ -849,7 +828,7 @@ const DiagnosisDB: React.FC = () => {
                       </div>
                     </div>
                   )}
-                </div>
+                </Card>
               )}
             </>
           )}
