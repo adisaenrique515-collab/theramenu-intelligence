@@ -9,7 +9,8 @@ import PlanHistory from './components/PlanHistory';
 import DietitianReview from './components/DietitianReview';
 import KitchenSheet from './components/KitchenSheet';
 import { Header as TheraHeader, type TabKey } from './components/thera/Header';
-import { StateView } from './components/thera/ui';
+import { Badge, Button, Card, StateView } from './components/thera/ui';
+import { ArrowLeft, CheckCircle2, ClipboardCheck, X } from 'lucide-react';
 import { generatePlanViaInternalApi } from './services/localClinicalApi';
 import { refineMenuWithClaude } from './services/claudeService';
 import { enrichPlanWithUsdaData } from './services/usdaFoodDataService';
@@ -32,6 +33,20 @@ interface NrsResult {
   score: number;
   risk: NrsRisk;
 }
+
+const nrsRiskTone = (risk: NrsRisk): 'emerald' | 'amber' | 'red' => {
+  if (risk === 'HIGH') return 'red';
+  if (risk === 'MODERATE') return 'amber';
+  return 'emerald';
+};
+
+const planStatusTone = (status: PlanStatus): 'slate' | 'blue' | 'emerald' | 'amber' | 'red' => {
+  if (status === 'APPROVED') return 'emerald';
+  if (status === 'SENT_TO_KITCHEN') return 'blue';
+  if (status === 'REJECTED') return 'red';
+  if (status === 'PENDING_REVIEW') return 'amber';
+  return 'slate';
+};
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab]             = useState<TabId>('generator');
@@ -199,64 +214,86 @@ const App: React.FC = () => {
 
       {/* ── Generator tab ─────────────────────────────────────────────────── */}
       {activeTab === 'generator' && (
-        <main className="mx-auto max-w-7xl px-4 pt-8">
+        <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
 
           {/* NRS screening banner */}
           {nrsResult && (
-            <div className={`mb-6 flex items-center justify-between rounded-xl border px-5 py-3 ${
-              nrsResult.risk === 'HIGH'     ? 'border-red-200 bg-red-50'    :
-              nrsResult.risk === 'MODERATE' ? 'border-amber-200 bg-amber-50' :
-                                              'border-emerald-200 bg-emerald-50'
-            }`}>
-              <div className="flex items-center space-x-3">
-                <i className={`fas fa-clipboard-check text-lg ${
-                  nrsResult.risk === 'HIGH' ? 'text-red-500' : nrsResult.risk === 'MODERATE' ? 'text-amber-500' : 'text-emerald-500'
-                }`}></i>
-                <div>
+            <Card className="mb-6 flex items-center justify-between gap-4 p-4">
+              <div className="flex min-w-0 items-center gap-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-slate-100 text-slate-600">
+                  <ClipboardCheck className="h-5 w-5" aria-hidden />
+                </div>
+                <div className="min-w-0 [&>span:first-child]:hidden">
+                  <p className="text-sm font-semibold text-slate-900">NRS-2002 screening complete</p>
                   <span className="text-xs font-bold text-slate-700">NRS-2002 Screening Complete — </span>
-                  <span className={`text-xs font-black ${
-                    nrsResult.risk === 'HIGH' ? 'text-red-700' : nrsResult.risk === 'MODERATE' ? 'text-amber-700' : 'text-emerald-700'
-                  }`}>{nrsResult.risk} RISK (score {nrsResult.score})</span>
+                  <div className="mt-1 flex flex-wrap items-center gap-2">
+                    <Badge tone={nrsRiskTone(nrsResult.risk)}>{nrsResult.risk} risk</Badge>
+                    <span className="text-xs text-slate-500">Score {nrsResult.score}</span>
+                  </div>
                 </div>
               </div>
-              <button onClick={() => setNrsResult(null)} className="text-slate-400 hover:text-slate-600 text-xs">
-                <i className="fas fa-times"></i>
-              </button>
-            </div>
+              <Button
+                type="button"
+                variant="ghost"
+                onClick={() => setNrsResult(null)}
+                className="min-h-10 px-3"
+                aria-label="Clear NRS screening result"
+              >
+                <X className="h-4 w-4" aria-hidden />
+              </Button>
+            </Card>
           )}
 
-          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12">
-            <div className={`no-print space-y-8 lg:col-span-4 lg:sticky lg:top-24 ${mobileView === 'result' ? 'hidden lg:block' : ''}`}>
-              <div className="group relative overflow-hidden rounded-xl bg-slate-900 p-8 text-white shadow-2xl">
-                <div className="absolute right-0 top-0 h-32 w-32 translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/10 blur-2xl transition-all group-hover:bg-blue-500/20"></div>
-                <div className="mb-6 flex items-center space-x-3">
-                  <div className="h-2 w-2 animate-pulse rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
-                  <span className="text-[10px] font-mono font-black uppercase tracking-[0.3em] text-blue-400">System Core Online</span>
+          <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[minmax(320px,420px)_1fr]">
+            <section className={`no-print space-y-6 lg:sticky lg:top-28 ${mobileView === 'result' ? 'hidden lg:block' : ''}`}>
+              <Card accent className="p-6">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <Badge tone="blue">Clinical generator</Badge>
+                    <h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-900">Therapeutic plan setup</h2>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                      Enter patient and diagnosis details to synthesize a seven-day therapeutic nutrition plan.
+                    </p>
+                  </div>
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-blue-50 text-blue-700">
+                    <ClipboardCheck className="h-5 w-5" aria-hidden />
+                  </div>
                 </div>
-                <h2 className="mb-4 text-3xl font-black uppercase italic leading-none tracking-tighter">Clinical<br/>Engine</h2>
-                <p className="mb-8 text-xs font-medium leading-relaxed text-slate-400">
+                <div className="mt-6 grid grid-cols-3 gap-3 border-t border-slate-100 pt-5">
+                  <div>
+                    <p className="text-lg font-semibold text-slate-900">7</p>
+                    <p className="mt-1 text-xs text-slate-500">Cycle days</p>
+                  </div>
+                  <div>
+                    <p className="text-lg font-semibold text-slate-900">21</p>
+                    <p className="mt-1 text-xs text-slate-500">Meal audits</p>
+                  </div>
+                  <div>
+                    <p className="text-lg font-semibold text-slate-900">Local</p>
+                    <p className="mt-1 text-xs text-slate-500">PHI boundary</p>
+                  </div>
+                </div>
+                <p className="hidden">
                   Deterministic engine → Claude AI review → USDA FDC enrichment → Dietitian sign-off → Kitchen output.
                 </p>
-                <div className="grid grid-cols-3 gap-4 border-t border-slate-800 pt-8">
-                  <div className="space-y-1"><p className="text-2xl font-black italic tracking-tighter">07</p><p className="text-[8px] font-mono uppercase tracking-widest text-slate-500">Cycle Days</p></div>
-                  <div className="space-y-1"><p className="text-2xl font-black italic tracking-tighter">21</p><p className="text-[8px] font-mono uppercase tracking-widest text-slate-500">Meal Audits</p></div>
-                  <div className="space-y-1"><p className="text-2xl font-black italic tracking-tighter">99<span className="text-xs">%</span></p><p className="text-[8px] font-mono uppercase tracking-widest text-slate-500">Local Only</p></div>
-                </div>
-              </div>
+              </Card>
               <TherapeuticForm onSubmit={handleGenerate} isLoading={loading} />
               {error && (
                 <StateView compact kind="error" title="Clinical Exception" description={error} />
               )}
-            </div>
+            </section>
 
-            <div className={`lg:col-span-8 ${mobileView === 'form' ? 'hidden lg:block' : ''}`}>
+            <section className={`${mobileView === 'form' ? 'hidden lg:block' : ''}`}>
               <div className="mb-4 lg:hidden">
-                <button
+                <Button
+                  type="button"
+                  variant="secondary"
                   onClick={() => setMobileView('form')}
-                  className="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-600 shadow-sm hover:text-gray-900"
+                  className="w-full"
                 >
-                  <i className="fas fa-arrow-left mr-2"></i>Back to Generator Inputs
-                </button>
+                  <ArrowLeft className="h-4 w-4" aria-hidden />
+                  Back to generator inputs
+                </Button>
               </div>
 
               {!result && !loading && (
@@ -265,12 +302,14 @@ const App: React.FC = () => {
                   title="Protocol Pending"
                   description="Submit a diagnosis to generate a comprehensive weekly nutritional strategy."
                   actions={!nrsResult && (
-                    <button
+                    <Button
+                      type="button"
+                      variant="secondary"
                       onClick={() => setActiveTab('screening')}
-                      className="px-5 py-2.5 rounded-lg border border-blue-200 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-widest hover:bg-blue-100 transition-all"
                     >
-                      <i className="fas fa-clipboard-check mr-2"></i>Complete NRS-2002 Screening First
-                    </button>
+                      <ClipboardCheck className="h-4 w-4" aria-hidden />
+                      Complete NRS-2002 screening first
+                    </Button>
                   )}
                 />
               )}
@@ -291,52 +330,48 @@ const App: React.FC = () => {
               {result && !loading && (
                 <div id="result-section" className="pb-12 space-y-4">
                   {/* Workflow status bar */}
-                  <div className="flex items-center justify-between bg-white rounded-xl border border-slate-200 px-5 py-3 shadow-sm">
-                    <div className="flex items-center space-x-4">
-                      {planId && (
-                        <span className="text-[10px] font-mono text-slate-400">
-                          ID: <span className="text-blue-600 font-bold">{planId}</span>
-                        </span>
-                      )}
-                      <span className={`text-[9px] font-bold px-2.5 py-1 rounded-full ${
-                        planStatus === 'APPROVED'        ? 'bg-emerald-100 text-emerald-700' :
-                        planStatus === 'SENT_TO_KITCHEN' ? 'bg-blue-100 text-blue-700' :
-                        planStatus === 'REJECTED'        ? 'bg-red-100 text-red-700' :
-                        planStatus === 'PENDING_REVIEW'  ? 'bg-amber-100 text-amber-700' :
-                                                           'bg-slate-100 text-slate-600'
-                      }`}>
-                        {planStatus.replace('_', ' ')}
-                      </span>
+                  <Card className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="min-w-0">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Badge tone={planStatusTone(planStatus)}>{planStatus.replace('_', ' ')}</Badge>
+                        {planId && (
+                          <span className="font-mono text-xs text-slate-500">
+                            ID: <span className="font-semibold text-blue-700">{planId}</span>
+                          </span>
+                        )}
+                      </div>
                       {reviewedBy && (
-                        <span className="text-[10px] text-slate-500">
-                          <i className="fas fa-check-circle text-emerald-500 mr-1"></i>{reviewedBy}
-                        </span>
+                        <div className="mt-2 flex items-center gap-2 text-sm text-slate-600">
+                          <CheckCircle2 className="h-4 w-4 text-emerald-600" aria-hidden />
+                          <span>{reviewedBy}</span>
+                        </div>
                       )}
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex flex-wrap items-center gap-2">
                       {planId && planStatus === 'DRAFT' && (
-                        <button
+                        <Button
+                          type="button"
                           onClick={() => setShowReview(true)}
-                          className="px-4 py-1.5 rounded-lg bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest hover:bg-blue-700 transition-all"
                         >
-                          <i className="fas fa-user-doctor mr-1.5"></i>Dietitian Review
-                        </button>
+                          Dietitian review
+                        </Button>
                       )}
                       {planStatus === 'APPROVED' && (
-                        <button
+                        <Button
+                          type="button"
                           onClick={() => setShowKitchen(true)}
-                          className="px-4 py-1.5 rounded-lg bg-green-600 text-white text-[10px] font-bold uppercase tracking-widest hover:bg-green-700 transition-all"
+                          className="bg-emerald-600 hover:bg-emerald-700"
                         >
-                          <i className="fas fa-utensils mr-1.5"></i>Kitchen Sheet
-                        </button>
+                          Kitchen sheet
+                        </Button>
                       )}
                     </div>
-                  </div>
+                  </Card>
 
                   <MenuResult plan={result} />
                 </div>
               )}
-            </div>
+            </section>
           </div>
         </main>
       )}
