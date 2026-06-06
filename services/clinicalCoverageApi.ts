@@ -58,9 +58,26 @@ export interface ClinicalCoverageReadinessResponse {
 
 // ── Cache ─────────────────────────────────────────────────────────────────
 
+import { isCloudflareMode } from '../utils/appMode';
+
+const EMPTY_THRESHOLDS: CoverageThresholds = {
+  grainStarch: 0, protein: 0, vegetable: 0, fruit: 0,
+  dairyAlternatives: 0, fatsOils: 0, brothsFluids: 0, legumes: 0,
+  minTotalApproved: 0, recommendedTotalApproved: 0, minFoodsPerSlot: 0,
+  minRotationPoolPerCombination: 0, minFoodsPerTexture: 0, minFoodsPerMealType: 0,
+};
+
 let cachedReadinessPromise: Promise<ClinicalCoverageReadinessResponse> | null = null;
 
 export async function loadClinicalCoverageReadiness(): Promise<ClinicalCoverageReadinessResponse> {
+  if (isCloudflareMode) {
+    return {
+      summaries: [],
+      thresholds: EMPTY_THRESHOLDS,
+      storeTotals: { total: 0, draft: 0, pendingReview: 0, approved: 0, retired: 0 },
+    };
+  }
+
   if (!cachedReadinessPromise) {
     cachedReadinessPromise = fetch('/api/internal/clinical-coverage/readiness')
       .then(async (res) => {
