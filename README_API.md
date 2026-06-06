@@ -136,3 +136,4 @@ The current schema is ready for Gemini/OpenAI retrieval:
 - Use `commercial_scores` and `monetization_tags` as ranking/filter signals.
 - Keep full copyrighted recipe text outside the database.
 - Add embeddings later in a separate `recipe_embeddings` table keyed by `recipe_id`.
+- 
