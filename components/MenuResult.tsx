@@ -441,7 +441,7 @@ PREPARED BY: ${plan.preparedBy}
                                   
                                   {/* USDA FDC Live Nutrient Panel */}
                                   {slot.item?.usdaNutrients && (
-                                    <div className="mt-2 p-2.5 rounded-lg bg-emerald-50/60 border border-emerald-100 opacity-0 group-hover/row:opacity-100 transition-opacity duration-300">
+                                    <Card className="mt-2 bg-emerald-50/60 p-2.5 opacity-0 transition-opacity duration-300 group-hover/row:opacity-100">
                                       <div className="flex items-center space-x-1.5 mb-2">
                                         <span className="text-[7px] font-mono font-black text-emerald-600 uppercase tracking-widest">USDA FDC</span>
                                         <span className="text-[7px] text-emerald-400">per 100 g</span>
@@ -465,12 +465,12 @@ PREPARED BY: ${plan.preparedBy}
                                           ) : null
                                         )}
                                       </div>
-                                    </div>
+                                    </Card>
                                   )}
 
                                   {/* Clinical Intelligence Sub-Panel */}
                                   {slot.item?.intelligence && (
-                                    <div className="mt-3 grid grid-cols-3 gap-3 bg-slate-50/50 p-3 rounded-lg border border-slate-100 opacity-0 group-hover/row:opacity-100 transition-opacity duration-300">
+                                    <Card className="mt-3 grid grid-cols-3 gap-3 bg-slate-50/50 p-3 opacity-0 transition-opacity duration-300 group-hover/row:opacity-100">
                                       <div className="space-y-1">
                                         <p className="text-[7px] font-mono text-slate-400 uppercase tracking-widest">Stability</p>
                                         <div className="flex items-center space-x-2">
@@ -486,20 +486,20 @@ PREPARED BY: ${plan.preparedBy}
                                       </div>
                                       <div className="space-y-1">
                                         <p className="text-[7px] font-mono text-slate-400 uppercase tracking-widest">Class</p>
-                                        <span className={`text-[7px] font-black px-1.5 py-0.5 rounded uppercase tracking-tighter ${
-                                          slot.item.intelligence.menuClassification === 'STAR' ? 'bg-emerald-100 text-emerald-700' :
-                                          slot.item.intelligence.menuClassification === 'PUZZLE' ? 'bg-blue-100 text-blue-700' :
-                                          slot.item.intelligence.menuClassification === 'PLOWHORSE' ? 'bg-amber-100 text-amber-700' :
-                                          'bg-red-100 text-red-700'
-                                        }`}>
+                                        <Badge tone={
+                                          slot.item.intelligence.menuClassification === 'STAR' ? 'emerald' :
+                                          slot.item.intelligence.menuClassification === 'PUZZLE' ? 'blue' :
+                                          slot.item.intelligence.menuClassification === 'PLOWHORSE' ? 'amber' :
+                                          'red'
+                                        }>
                                           {slot.item.intelligence.menuClassification}
-                                        </span>
+                                        </Badge>
                                       </div>
                                       <div className="col-span-3">
                                         <p className="text-[7px] font-mono text-slate-400 uppercase tracking-widest mb-1">Procurement Forecast</p>
                                         <p className="text-[8px] text-slate-600 leading-tight italic">"{slot.item.intelligence.procurementForecast}"</p>
                                       </div>
-                                    </div>
+                                    </Card>
                                   )}
                                 </div>
                                 <div className="text-right ml-4">
@@ -536,13 +536,13 @@ PREPARED BY: ${plan.preparedBy}
                         </>
                       )}
                     </div>
-                    <div className="bg-blue-50/50 p-3 rounded-lg border border-blue-100">
+                    <Card className="bg-blue-50/50 p-3">
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-[8px] font-mono font-bold text-blue-600 uppercase">Service Standard</span>
                         <i className="fas fa-check-circle text-blue-500 text-[10px]"></i>
                       </div>
                       <p className="text-[10px] font-bold text-slate-700">Temp: {meal.slots?.[0]?.item?.operational?.serviceTemp || ">= 60°C"}</p>
-                    </div>
+                    </Card>
                   </div>
                 </div>
               </Card>
@@ -602,7 +602,7 @@ PREPARED BY: ${plan.preparedBy}
                   </Card>
                 )}
                 {plan.diabetesMnt && (
-                  <div className="bg-orange-50 border border-orange-100 rounded-lg p-3 space-y-2">
+                  <Card className="bg-amber-50 p-3 space-y-2">
                     <p className="text-[9px] font-mono font-bold text-orange-600 uppercase tracking-widest">Diabetes Risk Engine</p>
                     <p className="text-sm font-bold text-slate-900">
                       Fasting Risk {plan.diabetesMnt.fastingRiskScore} ({plan.diabetesMnt.fastingRiskLevel})
@@ -613,18 +613,18 @@ PREPARED BY: ${plan.preparedBy}
                     {plan.diabetesMnt.safetyAlerts.slice(0, 2).map((alert) => (
                       <p key={alert} className="text-[10px] text-red-600 leading-relaxed">{alert}</p>
                     ))}
-                  </div>
+                  </Card>
                 )}
                 {plan.localEngine && (
-                  <div className="bg-blue-50 border border-blue-100 rounded-lg p-3 space-y-2">
+                  <Card className="bg-blue-50 p-3 space-y-2">
                     <p className="text-[9px] font-mono font-bold text-blue-600 uppercase tracking-widest">Local Execution</p>
                     <p className="text-[10px] text-slate-700">
                       {plan.localEngine.phiProcessing} • {plan.localEngine.networkDependency} • {plan.localEngine.databaseStatus.databaseReady ? 'SQLite loaded' : 'SQLite schema ready'}
                     </p>
-                  </div>
+                  </Card>
                 )}
                 {plan.therapeuticEngine && (
-                  <div className="bg-violet-50 border border-violet-100 rounded-lg p-3 space-y-2">
+                  <Card className="bg-blue-50 p-3 space-y-2">
                     <p className="text-[9px] font-mono font-bold text-violet-600 uppercase tracking-widest">Therapeutic Engine</p>
                     {plan.therapeuticEngine.ckdAssessment && (
                       <p className="text-[10px] text-slate-700">
@@ -661,37 +661,37 @@ PREPARED BY: ${plan.preparedBy}
                         {plan.therapeuticEngine.potassiumAlert.message}
                       </p>
                     )}
-                  </div>
+                  </Card>
                 )}
-                <div>
+                <Card className="p-3">
                   <p className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest mb-2">Scientific Rationale</p>
                   <p className="text-[11px] text-slate-600 leading-relaxed italic line-clamp-6">
                     {plan.rationale}
                   </p>
-                </div>
+                </Card>
                 {plan.diabetesMnt && (
-                  <div className="space-y-2">
+                  <Card className="p-3 space-y-2">
                     <p className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest">Plate Method</p>
                     {plan.diabetesMnt.plateMethod.map((step) => (
                       <p key={step} className="text-[10px] text-slate-600">{step}</p>
                     ))}
-                  </div>
+                  </Card>
                 )}
                 {plan.therapeuticEngine && (
-                  <div className="space-y-2">
+                  <Card className="p-3 space-y-2">
                     <p className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest">Fractionation Schedule</p>
                     {plan.therapeuticEngine.snackSchedule.map((time) => (
                       <p key={time} className="text-[10px] text-slate-600">{time}</p>
                     ))}
-                  </div>
+                  </Card>
                 )}
                 {plan.therapeuticEngine?.phosphorusGuide && (
-                  <div className="space-y-2">
+                  <Card className="p-3 space-y-2">
                     <p className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-widest">Low-Phosphorus Guide</p>
                     {plan.therapeuticEngine.phosphorusGuide.lowerPhosphorusFoodGroups.slice(0, 4).map((item) => (
                       <p key={item} className="text-[10px] text-slate-600">{item}</p>
                     ))}
-                  </div>
+                  </Card>
                 )}
                 <Button
                   onClick={handleShare}
