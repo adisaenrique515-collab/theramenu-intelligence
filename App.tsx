@@ -10,7 +10,7 @@ import DietitianReview from './components/DietitianReview';
 import KitchenSheet from './components/KitchenSheet';
 import { Header as TheraHeader, type TabKey } from './components/thera/Header';
 import { Badge, Button, Card, StateView } from './components/thera/ui';
-import { ArrowLeft, CheckCircle2, ClipboardCheck, X } from 'lucide-react';
+import { CheckCircle2, ClipboardCheck, X } from 'lucide-react';
 import { generatePlanViaInternalApi } from './services/localClinicalApi';
 import { refineMenuWithClaude } from './services/claudeService';
 import { enrichPlanWithUsdaData } from './services/usdaFoodDataService';
@@ -18,6 +18,10 @@ import { savePlan, type PlanStatus, type NrsRisk } from './services/planAuditSer
 import { PatientData } from './components/TherapeuticForm';
 import { WeeklyTherapeuticPlan } from './types';
 import { executionMode } from './utils/appMode';
+import { WorkflowStepper } from './components/thera/WorkflowStepper';
+import { Disclaimer } from './components/thera/ui';
+import type { GeneratedPlan } from './components/thera/types';
+import GeneratorShell from './components/GeneratorShell';
 
 type TabId = 'generator' | 'db' | 'logs' | 'screening' | 'compliance';
 
@@ -197,6 +201,16 @@ const App: React.FC = () => {
     setActiveTab('generator');
   };
 
+  const shellPlan: GeneratedPlan | null = result
+    ? {
+        reviewStatus:
+          planStatus === 'APPROVED' ? 'approved'
+          : planStatus === 'REJECTED' ? 'rejected'
+          : planStatus === 'PENDING_REVIEW' ? 'pending_review'
+          : 'draft',
+      }
+    : null;
+
   return (
     <div className="min-h-screen bg-slate-50 pb-20 font-sans selection:bg-blue-100">
       <TheraHeader
@@ -212,167 +226,108 @@ const App: React.FC = () => {
         )}
       />
 
+      <WorkflowStepper
+        activeTab={appToShellTab[activeTab]}
+        plan={shellPlan}
+        onJump={handleShellTabChange}
+      />
+
       {/* ── Generator tab ─────────────────────────────────────────────────── */}
       {activeTab === 'generator' && (
         <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-
-          {/* NRS screening banner */}
-          {nrsResult && (
-            <Card className="mb-6 flex items-center justify-between gap-4 p-4">
-              <div className="flex min-w-0 items-center gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-slate-100 text-slate-600">
-                  <ClipboardCheck className="h-5 w-5" aria-hidden />
-                </div>
-                <div className="min-w-0 [&>span:first-child]:hidden">
-                  <p className="text-sm font-semibold text-slate-900">NRS-2002 screening complete</p>
-                  <span className="text-xs font-bold text-slate-700">NRS-2002 Screening Complete — </span>
-                  <div className="mt-1 flex flex-wrap items-center gap-2">
-                    <Badge tone={nrsRiskTone(nrsResult.risk)}>{nrsResult.risk} risk</Badge>
-                    <span className="text-xs text-slate-500">Score {nrsResult.score}</span>
-                  </div>
-                </div>
-              </div>
-              <Button
-                type="button"
-                variant="ghost"
-                onClick={() => setNrsResult(null)}
-                className="min-h-10 px-3"
-                aria-label="Clear NRS screening result"
-              >
-                <X className="h-4 w-4" aria-hidden />
-              </Button>
-            </Card>
-          )}
-
-          <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[minmax(320px,420px)_1fr]">
-            <section className={`no-print space-y-6 lg:sticky lg:top-28 ${mobileView === 'result' ? 'hidden lg:block' : ''}`}>
-              <Card accent className="p-6">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <Badge tone="blue">Clinical generator</Badge>
-                    <h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-900">Therapeutic plan setup</h2>
-                    <p className="mt-2 text-sm leading-6 text-slate-600">
-                      Enter patient and diagnosis details to synthesize a seven-day therapeutic nutrition plan.
-                    </p>
-                  </div>
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-blue-50 text-blue-700">
+          <GeneratorShell
+            form={<TherapeuticForm onSubmit={handleGenerate} isLoading={loading} />}
+            error={error}
+            loading={loading}
+            hasResult={!!result}
+            mobileView={mobileView}
+            onBackToForm={() => setMobileView('form')}
+            lastPatientData={lastPatientData}
+            onScreeningClick={!nrsResult ? () => setActiveTab('screening') : undefined}
+            nrsSlot={nrsResult && (
+              <Card className="mb-6 flex items-center justify-between gap-4 p-4">
+                <div className="flex min-w-0 items-center gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-slate-100 text-slate-600">
                     <ClipboardCheck className="h-5 w-5" aria-hidden />
                   </div>
-                </div>
-                <div className="mt-6 grid grid-cols-3 gap-3 border-t border-slate-100 pt-5">
-                  <div>
-                    <p className="text-lg font-semibold text-slate-900">7</p>
-                    <p className="mt-1 text-xs text-slate-500">Cycle days</p>
-                  </div>
-                  <div>
-                    <p className="text-lg font-semibold text-slate-900">21</p>
-                    <p className="mt-1 text-xs text-slate-500">Meal audits</p>
-                  </div>
-                  <div>
-                    <p className="text-lg font-semibold text-slate-900">Local</p>
-                    <p className="mt-1 text-xs text-slate-500">PHI boundary</p>
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-slate-900">NRS-2002 screening complete</p>
+                    <div className="mt-1 flex flex-wrap items-center gap-2">
+                      <Badge tone={nrsRiskTone(nrsResult.risk)}>{nrsResult.risk} risk</Badge>
+                      <span className="text-xs text-slate-500">Score {nrsResult.score}</span>
+                    </div>
                   </div>
                 </div>
-                <p className="hidden">
-                  Deterministic engine → Claude AI review → USDA FDC enrichment → Dietitian sign-off → Kitchen output.
-                </p>
-              </Card>
-              <TherapeuticForm onSubmit={handleGenerate} isLoading={loading} />
-              {error && (
-                <StateView compact kind="error" title="Clinical Exception" description={error} />
-              )}
-            </section>
-
-            <section className={`${mobileView === 'form' ? 'hidden lg:block' : ''}`}>
-              <div className="mb-4 lg:hidden">
                 <Button
                   type="button"
-                  variant="secondary"
-                  onClick={() => setMobileView('form')}
-                  className="w-full"
+                  variant="ghost"
+                  onClick={() => setNrsResult(null)}
+                  className="min-h-10 px-3"
+                  aria-label="Clear NRS screening result"
                 >
-                  <ArrowLeft className="h-4 w-4" aria-hidden />
-                  Back to generator inputs
+                  <X className="h-4 w-4" aria-hidden />
                 </Button>
-              </div>
+              </Card>
+            )}
+            resultSlot={
+              <>
+                {loading && (
+                  <StateView
+                    kind="loading"
+                    title={`${currentStage ? `Stage ${currentStage}/3: ` : ''}Synthesis Underway`}
+                    description={
+                      currentStage === 1 ? 'Synthesizing 21 therapeutic meals. Applying clinical protocol filters.' :
+                      currentStage === 2 ? 'Claude AI reviewing clinical narratives. Enriching therapeutic rationale.' :
+                      currentStage === 3 ? 'Fetching live USDA nutrient data. Enriching detailed nutrient profiles.' :
+                      'Initializing clinical synthesis.'
+                    }
+                  />
+                )}
 
-              {!result && !loading && (
-                <StateView
-                  kind="empty"
-                  title="Protocol Pending"
-                  description="Submit a diagnosis to generate a comprehensive weekly nutritional strategy."
-                  actions={!nrsResult && (
-                    <Button
-                      type="button"
-                      variant="secondary"
-                      onClick={() => setActiveTab('screening')}
-                    >
-                      <ClipboardCheck className="h-4 w-4" aria-hidden />
-                      Complete NRS-2002 screening first
-                    </Button>
-                  )}
-                />
-              )}
-
-              {loading && (
-                <StateView
-                  kind="loading"
-                  title={`${currentStage ? `Stage ${currentStage}/3: ` : ''}Synthesis Underway`}
-                  description={
-                    currentStage === 1 ? 'Synthesizing 21 therapeutic meals. Applying clinical protocol filters.' :
-                    currentStage === 2 ? 'Claude AI reviewing clinical narratives. Enriching therapeutic rationale.' :
-                    currentStage === 3 ? 'Fetching live USDA nutrient data. Enriching detailed nutrient profiles.' :
-                    'Initializing clinical synthesis.'
-                  }
-                />
-              )}
-
-              {result && !loading && (
-                <div id="result-section" className="pb-12 space-y-4">
-                  {/* Workflow status bar */}
-                  <Card className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between">
-                    <div className="min-w-0">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <Badge tone={planStatusTone(planStatus)}>{planStatus.replace('_', ' ')}</Badge>
-                        {planId && (
-                          <span className="font-mono text-xs text-slate-500">
-                            ID: <span className="font-semibold text-blue-700">{planId}</span>
-                          </span>
+                {result && !loading && (
+                  <div id="result-section" className="space-y-4 pb-12">
+                    {/* Workflow status bar */}
+                    <Card className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between">
+                      <div className="min-w-0">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <Badge tone={planStatusTone(planStatus)}>{planStatus.replace('_', ' ')}</Badge>
+                          {planId && (
+                            <span className="font-mono text-xs text-slate-500">
+                              ID: <span className="font-semibold text-blue-700">{planId}</span>
+                            </span>
+                          )}
+                        </div>
+                        {reviewedBy && (
+                          <div className="mt-2 flex items-center gap-2 text-sm text-slate-600">
+                            <CheckCircle2 className="h-4 w-4 text-emerald-600" aria-hidden />
+                            <span>{reviewedBy}</span>
+                          </div>
                         )}
                       </div>
-                      {reviewedBy && (
-                        <div className="mt-2 flex items-center gap-2 text-sm text-slate-600">
-                          <CheckCircle2 className="h-4 w-4 text-emerald-600" aria-hidden />
-                          <span>{reviewedBy}</span>
-                        </div>
-                      )}
-                    </div>
-                    <div className="flex flex-wrap items-center gap-2">
-                      {planId && planStatus === 'DRAFT' && (
-                        <Button
-                          type="button"
-                          onClick={() => setShowReview(true)}
-                        >
-                          Dietitian review
-                        </Button>
-                      )}
-                      {planStatus === 'APPROVED' && (
-                        <Button
-                          type="button"
-                          onClick={() => setShowKitchen(true)}
-                          className="bg-emerald-600 hover:bg-emerald-700"
-                        >
-                          Kitchen sheet
-                        </Button>
-                      )}
-                    </div>
-                  </Card>
+                      <div className="flex flex-wrap items-center gap-2">
+                        {planId && planStatus === 'DRAFT' && (
+                          <Button type="button" onClick={() => setShowReview(true)}>
+                            Dietitian review
+                          </Button>
+                        )}
+                        {planStatus === 'APPROVED' && (
+                          <Button
+                            type="button"
+                            onClick={() => setShowKitchen(true)}
+                            className="bg-emerald-600 hover:bg-emerald-700"
+                          >
+                            Kitchen sheet
+                          </Button>
+                        )}
+                      </div>
+                    </Card>
 
-                  <MenuResult plan={result} />
-                </div>
-              )}
-            </section>
-          </div>
+                    <MenuResult plan={result} />
+                  </div>
+                )}
+              </>
+            }
+          />
         </main>
       )}
 
@@ -384,6 +339,8 @@ const App: React.FC = () => {
       )}
 
       <ChatBot />
+
+      <Disclaimer />
 
       {/* Dietitian review modal */}
       {showReview && result && planId && (
