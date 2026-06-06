@@ -143,6 +143,12 @@ const App: React.FC = () => {
     setMobileView('result');
   };
 
+  const openClinicalAssistant = () => {
+    window.requestAnimationFrame(() => {
+      document.querySelector<HTMLButtonElement>('button[aria-label="Open clinical assistant"]')?.click();
+    });
+  };
+
   const handleShellTabChange = (tab: TabKey) => {
     if (tab === 'diagnosis') {
       setActiveTab('db');
@@ -167,6 +173,10 @@ const App: React.FC = () => {
       }
       setActiveTab('generator');
       setMobileView('result');
+      return;
+    }
+    if (tab === 'ai') {
+      openClinicalAssistant();
       return;
     }
     setActiveTab('generator');
