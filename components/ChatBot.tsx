@@ -41,11 +41,11 @@ const ChatBot: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[1000] no-print">
+    <div className="fixed bottom-5 right-5 z-[1000] no-print sm:bottom-6 sm:right-6">
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg transition-all hover:bg-blue-700"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-white shadow-xl shadow-blue-900/20 transition-all hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-600/20"
         aria-label={isOpen ? 'Close clinical assistant' : 'Open clinical assistant'}
       >
         {isOpen ? (
@@ -60,16 +60,15 @@ const ChatBot: React.FC = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <Card className="absolute bottom-20 right-0 flex h-[500px] w-[350px] flex-col overflow-hidden animate-in slide-in-from-bottom-5 duration-300 sm:w-[400px]">
-          {/* Header */}
-          <div className="flex items-center justify-between bg-slate-900 p-4 text-white">
+        <Card className="absolute bottom-20 right-0 flex h-[min(520px,calc(100vh-120px))] w-[min(360px,calc(100vw-40px))] flex-col overflow-hidden animate-in slide-in-from-bottom-5 duration-300 sm:w-[400px]">
+          <div className="flex items-center justify-between bg-slate-950 p-4 text-white">
             <div className="flex items-center space-x-3">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600">
                 <Bot className="h-4 w-4" aria-hidden />
               </div>
               <div>
-                <h3 className="text-sm font-semibold">Local Clinical Dietitian</h3>
-                <p className="text-[10px] text-slate-400 font-mono uppercase tracking-widest">Internal Offline Engine</p>
+                <h3 className="text-sm font-semibold">Dietitian AI</h3>
+                <p className="font-mono text-[10px] uppercase tracking-widest text-slate-400">Clinical protocol assistant</p>
               </div>
             </div>
             <button onClick={() => setIsOpen(false)} className="flex h-8 w-8 items-center justify-center rounded-md text-slate-400 transition-colors hover:bg-slate-800 hover:text-white" aria-label="Minimize clinical assistant">
@@ -77,14 +76,13 @@ const ChatBot: React.FC = () => {
             </button>
           </div>
 
-          {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-50">
+          <div className="flex-1 space-y-4 overflow-y-auto bg-slate-50 p-4">
             {messages.map((msg, idx) => (
               <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[85%] p-3 rounded-2xl text-sm ${
-                  msg.role === 'user' 
-                    ? 'bg-blue-600 text-white rounded-tr-none shadow-sm' 
-                    : 'bg-white text-gray-800 border border-gray-200 rounded-tl-none shadow-sm'
+                <div className={`max-w-[85%] rounded-2xl p-3 text-sm leading-6 ${
+                  msg.role === 'user'
+                    ? 'rounded-tr-none bg-blue-600 text-white shadow-sm'
+                    : 'rounded-tl-none border border-slate-200 bg-white text-slate-800 shadow-sm'
                 }`}>
                   {msg.text}
                 </div>
@@ -92,24 +90,23 @@ const ChatBot: React.FC = () => {
             ))}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="flex space-x-1 rounded-2xl rounded-tl-none border border-gray-200 bg-white p-3 shadow-sm" role="status" aria-label="Assistant response loading">
-                  <div className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce"></div>
-                  <div className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce [animation-delay:0.2s]"></div>
-                  <div className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce [animation-delay:0.4s]"></div>
+                <div className="flex space-x-1 rounded-2xl rounded-tl-none border border-slate-200 bg-white p-3 shadow-sm" role="status" aria-label="Assistant response loading">
+                  <div className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-300"></div>
+                  <div className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-300 [animation-delay:0.2s]"></div>
+                  <div className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-300 [animation-delay:0.4s]"></div>
                 </div>
               </div>
             )}
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input */}
-          <div className="p-4 bg-white border-t border-gray-200">
+          <div className="border-t border-slate-200 bg-white p-4">
             <div className="relative flex items-center">
               <Input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+                onKeyDown={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="Ask about IDDSI, protocols..."
                 className="pr-12"
               />
@@ -122,8 +119,8 @@ const ChatBot: React.FC = () => {
                 <Send className="h-4 w-4" aria-hidden />
               </button>
             </div>
-            <p className="text-[9px] text-center text-gray-400 mt-2 uppercase tracking-widest font-mono">
-              Processed Locally - No External API
+            <p className="mt-2 text-center font-mono text-[9px] uppercase tracking-widest text-slate-400">
+              Uses current assistant mode
             </p>
           </div>
         </Card>
