@@ -78,6 +78,84 @@
     "legacyGroupOrder": 0
   },
   {
+    "id": "legacy:H_PYLORI:breakfast:beverage:warm_water",
+    "protocolCode": "H_PYLORI",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|breakfast|beverage",
+    "legacyOrder": 6,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:H_PYLORI:breakfast:beverage:chamomile_tea",
+    "protocolCode": "H_PYLORI",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|breakfast|beverage",
+    "legacyOrder": 7,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:H_PYLORI:breakfast:beverage:rice_water",
+    "protocolCode": "H_PYLORI",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|breakfast|beverage",
+    "legacyOrder": 8,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:H_PYLORI:breakfast:beverage:plain_clear_broth",
+    "protocolCode": "H_PYLORI",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "plain_clear_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|breakfast|beverage",
+    "legacyOrder": 9,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:H_PYLORI:breakfast:beverage:oat_uji_thin",
+    "protocolCode": "H_PYLORI",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "oat_uji_thin",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|breakfast|beverage",
+    "legacyOrder": 10,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:H_PYLORI:breakfast:beverage:low_fat_milk_small",
+    "protocolCode": "H_PYLORI",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "low_fat_milk_small",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|breakfast|beverage",
+    "legacyOrder": 11,
+    "legacyGroupOrder": 6
+  },
+  {
     "id": "legacy:H_PYLORI:lunch:soft_starch_base:arrowroot_boiled_soft",
     "protocolCode": "H_PYLORI",
     "mealType": "lunch",
@@ -87,7 +165,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_starch_base",
-    "legacyOrder": 6,
+    "legacyOrder": 12,
     "legacyGroupOrder": 0
   },
   {
@@ -100,7 +178,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_starch_base",
-    "legacyOrder": 7,
+    "legacyOrder": 13,
     "legacyGroupOrder": 1
   },
   {
@@ -113,7 +191,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_starch_base",
-    "legacyOrder": 8,
+    "legacyOrder": 14,
     "legacyGroupOrder": 2
   },
   {
@@ -126,7 +204,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_protein_primary",
-    "legacyOrder": 9,
+    "legacyOrder": 15,
     "legacyGroupOrder": 0
   },
   {
@@ -139,7 +217,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_protein_primary",
-    "legacyOrder": 10,
+    "legacyOrder": 16,
     "legacyGroupOrder": 1
   },
   {
@@ -152,7 +230,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_veg_side",
-    "legacyOrder": 11,
+    "legacyOrder": 17,
     "legacyGroupOrder": 0
   },
   {
@@ -165,8 +243,86 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|beverage",
-    "legacyOrder": 12,
+    "legacyOrder": 18,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:H_PYLORI:lunch:beverage:warm_water",
+    "protocolCode": "H_PYLORI",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|lunch|beverage",
+    "legacyOrder": 19,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:H_PYLORI:lunch:beverage:chamomile_tea",
+    "protocolCode": "H_PYLORI",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|lunch|beverage",
+    "legacyOrder": 20,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:H_PYLORI:lunch:beverage:rice_water",
+    "protocolCode": "H_PYLORI",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|lunch|beverage",
+    "legacyOrder": 21,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:H_PYLORI:lunch:beverage:plain_clear_broth",
+    "protocolCode": "H_PYLORI",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "plain_clear_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|lunch|beverage",
+    "legacyOrder": 22,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:H_PYLORI:lunch:beverage:oat_uji_thin",
+    "protocolCode": "H_PYLORI",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "oat_uji_thin",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|lunch|beverage",
+    "legacyOrder": 23,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:H_PYLORI:lunch:beverage:low_fat_milk_small",
+    "protocolCode": "H_PYLORI",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "low_fat_milk_small",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|lunch|beverage",
+    "legacyOrder": 24,
+    "legacyGroupOrder": 6
   },
   {
     "id": "legacy:H_PYLORI:dinner:soft_starch_base:sweet_potato_mash_plain",
@@ -178,7 +334,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_starch_base",
-    "legacyOrder": 13,
+    "legacyOrder": 25,
     "legacyGroupOrder": 0
   },
   {
@@ -191,7 +347,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_starch_base",
-    "legacyOrder": 14,
+    "legacyOrder": 26,
     "legacyGroupOrder": 1
   },
   {
@@ -204,7 +360,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_starch_base",
-    "legacyOrder": 15,
+    "legacyOrder": 27,
     "legacyGroupOrder": 2
   },
   {
@@ -217,7 +373,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_protein_primary",
-    "legacyOrder": 16,
+    "legacyOrder": 28,
     "legacyGroupOrder": 0
   },
   {
@@ -230,7 +386,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_protein_primary",
-    "legacyOrder": 17,
+    "legacyOrder": 29,
     "legacyGroupOrder": 1
   },
   {
@@ -243,7 +399,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_veg_side",
-    "legacyOrder": 18,
+    "legacyOrder": 30,
     "legacyGroupOrder": 0
   },
   {
@@ -256,8 +412,86 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|beverage",
-    "legacyOrder": 19,
+    "legacyOrder": 31,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:H_PYLORI:dinner:beverage:warm_water",
+    "protocolCode": "H_PYLORI",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|dinner|beverage",
+    "legacyOrder": 32,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:H_PYLORI:dinner:beverage:chamomile_tea",
+    "protocolCode": "H_PYLORI",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|dinner|beverage",
+    "legacyOrder": 33,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:H_PYLORI:dinner:beverage:rice_water",
+    "protocolCode": "H_PYLORI",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|dinner|beverage",
+    "legacyOrder": 34,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:H_PYLORI:dinner:beverage:plain_clear_broth",
+    "protocolCode": "H_PYLORI",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "plain_clear_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|dinner|beverage",
+    "legacyOrder": 35,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:H_PYLORI:dinner:beverage:oat_uji_thin",
+    "protocolCode": "H_PYLORI",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "oat_uji_thin",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|dinner|beverage",
+    "legacyOrder": 36,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:H_PYLORI:dinner:beverage:low_fat_milk_small",
+    "protocolCode": "H_PYLORI",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "low_fat_milk_small",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|dinner|beverage",
+    "legacyOrder": 37,
+    "legacyGroupOrder": 6
   },
   {
     "id": "legacy:GASTRIC:breakfast:soft_starch_base:uji_oat_plain",
@@ -269,7 +503,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|soft_starch_base",
-    "legacyOrder": 20,
+    "legacyOrder": 38,
     "legacyGroupOrder": 0
   },
   {
@@ -282,7 +516,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|soft_starch_base",
-    "legacyOrder": 21,
+    "legacyOrder": 39,
     "legacyGroupOrder": 1
   },
   {
@@ -295,7 +529,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|soft_starch_base",
-    "legacyOrder": 22,
+    "legacyOrder": 40,
     "legacyGroupOrder": 2
   },
   {
@@ -308,7 +542,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|soft_protein_primary",
-    "legacyOrder": 23,
+    "legacyOrder": 41,
     "legacyGroupOrder": 0
   },
   {
@@ -321,7 +555,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|soft_protein_primary",
-    "legacyOrder": 24,
+    "legacyOrder": 42,
     "legacyGroupOrder": 1
   },
   {
@@ -334,8 +568,86 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|beverage",
-    "legacyOrder": 25,
+    "legacyOrder": 43,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:GASTRIC:breakfast:beverage:warm_water",
+    "protocolCode": "GASTRIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|breakfast|beverage",
+    "legacyOrder": 44,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:GASTRIC:breakfast:beverage:chamomile_tea",
+    "protocolCode": "GASTRIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|breakfast|beverage",
+    "legacyOrder": 45,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:GASTRIC:breakfast:beverage:rice_water",
+    "protocolCode": "GASTRIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|breakfast|beverage",
+    "legacyOrder": 46,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:GASTRIC:breakfast:beverage:plain_clear_broth",
+    "protocolCode": "GASTRIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "plain_clear_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|breakfast|beverage",
+    "legacyOrder": 47,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:GASTRIC:breakfast:beverage:oat_uji_thin",
+    "protocolCode": "GASTRIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "oat_uji_thin",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|breakfast|beverage",
+    "legacyOrder": 48,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:GASTRIC:breakfast:beverage:low_fat_milk_small",
+    "protocolCode": "GASTRIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "low_fat_milk_small",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|breakfast|beverage",
+    "legacyOrder": 49,
+    "legacyGroupOrder": 6
   },
   {
     "id": "legacy:GASTRIC:lunch:soft_starch_base:arrowroot_boiled_soft",
@@ -347,7 +659,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_starch_base",
-    "legacyOrder": 26,
+    "legacyOrder": 50,
     "legacyGroupOrder": 0
   },
   {
@@ -360,7 +672,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_starch_base",
-    "legacyOrder": 27,
+    "legacyOrder": 51,
     "legacyGroupOrder": 1
   },
   {
@@ -373,7 +685,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_starch_base",
-    "legacyOrder": 28,
+    "legacyOrder": 52,
     "legacyGroupOrder": 2
   },
   {
@@ -386,7 +698,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_protein_primary",
-    "legacyOrder": 29,
+    "legacyOrder": 53,
     "legacyGroupOrder": 0
   },
   {
@@ -399,7 +711,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_protein_primary",
-    "legacyOrder": 30,
+    "legacyOrder": 54,
     "legacyGroupOrder": 1
   },
   {
@@ -412,7 +724,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_veg_side",
-    "legacyOrder": 31,
+    "legacyOrder": 55,
     "legacyGroupOrder": 0
   },
   {
@@ -425,8 +737,86 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|beverage",
-    "legacyOrder": 32,
+    "legacyOrder": 56,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:GASTRIC:lunch:beverage:warm_water",
+    "protocolCode": "GASTRIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|lunch|beverage",
+    "legacyOrder": 57,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:GASTRIC:lunch:beverage:chamomile_tea",
+    "protocolCode": "GASTRIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|lunch|beverage",
+    "legacyOrder": 58,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:GASTRIC:lunch:beverage:rice_water",
+    "protocolCode": "GASTRIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|lunch|beverage",
+    "legacyOrder": 59,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:GASTRIC:lunch:beverage:plain_clear_broth",
+    "protocolCode": "GASTRIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "plain_clear_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|lunch|beverage",
+    "legacyOrder": 60,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:GASTRIC:lunch:beverage:oat_uji_thin",
+    "protocolCode": "GASTRIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "oat_uji_thin",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|lunch|beverage",
+    "legacyOrder": 61,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:GASTRIC:lunch:beverage:low_fat_milk_small",
+    "protocolCode": "GASTRIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "low_fat_milk_small",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|lunch|beverage",
+    "legacyOrder": 62,
+    "legacyGroupOrder": 6
   },
   {
     "id": "legacy:GASTRIC:dinner:soft_starch_base:sweet_potato_mash_plain",
@@ -438,7 +828,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_starch_base",
-    "legacyOrder": 33,
+    "legacyOrder": 63,
     "legacyGroupOrder": 0
   },
   {
@@ -451,7 +841,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_starch_base",
-    "legacyOrder": 34,
+    "legacyOrder": 64,
     "legacyGroupOrder": 1
   },
   {
@@ -464,7 +854,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_protein_primary",
-    "legacyOrder": 35,
+    "legacyOrder": 65,
     "legacyGroupOrder": 0
   },
   {
@@ -477,7 +867,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_protein_primary",
-    "legacyOrder": 36,
+    "legacyOrder": 66,
     "legacyGroupOrder": 1
   },
   {
@@ -490,7 +880,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_veg_side",
-    "legacyOrder": 37,
+    "legacyOrder": 67,
     "legacyGroupOrder": 0
   },
   {
@@ -503,8 +893,86 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|beverage",
-    "legacyOrder": 38,
+    "legacyOrder": 68,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:GASTRIC:dinner:beverage:warm_water",
+    "protocolCode": "GASTRIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|dinner|beverage",
+    "legacyOrder": 69,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:GASTRIC:dinner:beverage:chamomile_tea",
+    "protocolCode": "GASTRIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|dinner|beverage",
+    "legacyOrder": 70,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:GASTRIC:dinner:beverage:rice_water",
+    "protocolCode": "GASTRIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|dinner|beverage",
+    "legacyOrder": 71,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:GASTRIC:dinner:beverage:plain_clear_broth",
+    "protocolCode": "GASTRIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "plain_clear_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|dinner|beverage",
+    "legacyOrder": 72,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:GASTRIC:dinner:beverage:oat_uji_thin",
+    "protocolCode": "GASTRIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "oat_uji_thin",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|dinner|beverage",
+    "legacyOrder": 73,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:GASTRIC:dinner:beverage:low_fat_milk_small",
+    "protocolCode": "GASTRIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "low_fat_milk_small",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|dinner|beverage",
+    "legacyOrder": 74,
+    "legacyGroupOrder": 6
   },
   {
     "id": "legacy:PEPTIC_ULCER:breakfast:soft_starch_base:uji_oat_plain",
@@ -516,7 +984,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|soft_starch_base",
-    "legacyOrder": 39,
+    "legacyOrder": 75,
     "legacyGroupOrder": 0
   },
   {
@@ -529,7 +997,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|soft_starch_base",
-    "legacyOrder": 40,
+    "legacyOrder": 76,
     "legacyGroupOrder": 1
   },
   {
@@ -542,7 +1010,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|soft_starch_base",
-    "legacyOrder": 41,
+    "legacyOrder": 77,
     "legacyGroupOrder": 2
   },
   {
@@ -555,7 +1023,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|soft_protein_primary",
-    "legacyOrder": 42,
+    "legacyOrder": 78,
     "legacyGroupOrder": 0
   },
   {
@@ -568,7 +1036,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|soft_protein_primary",
-    "legacyOrder": 43,
+    "legacyOrder": 79,
     "legacyGroupOrder": 1
   },
   {
@@ -581,8 +1049,86 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
-    "legacyOrder": 44,
+    "legacyOrder": 80,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:breakfast:beverage:warm_water",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
+    "legacyOrder": 81,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:breakfast:beverage:chamomile_tea",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
+    "legacyOrder": 82,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:breakfast:beverage:rice_water",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
+    "legacyOrder": 83,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:breakfast:beverage:plain_clear_broth",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "plain_clear_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
+    "legacyOrder": 84,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:breakfast:beverage:oat_uji_thin",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "oat_uji_thin",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
+    "legacyOrder": 85,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:breakfast:beverage:low_fat_milk_small",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "low_fat_milk_small",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
+    "legacyOrder": 86,
+    "legacyGroupOrder": 6
   },
   {
     "id": "legacy:PEPTIC_ULCER:lunch:soft_starch_base:arrowroot_boiled_soft",
@@ -594,7 +1140,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_starch_base",
-    "legacyOrder": 45,
+    "legacyOrder": 87,
     "legacyGroupOrder": 0
   },
   {
@@ -607,7 +1153,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_starch_base",
-    "legacyOrder": 46,
+    "legacyOrder": 88,
     "legacyGroupOrder": 1
   },
   {
@@ -620,7 +1166,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_protein_primary",
-    "legacyOrder": 47,
+    "legacyOrder": 89,
     "legacyGroupOrder": 0
   },
   {
@@ -633,7 +1179,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_protein_primary",
-    "legacyOrder": 48,
+    "legacyOrder": 90,
     "legacyGroupOrder": 1
   },
   {
@@ -646,7 +1192,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_veg_side",
-    "legacyOrder": 49,
+    "legacyOrder": 91,
     "legacyGroupOrder": 0
   },
   {
@@ -659,8 +1205,86 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|beverage",
-    "legacyOrder": 50,
+    "legacyOrder": 92,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:lunch:beverage:warm_water",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|lunch|beverage",
+    "legacyOrder": 93,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:lunch:beverage:chamomile_tea",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|lunch|beverage",
+    "legacyOrder": 94,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:lunch:beverage:rice_water",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|lunch|beverage",
+    "legacyOrder": 95,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:lunch:beverage:plain_clear_broth",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "plain_clear_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|lunch|beverage",
+    "legacyOrder": 96,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:lunch:beverage:oat_uji_thin",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "oat_uji_thin",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|lunch|beverage",
+    "legacyOrder": 97,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:lunch:beverage:low_fat_milk_small",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "low_fat_milk_small",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|lunch|beverage",
+    "legacyOrder": 98,
+    "legacyGroupOrder": 6
   },
   {
     "id": "legacy:PEPTIC_ULCER:dinner:soft_starch_base:sweet_potato_mash_plain",
@@ -672,7 +1296,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_starch_base",
-    "legacyOrder": 51,
+    "legacyOrder": 99,
     "legacyGroupOrder": 0
   },
   {
@@ -685,7 +1309,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_starch_base",
-    "legacyOrder": 52,
+    "legacyOrder": 100,
     "legacyGroupOrder": 1
   },
   {
@@ -698,7 +1322,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_protein_primary",
-    "legacyOrder": 53,
+    "legacyOrder": 101,
     "legacyGroupOrder": 0
   },
   {
@@ -711,7 +1335,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_protein_primary",
-    "legacyOrder": 54,
+    "legacyOrder": 102,
     "legacyGroupOrder": 1
   },
   {
@@ -724,7 +1348,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_veg_side",
-    "legacyOrder": 55,
+    "legacyOrder": 103,
     "legacyGroupOrder": 0
   },
   {
@@ -737,8 +1361,86 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|beverage",
-    "legacyOrder": 56,
+    "legacyOrder": 104,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:dinner:beverage:warm_water",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|dinner|beverage",
+    "legacyOrder": 105,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:dinner:beverage:chamomile_tea",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|dinner|beverage",
+    "legacyOrder": 106,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:dinner:beverage:rice_water",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|dinner|beverage",
+    "legacyOrder": 107,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:dinner:beverage:plain_clear_broth",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "plain_clear_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|dinner|beverage",
+    "legacyOrder": 108,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:dinner:beverage:oat_uji_thin",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "oat_uji_thin",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|dinner|beverage",
+    "legacyOrder": 109,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:dinner:beverage:low_fat_milk_small",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "low_fat_milk_small",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|dinner|beverage",
+    "legacyOrder": 110,
+    "legacyGroupOrder": 6
   },
   {
     "id": "legacy:GENERAL_HOSPITAL:breakfast:starch_base:rolled_oats",
@@ -750,7 +1452,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|starch_base",
-    "legacyOrder": 57,
+    "legacyOrder": 111,
     "legacyGroupOrder": 0
   },
   {
@@ -763,7 +1465,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|starch_base",
-    "legacyOrder": 58,
+    "legacyOrder": 112,
     "legacyGroupOrder": 1
   },
   {
@@ -776,7 +1478,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|starch_base",
-    "legacyOrder": 59,
+    "legacyOrder": 113,
     "legacyGroupOrder": 2
   },
   {
@@ -789,7 +1491,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|protein_primary",
-    "legacyOrder": 60,
+    "legacyOrder": 114,
     "legacyGroupOrder": 0
   },
   {
@@ -802,7 +1504,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|protein_primary",
-    "legacyOrder": 61,
+    "legacyOrder": 115,
     "legacyGroupOrder": 1
   },
   {
@@ -815,7 +1517,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|protein_primary",
-    "legacyOrder": 62,
+    "legacyOrder": 116,
     "legacyGroupOrder": 2
   },
   {
@@ -828,8 +1530,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
-    "legacyOrder": 63,
+    "legacyOrder": 117,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:breakfast:beverage:unsweetened_tea",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
+    "legacyOrder": 118,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:breakfast:beverage:chamomile_tea",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
+    "legacyOrder": 119,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:breakfast:beverage:mint_tea_mild",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
+    "legacyOrder": 120,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:breakfast:beverage:low_sodium_veg_broth",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
+    "legacyOrder": 121,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:breakfast:beverage:cucumber_water_small",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
+    "legacyOrder": 122,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:breakfast:beverage:apple_infused_water",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
+    "legacyOrder": 123,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:breakfast:beverage:unsweetened_soy_milk",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
+    "legacyOrder": 124,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:GENERAL_HOSPITAL:lunch:starch_base:brown_rice_cooked",
@@ -841,7 +1634,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|starch_base",
-    "legacyOrder": 64,
+    "legacyOrder": 125,
     "legacyGroupOrder": 0
   },
   {
@@ -854,7 +1647,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|starch_base",
-    "legacyOrder": 65,
+    "legacyOrder": 126,
     "legacyGroupOrder": 1
   },
   {
@@ -867,7 +1660,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|starch_base",
-    "legacyOrder": 66,
+    "legacyOrder": 127,
     "legacyGroupOrder": 2
   },
   {
@@ -880,7 +1673,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|protein_primary",
-    "legacyOrder": 67,
+    "legacyOrder": 128,
     "legacyGroupOrder": 0
   },
   {
@@ -893,7 +1686,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|protein_primary",
-    "legacyOrder": 68,
+    "legacyOrder": 129,
     "legacyGroupOrder": 1
   },
   {
@@ -906,7 +1699,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|protein_primary",
-    "legacyOrder": 69,
+    "legacyOrder": 130,
     "legacyGroupOrder": 2
   },
   {
@@ -919,7 +1712,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|vegetable_side",
-    "legacyOrder": 70,
+    "legacyOrder": 131,
     "legacyGroupOrder": 0
   },
   {
@@ -932,7 +1725,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|vegetable_side",
-    "legacyOrder": 71,
+    "legacyOrder": 132,
     "legacyGroupOrder": 1
   },
   {
@@ -945,8 +1738,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
-    "legacyOrder": 72,
+    "legacyOrder": 133,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:lunch:beverage:unsweetened_tea",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
+    "legacyOrder": 134,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:lunch:beverage:chamomile_tea",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
+    "legacyOrder": 135,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:lunch:beverage:mint_tea_mild",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
+    "legacyOrder": 136,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:lunch:beverage:low_sodium_veg_broth",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
+    "legacyOrder": 137,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:lunch:beverage:cucumber_water_small",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
+    "legacyOrder": 138,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:lunch:beverage:apple_infused_water",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
+    "legacyOrder": 139,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:lunch:beverage:unsweetened_soy_milk",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
+    "legacyOrder": 140,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:GENERAL_HOSPITAL:dinner:starch_base:brown_rice_cooked",
@@ -958,7 +1842,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|starch_base",
-    "legacyOrder": 73,
+    "legacyOrder": 141,
     "legacyGroupOrder": 0
   },
   {
@@ -971,7 +1855,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|starch_base",
-    "legacyOrder": 74,
+    "legacyOrder": 142,
     "legacyGroupOrder": 1
   },
   {
@@ -984,7 +1868,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|starch_base",
-    "legacyOrder": 75,
+    "legacyOrder": 143,
     "legacyGroupOrder": 2
   },
   {
@@ -997,7 +1881,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|protein_primary",
-    "legacyOrder": 76,
+    "legacyOrder": 144,
     "legacyGroupOrder": 0
   },
   {
@@ -1010,7 +1894,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|protein_primary",
-    "legacyOrder": 77,
+    "legacyOrder": 145,
     "legacyGroupOrder": 1
   },
   {
@@ -1023,7 +1907,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|protein_primary",
-    "legacyOrder": 78,
+    "legacyOrder": 146,
     "legacyGroupOrder": 2
   },
   {
@@ -1036,7 +1920,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|vegetable_side",
-    "legacyOrder": 79,
+    "legacyOrder": 147,
     "legacyGroupOrder": 0
   },
   {
@@ -1049,7 +1933,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|vegetable_side",
-    "legacyOrder": 80,
+    "legacyOrder": 148,
     "legacyGroupOrder": 1
   },
   {
@@ -1062,8 +1946,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
-    "legacyOrder": 81,
+    "legacyOrder": 149,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:dinner:beverage:unsweetened_tea",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
+    "legacyOrder": 150,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:dinner:beverage:chamomile_tea",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
+    "legacyOrder": 151,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:dinner:beverage:mint_tea_mild",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
+    "legacyOrder": 152,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:dinner:beverage:low_sodium_veg_broth",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
+    "legacyOrder": 153,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:dinner:beverage:cucumber_water_small",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
+    "legacyOrder": 154,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:dinner:beverage:apple_infused_water",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
+    "legacyOrder": 155,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:dinner:beverage:unsweetened_soy_milk",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
+    "legacyOrder": 156,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:T2DM:breakfast:controlled_carb_base:rolled_oats",
@@ -1075,7 +2050,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|controlled_carb_base",
-    "legacyOrder": 82,
+    "legacyOrder": 157,
     "legacyGroupOrder": 0
   },
   {
@@ -1088,7 +2063,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|controlled_carb_base",
-    "legacyOrder": 83,
+    "legacyOrder": 158,
     "legacyGroupOrder": 1
   },
   {
@@ -1101,7 +2076,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|protein_primary",
-    "legacyOrder": 84,
+    "legacyOrder": 159,
     "legacyGroupOrder": 0
   },
   {
@@ -1114,7 +2089,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|protein_primary",
-    "legacyOrder": 85,
+    "legacyOrder": 160,
     "legacyGroupOrder": 1
   },
   {
@@ -1127,8 +2102,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|beverage",
-    "legacyOrder": 86,
+    "legacyOrder": 161,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:T2DM:breakfast:beverage:unsweetened_tea",
+    "protocolCode": "T2DM",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|breakfast|beverage",
+    "legacyOrder": 162,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:T2DM:breakfast:beverage:chamomile_tea",
+    "protocolCode": "T2DM",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|breakfast|beverage",
+    "legacyOrder": 163,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:T2DM:breakfast:beverage:mint_tea_mild",
+    "protocolCode": "T2DM",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|breakfast|beverage",
+    "legacyOrder": 164,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:T2DM:breakfast:beverage:low_sodium_veg_broth",
+    "protocolCode": "T2DM",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|breakfast|beverage",
+    "legacyOrder": 165,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:T2DM:breakfast:beverage:cucumber_water_small",
+    "protocolCode": "T2DM",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|breakfast|beverage",
+    "legacyOrder": 166,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:T2DM:breakfast:beverage:apple_infused_water",
+    "protocolCode": "T2DM",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|breakfast|beverage",
+    "legacyOrder": 167,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:T2DM:breakfast:beverage:unsweetened_soy_milk",
+    "protocolCode": "T2DM",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|breakfast|beverage",
+    "legacyOrder": 168,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:T2DM:lunch:controlled_carb_base:barley_cooked",
@@ -1140,7 +2206,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|controlled_carb_base",
-    "legacyOrder": 87,
+    "legacyOrder": 169,
     "legacyGroupOrder": 0
   },
   {
@@ -1153,7 +2219,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|controlled_carb_base",
-    "legacyOrder": 88,
+    "legacyOrder": 170,
     "legacyGroupOrder": 1
   },
   {
@@ -1166,7 +2232,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|controlled_carb_base",
-    "legacyOrder": 89,
+    "legacyOrder": 171,
     "legacyGroupOrder": 2
   },
   {
@@ -1179,7 +2245,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|protein_primary",
-    "legacyOrder": 90,
+    "legacyOrder": 172,
     "legacyGroupOrder": 0
   },
   {
@@ -1192,7 +2258,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|protein_primary",
-    "legacyOrder": 91,
+    "legacyOrder": 173,
     "legacyGroupOrder": 1
   },
   {
@@ -1205,7 +2271,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|vegetable_side",
-    "legacyOrder": 92,
+    "legacyOrder": 174,
     "legacyGroupOrder": 0
   },
   {
@@ -1218,7 +2284,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|vegetable_side",
-    "legacyOrder": 93,
+    "legacyOrder": 175,
     "legacyGroupOrder": 1
   },
   {
@@ -1231,8 +2297,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|beverage",
-    "legacyOrder": 94,
+    "legacyOrder": 176,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:T2DM:lunch:beverage:unsweetened_tea",
+    "protocolCode": "T2DM",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|lunch|beverage",
+    "legacyOrder": 177,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:T2DM:lunch:beverage:chamomile_tea",
+    "protocolCode": "T2DM",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|lunch|beverage",
+    "legacyOrder": 178,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:T2DM:lunch:beverage:mint_tea_mild",
+    "protocolCode": "T2DM",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|lunch|beverage",
+    "legacyOrder": 179,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:T2DM:lunch:beverage:low_sodium_veg_broth",
+    "protocolCode": "T2DM",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|lunch|beverage",
+    "legacyOrder": 180,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:T2DM:lunch:beverage:cucumber_water_small",
+    "protocolCode": "T2DM",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|lunch|beverage",
+    "legacyOrder": 181,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:T2DM:lunch:beverage:apple_infused_water",
+    "protocolCode": "T2DM",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|lunch|beverage",
+    "legacyOrder": 182,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:T2DM:lunch:beverage:unsweetened_soy_milk",
+    "protocolCode": "T2DM",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|lunch|beverage",
+    "legacyOrder": 183,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:T2DM:dinner:controlled_carb_base:lentils_cooked",
@@ -1244,7 +2401,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|controlled_carb_base",
-    "legacyOrder": 95,
+    "legacyOrder": 184,
     "legacyGroupOrder": 0
   },
   {
@@ -1257,7 +2414,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|controlled_carb_base",
-    "legacyOrder": 96,
+    "legacyOrder": 185,
     "legacyGroupOrder": 1
   },
   {
@@ -1270,7 +2427,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|controlled_carb_base",
-    "legacyOrder": 97,
+    "legacyOrder": 186,
     "legacyGroupOrder": 2
   },
   {
@@ -1283,7 +2440,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|protein_primary",
-    "legacyOrder": 98,
+    "legacyOrder": 187,
     "legacyGroupOrder": 0
   },
   {
@@ -1296,7 +2453,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|protein_primary",
-    "legacyOrder": 99,
+    "legacyOrder": 188,
     "legacyGroupOrder": 1
   },
   {
@@ -1309,7 +2466,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|vegetable_side",
-    "legacyOrder": 100,
+    "legacyOrder": 189,
     "legacyGroupOrder": 0
   },
   {
@@ -1322,7 +2479,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|vegetable_side",
-    "legacyOrder": 101,
+    "legacyOrder": 190,
     "legacyGroupOrder": 1
   },
   {
@@ -1335,8 +2492,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|beverage",
-    "legacyOrder": 102,
+    "legacyOrder": 191,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:T2DM:dinner:beverage:unsweetened_tea",
+    "protocolCode": "T2DM",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|dinner|beverage",
+    "legacyOrder": 192,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:T2DM:dinner:beverage:chamomile_tea",
+    "protocolCode": "T2DM",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|dinner|beverage",
+    "legacyOrder": 193,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:T2DM:dinner:beverage:mint_tea_mild",
+    "protocolCode": "T2DM",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|dinner|beverage",
+    "legacyOrder": 194,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:T2DM:dinner:beverage:low_sodium_veg_broth",
+    "protocolCode": "T2DM",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|dinner|beverage",
+    "legacyOrder": 195,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:T2DM:dinner:beverage:cucumber_water_small",
+    "protocolCode": "T2DM",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|dinner|beverage",
+    "legacyOrder": 196,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:T2DM:dinner:beverage:apple_infused_water",
+    "protocolCode": "T2DM",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|dinner|beverage",
+    "legacyOrder": 197,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:T2DM:dinner:beverage:unsweetened_soy_milk",
+    "protocolCode": "T2DM",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|dinner|beverage",
+    "legacyOrder": 198,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:CARDIAC:breakfast:wholegrain_base:rolled_oats",
@@ -1348,7 +2596,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|wholegrain_base",
-    "legacyOrder": 103,
+    "legacyOrder": 199,
     "legacyGroupOrder": 0
   },
   {
@@ -1361,7 +2609,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|wholegrain_base",
-    "legacyOrder": 104,
+    "legacyOrder": 200,
     "legacyGroupOrder": 1
   },
   {
@@ -1374,7 +2622,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|protein_primary",
-    "legacyOrder": 105,
+    "legacyOrder": 201,
     "legacyGroupOrder": 0
   },
   {
@@ -1387,7 +2635,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|protein_primary",
-    "legacyOrder": 106,
+    "legacyOrder": 202,
     "legacyGroupOrder": 1
   },
   {
@@ -1400,8 +2648,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|beverage",
-    "legacyOrder": 107,
+    "legacyOrder": 203,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:CARDIAC:breakfast:beverage:unsweetened_tea",
+    "protocolCode": "CARDIAC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|breakfast|beverage",
+    "legacyOrder": 204,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:CARDIAC:breakfast:beverage:chamomile_tea",
+    "protocolCode": "CARDIAC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|breakfast|beverage",
+    "legacyOrder": 205,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:CARDIAC:breakfast:beverage:mint_tea_mild",
+    "protocolCode": "CARDIAC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|breakfast|beverage",
+    "legacyOrder": 206,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:CARDIAC:breakfast:beverage:low_sodium_veg_broth",
+    "protocolCode": "CARDIAC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|breakfast|beverage",
+    "legacyOrder": 207,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:CARDIAC:breakfast:beverage:cucumber_water_small",
+    "protocolCode": "CARDIAC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|breakfast|beverage",
+    "legacyOrder": 208,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:CARDIAC:breakfast:beverage:apple_infused_water",
+    "protocolCode": "CARDIAC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|breakfast|beverage",
+    "legacyOrder": 209,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:CARDIAC:breakfast:beverage:unsweetened_soy_milk",
+    "protocolCode": "CARDIAC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|breakfast|beverage",
+    "legacyOrder": 210,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:CARDIAC:lunch:wholegrain_base:brown_rice_cooked",
@@ -1413,7 +2752,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|wholegrain_base",
-    "legacyOrder": 108,
+    "legacyOrder": 211,
     "legacyGroupOrder": 0
   },
   {
@@ -1426,7 +2765,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|wholegrain_base",
-    "legacyOrder": 109,
+    "legacyOrder": 212,
     "legacyGroupOrder": 1
   },
   {
@@ -1439,7 +2778,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|wholegrain_base",
-    "legacyOrder": 110,
+    "legacyOrder": 213,
     "legacyGroupOrder": 2
   },
   {
@@ -1452,7 +2791,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|lean_protein_primary",
-    "legacyOrder": 111,
+    "legacyOrder": 214,
     "legacyGroupOrder": 0
   },
   {
@@ -1465,7 +2804,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|lean_protein_primary",
-    "legacyOrder": 112,
+    "legacyOrder": 215,
     "legacyGroupOrder": 1
   },
   {
@@ -1478,7 +2817,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|lean_protein_primary",
-    "legacyOrder": 113,
+    "legacyOrder": 216,
     "legacyGroupOrder": 2
   },
   {
@@ -1491,7 +2830,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|vegetable_side",
-    "legacyOrder": 114,
+    "legacyOrder": 217,
     "legacyGroupOrder": 0
   },
   {
@@ -1504,7 +2843,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|vegetable_side",
-    "legacyOrder": 115,
+    "legacyOrder": 218,
     "legacyGroupOrder": 1
   },
   {
@@ -1517,8 +2856,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|beverage",
-    "legacyOrder": 116,
+    "legacyOrder": 219,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:CARDIAC:lunch:beverage:unsweetened_tea",
+    "protocolCode": "CARDIAC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|lunch|beverage",
+    "legacyOrder": 220,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:CARDIAC:lunch:beverage:chamomile_tea",
+    "protocolCode": "CARDIAC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|lunch|beverage",
+    "legacyOrder": 221,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:CARDIAC:lunch:beverage:mint_tea_mild",
+    "protocolCode": "CARDIAC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|lunch|beverage",
+    "legacyOrder": 222,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:CARDIAC:lunch:beverage:low_sodium_veg_broth",
+    "protocolCode": "CARDIAC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|lunch|beverage",
+    "legacyOrder": 223,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:CARDIAC:lunch:beverage:cucumber_water_small",
+    "protocolCode": "CARDIAC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|lunch|beverage",
+    "legacyOrder": 224,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:CARDIAC:lunch:beverage:apple_infused_water",
+    "protocolCode": "CARDIAC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|lunch|beverage",
+    "legacyOrder": 225,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:CARDIAC:lunch:beverage:unsweetened_soy_milk",
+    "protocolCode": "CARDIAC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|lunch|beverage",
+    "legacyOrder": 226,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:CARDIAC:dinner:wholegrain_base:quinoa_cooked",
@@ -1530,7 +2960,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|wholegrain_base",
-    "legacyOrder": 117,
+    "legacyOrder": 227,
     "legacyGroupOrder": 0
   },
   {
@@ -1543,7 +2973,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|wholegrain_base",
-    "legacyOrder": 118,
+    "legacyOrder": 228,
     "legacyGroupOrder": 1
   },
   {
@@ -1556,7 +2986,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|lean_protein_primary",
-    "legacyOrder": 119,
+    "legacyOrder": 229,
     "legacyGroupOrder": 0
   },
   {
@@ -1569,7 +2999,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|lean_protein_primary",
-    "legacyOrder": 120,
+    "legacyOrder": 230,
     "legacyGroupOrder": 1
   },
   {
@@ -1582,7 +3012,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|vegetable_side",
-    "legacyOrder": 121,
+    "legacyOrder": 231,
     "legacyGroupOrder": 0
   },
   {
@@ -1595,7 +3025,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|vegetable_side",
-    "legacyOrder": 122,
+    "legacyOrder": 232,
     "legacyGroupOrder": 1
   },
   {
@@ -1608,8 +3038,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|beverage",
-    "legacyOrder": 123,
+    "legacyOrder": 233,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:CARDIAC:dinner:beverage:unsweetened_tea",
+    "protocolCode": "CARDIAC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|dinner|beverage",
+    "legacyOrder": 234,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:CARDIAC:dinner:beverage:chamomile_tea",
+    "protocolCode": "CARDIAC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|dinner|beverage",
+    "legacyOrder": 235,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:CARDIAC:dinner:beverage:mint_tea_mild",
+    "protocolCode": "CARDIAC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|dinner|beverage",
+    "legacyOrder": 236,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:CARDIAC:dinner:beverage:low_sodium_veg_broth",
+    "protocolCode": "CARDIAC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|dinner|beverage",
+    "legacyOrder": 237,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:CARDIAC:dinner:beverage:cucumber_water_small",
+    "protocolCode": "CARDIAC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|dinner|beverage",
+    "legacyOrder": 238,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:CARDIAC:dinner:beverage:apple_infused_water",
+    "protocolCode": "CARDIAC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|dinner|beverage",
+    "legacyOrder": 239,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:CARDIAC:dinner:beverage:unsweetened_soy_milk",
+    "protocolCode": "CARDIAC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|dinner|beverage",
+    "legacyOrder": 240,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:HTN:breakfast:starch_base:rolled_oats",
@@ -1621,7 +3142,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|starch_base",
-    "legacyOrder": 124,
+    "legacyOrder": 241,
     "legacyGroupOrder": 0
   },
   {
@@ -1634,7 +3155,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|starch_base",
-    "legacyOrder": 125,
+    "legacyOrder": 242,
     "legacyGroupOrder": 1
   },
   {
@@ -1647,7 +3168,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|protein_primary",
-    "legacyOrder": 126,
+    "legacyOrder": 243,
     "legacyGroupOrder": 0
   },
   {
@@ -1660,7 +3181,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|protein_primary",
-    "legacyOrder": 127,
+    "legacyOrder": 244,
     "legacyGroupOrder": 1
   },
   {
@@ -1673,8 +3194,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|beverage",
-    "legacyOrder": 128,
+    "legacyOrder": 245,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:HTN:breakfast:beverage:unsweetened_tea",
+    "protocolCode": "HTN",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|breakfast|beverage",
+    "legacyOrder": 246,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:HTN:breakfast:beverage:chamomile_tea",
+    "protocolCode": "HTN",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|breakfast|beverage",
+    "legacyOrder": 247,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:HTN:breakfast:beverage:mint_tea_mild",
+    "protocolCode": "HTN",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|breakfast|beverage",
+    "legacyOrder": 248,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:HTN:breakfast:beverage:low_sodium_veg_broth",
+    "protocolCode": "HTN",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|breakfast|beverage",
+    "legacyOrder": 249,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:HTN:breakfast:beverage:cucumber_water_small",
+    "protocolCode": "HTN",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|breakfast|beverage",
+    "legacyOrder": 250,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:HTN:breakfast:beverage:apple_infused_water",
+    "protocolCode": "HTN",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|breakfast|beverage",
+    "legacyOrder": 251,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:HTN:breakfast:beverage:unsweetened_soy_milk",
+    "protocolCode": "HTN",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|breakfast|beverage",
+    "legacyOrder": 252,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:HTN:lunch:starch_base:brown_rice_cooked",
@@ -1686,7 +3298,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|starch_base",
-    "legacyOrder": 129,
+    "legacyOrder": 253,
     "legacyGroupOrder": 0
   },
   {
@@ -1699,7 +3311,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|starch_base",
-    "legacyOrder": 130,
+    "legacyOrder": 254,
     "legacyGroupOrder": 1
   },
   {
@@ -1712,7 +3324,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|lean_protein_primary",
-    "legacyOrder": 131,
+    "legacyOrder": 255,
     "legacyGroupOrder": 0
   },
   {
@@ -1725,7 +3337,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|lean_protein_primary",
-    "legacyOrder": 132,
+    "legacyOrder": 256,
     "legacyGroupOrder": 1
   },
   {
@@ -1738,7 +3350,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|vegetable_side",
-    "legacyOrder": 133,
+    "legacyOrder": 257,
     "legacyGroupOrder": 0
   },
   {
@@ -1751,7 +3363,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|vegetable_side",
-    "legacyOrder": 134,
+    "legacyOrder": 258,
     "legacyGroupOrder": 1
   },
   {
@@ -1764,8 +3376,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|beverage",
-    "legacyOrder": 135,
+    "legacyOrder": 259,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:HTN:lunch:beverage:unsweetened_tea",
+    "protocolCode": "HTN",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|lunch|beverage",
+    "legacyOrder": 260,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:HTN:lunch:beverage:chamomile_tea",
+    "protocolCode": "HTN",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|lunch|beverage",
+    "legacyOrder": 261,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:HTN:lunch:beverage:mint_tea_mild",
+    "protocolCode": "HTN",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|lunch|beverage",
+    "legacyOrder": 262,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:HTN:lunch:beverage:low_sodium_veg_broth",
+    "protocolCode": "HTN",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|lunch|beverage",
+    "legacyOrder": 263,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:HTN:lunch:beverage:cucumber_water_small",
+    "protocolCode": "HTN",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|lunch|beverage",
+    "legacyOrder": 264,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:HTN:lunch:beverage:apple_infused_water",
+    "protocolCode": "HTN",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|lunch|beverage",
+    "legacyOrder": 265,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:HTN:lunch:beverage:unsweetened_soy_milk",
+    "protocolCode": "HTN",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|lunch|beverage",
+    "legacyOrder": 266,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:HTN:dinner:starch_base:quinoa_cooked",
@@ -1777,7 +3480,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|starch_base",
-    "legacyOrder": 136,
+    "legacyOrder": 267,
     "legacyGroupOrder": 0
   },
   {
@@ -1790,7 +3493,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|starch_base",
-    "legacyOrder": 137,
+    "legacyOrder": 268,
     "legacyGroupOrder": 1
   },
   {
@@ -1803,7 +3506,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|lean_protein_primary",
-    "legacyOrder": 138,
+    "legacyOrder": 269,
     "legacyGroupOrder": 0
   },
   {
@@ -1816,7 +3519,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|lean_protein_primary",
-    "legacyOrder": 139,
+    "legacyOrder": 270,
     "legacyGroupOrder": 1
   },
   {
@@ -1829,7 +3532,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|vegetable_side",
-    "legacyOrder": 140,
+    "legacyOrder": 271,
     "legacyGroupOrder": 0
   },
   {
@@ -1842,7 +3545,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|vegetable_side",
-    "legacyOrder": 141,
+    "legacyOrder": 272,
     "legacyGroupOrder": 1
   },
   {
@@ -1855,8 +3558,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|beverage",
-    "legacyOrder": 142,
+    "legacyOrder": 273,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:HTN:dinner:beverage:unsweetened_tea",
+    "protocolCode": "HTN",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|dinner|beverage",
+    "legacyOrder": 274,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:HTN:dinner:beverage:chamomile_tea",
+    "protocolCode": "HTN",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|dinner|beverage",
+    "legacyOrder": 275,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:HTN:dinner:beverage:mint_tea_mild",
+    "protocolCode": "HTN",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|dinner|beverage",
+    "legacyOrder": 276,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:HTN:dinner:beverage:low_sodium_veg_broth",
+    "protocolCode": "HTN",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|dinner|beverage",
+    "legacyOrder": 277,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:HTN:dinner:beverage:cucumber_water_small",
+    "protocolCode": "HTN",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|dinner|beverage",
+    "legacyOrder": 278,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:HTN:dinner:beverage:apple_infused_water",
+    "protocolCode": "HTN",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|dinner|beverage",
+    "legacyOrder": 279,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:HTN:dinner:beverage:unsweetened_soy_milk",
+    "protocolCode": "HTN",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|dinner|beverage",
+    "legacyOrder": 280,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:RENAL_STAGE_3:breakfast:renal_carb_base:rolled_oats",
@@ -1868,7 +3662,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|renal_carb_base",
-    "legacyOrder": 143,
+    "legacyOrder": 281,
     "legacyGroupOrder": 0
   },
   {
@@ -1881,7 +3675,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|renal_carb_base",
-    "legacyOrder": 144,
+    "legacyOrder": 282,
     "legacyGroupOrder": 1
   },
   {
@@ -1894,7 +3688,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|renal_protein_primary",
-    "legacyOrder": 145,
+    "legacyOrder": 283,
     "legacyGroupOrder": 0
   },
   {
@@ -1907,7 +3701,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|renal_protein_primary",
-    "legacyOrder": 146,
+    "legacyOrder": 284,
     "legacyGroupOrder": 1
   },
   {
@@ -1920,8 +3714,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
-    "legacyOrder": 147,
+    "legacyOrder": 285,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:breakfast:beverage:renal_herbal_tea",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "renal_herbal_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
+    "legacyOrder": 286,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:breakfast:beverage:rice_water",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
+    "legacyOrder": 287,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:breakfast:beverage:low_potassium_clear_broth",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "low_potassium_clear_broth",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
+    "legacyOrder": 288,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:breakfast:beverage:chamomile_tea",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
+    "legacyOrder": 289,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:breakfast:beverage:cucumber_water_small",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
+    "legacyOrder": 290,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:breakfast:beverage:apple_infused_water",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
+    "legacyOrder": 291,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:breakfast:beverage:warm_water",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
+    "legacyOrder": 292,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:RENAL_STAGE_3:lunch:renal_carb_base:brown_rice_cooked",
@@ -1933,7 +3818,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_carb_base",
-    "legacyOrder": 148,
+    "legacyOrder": 293,
     "legacyGroupOrder": 0
   },
   {
@@ -1946,7 +3831,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_carb_base",
-    "legacyOrder": 149,
+    "legacyOrder": 294,
     "legacyGroupOrder": 1
   },
   {
@@ -1959,7 +3844,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_protein_primary",
-    "legacyOrder": 150,
+    "legacyOrder": 295,
     "legacyGroupOrder": 0
   },
   {
@@ -1972,7 +3857,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_protein_primary",
-    "legacyOrder": 151,
+    "legacyOrder": 296,
     "legacyGroupOrder": 1
   },
   {
@@ -1985,7 +3870,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_veg_side",
-    "legacyOrder": 152,
+    "legacyOrder": 297,
     "legacyGroupOrder": 0
   },
   {
@@ -1998,8 +3883,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|beverage",
-    "legacyOrder": 153,
+    "legacyOrder": 298,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:lunch:beverage:renal_herbal_tea",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "renal_herbal_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|lunch|beverage",
+    "legacyOrder": 299,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:lunch:beverage:rice_water",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|lunch|beverage",
+    "legacyOrder": 300,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:lunch:beverage:low_potassium_clear_broth",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "low_potassium_clear_broth",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|lunch|beverage",
+    "legacyOrder": 301,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:lunch:beverage:chamomile_tea",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|lunch|beverage",
+    "legacyOrder": 302,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:lunch:beverage:cucumber_water_small",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|lunch|beverage",
+    "legacyOrder": 303,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:lunch:beverage:apple_infused_water",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|lunch|beverage",
+    "legacyOrder": 304,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:lunch:beverage:warm_water",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|lunch|beverage",
+    "legacyOrder": 305,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:RENAL_STAGE_3:dinner:renal_carb_base:brown_rice_cooked",
@@ -2011,7 +3987,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_carb_base",
-    "legacyOrder": 154,
+    "legacyOrder": 306,
     "legacyGroupOrder": 0
   },
   {
@@ -2024,7 +4000,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_carb_base",
-    "legacyOrder": 155,
+    "legacyOrder": 307,
     "legacyGroupOrder": 1
   },
   {
@@ -2037,7 +4013,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_protein_primary",
-    "legacyOrder": 156,
+    "legacyOrder": 308,
     "legacyGroupOrder": 0
   },
   {
@@ -2050,7 +4026,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_protein_primary",
-    "legacyOrder": 157,
+    "legacyOrder": 309,
     "legacyGroupOrder": 1
   },
   {
@@ -2063,7 +4039,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_veg_side",
-    "legacyOrder": 158,
+    "legacyOrder": 310,
     "legacyGroupOrder": 0
   },
   {
@@ -2076,8 +4052,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|beverage",
-    "legacyOrder": 159,
+    "legacyOrder": 311,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:dinner:beverage:renal_herbal_tea",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "renal_herbal_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|dinner|beverage",
+    "legacyOrder": 312,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:dinner:beverage:rice_water",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|dinner|beverage",
+    "legacyOrder": 313,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:dinner:beverage:low_potassium_clear_broth",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "low_potassium_clear_broth",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|dinner|beverage",
+    "legacyOrder": 314,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:dinner:beverage:chamomile_tea",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|dinner|beverage",
+    "legacyOrder": 315,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:dinner:beverage:cucumber_water_small",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|dinner|beverage",
+    "legacyOrder": 316,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:dinner:beverage:apple_infused_water",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|dinner|beverage",
+    "legacyOrder": 317,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:dinner:beverage:warm_water",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|dinner|beverage",
+    "legacyOrder": 318,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:RENAL_STAGE_4:breakfast:renal_carb_base:rolled_oats",
@@ -2089,7 +4156,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|renal_carb_base",
-    "legacyOrder": 160,
+    "legacyOrder": 319,
     "legacyGroupOrder": 0
   },
   {
@@ -2102,7 +4169,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|renal_carb_base",
-    "legacyOrder": 161,
+    "legacyOrder": 320,
     "legacyGroupOrder": 1
   },
   {
@@ -2115,7 +4182,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|renal_protein_primary",
-    "legacyOrder": 162,
+    "legacyOrder": 321,
     "legacyGroupOrder": 0
   },
   {
@@ -2128,7 +4195,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|renal_protein_primary",
-    "legacyOrder": 163,
+    "legacyOrder": 322,
     "legacyGroupOrder": 1
   },
   {
@@ -2141,8 +4208,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
-    "legacyOrder": 164,
+    "legacyOrder": 323,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:breakfast:beverage:renal_herbal_tea",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "renal_herbal_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
+    "legacyOrder": 324,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:breakfast:beverage:rice_water",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
+    "legacyOrder": 325,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:breakfast:beverage:low_potassium_clear_broth",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "low_potassium_clear_broth",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
+    "legacyOrder": 326,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:breakfast:beverage:chamomile_tea",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
+    "legacyOrder": 327,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:breakfast:beverage:cucumber_water_small",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
+    "legacyOrder": 328,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:breakfast:beverage:apple_infused_water",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
+    "legacyOrder": 329,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:breakfast:beverage:warm_water",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
+    "legacyOrder": 330,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:RENAL_STAGE_4:lunch:renal_carb_base:brown_rice_cooked",
@@ -2154,7 +4312,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_carb_base",
-    "legacyOrder": 165,
+    "legacyOrder": 331,
     "legacyGroupOrder": 0
   },
   {
@@ -2167,7 +4325,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_carb_base",
-    "legacyOrder": 166,
+    "legacyOrder": 332,
     "legacyGroupOrder": 1
   },
   {
@@ -2180,7 +4338,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_protein_primary",
-    "legacyOrder": 167,
+    "legacyOrder": 333,
     "legacyGroupOrder": 0
   },
   {
@@ -2193,7 +4351,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_protein_primary",
-    "legacyOrder": 168,
+    "legacyOrder": 334,
     "legacyGroupOrder": 1
   },
   {
@@ -2206,7 +4364,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_veg_side",
-    "legacyOrder": 169,
+    "legacyOrder": 335,
     "legacyGroupOrder": 0
   },
   {
@@ -2219,8 +4377,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|beverage",
-    "legacyOrder": 170,
+    "legacyOrder": 336,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:lunch:beverage:renal_herbal_tea",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "renal_herbal_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|lunch|beverage",
+    "legacyOrder": 337,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:lunch:beverage:rice_water",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|lunch|beverage",
+    "legacyOrder": 338,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:lunch:beverage:low_potassium_clear_broth",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "low_potassium_clear_broth",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|lunch|beverage",
+    "legacyOrder": 339,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:lunch:beverage:chamomile_tea",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|lunch|beverage",
+    "legacyOrder": 340,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:lunch:beverage:cucumber_water_small",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|lunch|beverage",
+    "legacyOrder": 341,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:lunch:beverage:apple_infused_water",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|lunch|beverage",
+    "legacyOrder": 342,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:lunch:beverage:warm_water",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|lunch|beverage",
+    "legacyOrder": 343,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:RENAL_STAGE_4:dinner:renal_carb_base:sweet_potato_mash_plain",
@@ -2232,7 +4481,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_carb_base",
-    "legacyOrder": 171,
+    "legacyOrder": 344,
     "legacyGroupOrder": 0
   },
   {
@@ -2245,7 +4494,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_carb_base",
-    "legacyOrder": 172,
+    "legacyOrder": 345,
     "legacyGroupOrder": 1
   },
   {
@@ -2258,7 +4507,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_protein_primary",
-    "legacyOrder": 173,
+    "legacyOrder": 346,
     "legacyGroupOrder": 0
   },
   {
@@ -2271,7 +4520,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_protein_primary",
-    "legacyOrder": 174,
+    "legacyOrder": 347,
     "legacyGroupOrder": 1
   },
   {
@@ -2284,7 +4533,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_veg_side",
-    "legacyOrder": 175,
+    "legacyOrder": 348,
     "legacyGroupOrder": 0
   },
   {
@@ -2297,8 +4546,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|beverage",
-    "legacyOrder": 176,
+    "legacyOrder": 349,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:dinner:beverage:renal_herbal_tea",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "renal_herbal_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|dinner|beverage",
+    "legacyOrder": 350,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:dinner:beverage:rice_water",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "rice_water",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|dinner|beverage",
+    "legacyOrder": 351,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:dinner:beverage:low_potassium_clear_broth",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "low_potassium_clear_broth",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|dinner|beverage",
+    "legacyOrder": 352,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:dinner:beverage:chamomile_tea",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|dinner|beverage",
+    "legacyOrder": 353,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:dinner:beverage:cucumber_water_small",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|dinner|beverage",
+    "legacyOrder": 354,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:dinner:beverage:apple_infused_water",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|dinner|beverage",
+    "legacyOrder": 355,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:dinner:beverage:warm_water",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "warm_water",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|dinner|beverage",
+    "legacyOrder": 356,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:HEPATIC:breakfast:gentle_carb_base:rolled_oats",
@@ -2310,7 +4650,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|gentle_carb_base",
-    "legacyOrder": 177,
+    "legacyOrder": 357,
     "legacyGroupOrder": 0
   },
   {
@@ -2323,7 +4663,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|gentle_carb_base",
-    "legacyOrder": 178,
+    "legacyOrder": 358,
     "legacyGroupOrder": 1
   },
   {
@@ -2336,7 +4676,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|fresh_lean_protein_optional",
-    "legacyOrder": 179,
+    "legacyOrder": 359,
     "legacyGroupOrder": 0
   },
   {
@@ -2349,7 +4689,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|fresh_lean_protein_optional",
-    "legacyOrder": 180,
+    "legacyOrder": 360,
     "legacyGroupOrder": 1
   },
   {
@@ -2362,7 +4702,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|whole_fruit_optional",
-    "legacyOrder": 181,
+    "legacyOrder": 361,
     "legacyGroupOrder": 0
   },
   {
@@ -2375,8 +4715,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|beverage",
-    "legacyOrder": 182,
+    "legacyOrder": 362,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:HEPATIC:breakfast:beverage:unsweetened_tea",
+    "protocolCode": "HEPATIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|breakfast|beverage",
+    "legacyOrder": 363,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:HEPATIC:breakfast:beverage:chamomile_tea",
+    "protocolCode": "HEPATIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|breakfast|beverage",
+    "legacyOrder": 364,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:HEPATIC:breakfast:beverage:mint_tea_mild",
+    "protocolCode": "HEPATIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|breakfast|beverage",
+    "legacyOrder": 365,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:HEPATIC:breakfast:beverage:low_sodium_veg_broth",
+    "protocolCode": "HEPATIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|breakfast|beverage",
+    "legacyOrder": 366,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:HEPATIC:breakfast:beverage:cucumber_water_small",
+    "protocolCode": "HEPATIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|breakfast|beverage",
+    "legacyOrder": 367,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:HEPATIC:breakfast:beverage:apple_infused_water",
+    "protocolCode": "HEPATIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|breakfast|beverage",
+    "legacyOrder": 368,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:HEPATIC:breakfast:beverage:unsweetened_soy_milk",
+    "protocolCode": "HEPATIC",
+    "mealType": "breakfast",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|breakfast|beverage",
+    "legacyOrder": 369,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:HEPATIC:lunch:gentle_carb_base:brown_rice_cooked",
@@ -2388,7 +4819,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|gentle_carb_base",
-    "legacyOrder": 183,
+    "legacyOrder": 370,
     "legacyGroupOrder": 0
   },
   {
@@ -2401,7 +4832,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|gentle_carb_base",
-    "legacyOrder": 184,
+    "legacyOrder": 371,
     "legacyGroupOrder": 1
   },
   {
@@ -2414,7 +4845,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|fresh_lean_protein_primary",
-    "legacyOrder": 185,
+    "legacyOrder": 372,
     "legacyGroupOrder": 0
   },
   {
@@ -2427,7 +4858,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|fresh_lean_protein_primary",
-    "legacyOrder": 186,
+    "legacyOrder": 373,
     "legacyGroupOrder": 1
   },
   {
@@ -2440,7 +4871,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|fresh_lean_protein_primary",
-    "legacyOrder": 187,
+    "legacyOrder": 374,
     "legacyGroupOrder": 2
   },
   {
@@ -2453,7 +4884,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|vegetable_side",
-    "legacyOrder": 188,
+    "legacyOrder": 375,
     "legacyGroupOrder": 0
   },
   {
@@ -2466,7 +4897,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|vegetable_side",
-    "legacyOrder": 189,
+    "legacyOrder": 376,
     "legacyGroupOrder": 1
   },
   {
@@ -2479,8 +4910,99 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|beverage",
-    "legacyOrder": 190,
+    "legacyOrder": 377,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:HEPATIC:lunch:beverage:unsweetened_tea",
+    "protocolCode": "HEPATIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|lunch|beverage",
+    "legacyOrder": 378,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:HEPATIC:lunch:beverage:chamomile_tea",
+    "protocolCode": "HEPATIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|lunch|beverage",
+    "legacyOrder": 379,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:HEPATIC:lunch:beverage:mint_tea_mild",
+    "protocolCode": "HEPATIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|lunch|beverage",
+    "legacyOrder": 380,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:HEPATIC:lunch:beverage:low_sodium_veg_broth",
+    "protocolCode": "HEPATIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|lunch|beverage",
+    "legacyOrder": 381,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:HEPATIC:lunch:beverage:cucumber_water_small",
+    "protocolCode": "HEPATIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|lunch|beverage",
+    "legacyOrder": 382,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:HEPATIC:lunch:beverage:apple_infused_water",
+    "protocolCode": "HEPATIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|lunch|beverage",
+    "legacyOrder": 383,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:HEPATIC:lunch:beverage:unsweetened_soy_milk",
+    "protocolCode": "HEPATIC",
+    "mealType": "lunch",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|lunch|beverage",
+    "legacyOrder": 384,
+    "legacyGroupOrder": 7
   },
   {
     "id": "legacy:HEPATIC:dinner:gentle_carb_base:quinoa_cooked",
@@ -2492,7 +5014,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|gentle_carb_base",
-    "legacyOrder": 191,
+    "legacyOrder": 385,
     "legacyGroupOrder": 0
   },
   {
@@ -2505,7 +5027,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|gentle_carb_base",
-    "legacyOrder": 192,
+    "legacyOrder": 386,
     "legacyGroupOrder": 1
   },
   {
@@ -2518,7 +5040,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|fresh_lean_protein_primary",
-    "legacyOrder": 193,
+    "legacyOrder": 387,
     "legacyGroupOrder": 0
   },
   {
@@ -2531,7 +5053,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|fresh_lean_protein_primary",
-    "legacyOrder": 194,
+    "legacyOrder": 388,
     "legacyGroupOrder": 1
   },
   {
@@ -2544,7 +5066,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|vegetable_side",
-    "legacyOrder": 195,
+    "legacyOrder": 389,
     "legacyGroupOrder": 0
   },
   {
@@ -2557,7 +5079,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|vegetable_side",
-    "legacyOrder": 196,
+    "legacyOrder": 390,
     "legacyGroupOrder": 1
   },
   {
@@ -2570,7 +5092,98 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|beverage",
-    "legacyOrder": 197,
+    "legacyOrder": 391,
     "legacyGroupOrder": 0
+  },
+  {
+    "id": "legacy:HEPATIC:dinner:beverage:unsweetened_tea",
+    "protocolCode": "HEPATIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "unsweetened_tea",
+    "priority": 9,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|dinner|beverage",
+    "legacyOrder": 392,
+    "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:HEPATIC:dinner:beverage:chamomile_tea",
+    "protocolCode": "HEPATIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "chamomile_tea",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|dinner|beverage",
+    "legacyOrder": 393,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:HEPATIC:dinner:beverage:mint_tea_mild",
+    "protocolCode": "HEPATIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "mint_tea_mild",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|dinner|beverage",
+    "legacyOrder": 394,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:HEPATIC:dinner:beverage:low_sodium_veg_broth",
+    "protocolCode": "HEPATIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "low_sodium_veg_broth",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|dinner|beverage",
+    "legacyOrder": 395,
+    "legacyGroupOrder": 4
+  },
+  {
+    "id": "legacy:HEPATIC:dinner:beverage:cucumber_water_small",
+    "protocolCode": "HEPATIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "cucumber_water_small",
+    "priority": 5,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|dinner|beverage",
+    "legacyOrder": 396,
+    "legacyGroupOrder": 5
+  },
+  {
+    "id": "legacy:HEPATIC:dinner:beverage:apple_infused_water",
+    "protocolCode": "HEPATIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "apple_infused_water",
+    "priority": 4,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|dinner|beverage",
+    "legacyOrder": 397,
+    "legacyGroupOrder": 6
+  },
+  {
+    "id": "legacy:HEPATIC:dinner:beverage:unsweetened_soy_milk",
+    "protocolCode": "HEPATIC",
+    "mealType": "dinner",
+    "slotName": "beverage",
+    "foodId": "unsweetened_soy_milk",
+    "priority": 3,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|dinner|beverage",
+    "legacyOrder": 398,
+    "legacyGroupOrder": 7
   }
 ]
