@@ -176,6 +176,137 @@ export interface ClinicalTargets extends NutrientVector {
   giPreferredMax?: number;
 }
 
+export type NutritionPrescriptionMethod = 'existing_local_formula';
+export type NutritionPrescriptionCarePathCode = 'STANDARD_DIET' | 'HOSPITAL_DIET';
+export type NutritionPrescriptionRiskLevel = 'low' | 'moderate' | 'high';
+
+export interface NutritionPrescriptionPatientSnapshot {
+  diagnosis: string;
+  age: number;
+  sex: 'male' | 'female';
+  weightKg: number;
+  heightCm: number;
+  goal: string;
+  mealCount: 3 | 4 | 5 | 6;
+  textureLevel: 'regular' | 'soft' | 'minced' | 'pureed' | 'liquid';
+  riskLevel: NutritionPrescriptionRiskLevel;
+  eGfr?: number;
+  acrMgG?: number;
+  potassiumMmolL?: number;
+  hypertension?: boolean;
+  heartFailure?: boolean;
+  onDialysis?: boolean;
+  malnourished?: boolean;
+  egfrBand?: 'gte45' | '30to45' | 'lt30';
+}
+
+export interface NutritionPrescriptionCarePath {
+  code: NutritionPrescriptionCarePathCode;
+  label: 'Standard Diet' | 'Hospital Diet';
+  energyKcalPerKg: number;
+  proteinMinGPerKg: number;
+  proteinMaxGPerKg: number;
+}
+
+export interface NutritionPrescriptionTargets extends ClinicalTargets {
+  method: NutritionPrescriptionMethod;
+}
+
+export interface NutritionPrescriptionMealPattern {
+  mealCount: 3 | 4 | 5 | 6;
+  mealRatios: Record<MealPlan['mealType'], number>;
+  mealTimingSchedule: string[];
+}
+
+export interface NutritionPrescriptionConstraints {
+  hardExclusions: string[];
+  preferredTerms: string[];
+  avoidTerms: string[];
+  maxRefusePct: number;
+  minFiberGPer100?: number;
+  maxSodiumMgPer100?: number;
+  maxPotassiumMgPer100?: number;
+  maxPhosphorusMgPer100?: number;
+  maxProteinGPer100?: number;
+  minProteinGPer100?: number;
+}
+
+export interface NutritionPrescriptionClinicalFlags {
+  renal: boolean;
+  diabetes: boolean;
+  cardiac: boolean;
+  dysphagia: boolean;
+  hepatic: boolean;
+  gastricSensitive: boolean;
+  postOp: boolean;
+  oncology: boolean;
+  dialysis: boolean;
+  malnourished: boolean;
+  heartFailure: boolean;
+  hypertension: boolean;
+}
+
+export interface NutritionPrescriptionSafety {
+  ckdAssessment?: {
+    gfrCategory: string;
+    acrCategory: string;
+    isCkd: boolean;
+    kidneyFailureHr: number;
+  };
+  proteinPrescription?: {
+    min: number;
+    target: number;
+    max: number | null;
+    source: string;
+  };
+  sodiumPrescription?: {
+    maxMg: number;
+    minMg?: number;
+    note: string;
+    source: string;
+  };
+  potassiumAlert?: {
+    severity: 'info' | 'warning' | 'critical';
+    message: string;
+    action: string;
+  } | null;
+  recommendedDiets: Array<{
+    code: string;
+    name: string;
+    priority: number;
+    source: 'NYS_DOCCS' | 'ESPEN';
+  }>;
+  phosphorusGuide: {
+    dailyAllowanceMg: {
+      min: number;
+      max: number;
+    };
+    ingredientLabelWarnings: string[];
+    highPhosphorusFoodGroups: string[];
+    lowerPhosphorusFoodGroups: string[];
+    careNotes: string[];
+  };
+  fastingRisk?: {
+    score: number;
+    level: NutritionPrescriptionRiskLevel;
+    factors: string[];
+  };
+}
+
+export interface NutritionPrescription {
+  prescriptionId: string;
+  generatedAt: string;
+  phase: 'shadow';
+  patient: NutritionPrescriptionPatientSnapshot;
+  carePath: NutritionPrescriptionCarePath;
+  targets: NutritionPrescriptionTargets;
+  mealPattern: NutritionPrescriptionMealPattern;
+  constraints: NutritionPrescriptionConstraints;
+  clinicalFlags: NutritionPrescriptionClinicalFlags;
+  safety: NutritionPrescriptionSafety;
+  rationale: string[];
+}
+
 export interface DayPlan {
   dayName: string;
   meals: MealPlan[];

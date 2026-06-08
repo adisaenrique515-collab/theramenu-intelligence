@@ -12,6 +12,7 @@
     "schema:check": "node --experimental-strip-types scripts/generateTherapeuticSchema.ts",
     "candidates:generate": "node --experimental-strip-types scripts/generateProtocolSlotCandidates.ts",
     "candidates:check": "node --experimental-strip-types scripts/checkProtocolSlotCandidateEquivalence.ts",
+    "prescription:check": "node --experimental-strip-types scripts/checkNutritionPrescriptionNoOutputDrift.ts",
     "smoke:offline": "node --experimental-strip-types scripts/offline-engine-smoke.ts",
     "import:bfpd": "node --experimental-strip-types scripts/importBfpdSeed.ts",
     "test": "node --experimental-strip-types --test server/__tests__/nutrientUtils.test.ts server/__tests__/clinicalProtocols.test.ts server/__tests__/eligibilityEngine.test.ts server/__tests__/validationEngine.test.ts server/__tests__/governanceEngine.test.ts server/__tests__/usdaImportPipeline.test.ts server/__tests__/coverageReports.test.ts server/__tests__/foodItemStore.test.ts"

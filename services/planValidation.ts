@@ -6,7 +6,7 @@ import type {
   WeeklyTherapeuticPlan,
   SchemaFoodItem,
 } from '../types';
-import { FOODS } from '../config/therapeuticSchema';
+import { FOODS } from '../config/therapeuticSchema.ts';
 
 const FOOD_BY_ID = new Map<string, SchemaFoodItem>(FOODS.map((food) => [food.food_id, food]));
 const DEFAULT_PORTION_G = 100;
