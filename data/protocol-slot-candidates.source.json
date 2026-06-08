@@ -39,6 +39,32 @@
     "legacyGroupOrder": 2
   },
   {
+    "id": "legacy:H_PYLORI:breakfast:soft_starch_base:rice_porridge_plain",
+    "protocolCode": "H_PYLORI",
+    "mealType": "breakfast",
+    "slotName": "soft_starch_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|breakfast|soft_starch_base",
+    "legacyOrder": 3,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:H_PYLORI:breakfast:soft_starch_base:cassava_mash_plain",
+    "protocolCode": "H_PYLORI",
+    "mealType": "breakfast",
+    "slotName": "soft_starch_base",
+    "foodId": "cassava_mash_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|breakfast|soft_starch_base",
+    "legacyOrder": 4,
+    "legacyGroupOrder": 4
+  },
+  {
     "id": "legacy:H_PYLORI:breakfast:soft_protein_primary:steamed_cod_plain",
     "protocolCode": "H_PYLORI",
     "mealType": "breakfast",
@@ -48,7 +74,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|breakfast|soft_protein_primary",
-    "legacyOrder": 3,
+    "legacyOrder": 5,
     "legacyGroupOrder": 0
   },
   {
@@ -61,7 +87,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|breakfast|soft_protein_primary",
-    "legacyOrder": 4,
+    "legacyOrder": 6,
     "legacyGroupOrder": 1
   },
   {
@@ -74,7 +100,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|breakfast|soft_protein_primary",
-    "legacyOrder": 5,
+    "legacyOrder": 7,
     "legacyGroupOrder": 2
   },
   {
@@ -87,7 +113,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|breakfast|soft_protein_primary",
-    "legacyOrder": 6,
+    "legacyOrder": 8,
     "legacyGroupOrder": 3
   },
   {
@@ -100,7 +126,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|breakfast|beverage",
-    "legacyOrder": 7,
+    "legacyOrder": 9,
     "legacyGroupOrder": 0
   },
   {
@@ -113,7 +139,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|breakfast|beverage",
-    "legacyOrder": 8,
+    "legacyOrder": 10,
     "legacyGroupOrder": 1
   },
   {
@@ -126,7 +152,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|breakfast|beverage",
-    "legacyOrder": 9,
+    "legacyOrder": 11,
     "legacyGroupOrder": 2
   },
   {
@@ -139,7 +165,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|breakfast|beverage",
-    "legacyOrder": 10,
+    "legacyOrder": 12,
     "legacyGroupOrder": 3
   },
   {
@@ -152,7 +178,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|breakfast|beverage",
-    "legacyOrder": 11,
+    "legacyOrder": 13,
     "legacyGroupOrder": 4
   },
   {
@@ -165,7 +191,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|breakfast|beverage",
-    "legacyOrder": 12,
+    "legacyOrder": 14,
     "legacyGroupOrder": 5
   },
   {
@@ -178,7 +204,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|breakfast|beverage",
-    "legacyOrder": 13,
+    "legacyOrder": 15,
     "legacyGroupOrder": 6
   },
   {
@@ -191,7 +217,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_starch_base",
-    "legacyOrder": 14,
+    "legacyOrder": 16,
     "legacyGroupOrder": 0
   },
   {
@@ -204,7 +230,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_starch_base",
-    "legacyOrder": 15,
+    "legacyOrder": 17,
     "legacyGroupOrder": 1
   },
   {
@@ -217,8 +243,34 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_starch_base",
-    "legacyOrder": 16,
+    "legacyOrder": 18,
     "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:H_PYLORI:lunch:soft_starch_base:rice_porridge_plain",
+    "protocolCode": "H_PYLORI",
+    "mealType": "lunch",
+    "slotName": "soft_starch_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|lunch|soft_starch_base",
+    "legacyOrder": 19,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:H_PYLORI:lunch:soft_starch_base:cassava_mash_plain",
+    "protocolCode": "H_PYLORI",
+    "mealType": "lunch",
+    "slotName": "soft_starch_base",
+    "foodId": "cassava_mash_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|lunch|soft_starch_base",
+    "legacyOrder": 20,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:H_PYLORI:lunch:soft_protein_primary:poached_chicken_plain",
@@ -230,7 +282,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_protein_primary",
-    "legacyOrder": 17,
+    "legacyOrder": 21,
     "legacyGroupOrder": 0
   },
   {
@@ -243,7 +295,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_protein_primary",
-    "legacyOrder": 18,
+    "legacyOrder": 22,
     "legacyGroupOrder": 1
   },
   {
@@ -256,7 +308,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_protein_primary",
-    "legacyOrder": 19,
+    "legacyOrder": 23,
     "legacyGroupOrder": 2
   },
   {
@@ -269,7 +321,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_protein_primary",
-    "legacyOrder": 20,
+    "legacyOrder": 24,
     "legacyGroupOrder": 3
   },
   {
@@ -282,7 +334,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_veg_side",
-    "legacyOrder": 21,
+    "legacyOrder": 25,
     "legacyGroupOrder": 0
   },
   {
@@ -295,7 +347,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_veg_side",
-    "legacyOrder": 22,
+    "legacyOrder": 26,
     "legacyGroupOrder": 1
   },
   {
@@ -308,7 +360,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_veg_side",
-    "legacyOrder": 23,
+    "legacyOrder": 27,
     "legacyGroupOrder": 2
   },
   {
@@ -321,7 +373,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_veg_side",
-    "legacyOrder": 24,
+    "legacyOrder": 28,
     "legacyGroupOrder": 3
   },
   {
@@ -334,7 +386,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_veg_side",
-    "legacyOrder": 25,
+    "legacyOrder": 29,
     "legacyGroupOrder": 4
   },
   {
@@ -347,7 +399,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|soft_veg_side",
-    "legacyOrder": 26,
+    "legacyOrder": 30,
     "legacyGroupOrder": 5
   },
   {
@@ -360,7 +412,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|beverage",
-    "legacyOrder": 27,
+    "legacyOrder": 31,
     "legacyGroupOrder": 0
   },
   {
@@ -373,7 +425,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|beverage",
-    "legacyOrder": 28,
+    "legacyOrder": 32,
     "legacyGroupOrder": 1
   },
   {
@@ -386,7 +438,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|beverage",
-    "legacyOrder": 29,
+    "legacyOrder": 33,
     "legacyGroupOrder": 2
   },
   {
@@ -399,7 +451,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|beverage",
-    "legacyOrder": 30,
+    "legacyOrder": 34,
     "legacyGroupOrder": 3
   },
   {
@@ -412,7 +464,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|beverage",
-    "legacyOrder": 31,
+    "legacyOrder": 35,
     "legacyGroupOrder": 4
   },
   {
@@ -425,7 +477,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|beverage",
-    "legacyOrder": 32,
+    "legacyOrder": 36,
     "legacyGroupOrder": 5
   },
   {
@@ -438,7 +490,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|lunch|beverage",
-    "legacyOrder": 33,
+    "legacyOrder": 37,
     "legacyGroupOrder": 6
   },
   {
@@ -451,7 +503,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_starch_base",
-    "legacyOrder": 34,
+    "legacyOrder": 38,
     "legacyGroupOrder": 0
   },
   {
@@ -464,7 +516,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_starch_base",
-    "legacyOrder": 35,
+    "legacyOrder": 39,
     "legacyGroupOrder": 1
   },
   {
@@ -477,8 +529,34 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_starch_base",
-    "legacyOrder": 36,
+    "legacyOrder": 40,
     "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:H_PYLORI:dinner:soft_starch_base:rice_porridge_plain",
+    "protocolCode": "H_PYLORI",
+    "mealType": "dinner",
+    "slotName": "soft_starch_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|dinner|soft_starch_base",
+    "legacyOrder": 41,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:H_PYLORI:dinner:soft_starch_base:cassava_mash_plain",
+    "protocolCode": "H_PYLORI",
+    "mealType": "dinner",
+    "slotName": "soft_starch_base",
+    "foodId": "cassava_mash_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "H_PYLORI|dinner|soft_starch_base",
+    "legacyOrder": 42,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:H_PYLORI:dinner:soft_protein_primary:poached_chicken_plain",
@@ -490,7 +568,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_protein_primary",
-    "legacyOrder": 37,
+    "legacyOrder": 43,
     "legacyGroupOrder": 0
   },
   {
@@ -503,7 +581,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_protein_primary",
-    "legacyOrder": 38,
+    "legacyOrder": 44,
     "legacyGroupOrder": 1
   },
   {
@@ -516,7 +594,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_protein_primary",
-    "legacyOrder": 39,
+    "legacyOrder": 45,
     "legacyGroupOrder": 2
   },
   {
@@ -529,7 +607,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_protein_primary",
-    "legacyOrder": 40,
+    "legacyOrder": 46,
     "legacyGroupOrder": 3
   },
   {
@@ -542,7 +620,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_veg_side",
-    "legacyOrder": 41,
+    "legacyOrder": 47,
     "legacyGroupOrder": 0
   },
   {
@@ -555,7 +633,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_veg_side",
-    "legacyOrder": 42,
+    "legacyOrder": 48,
     "legacyGroupOrder": 1
   },
   {
@@ -568,7 +646,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_veg_side",
-    "legacyOrder": 43,
+    "legacyOrder": 49,
     "legacyGroupOrder": 2
   },
   {
@@ -581,7 +659,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_veg_side",
-    "legacyOrder": 44,
+    "legacyOrder": 50,
     "legacyGroupOrder": 3
   },
   {
@@ -594,7 +672,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_veg_side",
-    "legacyOrder": 45,
+    "legacyOrder": 51,
     "legacyGroupOrder": 4
   },
   {
@@ -607,7 +685,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|soft_veg_side",
-    "legacyOrder": 46,
+    "legacyOrder": 52,
     "legacyGroupOrder": 5
   },
   {
@@ -620,7 +698,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|beverage",
-    "legacyOrder": 47,
+    "legacyOrder": 53,
     "legacyGroupOrder": 0
   },
   {
@@ -633,7 +711,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|beverage",
-    "legacyOrder": 48,
+    "legacyOrder": 54,
     "legacyGroupOrder": 1
   },
   {
@@ -646,7 +724,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|beverage",
-    "legacyOrder": 49,
+    "legacyOrder": 55,
     "legacyGroupOrder": 2
   },
   {
@@ -659,7 +737,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|beverage",
-    "legacyOrder": 50,
+    "legacyOrder": 56,
     "legacyGroupOrder": 3
   },
   {
@@ -672,7 +750,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|beverage",
-    "legacyOrder": 51,
+    "legacyOrder": 57,
     "legacyGroupOrder": 4
   },
   {
@@ -685,7 +763,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|beverage",
-    "legacyOrder": 52,
+    "legacyOrder": 58,
     "legacyGroupOrder": 5
   },
   {
@@ -698,7 +776,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "H_PYLORI|dinner|beverage",
-    "legacyOrder": 53,
+    "legacyOrder": 59,
     "legacyGroupOrder": 6
   },
   {
@@ -711,7 +789,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|soft_starch_base",
-    "legacyOrder": 54,
+    "legacyOrder": 60,
     "legacyGroupOrder": 0
   },
   {
@@ -724,7 +802,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|soft_starch_base",
-    "legacyOrder": 55,
+    "legacyOrder": 61,
     "legacyGroupOrder": 1
   },
   {
@@ -737,8 +815,34 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|soft_starch_base",
-    "legacyOrder": 56,
+    "legacyOrder": 62,
     "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:GASTRIC:breakfast:soft_starch_base:rice_porridge_plain",
+    "protocolCode": "GASTRIC",
+    "mealType": "breakfast",
+    "slotName": "soft_starch_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|breakfast|soft_starch_base",
+    "legacyOrder": 63,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:GASTRIC:breakfast:soft_starch_base:cassava_mash_plain",
+    "protocolCode": "GASTRIC",
+    "mealType": "breakfast",
+    "slotName": "soft_starch_base",
+    "foodId": "cassava_mash_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|breakfast|soft_starch_base",
+    "legacyOrder": 64,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:GASTRIC:breakfast:soft_protein_primary:steamed_cod_plain",
@@ -750,7 +854,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|soft_protein_primary",
-    "legacyOrder": 57,
+    "legacyOrder": 65,
     "legacyGroupOrder": 0
   },
   {
@@ -763,7 +867,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|soft_protein_primary",
-    "legacyOrder": 58,
+    "legacyOrder": 66,
     "legacyGroupOrder": 1
   },
   {
@@ -776,7 +880,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|soft_protein_primary",
-    "legacyOrder": 59,
+    "legacyOrder": 67,
     "legacyGroupOrder": 2
   },
   {
@@ -789,7 +893,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|soft_protein_primary",
-    "legacyOrder": 60,
+    "legacyOrder": 68,
     "legacyGroupOrder": 3
   },
   {
@@ -802,7 +906,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|beverage",
-    "legacyOrder": 61,
+    "legacyOrder": 69,
     "legacyGroupOrder": 0
   },
   {
@@ -815,7 +919,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|beverage",
-    "legacyOrder": 62,
+    "legacyOrder": 70,
     "legacyGroupOrder": 1
   },
   {
@@ -828,7 +932,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|beverage",
-    "legacyOrder": 63,
+    "legacyOrder": 71,
     "legacyGroupOrder": 2
   },
   {
@@ -841,7 +945,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|beverage",
-    "legacyOrder": 64,
+    "legacyOrder": 72,
     "legacyGroupOrder": 3
   },
   {
@@ -854,7 +958,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|beverage",
-    "legacyOrder": 65,
+    "legacyOrder": 73,
     "legacyGroupOrder": 4
   },
   {
@@ -867,7 +971,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|beverage",
-    "legacyOrder": 66,
+    "legacyOrder": 74,
     "legacyGroupOrder": 5
   },
   {
@@ -880,7 +984,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|breakfast|beverage",
-    "legacyOrder": 67,
+    "legacyOrder": 75,
     "legacyGroupOrder": 6
   },
   {
@@ -893,7 +997,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_starch_base",
-    "legacyOrder": 68,
+    "legacyOrder": 76,
     "legacyGroupOrder": 0
   },
   {
@@ -906,7 +1010,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_starch_base",
-    "legacyOrder": 69,
+    "legacyOrder": 77,
     "legacyGroupOrder": 1
   },
   {
@@ -919,8 +1023,34 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_starch_base",
-    "legacyOrder": 70,
+    "legacyOrder": 78,
     "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:GASTRIC:lunch:soft_starch_base:rice_porridge_plain",
+    "protocolCode": "GASTRIC",
+    "mealType": "lunch",
+    "slotName": "soft_starch_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|lunch|soft_starch_base",
+    "legacyOrder": 79,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:GASTRIC:lunch:soft_starch_base:cassava_mash_plain",
+    "protocolCode": "GASTRIC",
+    "mealType": "lunch",
+    "slotName": "soft_starch_base",
+    "foodId": "cassava_mash_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|lunch|soft_starch_base",
+    "legacyOrder": 80,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:GASTRIC:lunch:soft_protein_primary:poached_chicken_plain",
@@ -932,7 +1062,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_protein_primary",
-    "legacyOrder": 71,
+    "legacyOrder": 81,
     "legacyGroupOrder": 0
   },
   {
@@ -945,7 +1075,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_protein_primary",
-    "legacyOrder": 72,
+    "legacyOrder": 82,
     "legacyGroupOrder": 1
   },
   {
@@ -958,7 +1088,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_protein_primary",
-    "legacyOrder": 73,
+    "legacyOrder": 83,
     "legacyGroupOrder": 2
   },
   {
@@ -971,7 +1101,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_protein_primary",
-    "legacyOrder": 74,
+    "legacyOrder": 84,
     "legacyGroupOrder": 3
   },
   {
@@ -984,7 +1114,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_veg_side",
-    "legacyOrder": 75,
+    "legacyOrder": 85,
     "legacyGroupOrder": 0
   },
   {
@@ -997,7 +1127,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_veg_side",
-    "legacyOrder": 76,
+    "legacyOrder": 86,
     "legacyGroupOrder": 1
   },
   {
@@ -1010,7 +1140,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_veg_side",
-    "legacyOrder": 77,
+    "legacyOrder": 87,
     "legacyGroupOrder": 2
   },
   {
@@ -1023,7 +1153,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_veg_side",
-    "legacyOrder": 78,
+    "legacyOrder": 88,
     "legacyGroupOrder": 3
   },
   {
@@ -1036,7 +1166,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_veg_side",
-    "legacyOrder": 79,
+    "legacyOrder": 89,
     "legacyGroupOrder": 4
   },
   {
@@ -1049,7 +1179,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|soft_veg_side",
-    "legacyOrder": 80,
+    "legacyOrder": 90,
     "legacyGroupOrder": 5
   },
   {
@@ -1062,7 +1192,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|beverage",
-    "legacyOrder": 81,
+    "legacyOrder": 91,
     "legacyGroupOrder": 0
   },
   {
@@ -1075,7 +1205,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|beverage",
-    "legacyOrder": 82,
+    "legacyOrder": 92,
     "legacyGroupOrder": 1
   },
   {
@@ -1088,7 +1218,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|beverage",
-    "legacyOrder": 83,
+    "legacyOrder": 93,
     "legacyGroupOrder": 2
   },
   {
@@ -1101,7 +1231,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|beverage",
-    "legacyOrder": 84,
+    "legacyOrder": 94,
     "legacyGroupOrder": 3
   },
   {
@@ -1114,7 +1244,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|beverage",
-    "legacyOrder": 85,
+    "legacyOrder": 95,
     "legacyGroupOrder": 4
   },
   {
@@ -1127,7 +1257,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|beverage",
-    "legacyOrder": 86,
+    "legacyOrder": 96,
     "legacyGroupOrder": 5
   },
   {
@@ -1140,7 +1270,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|lunch|beverage",
-    "legacyOrder": 87,
+    "legacyOrder": 97,
     "legacyGroupOrder": 6
   },
   {
@@ -1153,7 +1283,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_starch_base",
-    "legacyOrder": 88,
+    "legacyOrder": 98,
     "legacyGroupOrder": 0
   },
   {
@@ -1166,8 +1296,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_starch_base",
-    "legacyOrder": 89,
+    "legacyOrder": 99,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:GASTRIC:dinner:soft_starch_base:pumpkin_mash_plain",
+    "protocolCode": "GASTRIC",
+    "mealType": "dinner",
+    "slotName": "soft_starch_base",
+    "foodId": "pumpkin_mash_plain",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|dinner|soft_starch_base",
+    "legacyOrder": 100,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:GASTRIC:dinner:soft_starch_base:rice_porridge_plain",
+    "protocolCode": "GASTRIC",
+    "mealType": "dinner",
+    "slotName": "soft_starch_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|dinner|soft_starch_base",
+    "legacyOrder": 101,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:GASTRIC:dinner:soft_starch_base:cassava_mash_plain",
+    "protocolCode": "GASTRIC",
+    "mealType": "dinner",
+    "slotName": "soft_starch_base",
+    "foodId": "cassava_mash_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GASTRIC|dinner|soft_starch_base",
+    "legacyOrder": 102,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:GASTRIC:dinner:soft_protein_primary:poached_chicken_plain",
@@ -1179,7 +1348,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_protein_primary",
-    "legacyOrder": 90,
+    "legacyOrder": 103,
     "legacyGroupOrder": 0
   },
   {
@@ -1192,7 +1361,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_protein_primary",
-    "legacyOrder": 91,
+    "legacyOrder": 104,
     "legacyGroupOrder": 1
   },
   {
@@ -1205,7 +1374,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_protein_primary",
-    "legacyOrder": 92,
+    "legacyOrder": 105,
     "legacyGroupOrder": 2
   },
   {
@@ -1218,7 +1387,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_protein_primary",
-    "legacyOrder": 93,
+    "legacyOrder": 106,
     "legacyGroupOrder": 3
   },
   {
@@ -1231,7 +1400,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_veg_side",
-    "legacyOrder": 94,
+    "legacyOrder": 107,
     "legacyGroupOrder": 0
   },
   {
@@ -1244,7 +1413,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_veg_side",
-    "legacyOrder": 95,
+    "legacyOrder": 108,
     "legacyGroupOrder": 1
   },
   {
@@ -1257,7 +1426,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_veg_side",
-    "legacyOrder": 96,
+    "legacyOrder": 109,
     "legacyGroupOrder": 2
   },
   {
@@ -1270,7 +1439,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_veg_side",
-    "legacyOrder": 97,
+    "legacyOrder": 110,
     "legacyGroupOrder": 3
   },
   {
@@ -1283,7 +1452,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_veg_side",
-    "legacyOrder": 98,
+    "legacyOrder": 111,
     "legacyGroupOrder": 4
   },
   {
@@ -1296,7 +1465,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|soft_veg_side",
-    "legacyOrder": 99,
+    "legacyOrder": 112,
     "legacyGroupOrder": 5
   },
   {
@@ -1309,7 +1478,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|beverage",
-    "legacyOrder": 100,
+    "legacyOrder": 113,
     "legacyGroupOrder": 0
   },
   {
@@ -1322,7 +1491,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|beverage",
-    "legacyOrder": 101,
+    "legacyOrder": 114,
     "legacyGroupOrder": 1
   },
   {
@@ -1335,7 +1504,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|beverage",
-    "legacyOrder": 102,
+    "legacyOrder": 115,
     "legacyGroupOrder": 2
   },
   {
@@ -1348,7 +1517,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|beverage",
-    "legacyOrder": 103,
+    "legacyOrder": 116,
     "legacyGroupOrder": 3
   },
   {
@@ -1361,7 +1530,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|beverage",
-    "legacyOrder": 104,
+    "legacyOrder": 117,
     "legacyGroupOrder": 4
   },
   {
@@ -1374,7 +1543,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|beverage",
-    "legacyOrder": 105,
+    "legacyOrder": 118,
     "legacyGroupOrder": 5
   },
   {
@@ -1387,7 +1556,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GASTRIC|dinner|beverage",
-    "legacyOrder": 106,
+    "legacyOrder": 119,
     "legacyGroupOrder": 6
   },
   {
@@ -1400,7 +1569,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|soft_starch_base",
-    "legacyOrder": 107,
+    "legacyOrder": 120,
     "legacyGroupOrder": 0
   },
   {
@@ -1413,7 +1582,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|soft_starch_base",
-    "legacyOrder": 108,
+    "legacyOrder": 121,
     "legacyGroupOrder": 1
   },
   {
@@ -1426,8 +1595,34 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|soft_starch_base",
-    "legacyOrder": 109,
+    "legacyOrder": 122,
     "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:breakfast:soft_starch_base:rice_porridge_plain",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "breakfast",
+    "slotName": "soft_starch_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|breakfast|soft_starch_base",
+    "legacyOrder": 123,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:breakfast:soft_starch_base:cassava_mash_plain",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "breakfast",
+    "slotName": "soft_starch_base",
+    "foodId": "cassava_mash_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|breakfast|soft_starch_base",
+    "legacyOrder": 124,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:PEPTIC_ULCER:breakfast:soft_protein_primary:steamed_cod_plain",
@@ -1439,7 +1634,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|soft_protein_primary",
-    "legacyOrder": 110,
+    "legacyOrder": 125,
     "legacyGroupOrder": 0
   },
   {
@@ -1452,7 +1647,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|soft_protein_primary",
-    "legacyOrder": 111,
+    "legacyOrder": 126,
     "legacyGroupOrder": 1
   },
   {
@@ -1465,7 +1660,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|soft_protein_primary",
-    "legacyOrder": 112,
+    "legacyOrder": 127,
     "legacyGroupOrder": 2
   },
   {
@@ -1478,7 +1673,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|soft_protein_primary",
-    "legacyOrder": 113,
+    "legacyOrder": 128,
     "legacyGroupOrder": 3
   },
   {
@@ -1491,7 +1686,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
-    "legacyOrder": 114,
+    "legacyOrder": 129,
     "legacyGroupOrder": 0
   },
   {
@@ -1504,7 +1699,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
-    "legacyOrder": 115,
+    "legacyOrder": 130,
     "legacyGroupOrder": 1
   },
   {
@@ -1517,7 +1712,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
-    "legacyOrder": 116,
+    "legacyOrder": 131,
     "legacyGroupOrder": 2
   },
   {
@@ -1530,7 +1725,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
-    "legacyOrder": 117,
+    "legacyOrder": 132,
     "legacyGroupOrder": 3
   },
   {
@@ -1543,7 +1738,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
-    "legacyOrder": 118,
+    "legacyOrder": 133,
     "legacyGroupOrder": 4
   },
   {
@@ -1556,7 +1751,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
-    "legacyOrder": 119,
+    "legacyOrder": 134,
     "legacyGroupOrder": 5
   },
   {
@@ -1569,7 +1764,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|breakfast|beverage",
-    "legacyOrder": 120,
+    "legacyOrder": 135,
     "legacyGroupOrder": 6
   },
   {
@@ -1582,7 +1777,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_starch_base",
-    "legacyOrder": 121,
+    "legacyOrder": 136,
     "legacyGroupOrder": 0
   },
   {
@@ -1595,8 +1790,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_starch_base",
-    "legacyOrder": 122,
+    "legacyOrder": 137,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:lunch:soft_starch_base:pumpkin_mash_plain",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "lunch",
+    "slotName": "soft_starch_base",
+    "foodId": "pumpkin_mash_plain",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|lunch|soft_starch_base",
+    "legacyOrder": 138,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:lunch:soft_starch_base:rice_porridge_plain",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "lunch",
+    "slotName": "soft_starch_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|lunch|soft_starch_base",
+    "legacyOrder": 139,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:lunch:soft_starch_base:cassava_mash_plain",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "lunch",
+    "slotName": "soft_starch_base",
+    "foodId": "cassava_mash_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|lunch|soft_starch_base",
+    "legacyOrder": 140,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:PEPTIC_ULCER:lunch:soft_protein_primary:poached_chicken_plain",
@@ -1608,7 +1842,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_protein_primary",
-    "legacyOrder": 123,
+    "legacyOrder": 141,
     "legacyGroupOrder": 0
   },
   {
@@ -1621,7 +1855,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_protein_primary",
-    "legacyOrder": 124,
+    "legacyOrder": 142,
     "legacyGroupOrder": 1
   },
   {
@@ -1634,7 +1868,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_protein_primary",
-    "legacyOrder": 125,
+    "legacyOrder": 143,
     "legacyGroupOrder": 2
   },
   {
@@ -1647,7 +1881,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_protein_primary",
-    "legacyOrder": 126,
+    "legacyOrder": 144,
     "legacyGroupOrder": 3
   },
   {
@@ -1660,7 +1894,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_veg_side",
-    "legacyOrder": 127,
+    "legacyOrder": 145,
     "legacyGroupOrder": 0
   },
   {
@@ -1673,7 +1907,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_veg_side",
-    "legacyOrder": 128,
+    "legacyOrder": 146,
     "legacyGroupOrder": 1
   },
   {
@@ -1686,7 +1920,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_veg_side",
-    "legacyOrder": 129,
+    "legacyOrder": 147,
     "legacyGroupOrder": 2
   },
   {
@@ -1699,7 +1933,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_veg_side",
-    "legacyOrder": 130,
+    "legacyOrder": 148,
     "legacyGroupOrder": 3
   },
   {
@@ -1712,7 +1946,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_veg_side",
-    "legacyOrder": 131,
+    "legacyOrder": 149,
     "legacyGroupOrder": 4
   },
   {
@@ -1725,7 +1959,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|soft_veg_side",
-    "legacyOrder": 132,
+    "legacyOrder": 150,
     "legacyGroupOrder": 5
   },
   {
@@ -1738,7 +1972,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|beverage",
-    "legacyOrder": 133,
+    "legacyOrder": 151,
     "legacyGroupOrder": 0
   },
   {
@@ -1751,7 +1985,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|beverage",
-    "legacyOrder": 134,
+    "legacyOrder": 152,
     "legacyGroupOrder": 1
   },
   {
@@ -1764,7 +1998,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|beverage",
-    "legacyOrder": 135,
+    "legacyOrder": 153,
     "legacyGroupOrder": 2
   },
   {
@@ -1777,7 +2011,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|beverage",
-    "legacyOrder": 136,
+    "legacyOrder": 154,
     "legacyGroupOrder": 3
   },
   {
@@ -1790,7 +2024,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|beverage",
-    "legacyOrder": 137,
+    "legacyOrder": 155,
     "legacyGroupOrder": 4
   },
   {
@@ -1803,7 +2037,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|beverage",
-    "legacyOrder": 138,
+    "legacyOrder": 156,
     "legacyGroupOrder": 5
   },
   {
@@ -1816,7 +2050,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|lunch|beverage",
-    "legacyOrder": 139,
+    "legacyOrder": 157,
     "legacyGroupOrder": 6
   },
   {
@@ -1829,7 +2063,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_starch_base",
-    "legacyOrder": 140,
+    "legacyOrder": 158,
     "legacyGroupOrder": 0
   },
   {
@@ -1842,8 +2076,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_starch_base",
-    "legacyOrder": 141,
+    "legacyOrder": 159,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:dinner:soft_starch_base:arrowroot_boiled_soft",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "dinner",
+    "slotName": "soft_starch_base",
+    "foodId": "arrowroot_boiled_soft",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|dinner|soft_starch_base",
+    "legacyOrder": 160,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:dinner:soft_starch_base:rice_porridge_plain",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "dinner",
+    "slotName": "soft_starch_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|dinner|soft_starch_base",
+    "legacyOrder": 161,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:PEPTIC_ULCER:dinner:soft_starch_base:cassava_mash_plain",
+    "protocolCode": "PEPTIC_ULCER",
+    "mealType": "dinner",
+    "slotName": "soft_starch_base",
+    "foodId": "cassava_mash_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "PEPTIC_ULCER|dinner|soft_starch_base",
+    "legacyOrder": 162,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:PEPTIC_ULCER:dinner:soft_protein_primary:poached_chicken_plain",
@@ -1855,7 +2128,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_protein_primary",
-    "legacyOrder": 142,
+    "legacyOrder": 163,
     "legacyGroupOrder": 0
   },
   {
@@ -1868,7 +2141,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_protein_primary",
-    "legacyOrder": 143,
+    "legacyOrder": 164,
     "legacyGroupOrder": 1
   },
   {
@@ -1881,7 +2154,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_protein_primary",
-    "legacyOrder": 144,
+    "legacyOrder": 165,
     "legacyGroupOrder": 2
   },
   {
@@ -1894,7 +2167,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_protein_primary",
-    "legacyOrder": 145,
+    "legacyOrder": 166,
     "legacyGroupOrder": 3
   },
   {
@@ -1907,7 +2180,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_veg_side",
-    "legacyOrder": 146,
+    "legacyOrder": 167,
     "legacyGroupOrder": 0
   },
   {
@@ -1920,7 +2193,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_veg_side",
-    "legacyOrder": 147,
+    "legacyOrder": 168,
     "legacyGroupOrder": 1
   },
   {
@@ -1933,7 +2206,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_veg_side",
-    "legacyOrder": 148,
+    "legacyOrder": 169,
     "legacyGroupOrder": 2
   },
   {
@@ -1946,7 +2219,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_veg_side",
-    "legacyOrder": 149,
+    "legacyOrder": 170,
     "legacyGroupOrder": 3
   },
   {
@@ -1959,7 +2232,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_veg_side",
-    "legacyOrder": 150,
+    "legacyOrder": 171,
     "legacyGroupOrder": 4
   },
   {
@@ -1972,7 +2245,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|soft_veg_side",
-    "legacyOrder": 151,
+    "legacyOrder": 172,
     "legacyGroupOrder": 5
   },
   {
@@ -1985,7 +2258,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|beverage",
-    "legacyOrder": 152,
+    "legacyOrder": 173,
     "legacyGroupOrder": 0
   },
   {
@@ -1998,7 +2271,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|beverage",
-    "legacyOrder": 153,
+    "legacyOrder": 174,
     "legacyGroupOrder": 1
   },
   {
@@ -2011,7 +2284,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|beverage",
-    "legacyOrder": 154,
+    "legacyOrder": 175,
     "legacyGroupOrder": 2
   },
   {
@@ -2024,7 +2297,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|beverage",
-    "legacyOrder": 155,
+    "legacyOrder": 176,
     "legacyGroupOrder": 3
   },
   {
@@ -2037,7 +2310,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|beverage",
-    "legacyOrder": 156,
+    "legacyOrder": 177,
     "legacyGroupOrder": 4
   },
   {
@@ -2050,7 +2323,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|beverage",
-    "legacyOrder": 157,
+    "legacyOrder": 178,
     "legacyGroupOrder": 5
   },
   {
@@ -2063,7 +2336,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "PEPTIC_ULCER|dinner|beverage",
-    "legacyOrder": 158,
+    "legacyOrder": 179,
     "legacyGroupOrder": 6
   },
   {
@@ -2076,7 +2349,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|starch_base",
-    "legacyOrder": 159,
+    "legacyOrder": 180,
     "legacyGroupOrder": 0
   },
   {
@@ -2089,7 +2362,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|starch_base",
-    "legacyOrder": 160,
+    "legacyOrder": 181,
     "legacyGroupOrder": 1
   },
   {
@@ -2102,8 +2375,34 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|starch_base",
-    "legacyOrder": 161,
+    "legacyOrder": 182,
     "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:breakfast:starch_base:bulgur_cooked",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "breakfast",
+    "slotName": "starch_base",
+    "foodId": "bulgur_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|breakfast|starch_base",
+    "legacyOrder": 183,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:breakfast:starch_base:millet_cooked",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "breakfast",
+    "slotName": "starch_base",
+    "foodId": "millet_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|breakfast|starch_base",
+    "legacyOrder": 184,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:GENERAL_HOSPITAL:breakfast:protein_primary:chicken_breast",
@@ -2115,7 +2414,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|protein_primary",
-    "legacyOrder": 162,
+    "legacyOrder": 185,
     "legacyGroupOrder": 0
   },
   {
@@ -2128,7 +2427,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|protein_primary",
-    "legacyOrder": 163,
+    "legacyOrder": 186,
     "legacyGroupOrder": 1
   },
   {
@@ -2141,7 +2440,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|protein_primary",
-    "legacyOrder": 164,
+    "legacyOrder": 187,
     "legacyGroupOrder": 2
   },
   {
@@ -2154,7 +2453,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|protein_primary",
-    "legacyOrder": 165,
+    "legacyOrder": 188,
     "legacyGroupOrder": 3
   },
   {
@@ -2167,7 +2466,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|protein_primary",
-    "legacyOrder": 166,
+    "legacyOrder": 189,
     "legacyGroupOrder": 4
   },
   {
@@ -2180,7 +2479,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
-    "legacyOrder": 167,
+    "legacyOrder": 190,
     "legacyGroupOrder": 0
   },
   {
@@ -2193,7 +2492,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
-    "legacyOrder": 168,
+    "legacyOrder": 191,
     "legacyGroupOrder": 1
   },
   {
@@ -2206,7 +2505,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
-    "legacyOrder": 169,
+    "legacyOrder": 192,
     "legacyGroupOrder": 2
   },
   {
@@ -2219,7 +2518,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
-    "legacyOrder": 170,
+    "legacyOrder": 193,
     "legacyGroupOrder": 3
   },
   {
@@ -2232,7 +2531,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
-    "legacyOrder": 171,
+    "legacyOrder": 194,
     "legacyGroupOrder": 4
   },
   {
@@ -2245,7 +2544,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
-    "legacyOrder": 172,
+    "legacyOrder": 195,
     "legacyGroupOrder": 5
   },
   {
@@ -2258,7 +2557,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
-    "legacyOrder": 173,
+    "legacyOrder": 196,
     "legacyGroupOrder": 6
   },
   {
@@ -2271,7 +2570,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|breakfast|beverage",
-    "legacyOrder": 174,
+    "legacyOrder": 197,
     "legacyGroupOrder": 7
   },
   {
@@ -2284,7 +2583,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|starch_base",
-    "legacyOrder": 175,
+    "legacyOrder": 198,
     "legacyGroupOrder": 0
   },
   {
@@ -2297,7 +2596,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|starch_base",
-    "legacyOrder": 176,
+    "legacyOrder": 199,
     "legacyGroupOrder": 1
   },
   {
@@ -2310,8 +2609,34 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|starch_base",
-    "legacyOrder": 177,
+    "legacyOrder": 200,
     "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:lunch:starch_base:bulgur_cooked",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "lunch",
+    "slotName": "starch_base",
+    "foodId": "bulgur_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|lunch|starch_base",
+    "legacyOrder": 201,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:lunch:starch_base:millet_cooked",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "lunch",
+    "slotName": "starch_base",
+    "foodId": "millet_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|lunch|starch_base",
+    "legacyOrder": 202,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:GENERAL_HOSPITAL:lunch:protein_primary:chicken_breast",
@@ -2323,7 +2648,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|protein_primary",
-    "legacyOrder": 178,
+    "legacyOrder": 203,
     "legacyGroupOrder": 0
   },
   {
@@ -2336,7 +2661,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|protein_primary",
-    "legacyOrder": 179,
+    "legacyOrder": 204,
     "legacyGroupOrder": 1
   },
   {
@@ -2349,7 +2674,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|protein_primary",
-    "legacyOrder": 180,
+    "legacyOrder": 205,
     "legacyGroupOrder": 2
   },
   {
@@ -2362,7 +2687,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|protein_primary",
-    "legacyOrder": 181,
+    "legacyOrder": 206,
     "legacyGroupOrder": 3
   },
   {
@@ -2375,7 +2700,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|protein_primary",
-    "legacyOrder": 182,
+    "legacyOrder": 207,
     "legacyGroupOrder": 4
   },
   {
@@ -2388,7 +2713,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|vegetable_side",
-    "legacyOrder": 183,
+    "legacyOrder": 208,
     "legacyGroupOrder": 0
   },
   {
@@ -2401,7 +2726,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|vegetable_side",
-    "legacyOrder": 184,
+    "legacyOrder": 209,
     "legacyGroupOrder": 1
   },
   {
@@ -2414,7 +2739,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
-    "legacyOrder": 185,
+    "legacyOrder": 210,
     "legacyGroupOrder": 0
   },
   {
@@ -2427,7 +2752,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
-    "legacyOrder": 186,
+    "legacyOrder": 211,
     "legacyGroupOrder": 1
   },
   {
@@ -2440,7 +2765,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
-    "legacyOrder": 187,
+    "legacyOrder": 212,
     "legacyGroupOrder": 2
   },
   {
@@ -2453,7 +2778,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
-    "legacyOrder": 188,
+    "legacyOrder": 213,
     "legacyGroupOrder": 3
   },
   {
@@ -2466,7 +2791,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
-    "legacyOrder": 189,
+    "legacyOrder": 214,
     "legacyGroupOrder": 4
   },
   {
@@ -2479,7 +2804,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
-    "legacyOrder": 190,
+    "legacyOrder": 215,
     "legacyGroupOrder": 5
   },
   {
@@ -2492,7 +2817,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
-    "legacyOrder": 191,
+    "legacyOrder": 216,
     "legacyGroupOrder": 6
   },
   {
@@ -2505,7 +2830,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|lunch|beverage",
-    "legacyOrder": 192,
+    "legacyOrder": 217,
     "legacyGroupOrder": 7
   },
   {
@@ -2518,7 +2843,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|starch_base",
-    "legacyOrder": 193,
+    "legacyOrder": 218,
     "legacyGroupOrder": 0
   },
   {
@@ -2531,7 +2856,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|starch_base",
-    "legacyOrder": 194,
+    "legacyOrder": 219,
     "legacyGroupOrder": 1
   },
   {
@@ -2544,8 +2869,34 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|starch_base",
-    "legacyOrder": 195,
+    "legacyOrder": 220,
     "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:dinner:starch_base:bulgur_cooked",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "dinner",
+    "slotName": "starch_base",
+    "foodId": "bulgur_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|dinner|starch_base",
+    "legacyOrder": 221,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:GENERAL_HOSPITAL:dinner:starch_base:millet_cooked",
+    "protocolCode": "GENERAL_HOSPITAL",
+    "mealType": "dinner",
+    "slotName": "starch_base",
+    "foodId": "millet_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "GENERAL_HOSPITAL|dinner|starch_base",
+    "legacyOrder": 222,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:GENERAL_HOSPITAL:dinner:protein_primary:chicken_breast",
@@ -2557,7 +2908,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|protein_primary",
-    "legacyOrder": 196,
+    "legacyOrder": 223,
     "legacyGroupOrder": 0
   },
   {
@@ -2570,7 +2921,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|protein_primary",
-    "legacyOrder": 197,
+    "legacyOrder": 224,
     "legacyGroupOrder": 1
   },
   {
@@ -2583,7 +2934,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|protein_primary",
-    "legacyOrder": 198,
+    "legacyOrder": 225,
     "legacyGroupOrder": 2
   },
   {
@@ -2596,7 +2947,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|protein_primary",
-    "legacyOrder": 199,
+    "legacyOrder": 226,
     "legacyGroupOrder": 3
   },
   {
@@ -2609,7 +2960,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|protein_primary",
-    "legacyOrder": 200,
+    "legacyOrder": 227,
     "legacyGroupOrder": 4
   },
   {
@@ -2622,7 +2973,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|vegetable_side",
-    "legacyOrder": 201,
+    "legacyOrder": 228,
     "legacyGroupOrder": 0
   },
   {
@@ -2635,7 +2986,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|vegetable_side",
-    "legacyOrder": 202,
+    "legacyOrder": 229,
     "legacyGroupOrder": 1
   },
   {
@@ -2648,7 +2999,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
-    "legacyOrder": 203,
+    "legacyOrder": 230,
     "legacyGroupOrder": 0
   },
   {
@@ -2661,7 +3012,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
-    "legacyOrder": 204,
+    "legacyOrder": 231,
     "legacyGroupOrder": 1
   },
   {
@@ -2674,7 +3025,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
-    "legacyOrder": 205,
+    "legacyOrder": 232,
     "legacyGroupOrder": 2
   },
   {
@@ -2687,7 +3038,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
-    "legacyOrder": 206,
+    "legacyOrder": 233,
     "legacyGroupOrder": 3
   },
   {
@@ -2700,7 +3051,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
-    "legacyOrder": 207,
+    "legacyOrder": 234,
     "legacyGroupOrder": 4
   },
   {
@@ -2713,7 +3064,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
-    "legacyOrder": 208,
+    "legacyOrder": 235,
     "legacyGroupOrder": 5
   },
   {
@@ -2726,7 +3077,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
-    "legacyOrder": 209,
+    "legacyOrder": 236,
     "legacyGroupOrder": 6
   },
   {
@@ -2739,7 +3090,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "GENERAL_HOSPITAL|dinner|beverage",
-    "legacyOrder": 210,
+    "legacyOrder": 237,
     "legacyGroupOrder": 7
   },
   {
@@ -2752,7 +3103,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|controlled_carb_base",
-    "legacyOrder": 211,
+    "legacyOrder": 238,
     "legacyGroupOrder": 0
   },
   {
@@ -2765,8 +3116,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|controlled_carb_base",
-    "legacyOrder": 212,
+    "legacyOrder": 239,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:T2DM:breakfast:controlled_carb_base:bulgur_cooked",
+    "protocolCode": "T2DM",
+    "mealType": "breakfast",
+    "slotName": "controlled_carb_base",
+    "foodId": "bulgur_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|breakfast|controlled_carb_base",
+    "legacyOrder": 240,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:T2DM:breakfast:controlled_carb_base:millet_cooked",
+    "protocolCode": "T2DM",
+    "mealType": "breakfast",
+    "slotName": "controlled_carb_base",
+    "foodId": "millet_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|breakfast|controlled_carb_base",
+    "legacyOrder": 241,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:T2DM:breakfast:controlled_carb_base:quinoa_cooked",
+    "protocolCode": "T2DM",
+    "mealType": "breakfast",
+    "slotName": "controlled_carb_base",
+    "foodId": "quinoa_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|breakfast|controlled_carb_base",
+    "legacyOrder": 242,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:T2DM:breakfast:protein_primary:chicken_breast",
@@ -2778,7 +3168,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|protein_primary",
-    "legacyOrder": 213,
+    "legacyOrder": 243,
     "legacyGroupOrder": 0
   },
   {
@@ -2791,7 +3181,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|protein_primary",
-    "legacyOrder": 214,
+    "legacyOrder": 244,
     "legacyGroupOrder": 1
   },
   {
@@ -2804,7 +3194,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|protein_primary",
-    "legacyOrder": 215,
+    "legacyOrder": 245,
     "legacyGroupOrder": 2
   },
   {
@@ -2817,7 +3207,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|protein_primary",
-    "legacyOrder": 216,
+    "legacyOrder": 246,
     "legacyGroupOrder": 3
   },
   {
@@ -2830,7 +3220,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|beverage",
-    "legacyOrder": 217,
+    "legacyOrder": 247,
     "legacyGroupOrder": 0
   },
   {
@@ -2843,7 +3233,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|beverage",
-    "legacyOrder": 218,
+    "legacyOrder": 248,
     "legacyGroupOrder": 1
   },
   {
@@ -2856,7 +3246,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|beverage",
-    "legacyOrder": 219,
+    "legacyOrder": 249,
     "legacyGroupOrder": 2
   },
   {
@@ -2869,7 +3259,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|beverage",
-    "legacyOrder": 220,
+    "legacyOrder": 250,
     "legacyGroupOrder": 3
   },
   {
@@ -2882,7 +3272,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|beverage",
-    "legacyOrder": 221,
+    "legacyOrder": 251,
     "legacyGroupOrder": 4
   },
   {
@@ -2895,7 +3285,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|beverage",
-    "legacyOrder": 222,
+    "legacyOrder": 252,
     "legacyGroupOrder": 5
   },
   {
@@ -2908,7 +3298,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|beverage",
-    "legacyOrder": 223,
+    "legacyOrder": 253,
     "legacyGroupOrder": 6
   },
   {
@@ -2921,7 +3311,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|breakfast|beverage",
-    "legacyOrder": 224,
+    "legacyOrder": 254,
     "legacyGroupOrder": 7
   },
   {
@@ -2934,7 +3324,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|controlled_carb_base",
-    "legacyOrder": 225,
+    "legacyOrder": 255,
     "legacyGroupOrder": 0
   },
   {
@@ -2947,7 +3337,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|controlled_carb_base",
-    "legacyOrder": 226,
+    "legacyOrder": 256,
     "legacyGroupOrder": 1
   },
   {
@@ -2960,8 +3350,34 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|controlled_carb_base",
-    "legacyOrder": 227,
+    "legacyOrder": 257,
     "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:T2DM:lunch:controlled_carb_base:bulgur_cooked",
+    "protocolCode": "T2DM",
+    "mealType": "lunch",
+    "slotName": "controlled_carb_base",
+    "foodId": "bulgur_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|lunch|controlled_carb_base",
+    "legacyOrder": 258,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:T2DM:lunch:controlled_carb_base:millet_cooked",
+    "protocolCode": "T2DM",
+    "mealType": "lunch",
+    "slotName": "controlled_carb_base",
+    "foodId": "millet_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|lunch|controlled_carb_base",
+    "legacyOrder": 259,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:T2DM:lunch:protein_primary:chicken_breast",
@@ -2973,7 +3389,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|protein_primary",
-    "legacyOrder": 228,
+    "legacyOrder": 260,
     "legacyGroupOrder": 0
   },
   {
@@ -2986,7 +3402,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|protein_primary",
-    "legacyOrder": 229,
+    "legacyOrder": 261,
     "legacyGroupOrder": 1
   },
   {
@@ -2999,7 +3415,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|protein_primary",
-    "legacyOrder": 230,
+    "legacyOrder": 262,
     "legacyGroupOrder": 2
   },
   {
@@ -3012,7 +3428,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|protein_primary",
-    "legacyOrder": 231,
+    "legacyOrder": 263,
     "legacyGroupOrder": 3
   },
   {
@@ -3025,7 +3441,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|vegetable_side",
-    "legacyOrder": 232,
+    "legacyOrder": 264,
     "legacyGroupOrder": 0
   },
   {
@@ -3038,7 +3454,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|vegetable_side",
-    "legacyOrder": 233,
+    "legacyOrder": 265,
     "legacyGroupOrder": 1
   },
   {
@@ -3051,7 +3467,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|beverage",
-    "legacyOrder": 234,
+    "legacyOrder": 266,
     "legacyGroupOrder": 0
   },
   {
@@ -3064,7 +3480,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|beverage",
-    "legacyOrder": 235,
+    "legacyOrder": 267,
     "legacyGroupOrder": 1
   },
   {
@@ -3077,7 +3493,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|beverage",
-    "legacyOrder": 236,
+    "legacyOrder": 268,
     "legacyGroupOrder": 2
   },
   {
@@ -3090,7 +3506,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|beverage",
-    "legacyOrder": 237,
+    "legacyOrder": 269,
     "legacyGroupOrder": 3
   },
   {
@@ -3103,7 +3519,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|beverage",
-    "legacyOrder": 238,
+    "legacyOrder": 270,
     "legacyGroupOrder": 4
   },
   {
@@ -3116,7 +3532,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|beverage",
-    "legacyOrder": 239,
+    "legacyOrder": 271,
     "legacyGroupOrder": 5
   },
   {
@@ -3129,7 +3545,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|beverage",
-    "legacyOrder": 240,
+    "legacyOrder": 272,
     "legacyGroupOrder": 6
   },
   {
@@ -3142,7 +3558,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|lunch|beverage",
-    "legacyOrder": 241,
+    "legacyOrder": 273,
     "legacyGroupOrder": 7
   },
   {
@@ -3155,7 +3571,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|controlled_carb_base",
-    "legacyOrder": 242,
+    "legacyOrder": 274,
     "legacyGroupOrder": 0
   },
   {
@@ -3168,7 +3584,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|controlled_carb_base",
-    "legacyOrder": 243,
+    "legacyOrder": 275,
     "legacyGroupOrder": 1
   },
   {
@@ -3181,8 +3597,34 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|controlled_carb_base",
-    "legacyOrder": 244,
+    "legacyOrder": 276,
     "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:T2DM:dinner:controlled_carb_base:bulgur_cooked",
+    "protocolCode": "T2DM",
+    "mealType": "dinner",
+    "slotName": "controlled_carb_base",
+    "foodId": "bulgur_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|dinner|controlled_carb_base",
+    "legacyOrder": 277,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:T2DM:dinner:controlled_carb_base:millet_cooked",
+    "protocolCode": "T2DM",
+    "mealType": "dinner",
+    "slotName": "controlled_carb_base",
+    "foodId": "millet_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "T2DM|dinner|controlled_carb_base",
+    "legacyOrder": 278,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:T2DM:dinner:protein_primary:chicken_breast",
@@ -3194,7 +3636,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|protein_primary",
-    "legacyOrder": 245,
+    "legacyOrder": 279,
     "legacyGroupOrder": 0
   },
   {
@@ -3207,7 +3649,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|protein_primary",
-    "legacyOrder": 246,
+    "legacyOrder": 280,
     "legacyGroupOrder": 1
   },
   {
@@ -3220,7 +3662,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|protein_primary",
-    "legacyOrder": 247,
+    "legacyOrder": 281,
     "legacyGroupOrder": 2
   },
   {
@@ -3233,7 +3675,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|protein_primary",
-    "legacyOrder": 248,
+    "legacyOrder": 282,
     "legacyGroupOrder": 3
   },
   {
@@ -3246,7 +3688,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|vegetable_side",
-    "legacyOrder": 249,
+    "legacyOrder": 283,
     "legacyGroupOrder": 0
   },
   {
@@ -3259,7 +3701,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|vegetable_side",
-    "legacyOrder": 250,
+    "legacyOrder": 284,
     "legacyGroupOrder": 1
   },
   {
@@ -3272,7 +3714,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|beverage",
-    "legacyOrder": 251,
+    "legacyOrder": 285,
     "legacyGroupOrder": 0
   },
   {
@@ -3285,7 +3727,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|beverage",
-    "legacyOrder": 252,
+    "legacyOrder": 286,
     "legacyGroupOrder": 1
   },
   {
@@ -3298,7 +3740,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|beverage",
-    "legacyOrder": 253,
+    "legacyOrder": 287,
     "legacyGroupOrder": 2
   },
   {
@@ -3311,7 +3753,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|beverage",
-    "legacyOrder": 254,
+    "legacyOrder": 288,
     "legacyGroupOrder": 3
   },
   {
@@ -3324,7 +3766,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|beverage",
-    "legacyOrder": 255,
+    "legacyOrder": 289,
     "legacyGroupOrder": 4
   },
   {
@@ -3337,7 +3779,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|beverage",
-    "legacyOrder": 256,
+    "legacyOrder": 290,
     "legacyGroupOrder": 5
   },
   {
@@ -3350,7 +3792,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|beverage",
-    "legacyOrder": 257,
+    "legacyOrder": 291,
     "legacyGroupOrder": 6
   },
   {
@@ -3363,7 +3805,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "T2DM|dinner|beverage",
-    "legacyOrder": 258,
+    "legacyOrder": 292,
     "legacyGroupOrder": 7
   },
   {
@@ -3376,7 +3818,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|wholegrain_base",
-    "legacyOrder": 259,
+    "legacyOrder": 293,
     "legacyGroupOrder": 0
   },
   {
@@ -3389,8 +3831,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|wholegrain_base",
-    "legacyOrder": 260,
+    "legacyOrder": 294,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:CARDIAC:breakfast:wholegrain_base:bulgur_cooked",
+    "protocolCode": "CARDIAC",
+    "mealType": "breakfast",
+    "slotName": "wholegrain_base",
+    "foodId": "bulgur_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|breakfast|wholegrain_base",
+    "legacyOrder": 295,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:CARDIAC:breakfast:wholegrain_base:millet_cooked",
+    "protocolCode": "CARDIAC",
+    "mealType": "breakfast",
+    "slotName": "wholegrain_base",
+    "foodId": "millet_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|breakfast|wholegrain_base",
+    "legacyOrder": 296,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:CARDIAC:breakfast:wholegrain_base:brown_rice_cooked",
+    "protocolCode": "CARDIAC",
+    "mealType": "breakfast",
+    "slotName": "wholegrain_base",
+    "foodId": "brown_rice_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|breakfast|wholegrain_base",
+    "legacyOrder": 297,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:CARDIAC:breakfast:protein_primary:white_fish",
@@ -3402,7 +3883,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|protein_primary",
-    "legacyOrder": 261,
+    "legacyOrder": 298,
     "legacyGroupOrder": 0
   },
   {
@@ -3415,7 +3896,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|protein_primary",
-    "legacyOrder": 262,
+    "legacyOrder": 299,
     "legacyGroupOrder": 1
   },
   {
@@ -3428,7 +3909,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|protein_primary",
-    "legacyOrder": 263,
+    "legacyOrder": 300,
     "legacyGroupOrder": 2
   },
   {
@@ -3441,7 +3922,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|beverage",
-    "legacyOrder": 264,
+    "legacyOrder": 301,
     "legacyGroupOrder": 0
   },
   {
@@ -3454,7 +3935,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|beverage",
-    "legacyOrder": 265,
+    "legacyOrder": 302,
     "legacyGroupOrder": 1
   },
   {
@@ -3467,7 +3948,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|beverage",
-    "legacyOrder": 266,
+    "legacyOrder": 303,
     "legacyGroupOrder": 2
   },
   {
@@ -3480,7 +3961,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|beverage",
-    "legacyOrder": 267,
+    "legacyOrder": 304,
     "legacyGroupOrder": 3
   },
   {
@@ -3493,7 +3974,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|beverage",
-    "legacyOrder": 268,
+    "legacyOrder": 305,
     "legacyGroupOrder": 4
   },
   {
@@ -3506,7 +3987,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|beverage",
-    "legacyOrder": 269,
+    "legacyOrder": 306,
     "legacyGroupOrder": 5
   },
   {
@@ -3519,7 +4000,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|beverage",
-    "legacyOrder": 270,
+    "legacyOrder": 307,
     "legacyGroupOrder": 6
   },
   {
@@ -3532,7 +4013,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|breakfast|beverage",
-    "legacyOrder": 271,
+    "legacyOrder": 308,
     "legacyGroupOrder": 7
   },
   {
@@ -3545,7 +4026,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|wholegrain_base",
-    "legacyOrder": 272,
+    "legacyOrder": 309,
     "legacyGroupOrder": 0
   },
   {
@@ -3558,7 +4039,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|wholegrain_base",
-    "legacyOrder": 273,
+    "legacyOrder": 310,
     "legacyGroupOrder": 1
   },
   {
@@ -3571,8 +4052,34 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|wholegrain_base",
-    "legacyOrder": 274,
+    "legacyOrder": 311,
     "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:CARDIAC:lunch:wholegrain_base:bulgur_cooked",
+    "protocolCode": "CARDIAC",
+    "mealType": "lunch",
+    "slotName": "wholegrain_base",
+    "foodId": "bulgur_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|lunch|wholegrain_base",
+    "legacyOrder": 312,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:CARDIAC:lunch:wholegrain_base:millet_cooked",
+    "protocolCode": "CARDIAC",
+    "mealType": "lunch",
+    "slotName": "wholegrain_base",
+    "foodId": "millet_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|lunch|wholegrain_base",
+    "legacyOrder": 313,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:CARDIAC:lunch:lean_protein_primary:salmon",
@@ -3584,7 +4091,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|lean_protein_primary",
-    "legacyOrder": 275,
+    "legacyOrder": 314,
     "legacyGroupOrder": 0
   },
   {
@@ -3597,7 +4104,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|lean_protein_primary",
-    "legacyOrder": 276,
+    "legacyOrder": 315,
     "legacyGroupOrder": 1
   },
   {
@@ -3610,7 +4117,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|lean_protein_primary",
-    "legacyOrder": 277,
+    "legacyOrder": 316,
     "legacyGroupOrder": 2
   },
   {
@@ -3623,7 +4130,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|vegetable_side",
-    "legacyOrder": 278,
+    "legacyOrder": 317,
     "legacyGroupOrder": 0
   },
   {
@@ -3636,7 +4143,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|vegetable_side",
-    "legacyOrder": 279,
+    "legacyOrder": 318,
     "legacyGroupOrder": 1
   },
   {
@@ -3649,7 +4156,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|beverage",
-    "legacyOrder": 280,
+    "legacyOrder": 319,
     "legacyGroupOrder": 0
   },
   {
@@ -3662,7 +4169,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|beverage",
-    "legacyOrder": 281,
+    "legacyOrder": 320,
     "legacyGroupOrder": 1
   },
   {
@@ -3675,7 +4182,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|beverage",
-    "legacyOrder": 282,
+    "legacyOrder": 321,
     "legacyGroupOrder": 2
   },
   {
@@ -3688,7 +4195,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|beverage",
-    "legacyOrder": 283,
+    "legacyOrder": 322,
     "legacyGroupOrder": 3
   },
   {
@@ -3701,7 +4208,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|beverage",
-    "legacyOrder": 284,
+    "legacyOrder": 323,
     "legacyGroupOrder": 4
   },
   {
@@ -3714,7 +4221,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|beverage",
-    "legacyOrder": 285,
+    "legacyOrder": 324,
     "legacyGroupOrder": 5
   },
   {
@@ -3727,7 +4234,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|beverage",
-    "legacyOrder": 286,
+    "legacyOrder": 325,
     "legacyGroupOrder": 6
   },
   {
@@ -3740,7 +4247,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|lunch|beverage",
-    "legacyOrder": 287,
+    "legacyOrder": 326,
     "legacyGroupOrder": 7
   },
   {
@@ -3753,7 +4260,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|wholegrain_base",
-    "legacyOrder": 288,
+    "legacyOrder": 327,
     "legacyGroupOrder": 0
   },
   {
@@ -3766,8 +4273,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|wholegrain_base",
-    "legacyOrder": 289,
+    "legacyOrder": 328,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:CARDIAC:dinner:wholegrain_base:bulgur_cooked",
+    "protocolCode": "CARDIAC",
+    "mealType": "dinner",
+    "slotName": "wholegrain_base",
+    "foodId": "bulgur_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|dinner|wholegrain_base",
+    "legacyOrder": 329,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:CARDIAC:dinner:wholegrain_base:millet_cooked",
+    "protocolCode": "CARDIAC",
+    "mealType": "dinner",
+    "slotName": "wholegrain_base",
+    "foodId": "millet_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|dinner|wholegrain_base",
+    "legacyOrder": 330,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:CARDIAC:dinner:wholegrain_base:brown_rice_cooked",
+    "protocolCode": "CARDIAC",
+    "mealType": "dinner",
+    "slotName": "wholegrain_base",
+    "foodId": "brown_rice_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "CARDIAC|dinner|wholegrain_base",
+    "legacyOrder": 331,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:CARDIAC:dinner:lean_protein_primary:salmon",
@@ -3779,7 +4325,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|lean_protein_primary",
-    "legacyOrder": 290,
+    "legacyOrder": 332,
     "legacyGroupOrder": 0
   },
   {
@@ -3792,7 +4338,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|lean_protein_primary",
-    "legacyOrder": 291,
+    "legacyOrder": 333,
     "legacyGroupOrder": 1
   },
   {
@@ -3805,7 +4351,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|lean_protein_primary",
-    "legacyOrder": 292,
+    "legacyOrder": 334,
     "legacyGroupOrder": 2
   },
   {
@@ -3818,7 +4364,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|vegetable_side",
-    "legacyOrder": 293,
+    "legacyOrder": 335,
     "legacyGroupOrder": 0
   },
   {
@@ -3831,7 +4377,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|vegetable_side",
-    "legacyOrder": 294,
+    "legacyOrder": 336,
     "legacyGroupOrder": 1
   },
   {
@@ -3844,7 +4390,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|beverage",
-    "legacyOrder": 295,
+    "legacyOrder": 337,
     "legacyGroupOrder": 0
   },
   {
@@ -3857,7 +4403,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|beverage",
-    "legacyOrder": 296,
+    "legacyOrder": 338,
     "legacyGroupOrder": 1
   },
   {
@@ -3870,7 +4416,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|beverage",
-    "legacyOrder": 297,
+    "legacyOrder": 339,
     "legacyGroupOrder": 2
   },
   {
@@ -3883,7 +4429,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|beverage",
-    "legacyOrder": 298,
+    "legacyOrder": 340,
     "legacyGroupOrder": 3
   },
   {
@@ -3896,7 +4442,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|beverage",
-    "legacyOrder": 299,
+    "legacyOrder": 341,
     "legacyGroupOrder": 4
   },
   {
@@ -3909,7 +4455,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|beverage",
-    "legacyOrder": 300,
+    "legacyOrder": 342,
     "legacyGroupOrder": 5
   },
   {
@@ -3922,7 +4468,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|beverage",
-    "legacyOrder": 301,
+    "legacyOrder": 343,
     "legacyGroupOrder": 6
   },
   {
@@ -3935,7 +4481,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "CARDIAC|dinner|beverage",
-    "legacyOrder": 302,
+    "legacyOrder": 344,
     "legacyGroupOrder": 7
   },
   {
@@ -3948,7 +4494,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|starch_base",
-    "legacyOrder": 303,
+    "legacyOrder": 345,
     "legacyGroupOrder": 0
   },
   {
@@ -3961,8 +4507,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|starch_base",
-    "legacyOrder": 304,
+    "legacyOrder": 346,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:HTN:breakfast:starch_base:bulgur_cooked",
+    "protocolCode": "HTN",
+    "mealType": "breakfast",
+    "slotName": "starch_base",
+    "foodId": "bulgur_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|breakfast|starch_base",
+    "legacyOrder": 347,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:HTN:breakfast:starch_base:millet_cooked",
+    "protocolCode": "HTN",
+    "mealType": "breakfast",
+    "slotName": "starch_base",
+    "foodId": "millet_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|breakfast|starch_base",
+    "legacyOrder": 348,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:HTN:breakfast:starch_base:brown_rice_cooked",
+    "protocolCode": "HTN",
+    "mealType": "breakfast",
+    "slotName": "starch_base",
+    "foodId": "brown_rice_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|breakfast|starch_base",
+    "legacyOrder": 349,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:HTN:breakfast:protein_primary:white_fish",
@@ -3974,7 +4559,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|protein_primary",
-    "legacyOrder": 305,
+    "legacyOrder": 350,
     "legacyGroupOrder": 0
   },
   {
@@ -3987,7 +4572,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|protein_primary",
-    "legacyOrder": 306,
+    "legacyOrder": 351,
     "legacyGroupOrder": 1
   },
   {
@@ -4000,7 +4585,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|protein_primary",
-    "legacyOrder": 307,
+    "legacyOrder": 352,
     "legacyGroupOrder": 2
   },
   {
@@ -4013,7 +4598,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|beverage",
-    "legacyOrder": 308,
+    "legacyOrder": 353,
     "legacyGroupOrder": 0
   },
   {
@@ -4026,7 +4611,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|beverage",
-    "legacyOrder": 309,
+    "legacyOrder": 354,
     "legacyGroupOrder": 1
   },
   {
@@ -4039,7 +4624,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|beverage",
-    "legacyOrder": 310,
+    "legacyOrder": 355,
     "legacyGroupOrder": 2
   },
   {
@@ -4052,7 +4637,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|beverage",
-    "legacyOrder": 311,
+    "legacyOrder": 356,
     "legacyGroupOrder": 3
   },
   {
@@ -4065,7 +4650,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|beverage",
-    "legacyOrder": 312,
+    "legacyOrder": 357,
     "legacyGroupOrder": 4
   },
   {
@@ -4078,7 +4663,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|beverage",
-    "legacyOrder": 313,
+    "legacyOrder": 358,
     "legacyGroupOrder": 5
   },
   {
@@ -4091,7 +4676,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|beverage",
-    "legacyOrder": 314,
+    "legacyOrder": 359,
     "legacyGroupOrder": 6
   },
   {
@@ -4104,7 +4689,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|breakfast|beverage",
-    "legacyOrder": 315,
+    "legacyOrder": 360,
     "legacyGroupOrder": 7
   },
   {
@@ -4117,7 +4702,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|starch_base",
-    "legacyOrder": 316,
+    "legacyOrder": 361,
     "legacyGroupOrder": 0
   },
   {
@@ -4130,8 +4715,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|starch_base",
-    "legacyOrder": 317,
+    "legacyOrder": 362,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:HTN:lunch:starch_base:bulgur_cooked",
+    "protocolCode": "HTN",
+    "mealType": "lunch",
+    "slotName": "starch_base",
+    "foodId": "bulgur_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|lunch|starch_base",
+    "legacyOrder": 363,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:HTN:lunch:starch_base:millet_cooked",
+    "protocolCode": "HTN",
+    "mealType": "lunch",
+    "slotName": "starch_base",
+    "foodId": "millet_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|lunch|starch_base",
+    "legacyOrder": 364,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:HTN:lunch:starch_base:barley_cooked",
+    "protocolCode": "HTN",
+    "mealType": "lunch",
+    "slotName": "starch_base",
+    "foodId": "barley_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|lunch|starch_base",
+    "legacyOrder": 365,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:HTN:lunch:lean_protein_primary:white_fish",
@@ -4143,7 +4767,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|lean_protein_primary",
-    "legacyOrder": 318,
+    "legacyOrder": 366,
     "legacyGroupOrder": 0
   },
   {
@@ -4156,7 +4780,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|lean_protein_primary",
-    "legacyOrder": 319,
+    "legacyOrder": 367,
     "legacyGroupOrder": 1
   },
   {
@@ -4169,7 +4793,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|lean_protein_primary",
-    "legacyOrder": 320,
+    "legacyOrder": 368,
     "legacyGroupOrder": 2
   },
   {
@@ -4182,7 +4806,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|vegetable_side",
-    "legacyOrder": 321,
+    "legacyOrder": 369,
     "legacyGroupOrder": 0
   },
   {
@@ -4195,7 +4819,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|vegetable_side",
-    "legacyOrder": 322,
+    "legacyOrder": 370,
     "legacyGroupOrder": 1
   },
   {
@@ -4208,7 +4832,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|beverage",
-    "legacyOrder": 323,
+    "legacyOrder": 371,
     "legacyGroupOrder": 0
   },
   {
@@ -4221,7 +4845,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|beverage",
-    "legacyOrder": 324,
+    "legacyOrder": 372,
     "legacyGroupOrder": 1
   },
   {
@@ -4234,7 +4858,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|beverage",
-    "legacyOrder": 325,
+    "legacyOrder": 373,
     "legacyGroupOrder": 2
   },
   {
@@ -4247,7 +4871,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|beverage",
-    "legacyOrder": 326,
+    "legacyOrder": 374,
     "legacyGroupOrder": 3
   },
   {
@@ -4260,7 +4884,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|beverage",
-    "legacyOrder": 327,
+    "legacyOrder": 375,
     "legacyGroupOrder": 4
   },
   {
@@ -4273,7 +4897,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|beverage",
-    "legacyOrder": 328,
+    "legacyOrder": 376,
     "legacyGroupOrder": 5
   },
   {
@@ -4286,7 +4910,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|beverage",
-    "legacyOrder": 329,
+    "legacyOrder": 377,
     "legacyGroupOrder": 6
   },
   {
@@ -4299,7 +4923,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|lunch|beverage",
-    "legacyOrder": 330,
+    "legacyOrder": 378,
     "legacyGroupOrder": 7
   },
   {
@@ -4312,7 +4936,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|starch_base",
-    "legacyOrder": 331,
+    "legacyOrder": 379,
     "legacyGroupOrder": 0
   },
   {
@@ -4325,8 +4949,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|starch_base",
-    "legacyOrder": 332,
+    "legacyOrder": 380,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:HTN:dinner:starch_base:bulgur_cooked",
+    "protocolCode": "HTN",
+    "mealType": "dinner",
+    "slotName": "starch_base",
+    "foodId": "bulgur_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|dinner|starch_base",
+    "legacyOrder": 381,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:HTN:dinner:starch_base:millet_cooked",
+    "protocolCode": "HTN",
+    "mealType": "dinner",
+    "slotName": "starch_base",
+    "foodId": "millet_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|dinner|starch_base",
+    "legacyOrder": 382,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:HTN:dinner:starch_base:brown_rice_cooked",
+    "protocolCode": "HTN",
+    "mealType": "dinner",
+    "slotName": "starch_base",
+    "foodId": "brown_rice_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HTN|dinner|starch_base",
+    "legacyOrder": 383,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:HTN:dinner:lean_protein_primary:white_fish",
@@ -4338,7 +5001,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|lean_protein_primary",
-    "legacyOrder": 333,
+    "legacyOrder": 384,
     "legacyGroupOrder": 0
   },
   {
@@ -4351,7 +5014,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|lean_protein_primary",
-    "legacyOrder": 334,
+    "legacyOrder": 385,
     "legacyGroupOrder": 1
   },
   {
@@ -4364,7 +5027,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|lean_protein_primary",
-    "legacyOrder": 335,
+    "legacyOrder": 386,
     "legacyGroupOrder": 2
   },
   {
@@ -4377,7 +5040,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|vegetable_side",
-    "legacyOrder": 336,
+    "legacyOrder": 387,
     "legacyGroupOrder": 0
   },
   {
@@ -4390,7 +5053,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|vegetable_side",
-    "legacyOrder": 337,
+    "legacyOrder": 388,
     "legacyGroupOrder": 1
   },
   {
@@ -4403,7 +5066,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|beverage",
-    "legacyOrder": 338,
+    "legacyOrder": 389,
     "legacyGroupOrder": 0
   },
   {
@@ -4416,7 +5079,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|beverage",
-    "legacyOrder": 339,
+    "legacyOrder": 390,
     "legacyGroupOrder": 1
   },
   {
@@ -4429,7 +5092,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|beverage",
-    "legacyOrder": 340,
+    "legacyOrder": 391,
     "legacyGroupOrder": 2
   },
   {
@@ -4442,7 +5105,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|beverage",
-    "legacyOrder": 341,
+    "legacyOrder": 392,
     "legacyGroupOrder": 3
   },
   {
@@ -4455,7 +5118,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|beverage",
-    "legacyOrder": 342,
+    "legacyOrder": 393,
     "legacyGroupOrder": 4
   },
   {
@@ -4468,7 +5131,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|beverage",
-    "legacyOrder": 343,
+    "legacyOrder": 394,
     "legacyGroupOrder": 5
   },
   {
@@ -4481,7 +5144,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|beverage",
-    "legacyOrder": 344,
+    "legacyOrder": 395,
     "legacyGroupOrder": 6
   },
   {
@@ -4494,7 +5157,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HTN|dinner|beverage",
-    "legacyOrder": 345,
+    "legacyOrder": 396,
     "legacyGroupOrder": 7
   },
   {
@@ -4507,7 +5170,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|renal_carb_base",
-    "legacyOrder": 346,
+    "legacyOrder": 397,
     "legacyGroupOrder": 0
   },
   {
@@ -4520,8 +5183,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|renal_carb_base",
-    "legacyOrder": 347,
+    "legacyOrder": 398,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:breakfast:renal_carb_base:white_rice_cooked",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "breakfast",
+    "slotName": "renal_carb_base",
+    "foodId": "white_rice_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|breakfast|renal_carb_base",
+    "legacyOrder": 399,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:breakfast:renal_carb_base:rice_porridge_plain",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "breakfast",
+    "slotName": "renal_carb_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|breakfast|renal_carb_base",
+    "legacyOrder": 400,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:breakfast:renal_carb_base:tapioca_porridge_plain",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "breakfast",
+    "slotName": "renal_carb_base",
+    "foodId": "tapioca_porridge_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|breakfast|renal_carb_base",
+    "legacyOrder": 401,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:RENAL_STAGE_3:breakfast:renal_protein_primary:chicken_breast",
@@ -4533,7 +5235,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|renal_protein_primary",
-    "legacyOrder": 348,
+    "legacyOrder": 402,
     "legacyGroupOrder": 0
   },
   {
@@ -4546,7 +5248,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|renal_protein_primary",
-    "legacyOrder": 349,
+    "legacyOrder": 403,
     "legacyGroupOrder": 1
   },
   {
@@ -4559,7 +5261,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|renal_protein_primary",
-    "legacyOrder": 350,
+    "legacyOrder": 404,
     "legacyGroupOrder": 2
   },
   {
@@ -4572,7 +5274,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
-    "legacyOrder": 351,
+    "legacyOrder": 405,
     "legacyGroupOrder": 0
   },
   {
@@ -4585,7 +5287,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
-    "legacyOrder": 352,
+    "legacyOrder": 406,
     "legacyGroupOrder": 1
   },
   {
@@ -4598,7 +5300,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
-    "legacyOrder": 353,
+    "legacyOrder": 407,
     "legacyGroupOrder": 2
   },
   {
@@ -4611,7 +5313,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
-    "legacyOrder": 354,
+    "legacyOrder": 408,
     "legacyGroupOrder": 3
   },
   {
@@ -4624,7 +5326,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
-    "legacyOrder": 355,
+    "legacyOrder": 409,
     "legacyGroupOrder": 4
   },
   {
@@ -4637,7 +5339,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
-    "legacyOrder": 356,
+    "legacyOrder": 410,
     "legacyGroupOrder": 5
   },
   {
@@ -4650,7 +5352,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
-    "legacyOrder": 357,
+    "legacyOrder": 411,
     "legacyGroupOrder": 6
   },
   {
@@ -4663,7 +5365,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|breakfast|beverage",
-    "legacyOrder": 358,
+    "legacyOrder": 412,
     "legacyGroupOrder": 7
   },
   {
@@ -4676,7 +5378,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_carb_base",
-    "legacyOrder": 359,
+    "legacyOrder": 413,
     "legacyGroupOrder": 0
   },
   {
@@ -4689,8 +5391,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_carb_base",
-    "legacyOrder": 360,
+    "legacyOrder": 414,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:lunch:renal_carb_base:white_rice_cooked",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "lunch",
+    "slotName": "renal_carb_base",
+    "foodId": "white_rice_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|lunch|renal_carb_base",
+    "legacyOrder": 415,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:lunch:renal_carb_base:rice_porridge_plain",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "lunch",
+    "slotName": "renal_carb_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|lunch|renal_carb_base",
+    "legacyOrder": 416,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:lunch:renal_carb_base:tapioca_porridge_plain",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "lunch",
+    "slotName": "renal_carb_base",
+    "foodId": "tapioca_porridge_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|lunch|renal_carb_base",
+    "legacyOrder": 417,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:RENAL_STAGE_3:lunch:renal_protein_primary:chicken_breast",
@@ -4702,7 +5443,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_protein_primary",
-    "legacyOrder": 361,
+    "legacyOrder": 418,
     "legacyGroupOrder": 0
   },
   {
@@ -4715,7 +5456,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_protein_primary",
-    "legacyOrder": 362,
+    "legacyOrder": 419,
     "legacyGroupOrder": 1
   },
   {
@@ -4728,7 +5469,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_protein_primary",
-    "legacyOrder": 363,
+    "legacyOrder": 420,
     "legacyGroupOrder": 2
   },
   {
@@ -4741,7 +5482,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_protein_primary",
-    "legacyOrder": 364,
+    "legacyOrder": 421,
     "legacyGroupOrder": 3
   },
   {
@@ -4754,7 +5495,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_veg_side",
-    "legacyOrder": 365,
+    "legacyOrder": 422,
     "legacyGroupOrder": 0
   },
   {
@@ -4767,7 +5508,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_veg_side",
-    "legacyOrder": 366,
+    "legacyOrder": 423,
     "legacyGroupOrder": 1
   },
   {
@@ -4780,7 +5521,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_veg_side",
-    "legacyOrder": 367,
+    "legacyOrder": 424,
     "legacyGroupOrder": 2
   },
   {
@@ -4793,7 +5534,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_veg_side",
-    "legacyOrder": 368,
+    "legacyOrder": 425,
     "legacyGroupOrder": 3
   },
   {
@@ -4806,7 +5547,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_veg_side",
-    "legacyOrder": 369,
+    "legacyOrder": 426,
     "legacyGroupOrder": 4
   },
   {
@@ -4819,7 +5560,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_veg_side",
-    "legacyOrder": 370,
+    "legacyOrder": 427,
     "legacyGroupOrder": 5
   },
   {
@@ -4832,7 +5573,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|renal_veg_side",
-    "legacyOrder": 371,
+    "legacyOrder": 428,
     "legacyGroupOrder": 6
   },
   {
@@ -4845,7 +5586,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|beverage",
-    "legacyOrder": 372,
+    "legacyOrder": 429,
     "legacyGroupOrder": 0
   },
   {
@@ -4858,7 +5599,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|beverage",
-    "legacyOrder": 373,
+    "legacyOrder": 430,
     "legacyGroupOrder": 1
   },
   {
@@ -4871,7 +5612,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|beverage",
-    "legacyOrder": 374,
+    "legacyOrder": 431,
     "legacyGroupOrder": 2
   },
   {
@@ -4884,7 +5625,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|beverage",
-    "legacyOrder": 375,
+    "legacyOrder": 432,
     "legacyGroupOrder": 3
   },
   {
@@ -4897,7 +5638,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|beverage",
-    "legacyOrder": 376,
+    "legacyOrder": 433,
     "legacyGroupOrder": 4
   },
   {
@@ -4910,7 +5651,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|beverage",
-    "legacyOrder": 377,
+    "legacyOrder": 434,
     "legacyGroupOrder": 5
   },
   {
@@ -4923,7 +5664,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|beverage",
-    "legacyOrder": 378,
+    "legacyOrder": 435,
     "legacyGroupOrder": 6
   },
   {
@@ -4936,7 +5677,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|lunch|beverage",
-    "legacyOrder": 379,
+    "legacyOrder": 436,
     "legacyGroupOrder": 7
   },
   {
@@ -4949,7 +5690,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_carb_base",
-    "legacyOrder": 380,
+    "legacyOrder": 437,
     "legacyGroupOrder": 0
   },
   {
@@ -4962,8 +5703,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_carb_base",
-    "legacyOrder": 381,
+    "legacyOrder": 438,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:dinner:renal_carb_base:white_rice_cooked",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "dinner",
+    "slotName": "renal_carb_base",
+    "foodId": "white_rice_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|dinner|renal_carb_base",
+    "legacyOrder": 439,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:dinner:renal_carb_base:rice_porridge_plain",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "dinner",
+    "slotName": "renal_carb_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|dinner|renal_carb_base",
+    "legacyOrder": 440,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:RENAL_STAGE_3:dinner:renal_carb_base:tapioca_porridge_plain",
+    "protocolCode": "RENAL_STAGE_3",
+    "mealType": "dinner",
+    "slotName": "renal_carb_base",
+    "foodId": "tapioca_porridge_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_3|dinner|renal_carb_base",
+    "legacyOrder": 441,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:RENAL_STAGE_3:dinner:renal_protein_primary:chicken_breast",
@@ -4975,7 +5755,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_protein_primary",
-    "legacyOrder": 382,
+    "legacyOrder": 442,
     "legacyGroupOrder": 0
   },
   {
@@ -4988,7 +5768,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_protein_primary",
-    "legacyOrder": 383,
+    "legacyOrder": 443,
     "legacyGroupOrder": 1
   },
   {
@@ -5001,7 +5781,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_protein_primary",
-    "legacyOrder": 384,
+    "legacyOrder": 444,
     "legacyGroupOrder": 2
   },
   {
@@ -5014,7 +5794,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_protein_primary",
-    "legacyOrder": 385,
+    "legacyOrder": 445,
     "legacyGroupOrder": 3
   },
   {
@@ -5027,7 +5807,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_veg_side",
-    "legacyOrder": 386,
+    "legacyOrder": 446,
     "legacyGroupOrder": 0
   },
   {
@@ -5040,7 +5820,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_veg_side",
-    "legacyOrder": 387,
+    "legacyOrder": 447,
     "legacyGroupOrder": 1
   },
   {
@@ -5053,7 +5833,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_veg_side",
-    "legacyOrder": 388,
+    "legacyOrder": 448,
     "legacyGroupOrder": 2
   },
   {
@@ -5066,7 +5846,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_veg_side",
-    "legacyOrder": 389,
+    "legacyOrder": 449,
     "legacyGroupOrder": 3
   },
   {
@@ -5079,7 +5859,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_veg_side",
-    "legacyOrder": 390,
+    "legacyOrder": 450,
     "legacyGroupOrder": 4
   },
   {
@@ -5092,7 +5872,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_veg_side",
-    "legacyOrder": 391,
+    "legacyOrder": 451,
     "legacyGroupOrder": 5
   },
   {
@@ -5105,7 +5885,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|renal_veg_side",
-    "legacyOrder": 392,
+    "legacyOrder": 452,
     "legacyGroupOrder": 6
   },
   {
@@ -5118,7 +5898,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|beverage",
-    "legacyOrder": 393,
+    "legacyOrder": 453,
     "legacyGroupOrder": 0
   },
   {
@@ -5131,7 +5911,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|beverage",
-    "legacyOrder": 394,
+    "legacyOrder": 454,
     "legacyGroupOrder": 1
   },
   {
@@ -5144,7 +5924,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|beverage",
-    "legacyOrder": 395,
+    "legacyOrder": 455,
     "legacyGroupOrder": 2
   },
   {
@@ -5157,7 +5937,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|beverage",
-    "legacyOrder": 396,
+    "legacyOrder": 456,
     "legacyGroupOrder": 3
   },
   {
@@ -5170,7 +5950,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|beverage",
-    "legacyOrder": 397,
+    "legacyOrder": 457,
     "legacyGroupOrder": 4
   },
   {
@@ -5183,7 +5963,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|beverage",
-    "legacyOrder": 398,
+    "legacyOrder": 458,
     "legacyGroupOrder": 5
   },
   {
@@ -5196,7 +5976,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|beverage",
-    "legacyOrder": 399,
+    "legacyOrder": 459,
     "legacyGroupOrder": 6
   },
   {
@@ -5209,7 +5989,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_3|dinner|beverage",
-    "legacyOrder": 400,
+    "legacyOrder": 460,
     "legacyGroupOrder": 7
   },
   {
@@ -5222,7 +6002,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|renal_carb_base",
-    "legacyOrder": 401,
+    "legacyOrder": 461,
     "legacyGroupOrder": 0
   },
   {
@@ -5235,8 +6015,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|renal_carb_base",
-    "legacyOrder": 402,
+    "legacyOrder": 462,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:breakfast:renal_carb_base:white_rice_cooked",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "breakfast",
+    "slotName": "renal_carb_base",
+    "foodId": "white_rice_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|breakfast|renal_carb_base",
+    "legacyOrder": 463,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:breakfast:renal_carb_base:rice_porridge_plain",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "breakfast",
+    "slotName": "renal_carb_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|breakfast|renal_carb_base",
+    "legacyOrder": 464,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:breakfast:renal_carb_base:tapioca_porridge_plain",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "breakfast",
+    "slotName": "renal_carb_base",
+    "foodId": "tapioca_porridge_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|breakfast|renal_carb_base",
+    "legacyOrder": 465,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:RENAL_STAGE_4:breakfast:renal_protein_primary:chicken_breast",
@@ -5248,7 +6067,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|renal_protein_primary",
-    "legacyOrder": 403,
+    "legacyOrder": 466,
     "legacyGroupOrder": 0
   },
   {
@@ -5261,7 +6080,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|renal_protein_primary",
-    "legacyOrder": 404,
+    "legacyOrder": 467,
     "legacyGroupOrder": 1
   },
   {
@@ -5274,7 +6093,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|renal_protein_primary",
-    "legacyOrder": 405,
+    "legacyOrder": 468,
     "legacyGroupOrder": 2
   },
   {
@@ -5287,7 +6106,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
-    "legacyOrder": 406,
+    "legacyOrder": 469,
     "legacyGroupOrder": 0
   },
   {
@@ -5300,7 +6119,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
-    "legacyOrder": 407,
+    "legacyOrder": 470,
     "legacyGroupOrder": 1
   },
   {
@@ -5313,7 +6132,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
-    "legacyOrder": 408,
+    "legacyOrder": 471,
     "legacyGroupOrder": 2
   },
   {
@@ -5326,7 +6145,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
-    "legacyOrder": 409,
+    "legacyOrder": 472,
     "legacyGroupOrder": 3
   },
   {
@@ -5339,7 +6158,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
-    "legacyOrder": 410,
+    "legacyOrder": 473,
     "legacyGroupOrder": 4
   },
   {
@@ -5352,7 +6171,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
-    "legacyOrder": 411,
+    "legacyOrder": 474,
     "legacyGroupOrder": 5
   },
   {
@@ -5365,7 +6184,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
-    "legacyOrder": 412,
+    "legacyOrder": 475,
     "legacyGroupOrder": 6
   },
   {
@@ -5378,7 +6197,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|breakfast|beverage",
-    "legacyOrder": 413,
+    "legacyOrder": 476,
     "legacyGroupOrder": 7
   },
   {
@@ -5391,7 +6210,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_carb_base",
-    "legacyOrder": 414,
+    "legacyOrder": 477,
     "legacyGroupOrder": 0
   },
   {
@@ -5404,8 +6223,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_carb_base",
-    "legacyOrder": 415,
+    "legacyOrder": 478,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:lunch:renal_carb_base:white_rice_cooked",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "lunch",
+    "slotName": "renal_carb_base",
+    "foodId": "white_rice_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|lunch|renal_carb_base",
+    "legacyOrder": 479,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:lunch:renal_carb_base:rice_porridge_plain",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "lunch",
+    "slotName": "renal_carb_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|lunch|renal_carb_base",
+    "legacyOrder": 480,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:lunch:renal_carb_base:tapioca_porridge_plain",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "lunch",
+    "slotName": "renal_carb_base",
+    "foodId": "tapioca_porridge_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|lunch|renal_carb_base",
+    "legacyOrder": 481,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:RENAL_STAGE_4:lunch:renal_protein_primary:chicken_breast",
@@ -5417,7 +6275,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_protein_primary",
-    "legacyOrder": 416,
+    "legacyOrder": 482,
     "legacyGroupOrder": 0
   },
   {
@@ -5430,7 +6288,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_protein_primary",
-    "legacyOrder": 417,
+    "legacyOrder": 483,
     "legacyGroupOrder": 1
   },
   {
@@ -5443,7 +6301,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_protein_primary",
-    "legacyOrder": 418,
+    "legacyOrder": 484,
     "legacyGroupOrder": 2
   },
   {
@@ -5456,7 +6314,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_protein_primary",
-    "legacyOrder": 419,
+    "legacyOrder": 485,
     "legacyGroupOrder": 3
   },
   {
@@ -5469,7 +6327,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_veg_side",
-    "legacyOrder": 420,
+    "legacyOrder": 486,
     "legacyGroupOrder": 0
   },
   {
@@ -5482,7 +6340,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_veg_side",
-    "legacyOrder": 421,
+    "legacyOrder": 487,
     "legacyGroupOrder": 1
   },
   {
@@ -5495,7 +6353,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_veg_side",
-    "legacyOrder": 422,
+    "legacyOrder": 488,
     "legacyGroupOrder": 2
   },
   {
@@ -5508,7 +6366,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_veg_side",
-    "legacyOrder": 423,
+    "legacyOrder": 489,
     "legacyGroupOrder": 3
   },
   {
@@ -5521,7 +6379,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_veg_side",
-    "legacyOrder": 424,
+    "legacyOrder": 490,
     "legacyGroupOrder": 4
   },
   {
@@ -5534,7 +6392,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_veg_side",
-    "legacyOrder": 425,
+    "legacyOrder": 491,
     "legacyGroupOrder": 5
   },
   {
@@ -5547,7 +6405,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|renal_veg_side",
-    "legacyOrder": 426,
+    "legacyOrder": 492,
     "legacyGroupOrder": 6
   },
   {
@@ -5560,7 +6418,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|beverage",
-    "legacyOrder": 427,
+    "legacyOrder": 493,
     "legacyGroupOrder": 0
   },
   {
@@ -5573,7 +6431,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|beverage",
-    "legacyOrder": 428,
+    "legacyOrder": 494,
     "legacyGroupOrder": 1
   },
   {
@@ -5586,7 +6444,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|beverage",
-    "legacyOrder": 429,
+    "legacyOrder": 495,
     "legacyGroupOrder": 2
   },
   {
@@ -5599,7 +6457,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|beverage",
-    "legacyOrder": 430,
+    "legacyOrder": 496,
     "legacyGroupOrder": 3
   },
   {
@@ -5612,7 +6470,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|beverage",
-    "legacyOrder": 431,
+    "legacyOrder": 497,
     "legacyGroupOrder": 4
   },
   {
@@ -5625,7 +6483,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|beverage",
-    "legacyOrder": 432,
+    "legacyOrder": 498,
     "legacyGroupOrder": 5
   },
   {
@@ -5638,7 +6496,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|beverage",
-    "legacyOrder": 433,
+    "legacyOrder": 499,
     "legacyGroupOrder": 6
   },
   {
@@ -5651,7 +6509,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|lunch|beverage",
-    "legacyOrder": 434,
+    "legacyOrder": 500,
     "legacyGroupOrder": 7
   },
   {
@@ -5664,7 +6522,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_carb_base",
-    "legacyOrder": 435,
+    "legacyOrder": 501,
     "legacyGroupOrder": 0
   },
   {
@@ -5677,8 +6535,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_carb_base",
-    "legacyOrder": 436,
+    "legacyOrder": 502,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:dinner:renal_carb_base:white_rice_cooked",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "dinner",
+    "slotName": "renal_carb_base",
+    "foodId": "white_rice_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|dinner|renal_carb_base",
+    "legacyOrder": 503,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:dinner:renal_carb_base:rice_porridge_plain",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "dinner",
+    "slotName": "renal_carb_base",
+    "foodId": "rice_porridge_plain",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|dinner|renal_carb_base",
+    "legacyOrder": 504,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:RENAL_STAGE_4:dinner:renal_carb_base:tapioca_porridge_plain",
+    "protocolCode": "RENAL_STAGE_4",
+    "mealType": "dinner",
+    "slotName": "renal_carb_base",
+    "foodId": "tapioca_porridge_plain",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "RENAL_STAGE_4|dinner|renal_carb_base",
+    "legacyOrder": 505,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:RENAL_STAGE_4:dinner:renal_protein_primary:chicken_breast",
@@ -5690,7 +6587,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_protein_primary",
-    "legacyOrder": 437,
+    "legacyOrder": 506,
     "legacyGroupOrder": 0
   },
   {
@@ -5703,7 +6600,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_protein_primary",
-    "legacyOrder": 438,
+    "legacyOrder": 507,
     "legacyGroupOrder": 1
   },
   {
@@ -5716,7 +6613,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_protein_primary",
-    "legacyOrder": 439,
+    "legacyOrder": 508,
     "legacyGroupOrder": 2
   },
   {
@@ -5729,7 +6626,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_protein_primary",
-    "legacyOrder": 440,
+    "legacyOrder": 509,
     "legacyGroupOrder": 3
   },
   {
@@ -5742,7 +6639,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_veg_side",
-    "legacyOrder": 441,
+    "legacyOrder": 510,
     "legacyGroupOrder": 0
   },
   {
@@ -5755,7 +6652,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_veg_side",
-    "legacyOrder": 442,
+    "legacyOrder": 511,
     "legacyGroupOrder": 1
   },
   {
@@ -5768,7 +6665,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_veg_side",
-    "legacyOrder": 443,
+    "legacyOrder": 512,
     "legacyGroupOrder": 2
   },
   {
@@ -5781,7 +6678,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_veg_side",
-    "legacyOrder": 444,
+    "legacyOrder": 513,
     "legacyGroupOrder": 3
   },
   {
@@ -5794,7 +6691,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_veg_side",
-    "legacyOrder": 445,
+    "legacyOrder": 514,
     "legacyGroupOrder": 4
   },
   {
@@ -5807,7 +6704,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_veg_side",
-    "legacyOrder": 446,
+    "legacyOrder": 515,
     "legacyGroupOrder": 5
   },
   {
@@ -5820,7 +6717,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|renal_veg_side",
-    "legacyOrder": 447,
+    "legacyOrder": 516,
     "legacyGroupOrder": 6
   },
   {
@@ -5833,7 +6730,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|beverage",
-    "legacyOrder": 448,
+    "legacyOrder": 517,
     "legacyGroupOrder": 0
   },
   {
@@ -5846,7 +6743,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|beverage",
-    "legacyOrder": 449,
+    "legacyOrder": 518,
     "legacyGroupOrder": 1
   },
   {
@@ -5859,7 +6756,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|beverage",
-    "legacyOrder": 450,
+    "legacyOrder": 519,
     "legacyGroupOrder": 2
   },
   {
@@ -5872,7 +6769,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|beverage",
-    "legacyOrder": 451,
+    "legacyOrder": 520,
     "legacyGroupOrder": 3
   },
   {
@@ -5885,7 +6782,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|beverage",
-    "legacyOrder": 452,
+    "legacyOrder": 521,
     "legacyGroupOrder": 4
   },
   {
@@ -5898,7 +6795,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|beverage",
-    "legacyOrder": 453,
+    "legacyOrder": 522,
     "legacyGroupOrder": 5
   },
   {
@@ -5911,7 +6808,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|beverage",
-    "legacyOrder": 454,
+    "legacyOrder": 523,
     "legacyGroupOrder": 6
   },
   {
@@ -5924,7 +6821,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "RENAL_STAGE_4|dinner|beverage",
-    "legacyOrder": 455,
+    "legacyOrder": 524,
     "legacyGroupOrder": 7
   },
   {
@@ -5937,7 +6834,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|gentle_carb_base",
-    "legacyOrder": 456,
+    "legacyOrder": 525,
     "legacyGroupOrder": 0
   },
   {
@@ -5950,8 +6847,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|gentle_carb_base",
-    "legacyOrder": 457,
+    "legacyOrder": 526,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:HEPATIC:breakfast:gentle_carb_base:barley_cooked",
+    "protocolCode": "HEPATIC",
+    "mealType": "breakfast",
+    "slotName": "gentle_carb_base",
+    "foodId": "barley_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|breakfast|gentle_carb_base",
+    "legacyOrder": 527,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:HEPATIC:breakfast:gentle_carb_base:bulgur_cooked",
+    "protocolCode": "HEPATIC",
+    "mealType": "breakfast",
+    "slotName": "gentle_carb_base",
+    "foodId": "bulgur_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|breakfast|gentle_carb_base",
+    "legacyOrder": 528,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:HEPATIC:breakfast:gentle_carb_base:millet_cooked",
+    "protocolCode": "HEPATIC",
+    "mealType": "breakfast",
+    "slotName": "gentle_carb_base",
+    "foodId": "millet_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|breakfast|gentle_carb_base",
+    "legacyOrder": 529,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:HEPATIC:breakfast:fresh_lean_protein_optional:chicken_breast",
@@ -5963,7 +6899,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|fresh_lean_protein_optional",
-    "legacyOrder": 458,
+    "legacyOrder": 530,
     "legacyGroupOrder": 0
   },
   {
@@ -5976,7 +6912,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|fresh_lean_protein_optional",
-    "legacyOrder": 459,
+    "legacyOrder": 531,
     "legacyGroupOrder": 1
   },
   {
@@ -5989,7 +6925,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|fresh_lean_protein_optional",
-    "legacyOrder": 460,
+    "legacyOrder": 532,
     "legacyGroupOrder": 2
   },
   {
@@ -6002,7 +6938,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|whole_fruit_optional",
-    "legacyOrder": 461,
+    "legacyOrder": 533,
     "legacyGroupOrder": 0
   },
   {
@@ -6015,7 +6951,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|beverage",
-    "legacyOrder": 462,
+    "legacyOrder": 534,
     "legacyGroupOrder": 0
   },
   {
@@ -6028,7 +6964,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|beverage",
-    "legacyOrder": 463,
+    "legacyOrder": 535,
     "legacyGroupOrder": 1
   },
   {
@@ -6041,7 +6977,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|beverage",
-    "legacyOrder": 464,
+    "legacyOrder": 536,
     "legacyGroupOrder": 2
   },
   {
@@ -6054,7 +6990,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|beverage",
-    "legacyOrder": 465,
+    "legacyOrder": 537,
     "legacyGroupOrder": 3
   },
   {
@@ -6067,7 +7003,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|beverage",
-    "legacyOrder": 466,
+    "legacyOrder": 538,
     "legacyGroupOrder": 4
   },
   {
@@ -6080,7 +7016,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|beverage",
-    "legacyOrder": 467,
+    "legacyOrder": 539,
     "legacyGroupOrder": 5
   },
   {
@@ -6093,7 +7029,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|beverage",
-    "legacyOrder": 468,
+    "legacyOrder": 540,
     "legacyGroupOrder": 6
   },
   {
@@ -6106,7 +7042,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|breakfast|beverage",
-    "legacyOrder": 469,
+    "legacyOrder": 541,
     "legacyGroupOrder": 7
   },
   {
@@ -6119,7 +7055,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|gentle_carb_base",
-    "legacyOrder": 470,
+    "legacyOrder": 542,
     "legacyGroupOrder": 0
   },
   {
@@ -6132,8 +7068,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|gentle_carb_base",
-    "legacyOrder": 471,
+    "legacyOrder": 543,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:HEPATIC:lunch:gentle_carb_base:barley_cooked",
+    "protocolCode": "HEPATIC",
+    "mealType": "lunch",
+    "slotName": "gentle_carb_base",
+    "foodId": "barley_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|lunch|gentle_carb_base",
+    "legacyOrder": 544,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:HEPATIC:lunch:gentle_carb_base:bulgur_cooked",
+    "protocolCode": "HEPATIC",
+    "mealType": "lunch",
+    "slotName": "gentle_carb_base",
+    "foodId": "bulgur_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|lunch|gentle_carb_base",
+    "legacyOrder": 545,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:HEPATIC:lunch:gentle_carb_base:millet_cooked",
+    "protocolCode": "HEPATIC",
+    "mealType": "lunch",
+    "slotName": "gentle_carb_base",
+    "foodId": "millet_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|lunch|gentle_carb_base",
+    "legacyOrder": 546,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:HEPATIC:lunch:fresh_lean_protein_primary:white_fish",
@@ -6145,7 +7120,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|fresh_lean_protein_primary",
-    "legacyOrder": 472,
+    "legacyOrder": 547,
     "legacyGroupOrder": 0
   },
   {
@@ -6158,7 +7133,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|fresh_lean_protein_primary",
-    "legacyOrder": 473,
+    "legacyOrder": 548,
     "legacyGroupOrder": 1
   },
   {
@@ -6171,7 +7146,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|fresh_lean_protein_primary",
-    "legacyOrder": 474,
+    "legacyOrder": 549,
     "legacyGroupOrder": 2
   },
   {
@@ -6184,7 +7159,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|vegetable_side",
-    "legacyOrder": 475,
+    "legacyOrder": 550,
     "legacyGroupOrder": 0
   },
   {
@@ -6197,7 +7172,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|vegetable_side",
-    "legacyOrder": 476,
+    "legacyOrder": 551,
     "legacyGroupOrder": 1
   },
   {
@@ -6210,7 +7185,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|beverage",
-    "legacyOrder": 477,
+    "legacyOrder": 552,
     "legacyGroupOrder": 0
   },
   {
@@ -6223,7 +7198,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|beverage",
-    "legacyOrder": 478,
+    "legacyOrder": 553,
     "legacyGroupOrder": 1
   },
   {
@@ -6236,7 +7211,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|beverage",
-    "legacyOrder": 479,
+    "legacyOrder": 554,
     "legacyGroupOrder": 2
   },
   {
@@ -6249,7 +7224,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|beverage",
-    "legacyOrder": 480,
+    "legacyOrder": 555,
     "legacyGroupOrder": 3
   },
   {
@@ -6262,7 +7237,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|beverage",
-    "legacyOrder": 481,
+    "legacyOrder": 556,
     "legacyGroupOrder": 4
   },
   {
@@ -6275,7 +7250,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|beverage",
-    "legacyOrder": 482,
+    "legacyOrder": 557,
     "legacyGroupOrder": 5
   },
   {
@@ -6288,7 +7263,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|beverage",
-    "legacyOrder": 483,
+    "legacyOrder": 558,
     "legacyGroupOrder": 6
   },
   {
@@ -6301,7 +7276,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|lunch|beverage",
-    "legacyOrder": 484,
+    "legacyOrder": 559,
     "legacyGroupOrder": 7
   },
   {
@@ -6314,7 +7289,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|gentle_carb_base",
-    "legacyOrder": 485,
+    "legacyOrder": 560,
     "legacyGroupOrder": 0
   },
   {
@@ -6327,8 +7302,47 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|gentle_carb_base",
-    "legacyOrder": 486,
+    "legacyOrder": 561,
     "legacyGroupOrder": 1
+  },
+  {
+    "id": "legacy:HEPATIC:dinner:gentle_carb_base:barley_cooked",
+    "protocolCode": "HEPATIC",
+    "mealType": "dinner",
+    "slotName": "gentle_carb_base",
+    "foodId": "barley_cooked",
+    "priority": 8,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|dinner|gentle_carb_base",
+    "legacyOrder": 562,
+    "legacyGroupOrder": 2
+  },
+  {
+    "id": "legacy:HEPATIC:dinner:gentle_carb_base:bulgur_cooked",
+    "protocolCode": "HEPATIC",
+    "mealType": "dinner",
+    "slotName": "gentle_carb_base",
+    "foodId": "bulgur_cooked",
+    "priority": 7,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|dinner|gentle_carb_base",
+    "legacyOrder": 563,
+    "legacyGroupOrder": 3
+  },
+  {
+    "id": "legacy:HEPATIC:dinner:gentle_carb_base:millet_cooked",
+    "protocolCode": "HEPATIC",
+    "mealType": "dinner",
+    "slotName": "gentle_carb_base",
+    "foodId": "millet_cooked",
+    "priority": 6,
+    "status": "approved",
+    "source": "therapeutic_schema_legacy",
+    "legacyKey": "HEPATIC|dinner|gentle_carb_base",
+    "legacyOrder": 564,
+    "legacyGroupOrder": 4
   },
   {
     "id": "legacy:HEPATIC:dinner:fresh_lean_protein_primary:white_fish",
@@ -6340,7 +7354,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|fresh_lean_protein_primary",
-    "legacyOrder": 487,
+    "legacyOrder": 565,
     "legacyGroupOrder": 0
   },
   {
@@ -6353,7 +7367,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|fresh_lean_protein_primary",
-    "legacyOrder": 488,
+    "legacyOrder": 566,
     "legacyGroupOrder": 1
   },
   {
@@ -6366,7 +7380,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|fresh_lean_protein_primary",
-    "legacyOrder": 489,
+    "legacyOrder": 567,
     "legacyGroupOrder": 2
   },
   {
@@ -6379,7 +7393,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|fresh_lean_protein_primary",
-    "legacyOrder": 490,
+    "legacyOrder": 568,
     "legacyGroupOrder": 3
   },
   {
@@ -6392,7 +7406,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|vegetable_side",
-    "legacyOrder": 491,
+    "legacyOrder": 569,
     "legacyGroupOrder": 0
   },
   {
@@ -6405,7 +7419,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|vegetable_side",
-    "legacyOrder": 492,
+    "legacyOrder": 570,
     "legacyGroupOrder": 1
   },
   {
@@ -6418,7 +7432,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|beverage",
-    "legacyOrder": 493,
+    "legacyOrder": 571,
     "legacyGroupOrder": 0
   },
   {
@@ -6431,7 +7445,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|beverage",
-    "legacyOrder": 494,
+    "legacyOrder": 572,
     "legacyGroupOrder": 1
   },
   {
@@ -6444,7 +7458,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|beverage",
-    "legacyOrder": 495,
+    "legacyOrder": 573,
     "legacyGroupOrder": 2
   },
   {
@@ -6457,7 +7471,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|beverage",
-    "legacyOrder": 496,
+    "legacyOrder": 574,
     "legacyGroupOrder": 3
   },
   {
@@ -6470,7 +7484,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|beverage",
-    "legacyOrder": 497,
+    "legacyOrder": 575,
     "legacyGroupOrder": 4
   },
   {
@@ -6483,7 +7497,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|beverage",
-    "legacyOrder": 498,
+    "legacyOrder": 576,
     "legacyGroupOrder": 5
   },
   {
@@ -6496,7 +7510,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|beverage",
-    "legacyOrder": 499,
+    "legacyOrder": 577,
     "legacyGroupOrder": 6
   },
   {
@@ -6509,7 +7523,7 @@
     "status": "approved",
     "source": "therapeutic_schema_legacy",
     "legacyKey": "HEPATIC|dinner|beverage",
-    "legacyOrder": 500,
+    "legacyOrder": 578,
     "legacyGroupOrder": 7
   }
 ]
