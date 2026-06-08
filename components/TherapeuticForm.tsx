@@ -138,6 +138,7 @@ const categories = [
   { type: DiagnosisType.DYSPHAGIA, icon: 'fa-spoon' },
   { type: DiagnosisType.HEPATIC, icon: 'fa-liver' },
   { type: DiagnosisType.POST_OP, icon: 'fa-user-nurse' },
+  { type: DiagnosisType.H_PYLORI, icon: 'fa-biohazard' },
 ];
 
 const booleanLabel = (value: keyof PatientData, label: string) => ({ value, label });

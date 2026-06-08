@@ -21,6 +21,7 @@ const DIAGNOSIS_MAP: Record<string, DiagnosisCode> = {
   'HEPATIC':        'LIVER_SUPPORT',
   'PEPTIC ULCER':   'PEPTIC_ULCER',
   'POST-OPERATIVE': 'POST_OP_SOFT',
+  'RENAL STAGE 4':  'RENAL_STAGE_4',
 };
 
 function toClientProfile(req: GeneratePlanRequest): PatientProfile {

@@ -433,6 +433,7 @@ export enum DiagnosisType {
   DYSPHAGIA = "DYSPHAGIA",
   NEUTROPENIC = "NEUTROPENIC",
   POST_OP = "POST-OPERATIVE",
+  RENAL_STAGE_4 = "RENAL STAGE 4",
   GERIATRIC = "GERIATRIC",
   CUSTOM = "CUSTOM"
 }
@@ -453,6 +454,7 @@ export type ProtocolCode =
 export const DIAGNOSIS_TO_PROTOCOL_CODE: Readonly<Partial<Record<DiagnosisType, ProtocolCode>>> = {
   [DiagnosisType.CARDIAC]: "CARDIAC",
   [DiagnosisType.RENAL]: "RENAL_STAGE_3",
+  [DiagnosisType.RENAL_STAGE_4]: "RENAL_STAGE_4",
   [DiagnosisType.DIABETIC]: "T2DM",
   [DiagnosisType.GASTRIC]: "GASTRIC",
   [DiagnosisType.ULCER]: "PEPTIC_ULCER",

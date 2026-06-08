@@ -19,6 +19,7 @@ import { calculateAlignmentScore, calculateTotalsFromMeals, validateWeeklyPlan }
 export type DiagnosisCode =
   | 'CARDIAC'
   | 'RENAL_STAGE_3'
+  | 'RENAL_STAGE_4'
   | 'T2DM'
   | 'GASTRIC'
   | 'LOW_FAT'
@@ -54,6 +55,7 @@ const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
 const DIAGNOSIS_TYPE_BY_CODE: Partial<Record<DiagnosisCode, DiagnosisType>> = {
   CARDIAC: DiagnosisType.CARDIAC,
   RENAL_STAGE_3: DiagnosisType.RENAL,
+  RENAL_STAGE_4: DiagnosisType.RENAL_STAGE_4,
   T2DM: DiagnosisType.DIABETIC,
   GASTRIC: DiagnosisType.GASTRIC,
   LOW_FAT: DiagnosisType.LOW_FAT,
