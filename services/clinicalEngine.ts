@@ -73,6 +73,8 @@ const SCHEMA_TO_UI_MEAL: Record<'breakfast' | 'lunch' | 'dinner', 'Breakfast' | 
 
 const FOOD_BY_ID = new Map(FOODS.map((food) => [food.food_id, food]));
 const SNACK_MEAL_TYPES: Array<MealPlan['mealType']> = ['Snack AM', 'Snack PM', 'Snack Eve'];
+// Maps snackIdx (0=AM, 1=PM, 2=Eve) to the SchemaMealType used in PROTOCOL_SLOT_CANDIDATES.
+const SNACK_IDX_TO_MEAL_TYPE: readonly SchemaMealType[] = ['snack_am', 'snack_pm', 'snack_eve'];
 
 function cloneTargets(targets: ClinicalTargets): ClinicalTargets {
   return { ...targets };
@@ -387,12 +389,19 @@ function buildSnackMeals(
   ];
 
   return SNACK_MEAL_TYPES.map((snackType, snackIdx) => {
-    const snackFoodId = pickFoodIdFromCategories(
-      config,
-      snackCategories[snackIdx] || ['fruit', 'grain'],
-      texture,
-      dayOffset + snackIdx + 1,
+    const snackMealType = SNACK_IDX_TO_MEAL_TYPE[snackIdx];
+    const snackCandidates = config.candidates.filter(
+      (c) => c.meal_type === snackMealType && c.slot_name === 'snack_item',
     );
+    const snackFoodId =
+      snackCandidates.length > 0
+        ? pickCandidateFoodId(config, 'snack_item', snackCandidates, texture, dayOffset + snackIdx + 1)
+        : pickFoodIdFromCategories(
+            config,
+            snackCategories[snackIdx] || ['fruit', 'grain'],
+            texture,
+            dayOffset + snackIdx + 1,
+          );
 
     const snackFood = snackFoodId ? FOOD_BY_ID.get(snackFoodId) : null;
     const snackPortion =
