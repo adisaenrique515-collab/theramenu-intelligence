@@ -10,6 +10,8 @@ interface GeneratePlanRequest {
   patientData: PatientData;
 }
 
+type ImportMetaEnvLike = ImportMeta & { env?: { PROD?: boolean } };
+
 // Maps DiagnosisType string values (sent by TherapeuticForm) to client-side DiagnosisCode.
 const DIAGNOSIS_MAP: Record<string, DiagnosisCode> = {
   'CARDIAC':        'CARDIAC',
@@ -43,7 +45,8 @@ function toClientProfile(req: GeneratePlanRequest): PatientProfile {
 export async function generatePlanViaInternalApi(payload: GeneratePlanRequest): Promise<WeeklyTherapeuticPlan> {
   // On Cloudflare Pages there is no Node.js server. Run the browser-side clinical
   // engine directly instead of calling the unreachable /api/* endpoint.
-  if (isCloudflareMode) {
+  const shouldUseBrowserClinicalEngine = Boolean((import.meta as ImportMetaEnvLike).env?.PROD) || isCloudflareMode;
+  if (shouldUseBrowserClinicalEngine) {
     return generateWeeklyPlan(toClientProfile(payload));
   }
 
