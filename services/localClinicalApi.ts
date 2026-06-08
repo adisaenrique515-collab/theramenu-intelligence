@@ -1,7 +1,7 @@
 import type { PatientData } from '../components/TherapeuticForm';
 import type { LocalNutritionDbStatus } from '../localNutritionDb.types';
 import type { WeeklyTherapeuticPlan } from '../types';
-import { isCloudflareMode } from '../utils/appMode';
+import { shouldUseLocalInternalApi } from '../utils/appMode';
 import { generateWeeklyPlan, type DiagnosisCode, type PatientProfile } from './clinicalEngine';
 
 interface GeneratePlanRequest {
@@ -9,8 +9,6 @@ interface GeneratePlanRequest {
   patientDetails: string;
   patientData: PatientData;
 }
-
-type ImportMetaEnvLike = ImportMeta & { env?: { PROD?: boolean } };
 
 // Maps DiagnosisType string values (sent by TherapeuticForm) to client-side DiagnosisCode.
 const DIAGNOSIS_MAP: Record<string, DiagnosisCode> = {
@@ -45,8 +43,7 @@ function toClientProfile(req: GeneratePlanRequest): PatientProfile {
 export async function generatePlanViaInternalApi(payload: GeneratePlanRequest): Promise<WeeklyTherapeuticPlan> {
   // On Cloudflare Pages there is no Node.js server. Run the browser-side clinical
   // engine directly instead of calling the unreachable /api/* endpoint.
-  const shouldUseBrowserClinicalEngine = Boolean((import.meta as ImportMetaEnvLike).env?.PROD) || isCloudflareMode;
-  if (shouldUseBrowserClinicalEngine) {
+  if (!shouldUseLocalInternalApi) {
     return generateWeeklyPlan(toClientProfile(payload));
   }
 
@@ -69,7 +66,7 @@ export async function generatePlanViaInternalApi(payload: GeneratePlanRequest): 
 let cachedDbStatusPromise: Promise<LocalNutritionDbStatus> | null = null;
 
 export async function loadLocalNutritionDbStatus(): Promise<LocalNutritionDbStatus> {
-  if (isCloudflareMode) {
+  if (!shouldUseLocalInternalApi) {
     return {
       databasePath: 'cloudflare-mode',
       databaseReady: false,

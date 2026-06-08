@@ -5,6 +5,7 @@
  */
 
 import type { WeeklyTherapeuticPlan } from '../types';
+import { shouldUseLocalInternalApi } from '../utils/appMode';
 
 const FETCH_TIMEOUT_MS = 30000;
 
@@ -16,6 +17,10 @@ const FETCH_TIMEOUT_MS = 30000;
 export async function enrichPlanWithUsdaData(
   plan: WeeklyTherapeuticPlan,
 ): Promise<WeeklyTherapeuticPlan> {
+  if (!shouldUseLocalInternalApi) {
+    return plan;
+  }
+
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
 

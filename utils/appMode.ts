@@ -1,6 +1,6 @@
 export type ExecutionMode = 'MOCK' | 'LIVE';
 
-type ImportMetaEnvLike = ImportMeta & { env?: Record<string, string | undefined> };
+type ImportMetaEnvLike = ImportMeta & { env?: Record<string, string | boolean | undefined> };
 
 const env = (import.meta as ImportMetaEnvLike).env || {};
 const useMockDataEnv = String(env.VITE_USE_MOCK_DATA || '').toLowerCase() === 'true';
@@ -16,4 +16,7 @@ export const isMockMode = executionMode === 'MOCK';
 // Supabase's REST API for persistence instead of /api/* internal endpoints.
 export const supabaseUrl = String(env.VITE_SUPABASE_URL || '').trim();
 export const supabaseAnonKey = String(env.VITE_SUPABASE_ANON_KEY || '').trim();
+export const hasSupabaseConfig = supabaseUrl.length > 0 && supabaseAnonKey.length > 0;
 export const isCloudflareMode = supabaseUrl.length > 0;
+export const isProductionBrowser = Boolean(env.PROD);
+export const shouldUseLocalInternalApi = !isProductionBrowser && !isCloudflareMode;

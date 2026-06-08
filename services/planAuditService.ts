@@ -1,5 +1,5 @@
 import type { WeeklyTherapeuticPlan } from '../types';
-import { isCloudflareMode } from '../utils/appMode';
+import { hasSupabaseConfig, shouldUseLocalInternalApi } from '../utils/appMode';
 import { supabaseInsert, supabaseSelect, supabasePatch } from './supabaseClient';
 
 export type PlanStatus = 'DRAFT' | 'PENDING_REVIEW' | 'APPROVED' | 'SENT_TO_KITCHEN' | 'REJECTED';
@@ -81,7 +81,7 @@ export async function savePlan(
   nrsRiskLevel?: NrsRisk,
   nrsScore?: number,
 ): Promise<string> {
-  if (isCloudflareMode) {
+  if (hasSupabaseConfig) {
     try {
       const id = generateId();
       const now = new Date().toISOString();
@@ -105,6 +105,10 @@ export async function savePlan(
     }
   }
 
+  if (!shouldUseLocalInternalApi) {
+    return '';
+  }
+
   try {
     const res = await fetch('/api/internal/plans/save', {
       method: 'POST',
@@ -120,7 +124,7 @@ export async function savePlan(
 }
 
 export async function submitReview(planId: string, req: ReviewRequest): Promise<void> {
-  if (isCloudflareMode) {
+  if (hasSupabaseConfig) {
     const now = new Date().toISOString();
     await supabasePatch('plan_audit_log', `id=eq.${encodeURIComponent(planId)}`, {
       status: req.status,
@@ -133,6 +137,10 @@ export async function submitReview(planId: string, req: ReviewRequest): Promise<
     return;
   }
 
+  if (!shouldUseLocalInternalApi) {
+    return;
+  }
+
   const res = await fetch(`/api/internal/plans/${planId}/review`, {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
@@ -142,7 +150,7 @@ export async function submitReview(planId: string, req: ReviewRequest): Promise<
 }
 
 export async function getPlanHistory(): Promise<PlanRecord[]> {
-  if (isCloudflareMode) {
+  if (hasSupabaseConfig) {
     try {
       const rows = await supabaseSelect<Record<string, unknown>>(
         'plan_audit_log',
@@ -154,13 +162,17 @@ export async function getPlanHistory(): Promise<PlanRecord[]> {
     }
   }
 
+  if (!shouldUseLocalInternalApi) {
+    return [];
+  }
+
   const res = await fetch('/api/internal/plans/history');
   if (!res.ok) throw new Error('Failed to fetch history');
   return res.json() as Promise<PlanRecord[]>;
 }
 
 export async function getPlanById(id: string): Promise<PlanRecordFull | null> {
-  if (isCloudflareMode) {
+  if (hasSupabaseConfig) {
     try {
       const rows = await supabaseSelect<Record<string, unknown>>(
         'plan_audit_log',
@@ -172,6 +184,10 @@ export async function getPlanById(id: string): Promise<PlanRecordFull | null> {
     } catch {
       return null;
     }
+  }
+
+  if (!shouldUseLocalInternalApi) {
+    return null;
   }
 
   const res = await fetch(`/api/internal/plans/${id}`);

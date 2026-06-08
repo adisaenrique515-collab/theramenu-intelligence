@@ -58,7 +58,7 @@ export interface ClinicalCoverageReadinessResponse {
 
 // ── Cache ─────────────────────────────────────────────────────────────────
 
-import { isCloudflareMode } from '../utils/appMode';
+import { shouldUseLocalInternalApi } from '../utils/appMode';
 
 const EMPTY_THRESHOLDS: CoverageThresholds = {
   grainStarch: 0, protein: 0, vegetable: 0, fruit: 0,
@@ -70,7 +70,7 @@ const EMPTY_THRESHOLDS: CoverageThresholds = {
 let cachedReadinessPromise: Promise<ClinicalCoverageReadinessResponse> | null = null;
 
 export async function loadClinicalCoverageReadiness(): Promise<ClinicalCoverageReadinessResponse> {
-  if (isCloudflareMode) {
+  if (!shouldUseLocalInternalApi) {
     return {
       summaries: [],
       thresholds: EMPTY_THRESHOLDS,

@@ -1,12 +1,12 @@
 import type { ResourcePackSummary } from '../resourcePack.types';
-import { isCloudflareMode } from '../utils/appMode';
+import { shouldUseLocalInternalApi } from '../utils/appMode';
 
 const EMPTY_SEED = { sourceDocument: '', sourceFramework: '', resourceType: '', rules: {} };
 
 let cachedSummaryPromise: Promise<ResourcePackSummary> | null = null;
 
 export async function loadResourcePackSummary(): Promise<ResourcePackSummary> {
-  if (isCloudflareMode) {
+  if (!shouldUseLocalInternalApi) {
     return {
       foodsCount: 0,
       foodsWithMeasures: 0,

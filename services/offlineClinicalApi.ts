@@ -1,10 +1,10 @@
 import type { OfflineClinicalOverview } from '../offlineClinical.types';
-import { isCloudflareMode } from '../utils/appMode';
+import { shouldUseLocalInternalApi } from '../utils/appMode';
 
 let cachedOverviewPromise: Promise<OfflineClinicalOverview> | null = null;
 
 export async function loadOfflineClinicalOverview(): Promise<OfflineClinicalOverview> {
-  if (isCloudflareMode) {
+  if (!shouldUseLocalInternalApi) {
     return {
       networkStatus: 'offline',
       engineMode: 'internal-api',
