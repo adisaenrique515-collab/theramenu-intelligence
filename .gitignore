@@ -55,3 +55,6 @@ CON
 # ── Large data files (exceed GitHub 100 MB limit) ─────────────────────────────
 Thera-menu-main/data/bfpd-import/
 Thera-menu-main/data/local-db/*.sqlite
+
+# ── Local ETL / runtime nutrition DB (auto-hydrated from USDA flat files) ─────
+data/local-db/*.sqlite

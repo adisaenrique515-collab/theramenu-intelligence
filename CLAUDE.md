@@ -82,6 +82,10 @@ cd Thera-menu-main && npm run smoke:offline
 - `@types/react@^19` and `@types/react-dom@^19` are in `package.json` devDependencies but not yet installed (network was unavailable). Run `npm install` inside `Thera-menu-main/` to resolve IDE React type errors. The Vite build works regardless (`skipLibCheck: true`).
 - USDA FDC API key in `.env.local` should be rotated — it was previously in a committed file.
 
+## Local nutrition database
+
+`data/local-db/*.sqlite` is local ETL/runtime data and must not be committed (gitignored). `theramenu-clinical.sqlite` is auto-hydrated from USDA flat files (`FOOD_DES.txt`, `NUT_DATA.txt`, `WEIGHT.txt`) on first server request — place them in `data/usda-flatfiles/`, `resources/usda-flatfiles/`, or set `THERAMENU_USDA_FLATFILE_DIR`. MOCK mode does not require the local DB.
+
 ## File relationships worth knowing
 
 - `types.ts` is imported by both client services AND server modules
