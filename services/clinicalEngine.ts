@@ -81,6 +81,7 @@ interface WeeklySignatureState {
   usedMealSignatures: Set<string>;
   usedSnackSignatures: Set<string>;
   fallbackReasons: string[];
+  currentDayCoreSignatures: Set<string>;
 }
 
 function cloneTargets(targets: ClinicalTargets): ClinicalTargets {
@@ -363,6 +364,18 @@ function buildNonBeverageMealSignature(meal: MealPlan): string {
   return `${meal.mealType}|${slotParts.join('|')}`;
 }
 
+function buildSameDayCoreSignature(meal: MealPlan): string {
+  return (meal.slots || [])
+    .filter((slot) => !isBeverageSignatureSlot(slot.slotName))
+    .map((slot) => slot.item?.foodId || 'EMPTY')
+    .sort()
+    .join('|');
+}
+
+function shouldApplySameDayCoreGuard(mealType: SchemaMealType): boolean {
+  return mealType === 'lunch' || mealType === 'dinner';
+}
+
 function buildSnackSignature(meal: MealPlan): string {
   const snackItem = (meal.slots || []).find((slot) => slot.slotName.toLowerCase().includes('snack'));
   return `${meal.mealType}|${snackItem?.item?.foodId || 'EMPTY'}`;
@@ -436,15 +449,32 @@ function buildMealFromSchema(
   for (let attempt = 0; attempt < MAX_ANTI_REPETITION_ATTEMPTS; attempt += 1) {
     const meal = attempt === 0 ? fallbackMeal : buildAttempt(attempt);
     const signature = buildNonBeverageMealSignature(meal);
-    if (!signatureState.usedMealSignatures.has(signature)) {
+    const sameDayCoreSignature = buildSameDayCoreSignature(meal);
+    const sameDayCoreAvailable =
+      !shouldApplySameDayCoreGuard(mealType) ||
+      !signatureState.currentDayCoreSignatures.has(sameDayCoreSignature);
+
+    if (!signatureState.usedMealSignatures.has(signature) && sameDayCoreAvailable) {
       signatureState.usedMealSignatures.add(signature);
+      if (shouldApplySameDayCoreGuard(mealType)) {
+        signatureState.currentDayCoreSignatures.add(sameDayCoreSignature);
+      }
       return meal;
     }
   }
 
   const fallbackSignature = buildNonBeverageMealSignature(fallbackMeal);
+  const fallbackCoreSignature = buildSameDayCoreSignature(fallbackMeal);
+  const sameDayCoreDuplicate =
+    shouldApplySameDayCoreGuard(mealType) &&
+    signatureState.currentDayCoreSignatures.has(fallbackCoreSignature);
   signatureState.usedMealSignatures.add(fallbackSignature);
-  const reason = `${fallbackMeal.mealType} repeated after ${MAX_ANTI_REPETITION_ATTEMPTS} safe anti-repetition attempts; protocol-safe candidates took priority.`;
+  if (shouldApplySameDayCoreGuard(mealType)) {
+    signatureState.currentDayCoreSignatures.add(fallbackCoreSignature);
+  }
+  const reason = sameDayCoreDuplicate
+    ? `${fallbackMeal.mealType} repeated a same-day core combination after ${MAX_ANTI_REPETITION_ATTEMPTS} safe anti-repetition attempts; protocol-safe candidates took priority.`
+    : `${fallbackMeal.mealType} repeated after ${MAX_ANTI_REPETITION_ATTEMPTS} safe anti-repetition attempts; protocol-safe candidates took priority.`;
   signatureState.fallbackReasons.push(reason);
   return addFallbackNoteToFirstNonBeverageSlot(fallbackMeal, reason);
 }
@@ -633,9 +663,11 @@ export function generateWeeklyPlan(profile: PatientProfile): WeeklyTherapeuticPl
     usedMealSignatures: new Set<string>(),
     usedSnackSignatures: new Set<string>(),
     fallbackReasons: [],
+    currentDayCoreSignatures: new Set<string>(),
   };
 
   const days: DayPlan[] = DAYS.map((dayName, dayIdx) => {
+    signatureState.currentDayCoreSignatures = new Set<string>();
     const schemaMeals =
       enriched?.schemaConfig
         ? (['breakfast', 'lunch', 'dinner'] as const)
