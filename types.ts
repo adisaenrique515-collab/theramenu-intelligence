@@ -414,6 +414,38 @@ export interface WeeklyTherapeuticPlan {
   validationReport?: PlanValidationReport;
 }
 
+export type ShadowSafetyGateCode =
+  | 'allergen_screen'
+  | 'medication_interaction_screen'
+  | 'diagnosis_protocol_compliance'
+  | 'nutrient_limit_screen'
+  | 'iddsi_texture_documentation'
+  | 'haccp_kitchen_documentation'
+  | 'signoff_printability';
+
+export type ShadowSafetyGateStatus = 'pass' | 'warn' | 'block' | 'pending' | 'not_configured';
+
+export interface ShadowSafetyGateResult {
+  readonly code: ShadowSafetyGateCode;
+  readonly label: string;
+  readonly status: ShadowSafetyGateStatus;
+  readonly enforced: false;
+  readonly summary: string;
+  readonly findings: readonly string[];
+  readonly requiresStructuredInput?: boolean;
+  readonly requiresSupabase?: boolean;
+  readonly requiresAttestation?: boolean;
+}
+
+export interface ShadowSafetyReport {
+  readonly mode: 'shadow_only';
+  readonly enforced: false;
+  readonly generatedAt: string;
+  readonly overallStatus: ShadowSafetyGateStatus;
+  readonly disclaimer: 'Shadow safety evaluation - not yet enforced';
+  readonly gates: readonly ShadowSafetyGateResult[];
+}
+
 export enum DiagnosisType {
   CARDIAC = "CARDIAC",
   RENAL = "RENAL",

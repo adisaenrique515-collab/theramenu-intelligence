@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TherapeuticForm from './components/TherapeuticForm';
 import MenuResult from './components/MenuResult';
 import DiagnosisDB from './components/DiagnosisDB';
@@ -22,6 +22,9 @@ import { WorkflowStepper } from './components/thera/WorkflowStepper';
 import { Disclaimer } from './components/thera/ui';
 import type { GeneratedPlan } from './components/thera/types';
 import GeneratorShell from './components/GeneratorShell';
+import { ShadowSafetyReportCard } from './components/ShadowSafetyReportCard';
+import { buildShadowSafetyReport } from './services/shadowSafetyGateService';
+import type { ShadowSafetyReport } from './types';
 
 type TabId = 'generator' | 'plan' | 'db' | 'logs' | 'screening' | 'compliance';
 
@@ -133,6 +136,7 @@ const App: React.FC = () => {
   const [kitchenNotice, setKitchenNotice]     = useState<KitchenNotice | null>(null);
   const [nrsResult, setNrsResult]             = useState<NrsResult | null>(null);
   const [lastPatientData, setLastPatientData] = useState<Record<string, unknown>>({});
+  const [shadowSafetyReport, setShadowSafetyReport] = useState<ShadowSafetyReport | null>(null);
 
   const hasGeneratedPlan = !!result;
   const canOpenKitchen = hasGeneratedPlan && (planStatus === 'APPROVED' || planStatus === 'SENT_TO_KITCHEN');
@@ -151,6 +155,7 @@ const App: React.FC = () => {
     setPlanStatus('DRAFT');
     setReviewedBy('');
     setKitchenNotice(null);
+    setShadowSafetyReport(null);
     setMobileView('result');
     setLastPatientData({ ...patientData, diagnosis } as Record<string, unknown>);
 
@@ -211,6 +216,15 @@ const App: React.FC = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (!result) {
+      setShadowSafetyReport(null);
+      return;
+    }
+
+    setShadowSafetyReport(buildShadowSafetyReport(result, { planId, planStatus, reviewedBy }));
+  }, [planId, planStatus, result, reviewedBy]);
 
   const handleScreeningComplete = (score: number, risk: NrsRisk) => {
     setNrsResult({ score, risk });
@@ -510,6 +524,8 @@ const App: React.FC = () => {
 
                     {renderPlanStatusShell()}
 
+                    {shadowSafetyReport && <ShadowSafetyReportCard report={shadowSafetyReport} />}
+
                     <MenuResult plan={result} />
                   </div>
                 )}
@@ -543,6 +559,7 @@ const App: React.FC = () => {
                 />
               )}
               {renderPlanStatusShell()}
+              {shadowSafetyReport && <ShadowSafetyReportCard report={shadowSafetyReport} />}
               <MenuResult plan={result} />
             </div>
           )}
