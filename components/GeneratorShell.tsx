@@ -14,26 +14,22 @@ import { isCloudflareMode } from '../utils/appMode';
 import { ProtocolPanel } from './ProtocolPanel';
 
 interface ComputedTargets {
-  energyKcal: number;
-  proteinG: number;
-  sodiumMg: number;
+  label: string;
+  value: string;
 }
 
-function computeTargets(p: Record<string, unknown>): ComputedTargets | null {
-  const weight = Number(p.weightKg);
-  const height = Number(p.heightCm);
-  const age = Number(p.age);
-  const sex = String(p.sex ?? '');
-  if (!weight || !height || !age) return null;
-  const bmr =
-    sex === 'male'
-      ? 10 * weight + 6.25 * height - 5 * age + 5
-      : 10 * weight + 6.25 * height - 5 * age - 161;
-  return {
-    energyKcal: Math.round(bmr * 1.3),
-    proteinG: Math.round(weight * 1.2),
-    sodiumMg: 2000,
-  };
+function buildGenerationSummary(p: Record<string, unknown>): ComputedTargets[] {
+  const diagnosis = typeof p.diagnosis === 'string' && p.diagnosis ? p.diagnosis : 'Awaiting diagnosis';
+  const texture = typeof p.textureLevel === 'string' && p.textureLevel ? p.textureLevel : 'Form default';
+  const mealCount = Number(p.mealCount);
+  const riskLevel = typeof p.riskLevel === 'string' && p.riskLevel ? p.riskLevel : 'Form default';
+
+  return [
+    { label: 'Diagnosis route', value: diagnosis },
+    { label: 'Texture', value: texture },
+    { label: 'Meals per day', value: Number.isFinite(mealCount) && mealCount > 0 ? String(mealCount) : 'Form default' },
+    { label: 'Risk level', value: riskLevel },
+  ];
 }
 
 function Stat({ label, value }: { label: string; value: string }) {
@@ -75,7 +71,7 @@ export default function GeneratorShell({
   const [extracted, setExtracted] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
-  const targets = computeTargets(lastPatientData);
+  const generationSummary = buildGenerationSummary(lastPatientData);
   const showSidebar = !hasResult && !loading;
   const diagnosis = typeof lastPatientData.diagnosis === 'string' ? lastPatientData.diagnosis : undefined;
 
@@ -204,20 +200,25 @@ export default function GeneratorShell({
               <ProtocolPanel diagnosis={diagnosis} />
 
               <Card className="p-5">
-                <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-500">
-                  Computed Targets
-                </h3>
-                {targets ? (
-                  <dl className="space-y-4">
-                    <Stat label="Energy Target" value={`${targets.energyKcal} kcal / day`} />
-                    <Stat label="Protein Target" value={`${targets.proteinG} g / day`} />
-                    <Stat label="Sodium Limit" value={`${targets.sodiumMg} mg / day`} />
-                  </dl>
-                ) : (
-                  <p className="text-sm text-slate-500">Generate a plan to see computed targets.</p>
-                )}
-                <p className="mt-6 text-xs text-slate-500">
-                  BMR via Mifflin-St Jeor at moderate activity. Protein at 1.2 g/kg.
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <div>
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+                      Generation Summary
+                    </h3>
+                    <p className="mt-1 text-xs leading-5 text-slate-500">
+                      Uses the current TheraMenu clinical protocol engine. Target math is shown after generation from
+                      the produced plan.
+                    </p>
+                  </div>
+                  <Badge tone="blue">Read only</Badge>
+                </div>
+                <dl className="space-y-4">
+                  {generationSummary.map((item) => (
+                    <Stat key={item.label} label={item.label} value={item.value} />
+                  ))}
+                </dl>
+                <p className="mt-6 text-xs leading-5 text-slate-500">
+                  Meal plans remain in draft status until dietitian review. Kitchen Output is gated by approval.
                 </p>
               </Card>
 

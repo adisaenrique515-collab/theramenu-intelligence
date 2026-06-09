@@ -198,6 +198,8 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
   const [patientData, setPatientData] = useState<PatientData>(DEFAULT_PATIENT);
 
   const isDiabetes = selectedDiagnosis === DiagnosisType.DIABETIC;
+  const selectedDiagnosisLabel = selectedDiagnosis || 'Select diagnosis';
+  const engineModeLabel = 'TheraMenu protocol engine';
 
   const setField = <K extends keyof PatientData>(key: K, value: PatientData[K]) => {
     setPatientData((current) => ({ ...current, [key]: value }));
@@ -534,6 +536,36 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
               <span className="font-mono text-[7px] uppercase tracking-widest text-slate-400">Local Narrative Store</span>
               <i className="fas fa-check-circle text-[10px] text-emerald-500"></i>
             </div>
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-blue-100 bg-blue-50/60 p-5">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.25em] text-blue-700">Generation Summary</p>
+              <h3 className="mt-1 text-sm font-black text-slate-900">Clinical route preview</h3>
+              <p className="mt-2 max-w-2xl text-xs leading-5 text-slate-600">
+                Generation uses the current TheraMenu clinical protocol engine. The plan remains a draft for
+                dietitian review before kitchen use.
+              </p>
+            </div>
+            <Badge tone={selectedDiagnosis ? 'emerald' : 'amber'}>
+              {selectedDiagnosis ? 'Route selected' : 'Diagnosis required'}
+            </Badge>
+          </div>
+
+          <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            {[
+              { label: 'Diagnosis', value: selectedDiagnosisLabel },
+              { label: 'Texture', value: patientData.textureLevel },
+              { label: 'Meals/day', value: `${patientData.mealCount}` },
+              { label: 'Output mode', value: engineModeLabel },
+            ].map((item) => (
+              <div key={item.label} className="rounded-xl border border-blue-100 bg-white px-4 py-3">
+                <p className="font-mono text-[8px] font-black uppercase tracking-widest text-slate-400">{item.label}</p>
+                <p className="mt-1 truncate text-xs font-black uppercase text-slate-800">{item.value}</p>
+              </div>
+            ))}
           </div>
         </section>
 
