@@ -23,10 +23,11 @@ import { Disclaimer } from './components/thera/ui';
 import type { GeneratedPlan } from './components/thera/types';
 import GeneratorShell from './components/GeneratorShell';
 
-type TabId = 'generator' | 'db' | 'logs' | 'screening' | 'compliance';
+type TabId = 'generator' | 'plan' | 'db' | 'logs' | 'screening' | 'compliance';
 
 const appToShellTab: Record<TabId, TabKey> = {
   generator: 'generator',
+  plan: 'plan',
   db: 'diagnosis',
   logs: 'audit',
   screening: 'screening',
@@ -274,7 +275,7 @@ const App: React.FC = () => {
       return;
     }
     if (tab === 'plan') {
-      setActiveTab('generator');
+      setActiveTab('plan');
       setMobileView('result');
       return;
     }
@@ -298,6 +299,119 @@ const App: React.FC = () => {
           : 'draft',
       }
     : null;
+
+  const planStatusSummary = result ? {
+    validationTone: result.validationReport ? (result.validationReport.passed ? 'emerald' : 'red') : 'slate',
+    validationLabel: result.validationReport ? (result.validationReport.passed ? 'Passed' : 'Review required') : 'Not available',
+    validationDetail: result.validationReport?.summary
+      ? `${result.validationReport.summary.nutrientChecksPassed}/${result.validationReport.summary.nutrientChecksTotal} nutrient checks passed`
+      : 'Validation report has not been attached to this plan.',
+    protocolLabel:
+      result.therapeuticEngine?.recommendedDiets?.map((diet) => diet.code).join(', ') ||
+      result.compoundDietCodes?.join(', ') ||
+      result.diagnosis,
+    reviewLabel:
+      planStatus === 'APPROVED' ? 'Approved'
+      : planStatus === 'SENT_TO_KITCHEN' ? 'Sent to kitchen'
+      : planStatus === 'REJECTED' ? 'Rejected'
+      : planStatus === 'PENDING_REVIEW' ? 'Pending review'
+      : 'Draft',
+    kitchenLabel: canOpenKitchen ? 'Eligible' : 'Blocked',
+    kitchenDetail: canOpenKitchen
+      ? 'Kitchen Output is available for this plan.'
+      : 'Dietitian approval is required before Kitchen Output.',
+  } : null;
+
+  const renderPlanStatusShell = () => {
+    if (!result || !planStatusSummary) return null;
+
+    return (
+      <Card className="space-y-4 p-4">
+        <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
+          <div className="min-w-0">
+            <div className="mb-2 flex flex-wrap items-center gap-2">
+              <Badge tone={planStatusTone(planStatus)}>{planStatus.replace('_', ' ')}</Badge>
+              {result.carePathLabel && <Badge tone="emerald">{result.carePathLabel}</Badge>}
+              {result.engineMode && <Badge tone="blue">{result.engineMode}</Badge>}
+            </div>
+            <h2 className="text-lg font-semibold text-slate-900">{result.diagnosis}</h2>
+            <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500">
+              <span>
+                Plan ID:{' '}
+                <span className="font-mono font-semibold text-slate-800">{planId ?? 'Not saved'}</span>
+              </span>
+              <span>
+                Texture:{' '}
+                <span className="font-mono font-semibold text-slate-800">{result.constraints?.textureLevel ?? 'Regular'}</span>
+              </span>
+              <span>
+                Alignment:{' '}
+                <span className="font-mono font-semibold text-slate-800">{result.clinicalAlignmentScore}%</span>
+              </span>
+            </div>
+            {reviewedBy && (
+              <div className="mt-2 flex items-center gap-2 text-sm text-slate-600">
+                <CheckCircle2 className="h-4 w-4 text-emerald-600" aria-hidden />
+                <span>{reviewedBy}</span>
+              </div>
+            )}
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            {planId && planStatus === 'DRAFT' && (
+              <Button type="button" onClick={() => setShowReview(true)}>
+                Dietitian review
+              </Button>
+            )}
+            <Button
+              type="button"
+              onClick={handleKitchenOutputRequest}
+              className={canOpenKitchen ? 'bg-emerald-600 hover:bg-emerald-700' : undefined}
+            >
+              Kitchen sheet
+            </Button>
+          </div>
+        </div>
+
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          {[
+            {
+              label: 'Review status',
+              value: planStatusSummary.reviewLabel,
+              detail: reviewedBy ? `Signed by ${reviewedBy}` : 'Dietitian sign-off controls remain unchanged.',
+              tone: planStatusTone(planStatus),
+            },
+            {
+              label: 'Kitchen eligibility',
+              value: planStatusSummary.kitchenLabel,
+              detail: planStatusSummary.kitchenDetail,
+              tone: canOpenKitchen ? 'emerald' : 'amber',
+            },
+            {
+              label: 'Validation',
+              value: planStatusSummary.validationLabel,
+              detail: planStatusSummary.validationDetail,
+              tone: planStatusSummary.validationTone,
+            },
+            {
+              label: 'Protocol',
+              value: planStatusSummary.protocolLabel,
+              detail: result.constraints?.nutrientTargets ?? 'Current weekly plan remains the clinical source of truth.',
+              tone: 'blue',
+            },
+          ].map((item) => (
+            <Card key={item.label} className="bg-slate-50 p-3">
+              <div className="mb-2 flex items-center justify-between gap-2">
+                <p className="font-mono text-[9px] font-bold uppercase tracking-widest text-slate-400">{item.label}</p>
+                <Badge tone={item.tone as 'slate' | 'blue' | 'emerald' | 'amber' | 'red'}>{item.value}</Badge>
+              </div>
+              <p className="line-clamp-3 text-xs leading-5 text-slate-600">{item.detail}</p>
+            </Card>
+          ))}
+        </div>
+      </Card>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 pb-20 font-sans selection:bg-blue-100">
@@ -394,39 +508,7 @@ const App: React.FC = () => {
                       />
                     )}
 
-                    {/* Workflow status bar */}
-                    <Card className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between">
-                      <div className="min-w-0">
-                        <div className="flex flex-wrap items-center gap-2">
-                          <Badge tone={planStatusTone(planStatus)}>{planStatus.replace('_', ' ')}</Badge>
-                          {planId && (
-                            <span className="font-mono text-xs text-slate-500">
-                              ID: <span className="font-semibold text-blue-700">{planId}</span>
-                            </span>
-                          )}
-                        </div>
-                        {reviewedBy && (
-                          <div className="mt-2 flex items-center gap-2 text-sm text-slate-600">
-                            <CheckCircle2 className="h-4 w-4 text-emerald-600" aria-hidden />
-                            <span>{reviewedBy}</span>
-                          </div>
-                        )}
-                      </div>
-                      <div className="flex flex-wrap items-center gap-2">
-                        {planId && planStatus === 'DRAFT' && (
-                          <Button type="button" onClick={() => setShowReview(true)}>
-                            Dietitian review
-                          </Button>
-                        )}
-                        <Button
-                          type="button"
-                          onClick={handleKitchenOutputRequest}
-                          className={canOpenKitchen ? 'bg-emerald-600 hover:bg-emerald-700' : undefined}
-                        >
-                          Kitchen sheet
-                        </Button>
-                      </div>
-                    </Card>
+                    {renderPlanStatusShell()}
 
                     <MenuResult plan={result} />
                   </div>
@@ -434,6 +516,36 @@ const App: React.FC = () => {
               </>
             }
           />
+        </main>
+      )}
+
+      {activeTab === 'plan' && (
+        <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+          {!result ? (
+            <StateView
+              kind="empty"
+              title="No plan generated yet"
+              description="Complete the Generator to synthesize a therapeutic weekly plan before opening the Plan workflow."
+              actions={(
+                <Button type="button" onClick={() => setActiveTab('generator')}>
+                  Open generator
+                </Button>
+              )}
+            />
+          ) : (
+            <div id="result-section" className="space-y-4 pb-12">
+              {kitchenNotice && (
+                <StateView
+                  compact
+                  kind="warning"
+                  title={kitchenNotice.title}
+                  description={kitchenNotice.description}
+                />
+              )}
+              {renderPlanStatusShell()}
+              <MenuResult plan={result} />
+            </div>
+          )}
         </main>
       )}
 
