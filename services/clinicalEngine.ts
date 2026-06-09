@@ -75,6 +75,13 @@ const FOOD_BY_ID = new Map(FOODS.map((food) => [food.food_id, food]));
 const SNACK_MEAL_TYPES: Array<MealPlan['mealType']> = ['Snack AM', 'Snack PM', 'Snack Eve'];
 // Maps snackIdx (0=AM, 1=PM, 2=Eve) to the SchemaMealType used in PROTOCOL_SLOT_CANDIDATES.
 const SNACK_IDX_TO_MEAL_TYPE: readonly SchemaMealType[] = ['snack_am', 'snack_pm', 'snack_eve'];
+const MAX_ANTI_REPETITION_ATTEMPTS = 12;
+
+interface WeeklySignatureState {
+  usedMealSignatures: Set<string>;
+  usedSnackSignatures: Set<string>;
+  fallbackReasons: string[];
+}
 
 function cloneTargets(targets: ClinicalTargets): ClinicalTargets {
   return { ...targets };
@@ -314,24 +321,66 @@ function buildSlotItem(slotName: string, foodId: string | null, requestedTexture
   };
 }
 
+function getSafeCandidateFoodIds(
+  config: ProtocolConfig,
+  candidates: { food_id: string; priority: number }[],
+  requestedTexture: SchemaTextureClass,
+): string[] {
+  const sorted = [...candidates].sort((a, b) => b.priority - a.priority);
+  return sorted
+    .map((candidate) => candidate.food_id)
+    .filter((foodId) => matchesTexture(foodId, requestedTexture))
+    .filter((foodId) => protocolSpecificFilter(foodId, config));
+}
+
 function pickCandidateFoodId(
   config: ProtocolConfig,
   slotName: string,
   candidates: { food_id: string; priority: number }[],
   requestedTexture: SchemaTextureClass,
   dayOffset: number,
+  attemptOffset = 0,
 ): string | null {
-  const sorted = [...candidates].sort((a, b) => b.priority - a.priority);
-  const filteredCandidates = sorted
-    .map((candidate) => candidate.food_id)
-    .filter((foodId) => matchesTexture(foodId, requestedTexture))
-    .filter((foodId) => protocolSpecificFilter(foodId, config));
+  const filteredCandidates = getSafeCandidateFoodIds(config, candidates, requestedTexture);
 
   if (filteredCandidates.length > 0) {
-    return filteredCandidates[dayOffset % filteredCandidates.length] || null;
+    return filteredCandidates[(dayOffset + attemptOffset) % filteredCandidates.length] || null;
   }
 
   return pickFoodIdFromCategories(config, inferSlotCategories(slotName), requestedTexture, dayOffset);
+}
+
+function isBeverageSignatureSlot(slotName: string): boolean {
+  const normalized = slotName.toLowerCase();
+  return normalized.includes('beverage') || normalized.includes('hydration');
+}
+
+function buildNonBeverageMealSignature(meal: MealPlan): string {
+  const slotParts = (meal.slots || [])
+    .filter((slot) => !isBeverageSignatureSlot(slot.slotName))
+    .map((slot) => `${slot.slotName.toLowerCase()}:${slot.item?.foodId || 'EMPTY'}`)
+    .sort();
+  return `${meal.mealType}|${slotParts.join('|')}`;
+}
+
+function buildSnackSignature(meal: MealPlan): string {
+  const snackItem = (meal.slots || []).find((slot) => slot.slotName.toLowerCase().includes('snack'));
+  return `${meal.mealType}|${snackItem?.item?.foodId || 'EMPTY'}`;
+}
+
+function addFallbackNoteToFirstNonBeverageSlot(meal: MealPlan, note: string): MealPlan {
+  let noteApplied = false;
+  return {
+    ...meal,
+    slots: meal.slots?.map((slot) => {
+      if (noteApplied || isBeverageSignatureSlot(slot.slotName)) return slot;
+      noteApplied = true;
+      return {
+        ...slot,
+        substitutionNote: slot.substitutionNote ? `${slot.substitutionNote} ${note}` : note,
+      };
+    }),
+  };
 }
 
 function buildMealFromSchema(
@@ -339,13 +388,16 @@ function buildMealFromSchema(
   mealType: SchemaMealType,
   texture: SchemaTextureClass,
   dayOffset: number,
+  signatureState?: WeeklySignatureState,
 ): MealPlan | null {
   if (!SCHEMA_TO_UI_MEAL[mealType as 'breakfast' | 'lunch' | 'dinner']) return null;
 
-  const slots = config.slots
+  const schemaSlots = config.slots
     .filter((slot) => slot.meal_type === mealType)
-    .sort((a, b) => a.slot_order - b.slot_order)
-    .map((slot) => {
+    .sort((a, b) => a.slot_order - b.slot_order);
+
+  const buildAttempt = (attemptOffset: number): MealPlan => {
+    const slots = schemaSlots.map((slot, slotIdx) => {
       const candidates = config.candidates
         .filter((candidate) => candidate.meal_type === mealType && candidate.slot_name === slot.slot_name)
         .sort((a, b) => b.priority - a.priority);
@@ -356,6 +408,7 @@ function buildMealFromSchema(
         candidates,
         texture,
         dayOffset + slot.slot_order,
+        attemptOffset * (slotIdx + 1),
       );
       const item = buildSlotItem(slot.slot_name, foodId, texture);
       return {
@@ -370,17 +423,37 @@ function buildMealFromSchema(
       } as MealSlot;
     });
 
-  return {
-    mealType: SCHEMA_TO_UI_MEAL[mealType as 'breakfast' | 'lunch' | 'dinner'],
-    dietaryLabel: config.protocol.protocol_name,
-    slots,
+    return {
+      mealType: SCHEMA_TO_UI_MEAL[mealType as 'breakfast' | 'lunch' | 'dinner'],
+      dietaryLabel: config.protocol.protocol_name,
+      slots,
+    };
   };
+
+  const fallbackMeal = buildAttempt(0);
+  if (!signatureState) return fallbackMeal;
+
+  for (let attempt = 0; attempt < MAX_ANTI_REPETITION_ATTEMPTS; attempt += 1) {
+    const meal = attempt === 0 ? fallbackMeal : buildAttempt(attempt);
+    const signature = buildNonBeverageMealSignature(meal);
+    if (!signatureState.usedMealSignatures.has(signature)) {
+      signatureState.usedMealSignatures.add(signature);
+      return meal;
+    }
+  }
+
+  const fallbackSignature = buildNonBeverageMealSignature(fallbackMeal);
+  signatureState.usedMealSignatures.add(fallbackSignature);
+  const reason = `${fallbackMeal.mealType} repeated after ${MAX_ANTI_REPETITION_ATTEMPTS} safe anti-repetition attempts; protocol-safe candidates took priority.`;
+  signatureState.fallbackReasons.push(reason);
+  return addFallbackNoteToFirstNonBeverageSlot(fallbackMeal, reason);
 }
 
 function buildSnackMeals(
   config: ProtocolConfig,
   texture: SchemaTextureClass,
   dayOffset: number,
+  signatureState?: WeeklySignatureState,
 ): MealPlan[] {
   const snackCategories: SchemaFoodCategory[][] = [
     ['fruit', 'grain'],
@@ -393,21 +466,23 @@ function buildSnackMeals(
     const snackCandidates = config.candidates.filter(
       (c) => c.meal_type === snackMealType && c.slot_name === 'snack_item',
     );
-    const snackFoodId =
-      snackCandidates.length > 0
-        ? pickCandidateFoodId(config, 'snack_item', snackCandidates, texture, dayOffset + snackIdx + 1)
-        : pickFoodIdFromCategories(
-            config,
-            snackCategories[snackIdx] || ['fruit', 'grain'],
-            texture,
-            dayOffset + snackIdx + 1,
-          );
+    const safeSnackIds = getSafeCandidateFoodIds(config, snackCandidates, texture);
+    const buildSnackAttempt = (attemptOffset: number): MealPlan => {
+      const snackFoodId =
+        safeSnackIds.length > 0
+          ? safeSnackIds[(dayOffset + snackIdx + 1 + attemptOffset) % safeSnackIds.length] || null
+          : pickFoodIdFromCategories(
+              config,
+              snackCategories[snackIdx] || ['fruit', 'grain'],
+              texture,
+              dayOffset + snackIdx + 1,
+            );
 
-    const snackFood = snackFoodId ? FOOD_BY_ID.get(snackFoodId) : null;
-    const snackPortion =
-      snackFood?.category === 'protein' || snackFood?.category === 'legume' ? '80g' : '100g';
+      const snackFood = snackFoodId ? FOOD_BY_ID.get(snackFoodId) : null;
+      const snackPortion =
+        snackFood?.category === 'protein' || snackFood?.category === 'legume' ? '80g' : '100g';
 
-    return {
+      return {
       mealType: snackType,
       dietaryLabel: config.protocol.protocol_name,
       slots: [
@@ -434,7 +509,29 @@ function buildSnackMeals(
           status: 'FILLED',
         },
       ],
-    } as MealPlan;
+      } as MealPlan;
+    };
+
+    const fallbackSnack = buildSnackAttempt(0);
+    if (!signatureState) return fallbackSnack;
+
+    for (let attempt = 0; attempt < MAX_ANTI_REPETITION_ATTEMPTS; attempt += 1) {
+      const snack = attempt === 0 ? fallbackSnack : buildSnackAttempt(attempt);
+      const signature = buildSnackSignature(snack);
+      if (!signatureState.usedSnackSignatures.has(signature)) {
+        signatureState.usedSnackSignatures.add(signature);
+        return snack;
+      }
+    }
+
+    const fallbackSignature = buildSnackSignature(fallbackSnack);
+    signatureState.usedSnackSignatures.add(fallbackSignature);
+    const reason =
+      safeSnackIds.length < DAYS.length
+        ? `${snackType} repeated because only ${safeSnackIds.length} safe snack candidates are available for this protocol.`
+        : `${snackType} repeated after ${MAX_ANTI_REPETITION_ATTEMPTS} safe anti-repetition attempts; protocol-safe candidates took priority.`;
+    signatureState.fallbackReasons.push(reason);
+    return addFallbackNoteToFirstNonBeverageSlot(fallbackSnack, reason);
   });
 }
 
@@ -532,6 +629,11 @@ export function generateWeeklyPlan(profile: PatientProfile): WeeklyTherapeuticPl
     enriched?.schemaConfig?.protocol.default_texture ||
     (profile.diagnosis === 'POST_OP_SOFT' ? 'soft' : 'regular');
   const targetMealCount = profile.mealCount || enriched?.schemaConfig?.protocol.default_meal_count || 3;
+  const signatureState: WeeklySignatureState = {
+    usedMealSignatures: new Set<string>(),
+    usedSnackSignatures: new Set<string>(),
+    fallbackReasons: [],
+  };
 
   const days: DayPlan[] = DAYS.map((dayName, dayIdx) => {
     const schemaMeals =
@@ -543,6 +645,7 @@ export function generateWeeklyPlan(profile: PatientProfile): WeeklyTherapeuticPl
                 mealType,
                 resolvedTexture as SchemaTextureClass,
                 dayIdx,
+                signatureState,
               ),
             )
             .filter((meal): meal is MealPlan => Boolean(meal))
@@ -553,7 +656,7 @@ export function generateWeeklyPlan(profile: PatientProfile): WeeklyTherapeuticPl
     const snackMeals =
       snackCount > 0
         ? enriched?.schemaConfig
-          ? buildSnackMeals(enriched.schemaConfig, resolvedTexture as SchemaTextureClass, dayIdx)
+          ? buildSnackMeals(enriched.schemaConfig, resolvedTexture as SchemaTextureClass, dayIdx, signatureState)
           : buildFallbackSnacks(profile.diagnosis, resolvedTexture, dayIdx)
         : [];
 
@@ -586,6 +689,7 @@ export function generateWeeklyPlan(profile: PatientProfile): WeeklyTherapeuticPl
       'Normalization pipeline active for meal and nutrient source harmonization',
       'Nutrient and variety checks are validated against internal safety gates',
       'Data source baseline: USDA FNDDS/FDC and local clinical diet manuals',
+      ...Array.from(new Set(signatureState.fallbackReasons)),
     ],
     rationale: `${carePath.label}: ${carePath.label === 'Hospital Diet' ? 'moderate/high nutritional risk pathway with higher protein support.' : 'low-risk baseline pathway.'} ${legacyRule?.therapeutic_goal || fallbackRationale}`,
     preparedBy: 'Clinical Engine (Offline-First Schema)',
