@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { DiagnosisType } from '../types';
 import CollapsibleSection from './CollapsibleSection';
+import { ProtocolCandidatePreview } from './ProtocolCandidatePreview';
 import { Badge, Button, Card, Input, Select } from './thera/ui';
 
 export interface PatientData {
@@ -568,6 +569,12 @@ const TherapeuticForm: React.FC<TherapeuticFormProps> = ({ onSubmit, isLoading }
             ))}
           </div>
         </section>
+
+        <ProtocolCandidatePreview
+          diagnosis={selectedDiagnosis}
+          textureLevel={patientData.textureLevel}
+          mealCount={patientData.mealCount}
+        />
 
         <Button
           type="submit"
