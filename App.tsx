@@ -38,6 +38,11 @@ interface NrsResult {
   risk: NrsRisk;
 }
 
+interface KitchenNotice {
+  title: string;
+  description: string;
+}
+
 const nrsRiskTone = (risk: NrsRisk): 'emerald' | 'amber' | 'red' => {
   if (risk === 'HIGH') return 'red';
   if (risk === 'MODERATE') return 'amber';
@@ -124,8 +129,12 @@ const App: React.FC = () => {
   const [reviewedBy, setReviewedBy]           = useState<string>('');
   const [showReview, setShowReview]           = useState(false);
   const [showKitchen, setShowKitchen]         = useState(false);
+  const [kitchenNotice, setKitchenNotice]     = useState<KitchenNotice | null>(null);
   const [nrsResult, setNrsResult]             = useState<NrsResult | null>(null);
   const [lastPatientData, setLastPatientData] = useState<Record<string, unknown>>({});
+
+  const hasGeneratedPlan = !!result;
+  const canOpenKitchen = hasGeneratedPlan && (planStatus === 'APPROVED' || planStatus === 'SENT_TO_KITCHEN');
 
   const handleGenerate = async (
     _originalMenu: string,
@@ -140,6 +149,7 @@ const App: React.FC = () => {
     setPlanId(null);
     setPlanStatus('DRAFT');
     setReviewedBy('');
+    setKitchenNotice(null);
     setMobileView('result');
     setLastPatientData({ ...patientData, diagnosis } as Record<string, unknown>);
 
@@ -208,6 +218,7 @@ const App: React.FC = () => {
   const handleReviewStatusChange = (status: PlanStatus, by: string) => {
     setPlanStatus(status);
     setReviewedBy(by);
+    setKitchenNotice(null);
   };
 
   const handleLoadHistoryPlan = (record: { plan: WeeklyTherapeuticPlan; id: string; status: PlanStatus; reviewedBy?: string }) => {
@@ -215,6 +226,7 @@ const App: React.FC = () => {
     setPlanId(record.id);
     setPlanStatus(record.status);
     setReviewedBy(record.reviewedBy ?? '');
+    setKitchenNotice(null);
     setActiveTab('generator');
     setMobileView('result');
   };
@@ -223,6 +235,29 @@ const App: React.FC = () => {
     window.requestAnimationFrame(() => {
       document.querySelector<HTMLButtonElement>('button[aria-label="Open clinical assistant"]')?.click();
     });
+  };
+
+  const handleKitchenOutputRequest = () => {
+    if (canOpenKitchen) {
+      setKitchenNotice(null);
+      setShowKitchen(true);
+      return;
+    }
+
+    setShowKitchen(false);
+    setActiveTab('generator');
+    setMobileView(hasGeneratedPlan ? 'result' : 'form');
+    setKitchenNotice(
+      hasGeneratedPlan
+        ? {
+            title: 'Dietitian approval required',
+            description: 'Kitchen Output is available only after the plan is approved or sent to kitchen.',
+          }
+        : {
+            title: 'No generated plan',
+            description: 'Generate a therapeutic plan before opening Kitchen Output.',
+          },
+    );
   };
 
   const handleShellTabChange = (tab: TabKey) => {
@@ -244,11 +279,7 @@ const App: React.FC = () => {
       return;
     }
     if (tab === 'kitchen') {
-      if (result && planStatus === 'APPROVED') {
-        setShowKitchen(true);
-      }
-      setActiveTab('generator');
-      setMobileView('result');
+      handleKitchenOutputRequest();
       return;
     }
     if (tab === 'ai') {
@@ -261,7 +292,7 @@ const App: React.FC = () => {
   const shellPlan: GeneratedPlan | null = result
     ? {
         reviewStatus:
-          planStatus === 'APPROVED' ? 'approved'
+          planStatus === 'APPROVED' || planStatus === 'SENT_TO_KITCHEN' ? 'approved'
           : planStatus === 'REJECTED' ? 'rejected'
           : planStatus === 'PENDING_REVIEW' ? 'pending_review'
           : 'draft',
@@ -292,6 +323,14 @@ const App: React.FC = () => {
       {/* ── Generator tab ─────────────────────────────────────────────────── */}
       {activeTab === 'generator' && (
         <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+          {kitchenNotice && !result && (
+            <StateView
+              compact
+              kind="warning"
+              title={kitchenNotice.title}
+              description={kitchenNotice.description}
+            />
+          )}
           <GeneratorShell
             form={<TherapeuticForm onSubmit={handleGenerate} isLoading={loading} />}
             error={error}
@@ -346,6 +385,15 @@ const App: React.FC = () => {
 
                 {result && !loading && (
                   <div id="result-section" className="space-y-4 pb-12">
+                    {kitchenNotice && (
+                      <StateView
+                        compact
+                        kind="warning"
+                        title={kitchenNotice.title}
+                        description={kitchenNotice.description}
+                      />
+                    )}
+
                     {/* Workflow status bar */}
                     <Card className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between">
                       <div className="min-w-0">
@@ -370,15 +418,13 @@ const App: React.FC = () => {
                             Dietitian review
                           </Button>
                         )}
-                        {planStatus === 'APPROVED' && (
-                          <Button
-                            type="button"
-                            onClick={() => setShowKitchen(true)}
-                            className="bg-emerald-600 hover:bg-emerald-700"
-                          >
-                            Kitchen sheet
-                          </Button>
-                        )}
+                        <Button
+                          type="button"
+                          onClick={handleKitchenOutputRequest}
+                          className={canOpenKitchen ? 'bg-emerald-600 hover:bg-emerald-700' : undefined}
+                        >
+                          Kitchen sheet
+                        </Button>
                       </div>
                     </Card>
 
